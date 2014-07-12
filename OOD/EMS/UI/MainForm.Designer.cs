@@ -32,6 +32,7 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.NameTextBox = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -59,25 +60,40 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("B Roya", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.label2.Location = new System.Drawing.Point(110, 183);
+            this.label2.Location = new System.Drawing.Point(216, 183);
             this.label2.Name = "label2";
             this.label2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.label2.Size = new System.Drawing.Size(225, 70);
+            this.label2.Size = new System.Drawing.Size(104, 70);
             this.label2.TabIndex = 5;
-            this.label2.Text = "کاربر گرامی، سید حامد مقیمی\r\nخوش آمدید";
+            this.label2.Text = "کاربر گرامی،\r\nخوش آمدید";
+            // 
+            // NameTextBox
+            // 
+            this.NameTextBox.Font = new System.Drawing.Font("B Roya", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.NameTextBox.Location = new System.Drawing.Point(33, 184);
+            this.NameTextBox.Name = "NameTextBox";
+            this.NameTextBox.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.NameTextBox.Size = new System.Drawing.Size(189, 31);
+            this.NameTextBox.TabIndex = 6;
+            this.NameTextBox.Text = "سید حامد مقیمی";
+            this.NameTextBox.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.NameTextBox.Click += new System.EventHandler(this.label3_Click);
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 24F);
             this.ClientSize = new System.Drawing.Size(596, 356);
+            this.Controls.Add(this.NameTextBox);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label1);
             this.Name = "MainForm";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.MainForm_FormClosed);
+            this.Load += new System.EventHandler(this.MainForm_Load);
             this.Controls.SetChildIndex(this.label1, 0);
             this.Controls.SetChildIndex(this.pictureBox1, 0);
             this.Controls.SetChildIndex(this.label2, 0);
+            this.Controls.SetChildIndex(this.NameTextBox, 0);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -89,5 +105,6 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label NameTextBox;
     }
 }
