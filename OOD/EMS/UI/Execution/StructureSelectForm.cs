@@ -6,9 +6,9 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 
-namespace OOD.ExecutiveForms
+namespace OOD.EMS.UI.ExecutiveForms
 {
-    public partial class StructureSelectForm : OOD.TemplateDialog
+    public partial class StructureSelectForm : TemplateDialog
     {
         public string Section { get; set; }
 

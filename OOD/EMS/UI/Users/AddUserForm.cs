@@ -8,13 +8,12 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace OOD.UserManagement
+namespace OOD.EMS.UI.Users
 {
-    public partial class AddUserForm : TemplateForm
+    public partial class AddUserForm : TemplateDialog
     {
         public AddUserForm()
         {
-            this.menu.Visible = false;
             InitializeComponent();
         }
 

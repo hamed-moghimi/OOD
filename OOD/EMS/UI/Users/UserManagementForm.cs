@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace OOD.UserManagement
+namespace OOD.EMS.UI.Users
 {
     public partial class UserManagementForm : TemplateForm
     {
@@ -20,8 +20,6 @@ namespace OOD.UserManagement
                 dataGridView1.Rows.Add(row);
             }
         }
-
-
 
         private void delete_Click(object sender, EventArgs e)
         {

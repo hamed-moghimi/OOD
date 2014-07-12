@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace EMS.User
+namespace OOD.EMS.Users
 {
     public class Manager : BasicUser
     {

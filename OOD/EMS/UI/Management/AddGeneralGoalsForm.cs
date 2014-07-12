@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace OOD.Management
+namespace OOD.EMS.UI.Management
 {
     public partial class AddGeneralGoalsForm : TemplateForm
     {

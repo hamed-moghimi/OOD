@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace OOD.Audit.Audit
+namespace OOD.EMS.UI.Audit.Audit
 {
     public partial class AuditGeneralViewForm : TemplateForm
     {

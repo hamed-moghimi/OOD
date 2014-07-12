@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace OOD.ExecutiveForms
+namespace OOD.EMS.UI.ExecutiveForms
 {
     public partial class ResourceForm : TemplateForm
     {

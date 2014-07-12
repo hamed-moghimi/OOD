@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace EMS.Management
+namespace OOD.EMS.Management
 {
     public class GeneralGoal_LegalConstraintRelation : ManagementDocumentRelation, IEquatable<GeneralGoal_LegalConstraintRelation>
     {

@@ -6,9 +6,9 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 
-namespace OOD.ExecutiveForms
+namespace OOD.EMS.UI.ExecutiveForms
 {
-    public partial class ScheduleForm : OOD.TemplateForm
+    public partial class ScheduleForm : TemplateForm
     {
         public ScheduleForm()
         {

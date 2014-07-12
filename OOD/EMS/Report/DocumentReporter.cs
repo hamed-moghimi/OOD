@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using EMS.Execution;
-using EMS.Audit;
-using EMS.Management;
-using EMS.Report;
+using OOD.EMS.Execution;
+using OOD.EMS.Audit;
+using OOD.EMS.Management;
+using OOD.EMS.Report;
 
-namespace EMS.Report
+namespace OOD.EMS.Report
 {
     class DocumentReporter
     {

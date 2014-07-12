@@ -1,6 +1,6 @@
 ﻿using System.Windows.Forms;
 
-namespace OOD
+namespace OOD.EMS.UI
 {
     partial class TemplateForm
     {

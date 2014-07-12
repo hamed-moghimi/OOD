@@ -6,9 +6,9 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 
-namespace OOD.ReportForms
+namespace OOD.EMS.UI.ReportForms
 {
-    public partial class DashboardForm : OOD.TemplateForm
+    public partial class DashboardForm : TemplateForm
     {
         public DashboardForm()
         {

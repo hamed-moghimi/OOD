@@ -1,4 +1,4 @@
-﻿namespace OOD.ExecutiveForms
+﻿namespace OOD.EMS.UI.ExecutiveForms
 {
     partial class StructureForm
     {

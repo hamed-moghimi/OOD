@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace OOD.Audit.Report
+namespace OOD.EMS.UI.Audit.Report
 {
     public partial class ExecutiveReportListForm : TemplateForm
     {

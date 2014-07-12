@@ -1,4 +1,4 @@
-﻿namespace OOD
+﻿namespace OOD.EMS.UI
 {
     partial class MainForm
     {

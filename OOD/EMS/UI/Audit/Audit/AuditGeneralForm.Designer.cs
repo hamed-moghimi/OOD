@@ -1,4 +1,4 @@
-﻿namespace OOD.Audit
+﻿namespace OOD.EMS.UI.Audit
 {
     partial class AuditGeneralForm
     {

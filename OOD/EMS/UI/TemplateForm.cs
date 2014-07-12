@@ -8,15 +8,15 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-using OOD.ExecutiveForms;
-using OOD.ReportForms;
-using OOD.Audit;
-using OOD.Audit.Report;
-using OOD.Audit.Metric;
-using OOD.Management;
-using OOD.UserManagement;
+using OOD.EMS.UI.ExecutiveForms;
+using OOD.EMS.UI.ReportForms;
+using OOD.EMS.UI.Audit;
+using OOD.EMS.UI.Audit.Report;
+using OOD.EMS.UI.Audit.Metric;
+using OOD.EMS.UI.Management;
+using OOD.EMS.UI.Users;
 
-namespace OOD
+namespace OOD.EMS.UI
 {
     public partial class TemplateForm : Form
     {

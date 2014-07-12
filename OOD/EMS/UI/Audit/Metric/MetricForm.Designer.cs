@@ -1,4 +1,4 @@
-﻿namespace OOD.Audit.Metric
+﻿namespace OOD.EMS.UI.Audit.Metric
 {
     partial class MetricForm
     {

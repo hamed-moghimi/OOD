@@ -6,9 +6,9 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 
-namespace OOD.ExecutiveForms
+namespace OOD.EMS.UI.ExecutiveForms
 {
-    public partial class ResourceEditForm : OOD.TemplateDialog
+    public partial class ResourceEditForm : TemplateDialog
     {
         private object[] resource;
         private bool canEdit = false;

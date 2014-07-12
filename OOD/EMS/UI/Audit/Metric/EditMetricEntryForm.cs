@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace OOD.Audit.Metric
+namespace OOD.EMS.UI.Audit.Metric
 {
     public partial class EditMetricEntryForm : TemplateForm
     {

@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace OOD
+namespace OOD.EMS.UI
 {
     public partial class TemplateDialog : Form
     {

@@ -1,4 +1,4 @@
-﻿namespace OOD.Audit.Report
+﻿namespace OOD.EMS.UI.Audit.Report
 {
     partial class ExecutiveReportForm
     {

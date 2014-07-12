@@ -1,4 +1,4 @@
-﻿namespace OOD.UserManagement
+﻿namespace OOD.EMS.UI.Users
 {
     partial class AddUserForm
     {
@@ -39,7 +39,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(196, 30);
+            this.label1.Location = new System.Drawing.Point(200, 19);
             this.label1.Name = "label1";
             this.label1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.label1.Size = new System.Drawing.Size(64, 24);
@@ -48,15 +48,15 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(40, 27);
+            this.textBox1.Location = new System.Drawing.Point(12, 16);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(121, 31);
+            this.textBox1.Size = new System.Drawing.Size(165, 31);
             this.textBox1.TabIndex = 4;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(179, 79);
+            this.label2.Location = new System.Drawing.Point(183, 68);
             this.label2.Name = "label2";
             this.label2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.label2.Size = new System.Drawing.Size(85, 24);
@@ -70,14 +70,14 @@
             "کاربر میانی",
             "کاربر ارشد",
             "بازرس"});
-            this.comboBox1.Location = new System.Drawing.Point(40, 79);
+            this.comboBox1.Location = new System.Drawing.Point(12, 68);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 32);
+            this.comboBox1.Size = new System.Drawing.Size(165, 32);
             this.comboBox1.TabIndex = 6;
             // 
             // Cancel
             // 
-            this.Cancel.Location = new System.Drawing.Point(36, 142);
+            this.Cancel.Location = new System.Drawing.Point(24, 117);
             this.Cancel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Cancel.Name = "Cancel";
             this.Cancel.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -89,7 +89,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(157, 142);
+            this.button2.Location = new System.Drawing.Point(145, 117);
             this.button2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(105, 33);
@@ -98,11 +98,11 @@
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // Add_User
+            // AddUserForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(290, 196);
+            this.ClientSize = new System.Drawing.Size(279, 163);
             this.Controls.Add(this.Cancel);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.comboBox1);
@@ -110,14 +110,8 @@
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label1);
             this.Margin = new System.Windows.Forms.Padding(7, 11, 7, 11);
-            this.Name = "Add_User";
+            this.Name = "AddUserForm";
             this.Text = "اضافه‌کردن کاربر";
-            this.Controls.SetChildIndex(this.label1, 0);
-            this.Controls.SetChildIndex(this.textBox1, 0);
-            this.Controls.SetChildIndex(this.label2, 0);
-            this.Controls.SetChildIndex(this.comboBox1, 0);
-            this.Controls.SetChildIndex(this.button2, 0);
-            this.Controls.SetChildIndex(this.Cancel, 0);
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -8,13 +8,12 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace OOD.UserManagement
+namespace OOD.EMS.UI.Users
 {
     public partial class ViewUserForm : TemplateForm
     {
         public ViewUserForm()
         {
-            this.menu.Visible = false;
             InitializeComponent();
         }
 
@@ -23,10 +22,5 @@ namespace OOD.UserManagement
             this.Close();
         }
 
-        private void button2_Click(object sender, EventArgs e)
-        {
-            ask_confirm();
-            System.Windows.Forms.Application.Exit();
-        }
     }
 }

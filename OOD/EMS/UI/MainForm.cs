@@ -6,9 +6,9 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 
-namespace OOD
+namespace OOD.EMS.UI
 {
-    public partial class MainForm : OOD.TemplateForm
+    public partial class MainForm : TemplateForm
     {
         public MainForm()
         {

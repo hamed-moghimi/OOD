@@ -1,4 +1,4 @@
-﻿namespace OOD
+﻿namespace OOD.EMS.UI
 {
     partial class TemplateDialog
     {
@@ -33,7 +33,7 @@
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
             this.SuspendLayout();
             // 
-            // DialogTemplate
+            // TemplateDialog
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -44,7 +44,7 @@
             this.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "DialogTemplate";
+            this.Name = "TemplateDialog";
             this.Load += new System.EventHandler(this.DialogTemplate_Load);
             this.ResumeLayout(false);
 

@@ -1,4 +1,4 @@
-﻿namespace OOD.Management
+﻿namespace OOD.EMS.UI.Management
 {
     partial class LegalReqForm
     {

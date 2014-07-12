@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 
-namespace OOD.Audit
+namespace OOD.EMS.UI.Audit
 {
     public partial class AuditExecutiveListForm : TemplateForm
     {

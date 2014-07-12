@@ -1,4 +1,4 @@
-﻿namespace OOD.UserManagement
+﻿namespace OOD.EMS.UI.Users
 {
     partial class UserManagementForm
     {
@@ -114,7 +114,7 @@
             this.add.UseVisualStyleBackColor = true;
             this.add.Click += new System.EventHandler(this.add_Click);
             // 
-            // UserManagement
+            // UserManagementForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -124,8 +124,8 @@
             this.Controls.Add(this.delete);
             this.Controls.Add(this.add);
             this.Controls.Add(this.dataGridView1);
-            this.Name = "UserManagement";
-            this.Text = "UserManagement";
+            this.Name = "UserManagementForm";
+            this.Text = "مدیریت کاربران";
             this.Controls.SetChildIndex(this.dataGridView1, 0);
             this.Controls.SetChildIndex(this.add, 0);
             this.Controls.SetChildIndex(this.delete, 0);

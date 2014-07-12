@@ -7,14 +7,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using OOD.EMS.Users;
 
-namespace OOD.UserManagement
+namespace OOD.EMS.UI.Users
 {
-    public partial class LoginForm : TemplateForm
+    public partial class LoginForm : TemplateDialog
     {
         public LoginForm()
         {
-            this.menu.Visible = false;
             InitializeComponent();
         }
 
@@ -25,6 +25,7 @@ namespace OOD.UserManagement
 
         private void button2_Click(object sender, EventArgs e)
         {
+            Authentication.getInstance().login(null);
             (new MainForm()).Show();
             this.Hide();
         }
