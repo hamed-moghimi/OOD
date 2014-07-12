@@ -10,9 +10,9 @@ namespace OOD.EMS.Execution
     {
         public String Name { set; get; }
         public Department Supervisor { set; get; }
-        public User.User Manager { set; get; }
+        public Users.User Manager { set; get; }
 
-        public Department(String name, Department supervisor, User.User manager)
+        public Department(String name, Department supervisor, Users.User manager)
         {
             Name = name;
             Supervisor = supervisor;

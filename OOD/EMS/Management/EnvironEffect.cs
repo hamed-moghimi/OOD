@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using OOD.EMS.Users;
 
 namespace OOD.EMS.Management
 {
@@ -13,7 +14,7 @@ namespace OOD.EMS.Management
             Title = title;
             Description = description;
             Date = DateTime.Now;
-            DocUser = User.Authentication.getInstance().ActiveUser;
+            DocUser = Authentication.getInstance().ActiveUser;
         }
 
         public override bool Equals(object obj)

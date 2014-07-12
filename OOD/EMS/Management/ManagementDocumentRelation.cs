@@ -9,6 +9,6 @@ namespace OOD.EMS.Management
     public abstract class ManagementDocumentRelation
     {
         public DateTime Date { set; get; }
-        public User.User RelationUser { set; get; }        
+        public Users.User RelationUser { set; get; }        
     }
 }

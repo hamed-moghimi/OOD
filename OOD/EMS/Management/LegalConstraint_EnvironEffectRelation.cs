@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using OOD.EMS.Users;
 
 namespace OOD.EMS.Management
 {
@@ -16,7 +17,7 @@ namespace OOD.EMS.Management
             EnvEffect = envEffect;
             LegConst = legConst;
             Date = DateTime.Now;
-            RelationUser = User.Authentication.getInstance().ActiveUser;
+            RelationUser = Authentication.getInstance().ActiveUser;
         }
 
         public override bool Equals(object obj)

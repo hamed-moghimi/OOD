@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using OOD.EMS.Users;
 
 namespace OOD.EMS.Execution
 {
@@ -11,7 +12,7 @@ namespace OOD.EMS.Execution
         public Management.GeneralGoal GenGoal { set; get; }
         public ExecutiveGoal ExecGoal { set; get; }
         public DateTime Date { set; get; }
-        public User.User RelUser { set; get; }
+        public Users.User RelUser { set; get; }
         public int Contribution { set; get; }
 
 
@@ -20,7 +21,7 @@ namespace OOD.EMS.Execution
             GenGoal = genGoal;
             ExecGoal = execGoal;
             Date = DateTime.Now;
-            RelUser = User.Authentication.getInstance().ActiveUser;
+            RelUser = Authentication.getInstance().ActiveUser;
             Contribution = contribution;
         }
 

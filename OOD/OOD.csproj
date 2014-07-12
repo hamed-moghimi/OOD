@@ -79,6 +79,9 @@
     <Compile Include="EMS\Audit\PhysicalInspectionStorage.cs" />
     <Compile Include="EMS\Audit\TaskAudit.cs" />
     <Compile Include="EMS\Audit\TaskAuditStorage.cs" />
+    <Compile Include="EMS\Exceptions\ActiveUserExistsException.cs" />
+    <Compile Include="EMS\Exceptions\EMSException.cs" />
+    <Compile Include="EMS\Exceptions\NoSuchUserException.cs" />
     <Compile Include="EMS\Execution\Allocation.cs" />
     <Compile Include="EMS\Execution\AllocationStorage.cs" />
     <Compile Include="EMS\Execution\Contribution.cs" />

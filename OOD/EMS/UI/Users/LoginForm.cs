@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using OOD.EMS.Users;
+using OOD.EMS.Exceptions;
 
 namespace OOD.EMS.UI.Users
 {
@@ -25,9 +26,20 @@ namespace OOD.EMS.UI.Users
 
         private void button2_Click(object sender, EventArgs e)
         {
-            Authentication.getInstance().login(null);
-            (new MainForm()).Show();
-            this.Hide();
+            try
+            {
+                Authentication.getInstance().login(usernameBox.Text);
+                (new MainForm()).Show();
+                this.Hide();
+            }
+            catch (ActiveUserExistsException ex)
+            {
+                MessageBox.Show(ex.Message, "خطا");                
+            }
+            catch (NoSuchUserException ex)
+            {
+                MessageBox.Show(ex.Message, "2 خطا");
+            }
         }
     }
 }
