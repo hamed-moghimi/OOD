@@ -26,13 +26,22 @@ namespace EMS.User
             return instance;
         }
 
-        public void login(User user)
+        public void login(String username)
         {
             //TODO: exception
             if (ActiveUser == null)
             {
                 List<User> users = UserStorage.getInstance().all();
-                if (users.Contains(user))
+                User user = null;
+                foreach (User u in users)
+                {
+                    if (u.Username.Equals(username))
+                    {
+                        user = u;
+                        break;
+                    }
+                }
+                if (user != null)
                 {
                     ActiveUser = user;
                 }
