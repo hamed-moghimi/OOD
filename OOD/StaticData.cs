@@ -1,0 +1,128 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace OOD
+{
+    class StaticData
+    {
+        static StaticData()
+        {
+            // static constructor
+            // copy static data to lists so we can change them
+            foreach(object[] item in _resources)
+                resources.Add(item);
+
+            foreach (object[] item in _trainings)
+                trainings.Add(item);
+
+            foreach (object[] item in _executiveGoals)
+                executiveGoals.Add(item);
+
+            foreach (object[] item in _schedules)
+                schedules.Add(item);
+            
+            foreach (object[] item in _tasks)
+                tasks.Add(item);
+
+            foreach (object[] item in _generalGoals)
+                generalGoals.Add(item);
+
+            foreach (object[] item in _Metrics)
+                Metrics.Add(item);
+
+            foreach (object[] item in _LegalReq)
+                LegalReq.Add(item);
+
+            foreach (object[] item in _effects)
+                effects.Add(item);
+
+            foreach (object[] item in _relations)
+                relations.Add(item);
+
+            foreach (object[] item in _users)
+                users.Add(item);
+        }
+
+        // resource: title, amount, description
+        public static List<object[]> resources = new List<object[]>();
+        private static object[][] _resources = new object[][] {
+            new object[] {"نفت‌کش C1423", "۳ فروند", "واقع در بندر امام خمینی، خرمشهر و شهید رجایی"},
+            new object[] {"حساب ارزی سازمان بنادر", "۵۵۴ میلیون دلار", "بر اساس نظر مدیرعامل و با اجازه وزیر اجازه برداشت از حساب ارزی وجود دارد"},
+            new object[] {"کشتی لایروبی", "۱۳ فروند", "۱۰ فروند در بنادر خلیج فارس و ۳ فروند در بنادر دریای خزر"},
+        };
+
+        // training resource: title, field, description, attachments, text
+        public static List<object[]> trainings = new List<object[]>();
+        private static object[][] _trainings = new object[][] {
+            new object[] {"تاثیرات نفت بر موجودات دریایی", "تاثیرات زیست‌محیطی", "در این مستند، تاثیرات لکه‌های نفتی بر زندگی موجودات دریایی به تصویر درآمده است.", "۱ فایل"},
+            new object[] {"کاهش آلودگی‌های گرمایی", "تاثیرات زیست‌محیطی", "آلودگی گرمایی چیست؟ چگونه می‌توان در کارخانجات، واحدهای صنعتی و اداری و حتی واحدهای مسکونی از آن جلوگیری کرد؟", "ندارد"}
+        };
+
+        // executive goal: title, start date, responsible
+        public static List<object[]> executiveGoals = new List<object[]>();
+        private static object[][] _executiveGoals = new object[][] {
+            new object[] {"کاهش ۲۵ درصدی شاخص آلاینده‌های نفتی در بندر خرمشهر", "۲۶ / ۲ / ۱۳۹۳","اداره کل بندر خرمشهر"},
+            new object[] {"تهیه ۳ فروند کشتی لای‌روبی در خلیج فارس", "۲۶ / ۲ / ۱۳۹۳","اداره کل تجهیزات"},
+        };
+
+        // schedule: goal, start date, end date, progress
+        public static List<object[]> schedules = new List<object[]>();
+        private static object[][] _schedules = new object[][] {
+            new object[] {"کاهش ۲۵ درصدی شاخص آلاینده‌های نفتی در بندر خرمشهر", "۲۶ / ۲ / ۱۳۹۳", "۲۶ / ۲ / ۱۳۹۴", "۲۳٪"},
+            new object[] {"تهیه ۳ فروند کشتی لای‌روبی در خلیج فارس", "۲۶ / ۲ / ۱۳۹۳", "۲۶ / ۲ / ۱۳۹۵", "۵٪"},
+        };
+
+        // tasks: title, start date, end date, progress
+        public static List<object[]> tasks = new List<object[]>();
+        private static object[][] _tasks = new object[][] {
+            new object[] {"۵٪", "برگزاری مناقصه داخلی و خارجی", "روابط عمومی و امور بین‌الملل", "۲۶ / ۲ / ۱۳۹۳", "۲۶ / ۴ / ۱۳۹۳", "۲۳٪"},
+            new object[] {"۱۵٪", "طراحی و کنترل فنی طرح اولیه پیمانکار کشتی‌ساز", "اداره کل تجهیزات" ,"۲۶ / ۵ / ۱۳۹۳", "۲۶ / ۱۰ / ۱۳۹۳", "۵٪"},
+        };
+
+        // general goal: title, description, attachment
+        public static List<object[]> generalGoals = new List<object[]>();
+        private static object[][] _generalGoals = new object[][] {
+            new object[] {"کاهش آلاینده‌های زیست‌محیطی کشتی‌ها تا حد استاندارد اروپا", "باید شاخص آلایندگی کشتی‌های نفت‌کش که عمده آلودگی‌های زیست‌محیطی خلیج فارس ناشی از آن‌هاست تا حد قابل‌قبولی کاهش یابد", "file.pdf"},
+            new object[] {"‫افزایش ایمنی در بنادر و کاهش احتمال آتش‌سوزی فراورده‌های نفتی", "امکانات ایمنی در بنادر به گونه‌ای فراهم شود تا علاوه بر پیش‌گیری از وقوع آتش‌سوزی در بندر و وارد آمدن خسارات مالی و جانی، میزان آلاینده‌های ناشی از حریق مواد نفتی نیز کاهش داشته باشد", "file.pdf"},
+            new object[] {"‫کاهش میزان آلودگی اسکله و بخش ترانزیت بنادر", "نشت مواد سمی و وارد‌شدن آلودگی‌های شیمیایی و میکروبی به آب‌های اسکله‌های ترانزیت باید کاهش داشته باشد", "file.pdf"},
+        };
+
+        public static List<object[]> Metrics = new List<object[]>();
+        private static object[][] _Metrics = new object[][] {
+            new object[] {"حجم آلاینده‌های نفتی آزاد شده در آب"},
+            new object[] {"حجم گاز دی‌اکسیدکربن"},
+            new object[] {"هزینه‌ی سالیانه"},
+            new object[] {"تلفات آبزیان"},
+        };
+
+        public static List<object[]> LegalReq = new List<object[]>();
+        private static object[][] _LegalReq = new object[][] {
+            new object[] {"تضمین ضریب ایمنی پرسنل بندر مطابق با مصوبه وزارت کار و رفاه اجتماعی ", "توضیح"},
+            new object[] {"خارج کردن نفت‌کش های با عمر بالاتر از ۳۰ سال تا پایان سال ۹۵ مطابق با مصوبه وزارت نفت ", "توضیح"},
+
+        };
+
+        public static List<object[]> effects = new List<object[]>();
+        private static object[][] _effects = new object[][] {
+            new object[] {"سند بررسی تاثیر جمعیت پرسنل بندری بر میانگین شاخص آلاینده‌های زیست‌محیطی در بنادر خلیج فارس ", "توضیح"},
+            
+        };
+
+        public static List<object[]> relations = new List<object[]>();
+        private static object[][] _relations = new object[][] {
+            new object[] {"خارج کردن نفت‌کش های فرسوده تا پایان سال ۹۵  ", "کاهش آلاینده‌های زیست‌محیطی کشتی‌ها "},
+            new object[] {"خارج کردن نفت‌کش های فرسوده تا پایان سال ۹۵  ", "کاهش میزان آلودگی اسکله و بخش ترانزیت بنادر"},
+        };
+
+        public static List<object[]> users = new List<object[]>();
+        private static object[][] _users = new object[][] {
+            new object[] {"مینا طهماسبی", "کاربر میانی"},
+            new object[] {"حامد مقیمی", "کاربر ارشد"},
+            new object[] {"علی طبسی", "بازرس"},
+            new object[] {"زینب نویدی", "مدبر سامانه"},
+        };
+    }
+}
