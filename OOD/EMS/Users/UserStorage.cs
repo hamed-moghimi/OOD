@@ -8,12 +8,16 @@ namespace OOD.EMS.Users
 {
     class UserStorage
     {
-        private UserStorage instance;
+        private static UserStorage instance;
         private List<User> userList;
 
         private UserStorage()
         {
             userList = new List<User>();
+
+            //TMP
+            userList.Add(new User("مینا", "طهماسبی", "minmit", new Manager()));
+            userList.Add(new User("حامد", "مقیمی", "shmoghimi70", new HeadManager()));
         }
 
         public List<User> all()
@@ -33,7 +37,7 @@ namespace OOD.EMS.Users
             userList.Remove(user);
         }
 
-        public UserStorage getInstance()
+        public static UserStorage getInstance()
         {
             if (instance == null)
             {

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using OOD.EMS.Exceptions;
 
 namespace OOD.EMS.Users
 {
@@ -25,12 +26,33 @@ namespace OOD.EMS.Users
             return instance;
         }
 
-        public void login(User user)
+        public void login(String username)
         {
             //TODO: exception
             if (ActiveUser == null)
             {
-                ActiveUser = user;
+                List<User> users = UserStorage.getInstance().all();
+                User user = null;
+                foreach (User u in users)
+                {
+                    if (u.Username.Equals(username))
+                    {
+                        user = u;
+                        break;
+                    }
+                }
+                if (user != null)
+                {
+                    ActiveUser = user;
+                }
+                else
+                {
+                    throw new NoSuchUserException();
+                }
+            }
+            else
+            {
+                throw new ActiveUserExistsException();
             }
         }
 
