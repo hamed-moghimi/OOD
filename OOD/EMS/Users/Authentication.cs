@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using OOD.EMS.Exceptions;
 
 namespace EMS.User
 {
@@ -30,7 +31,19 @@ namespace EMS.User
             //TODO: exception
             if (ActiveUser == null)
             {
-                ActiveUser = user;
+                List<User> users = UserStorage.getInstance().all();
+                if (users.Contains(user))
+                {
+                    ActiveUser = user;
+                }
+                else
+                {
+                    throw new NoSuchUserException();
+                }
+            }
+            else
+            {
+                throw new ActiveUserExistsException();
             }
         }
 
