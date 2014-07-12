@@ -10,7 +10,7 @@ namespace OOD.EMS.Exceptions
     {
 
         public NoSuchUserException()
-            : base("چنین کاربری در سیستم ثبت نشده است.")
+            : base("چنین کاربری در سیستم ثبت نشده است")
         {
         }
     }
