@@ -8,7 +8,7 @@ namespace OOD.EMS.Exceptions
 {
     public class ActiveUserExistsException : EMSException
     {
-        public ActiveUserExistsException() : base("کاربری پیش از این در سیستم فعال است.")
+        public ActiveUserExistsException() : base("کاربری پیش از این در سیستم فعال است")
         {
         }
     }
