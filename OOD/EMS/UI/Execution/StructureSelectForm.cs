@@ -8,11 +8,11 @@ using System.Windows.Forms;
 
 namespace OOD.ExecutiveForms
 {
-    public partial class StructureSelect : OOD.DialogTemplate
+    public partial class StructureSelectForm : OOD.TemplateDialog
     {
         public string Section { get; set; }
 
-        public StructureSelect()
+        public StructureSelectForm()
         {
             InitializeComponent();
         }

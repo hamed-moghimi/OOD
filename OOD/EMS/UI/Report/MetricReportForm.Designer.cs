@@ -1,6 +1,6 @@
 ﻿namespace OOD.ReportForms
 {
-    partial class ScheduleReportForm
+    partial class MetricReportForm
     {
         /// <summary>
         /// Required designer variable.

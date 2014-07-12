@@ -1,6 +1,6 @@
 ﻿namespace OOD.ExecutiveForms
 {
-    partial class StructureSelect
+    partial class StructureSelectForm
     {
         /// <summary>
         /// Required designer variable.

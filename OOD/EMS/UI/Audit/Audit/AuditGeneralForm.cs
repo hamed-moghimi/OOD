@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace OOD.Audit
 {
-    public partial class Audit_Kalan : Template
+    public partial class AuditGeneralForm : TemplateForm
     {
-        public Audit_Kalan()
+        public AuditGeneralForm()
         {
             this.menu.Visible = false;
             InitializeComponent();

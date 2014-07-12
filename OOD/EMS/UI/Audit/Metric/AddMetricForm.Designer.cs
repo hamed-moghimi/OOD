@@ -1,6 +1,6 @@
 ﻿namespace OOD.Audit.Metric
 {
-    partial class Add_Metric
+    partial class AddMetricForm
     {
         /// <summary>
         /// Required designer variable.

@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace OOD.UserManagement
 {
-    public partial class UserManagement : Template
+    public partial class UserManagementForm : TemplateForm
     {
-        public UserManagement()
+        public UserManagementForm()
         {
             InitializeComponent();
             foreach (object[] row in StaticData.users)
@@ -32,12 +32,12 @@ namespace OOD.UserManagement
 
         private void add_Click(object sender, EventArgs e)
         {
-            (new Add_User()).ShowDialog();
+            (new AddUserForm()).ShowDialog();
         }
 
         private void edit_Click(object sender, EventArgs e)
         {
-            (new Edit_User()).ShowDialog();
+            (new EditUserForm()).ShowDialog();
         }
 
         private void Cancel_Click(object sender, EventArgs e)

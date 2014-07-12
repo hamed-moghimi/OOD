@@ -1,6 +1,6 @@
 ﻿namespace OOD.Audit.Audit
 {
-    partial class Audit_Kalan_View
+    partial class AuditGeneralViewForm
     {
         /// <summary>
         /// Required designer variable.

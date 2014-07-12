@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace OOD.Management
 {
-    public partial class LegalReq : Template
+    public partial class LegalReqForm : TemplateForm
     {
-        public LegalReq()
+        public LegalReqForm()
         {
             InitializeComponent();
             load_goals();
@@ -36,7 +36,7 @@ namespace OOD.Management
 
         private void add_Click(object sender, EventArgs e)
         {
-            AddLegalReq add = new AddLegalReq("", "");
+            AddLegalReqForm add = new AddLegalReqForm("", "");
             add.ShowDialog();
             dataGridView1.Rows.Add(add.name, add.dscp);
             object[] row = {add.name, add.dscp, "file.pdf"};
@@ -45,7 +45,7 @@ namespace OOD.Management
 
         private void edit_Click(object sender, EventArgs e)
         {
-            AddLegalReq add = new AddLegalReq((string)dataGridView1.Rows[dataGridView1.SelectedRows[0].Index].Cells[0].Value,
+            AddLegalReqForm add = new AddLegalReqForm((string)dataGridView1.Rows[dataGridView1.SelectedRows[0].Index].Cells[0].Value,
                     (string)dataGridView1.Rows[dataGridView1.SelectedRows[0].Index].Cells[1].Value);
             add.ShowDialog();
             StaticData.LegalReq[dataGridView1.SelectedRows[0].Index][0] = add.name;

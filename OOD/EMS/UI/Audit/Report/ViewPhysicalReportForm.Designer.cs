@@ -1,6 +1,6 @@
 ﻿namespace OOD.Audit.Report
 {
-    partial class View_Physical_Report
+    partial class ViewPhysicalReportForm
     {
         /// <summary>
         /// Required designer variable.

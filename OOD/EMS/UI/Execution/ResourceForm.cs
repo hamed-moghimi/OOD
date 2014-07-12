@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace OOD.ExecutiveForms
 {
-    public partial class ResourceForm : Template
+    public partial class ResourceForm : TemplateForm
     {
         public ResourceForm()
         {
@@ -33,12 +33,12 @@ namespace OOD.ExecutiveForms
 
         private void dataGridView1_DoubleClick(object sender, EventArgs e)
         {
-            new ResourceEdit(false, StaticData.resources[dataGridView1.SelectedRows[0].Index]).ShowDialog();
+            new ResourceEditForm(false, StaticData.resources[dataGridView1.SelectedRows[0].Index]).ShowDialog();
         }
 
         private void editButton_Click(object sender, EventArgs e)
         {
-            ResourceEdit f = new ResourceEdit(true, StaticData.resources[dataGridView1.SelectedRows[0].Index]);
+            ResourceEditForm f = new ResourceEditForm(true, StaticData.resources[dataGridView1.SelectedRows[0].Index]);
             f.ShowDialog();
             StaticData.resources[dataGridView1.SelectedRows[0].Index] = f.Resource;
             ResourseForm_Load(this, null);
@@ -46,7 +46,7 @@ namespace OOD.ExecutiveForms
 
         private void addButton_Click(object sender, EventArgs e)
         {
-            ResourceEdit f = new ResourceEdit(true, null);
+            ResourceEditForm f = new ResourceEditForm(true, null);
             f.ShowDialog();
             StaticData.resources.Add(f.Resource);
             ResourseForm_Load(this, null);

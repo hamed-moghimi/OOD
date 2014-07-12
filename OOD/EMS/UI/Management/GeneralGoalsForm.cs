@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace OOD.Management
 {
-    public partial class GeneralGoals : Template
+    public partial class GeneralGoalsForm : TemplateForm
     {
-        public GeneralGoals()
+        public GeneralGoalsForm()
         {
             InitializeComponent();
             load_goals();
@@ -36,7 +36,7 @@ namespace OOD.Management
 
         private void add_Click(object sender, EventArgs e)
         {
-            AddGeneralGoals add = new AddGeneralGoals("", "");
+            AddGeneralGoalsForm add = new AddGeneralGoalsForm("", "");
             add.ShowDialog();
             dataGridView1.Rows.Add(add.name, add.dscp);
             object[] row = {add.name, add.dscp, "file.pdf"};
@@ -45,7 +45,7 @@ namespace OOD.Management
 
         private void edit_Click(object sender, EventArgs e)
         {
-            AddGeneralGoals add = new AddGeneralGoals((string)dataGridView1.Rows[dataGridView1.SelectedRows[0].Index].Cells[0].Value,
+            AddGeneralGoalsForm add = new AddGeneralGoalsForm((string)dataGridView1.Rows[dataGridView1.SelectedRows[0].Index].Cells[0].Value,
                     (string)dataGridView1.Rows[dataGridView1.SelectedRows[0].Index].Cells[1].Value);
             add.ShowDialog();
             StaticData.generalGoals[dataGridView1.SelectedRows[0].Index][0] = add.name;
@@ -63,7 +63,7 @@ namespace OOD.Management
 
         private void button1_Click(object sender, EventArgs e)
         {
-            (new ViewGeneralGoal()).ShowDialog();
+            (new ViewGeneralGoalForm()).ShowDialog();
         }
     }
 }

@@ -1,6 +1,6 @@
 ﻿namespace OOD.UserManagement
 {
-    partial class Add_User
+    partial class AddUserForm
     {
         /// <summary>
         /// Required designer variable.

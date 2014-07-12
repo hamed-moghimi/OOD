@@ -1,6 +1,6 @@
 ﻿namespace OOD.UserManagement
 {
-    partial class View_User
+    partial class ViewUserForm
     {
         /// <summary>
         /// Required designer variable.

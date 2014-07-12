@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace OOD.Management
 {
-    public partial class ViewGeneralGoal : Template
+    public partial class ViewGeneralGoalForm : TemplateForm
     {
-        public ViewGeneralGoal()
+        public ViewGeneralGoalForm()
         {
             menu.Visible = false;
             InitializeComponent();

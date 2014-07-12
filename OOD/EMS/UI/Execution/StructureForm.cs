@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace OOD.ExecutiveForms
 {
-    public partial class StructureForm : Template
+    public partial class StructureForm : TemplateForm
     {
         public StructureForm()
         {

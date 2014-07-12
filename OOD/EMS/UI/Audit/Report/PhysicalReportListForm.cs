@@ -10,21 +10,21 @@ using System.Windows.Forms;
 
 namespace OOD.Audit.Report
 {
-    public partial class Physical_Report_List : Template
+    public partial class PhysicalReportListForm : TemplateForm
     {
-        public Physical_Report_List()
+        public PhysicalReportListForm()
         {
             InitializeComponent();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            (new View_Physical_Report()).ShowDialog();
+            (new ViewPhysicalReportForm()).ShowDialog();
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            (new Physical_Report()).ShowDialog();
+            (new PhysicalReportForm()).ShowDialog();
         }
 
         private void button2_Click(object sender, EventArgs e)

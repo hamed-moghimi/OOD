@@ -1,6 +1,6 @@
 ﻿namespace OOD.ExecutiveForms
 {
-    partial class ResourceEdit
+    partial class ResourceEditForm
     {
         /// <summary>
         /// Required designer variable.

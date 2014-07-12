@@ -10,16 +10,16 @@ using System.Windows.Forms;
 
 namespace OOD.Management
 {
-    public partial class AddEffect : Template
+    public partial class AddEffectForm : TemplateForm
     {
-        public AddEffect()
+        public AddEffectForm()
         {
             InitializeComponent();
         }
 
         public string name { set; get; }
         public string dscp { set; get; }
-        public AddEffect(string name, string dscp)
+        public AddEffectForm(string name, string dscp)
         {
             this.menu.Visible = false;
             InitializeComponent();

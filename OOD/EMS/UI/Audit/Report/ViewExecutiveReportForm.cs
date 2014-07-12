@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace OOD.Audit.Report
 {
-    public partial class View_Executive_Report : DialogTemplate
+    public partial class ViewExecutiveReportForm : TemplateDialog
     {
-        public View_Executive_Report()
+        public ViewExecutiveReportForm()
         {
             InitializeComponent();
         }

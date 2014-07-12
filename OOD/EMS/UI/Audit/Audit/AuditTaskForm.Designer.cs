@@ -1,6 +1,6 @@
 ﻿namespace OOD.Audit
 {
-    partial class Audit_Task
+    partial class AuditTaskForm
     {
         /// <summary>
         /// Required designer variable.

@@ -10,11 +10,11 @@ using System.Windows.Forms;
 
 namespace OOD.Management
 {
-    public partial class AddLegalReq : Template
+    public partial class AddLegalReqForm : TemplateForm
     {
         public string name { set; get; }
         public string dscp { set; get; }
-        public AddLegalReq(string name, string dscp)
+        public AddLegalReqForm(string name, string dscp)
         {
             this.menu.Visible = false;
             InitializeComponent();

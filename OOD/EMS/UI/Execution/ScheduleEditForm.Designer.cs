@@ -1,6 +1,6 @@
 ﻿namespace OOD.ExecutiveForms
 {
-    partial class ScheduleEdit
+    partial class ScheduleEditForm
     {
         /// <summary>
         /// Required designer variable.

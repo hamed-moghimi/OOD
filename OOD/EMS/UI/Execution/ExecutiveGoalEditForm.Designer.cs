@@ -1,6 +1,6 @@
 ﻿namespace OOD.ExecutiveForms
 {
-    partial class ExecutiveGoalEdit
+    partial class ExecutiveGoalEditForm
     {
         /// <summary>
         /// Required designer variable.

@@ -8,7 +8,7 @@ using System.Windows.Forms;
 
 namespace OOD.ExecutiveForms
 {
-    public partial class ScheduleForm : OOD.Template
+    public partial class ScheduleForm : OOD.TemplateForm
     {
         public ScheduleForm()
         {
@@ -24,7 +24,7 @@ namespace OOD.ExecutiveForms
 
         private void dataGridView1_DoubleClick(object sender, EventArgs e)
         {
-            new ScheduleEdit(false, StaticData.schedules[dataGridView1.SelectedRows[0].Index]).ShowDialog();
+            new ScheduleEditForm(false, StaticData.schedules[dataGridView1.SelectedRows[0].Index]).ShowDialog();
         }
     }
 }

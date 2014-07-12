@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace OOD.Management
 {
-    public partial class Effect : Template
+    public partial class EffectForm : TemplateForm
     {
-        public Effect()
+        public EffectForm()
         {
             InitializeComponent();
             load_goals();
@@ -36,7 +36,7 @@ namespace OOD.Management
 
         private void add_Click(object sender, EventArgs e)
         {
-            AddEffect add = new AddEffect("", "");
+            AddEffectForm add = new AddEffectForm("", "");
             add.ShowDialog();
             dataGridView1.Rows.Add(add.name, add.dscp);
             object[] row = {add.name, add.dscp, "file.pdf"};
@@ -45,7 +45,7 @@ namespace OOD.Management
 
         private void edit_Click(object sender, EventArgs e)
         {
-            AddEffect add = new AddEffect((string)dataGridView1.Rows[dataGridView1.SelectedRows[0].Index].Cells[0].Value,
+            AddEffectForm add = new AddEffectForm((string)dataGridView1.Rows[dataGridView1.SelectedRows[0].Index].Cells[0].Value,
                     (string)dataGridView1.Rows[dataGridView1.SelectedRows[0].Index].Cells[1].Value);
             add.ShowDialog();
             StaticData.effects[dataGridView1.SelectedRows[0].Index][0] = add.name;

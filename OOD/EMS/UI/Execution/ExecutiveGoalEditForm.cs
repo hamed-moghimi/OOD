@@ -8,12 +8,12 @@ using System.Windows.Forms;
 
 namespace OOD.ExecutiveForms
 {
-    public partial class ExecutiveGoalEdit : OOD.DialogTemplate
+    public partial class ExecutiveGoalEditForm : OOD.TemplateDialog
     {
         private object[] resource;
         private bool canEdit = false;
 
-        public ExecutiveGoalEdit(bool canEdit, object[] resource)
+        public ExecutiveGoalEditForm(bool canEdit, object[] resource)
         {
             this.resource = resource;
             this.canEdit = canEdit;
@@ -32,7 +32,7 @@ namespace OOD.ExecutiveForms
 
         private void button2_Click(object sender, EventArgs e)
         {
-            StructureSelect s = new StructureSelect();
+            StructureSelectForm s = new StructureSelectForm();
             s.ShowDialog();
             responsibleBox.Text = s.Section;
         }

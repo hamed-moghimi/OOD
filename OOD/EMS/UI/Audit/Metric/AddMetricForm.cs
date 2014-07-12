@@ -10,11 +10,11 @@ using System.Windows.Forms;
 
 namespace OOD.Audit.Metric
 {
-    public partial class Add_Metric : Template
+    public partial class AddMetricForm : TemplateForm
     {
         public string name
         { get; set; }
-        public Add_Metric(string nameText)
+        public AddMetricForm(string nameText)
         {
             this.menu.Visible = false;
             InitializeComponent();

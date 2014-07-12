@@ -2,7 +2,7 @@
 
 namespace OOD
 {
-    partial class Template
+    partial class TemplateForm
     {
         /// <summary>
         /// Required designer variable.
@@ -36,7 +36,7 @@ namespace OOD
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Template));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TemplateForm));
             this.menu = new System.Windows.Forms.MenuStrip();
             this.managementMenu = new System.Windows.Forms.ToolStripMenuItem();
             this.generalGoalsSubmenu = new System.Windows.Forms.ToolStripMenuItem();
@@ -66,7 +66,6 @@ namespace OOD
             this.reportMenu = new System.Windows.Forms.ToolStripMenuItem();
             this.documentReport = new System.Windows.Forms.ToolStripMenuItem();
             this.scheduleReport = new System.Windows.Forms.ToolStripMenuItem();
-            this.trainingResourceReport = new System.Windows.Forms.ToolStripMenuItem();
             this.metricsReport = new System.Windows.Forms.ToolStripMenuItem();
             this.AccountMenu = new System.Windows.Forms.ToolStripMenuItem();
             this.viewAccountSubmenu = new System.Windows.Forms.ToolStripMenuItem();
@@ -289,7 +288,6 @@ namespace OOD
             this.reportMenu.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.documentReport,
             this.scheduleReport,
-            this.trainingResourceReport,
             this.metricsReport});
             this.reportMenu.Name = "reportMenu";
             this.reportMenu.Size = new System.Drawing.Size(69, 28);
@@ -308,13 +306,6 @@ namespace OOD
             this.scheduleReport.Size = new System.Drawing.Size(175, 28);
             this.scheduleReport.Text = "برنامه‌های اقدام";
             this.scheduleReport.Click += new System.EventHandler(this.scheduleReport_Click);
-            // 
-            // trainingResourceReport
-            // 
-            this.trainingResourceReport.Name = "trainingResourceReport";
-            this.trainingResourceReport.Size = new System.Drawing.Size(175, 28);
-            this.trainingResourceReport.Text = "محتواهای آموزشی";
-            this.trainingResourceReport.Click += new System.EventHandler(this.trainingResourceReport_Click);
             // 
             // metricsReport
             // 
@@ -353,7 +344,7 @@ namespace OOD
             this.toolTip.ReshowDelay = 100;
             this.toolTip.ShowAlways = true;
             // 
-            // Template
+            // TemplateForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -366,7 +357,7 @@ namespace OOD
             this.MainMenuStrip = this.menu;
             this.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.MaximizeBox = false;
-            this.Name = "Template";
+            this.Name = "TemplateForm";
             this.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "سامانه مدیریت زیست‌محیطی";
@@ -395,7 +386,6 @@ namespace OOD
         private ToolStripMenuItem conventionSubmenu;
         private ToolStripMenuItem documentReport;
         private ToolStripMenuItem scheduleReport;
-        private ToolStripMenuItem trainingResourceReport;
         private ToolStripMenuItem metricsReport;
         private ToolStripMenuItem auditGoalSubmenu;
         private ToolStripMenuItem generalGoalAuditSubmenu;

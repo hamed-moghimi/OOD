@@ -11,9 +11,9 @@ using System.Windows.Forms;
 
 namespace OOD.Audit
 {
-    public partial class Audit_Executive_List : Template
+    public partial class AuditExecutiveListForm : TemplateForm
     {
-        public Audit_Executive_List()
+        public AuditExecutiveListForm()
         {
             InitializeComponent();
             foreach (object[] row in StaticData.executiveGoals)
@@ -24,7 +24,7 @@ namespace OOD.Audit
 
         private void Audit_Click(object sender, EventArgs e)
         {
-            (new Audit_Executive()).ShowDialog();
+            (new AuditExecutiveForm()).ShowDialog();
         }
 
         private void Cancel_Click(object sender, EventArgs e)

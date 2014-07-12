@@ -8,7 +8,7 @@ using System.Windows.Forms;
 
 namespace OOD.ReportForms
 {
-    public partial class OverallReportForm : OOD.Template
+    public partial class OverallReportForm : OOD.TemplateForm
     {
         public OverallReportForm()
         {

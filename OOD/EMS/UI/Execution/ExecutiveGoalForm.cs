@@ -8,7 +8,7 @@ using System.Windows.Forms;
 
 namespace OOD.ExecutiveForms
 {
-    public partial class ExecutiveGoalForm : OOD.Template
+    public partial class ExecutiveGoalForm : OOD.TemplateForm
     {
         public ExecutiveGoalForm()
         {
@@ -31,12 +31,12 @@ namespace OOD.ExecutiveForms
 
         private void dataGridView1_DoubleClick(object sender, EventArgs e)
         {
-            new ExecutiveGoalEdit(false, StaticData.executiveGoals[dataGridView1.SelectedRows[0].Index]).ShowDialog();
+            new ExecutiveGoalEditForm(false, StaticData.executiveGoals[dataGridView1.SelectedRows[0].Index]).ShowDialog();
         }
 
         private void editButton_Click(object sender, EventArgs e)
         {
-            ResourceEdit f = new ResourceEdit(true, StaticData.executiveGoals[dataGridView1.SelectedRows[0].Index]);
+            ResourceEditForm f = new ResourceEditForm(true, StaticData.executiveGoals[dataGridView1.SelectedRows[0].Index]);
             f.ShowDialog();
             StaticData.executiveGoals[dataGridView1.SelectedRows[0].Index] = f.Resource;
             ExecutiveGoalForm_Load(this, null);
@@ -44,7 +44,7 @@ namespace OOD.ExecutiveForms
 
         private void addButton_Click(object sender, EventArgs e)
         {
-            ResourceEdit f = new ResourceEdit(true, null);
+            ResourceEditForm f = new ResourceEditForm(true, null);
             f.ShowDialog();
             StaticData.executiveGoals.Add(f.Resource);
             ExecutiveGoalForm_Load(this, null);

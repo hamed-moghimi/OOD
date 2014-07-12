@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace OOD
 {
-    public partial class DialogTemplate : Form
+    public partial class TemplateDialog : Form
     {
-        public DialogTemplate()
+        public TemplateDialog()
         {
             InitializeComponent();
         }

@@ -10,21 +10,21 @@ using System.Windows.Forms;
 
 namespace OOD.Audit.Report
 {
-    public partial class Executive_Report_List : Template
+    public partial class ExecutiveReportListForm : TemplateForm
     {
-        public Executive_Report_List()
+        public ExecutiveReportListForm()
         {
             InitializeComponent();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            (new View_Executive_Report()).ShowDialog();
+            (new ViewExecutiveReportForm()).ShowDialog();
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            (new Executive_Report()).ShowDialog();
+            (new ExecutiveReportForm()).ShowDialog();
         }
 
         private void button2_Click(object sender, EventArgs e)

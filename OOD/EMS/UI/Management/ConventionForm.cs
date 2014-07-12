@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace OOD.Management
 {
-    public partial class Misaghname : Template
+    public partial class ConventionForm : TemplateForm
     {
-        public Misaghname()
+        public ConventionForm()
         {
             InitializeComponent();
         }

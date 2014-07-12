@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace OOD.Audit.Audit
 {
-    public partial class Audit_Kalan_View : Template
+    public partial class AuditGeneralViewForm : TemplateForm
     {
-        public Audit_Kalan_View()
+        public AuditGeneralViewForm()
         {
             this.menu.Visible = false;
             InitializeComponent();
@@ -25,7 +25,7 @@ namespace OOD.Audit.Audit
 
         private void Audit_Click(object sender, EventArgs e)
         {
-            (new Audit_Kalan()).ShowDialog();
+            (new AuditGeneralForm()).ShowDialog();
         }
     }
 }

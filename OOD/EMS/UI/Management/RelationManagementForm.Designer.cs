@@ -1,6 +1,6 @@
 ﻿namespace OOD.Management
 {
-    partial class RelationManagement
+    partial class RelationManagementForm
     {
         /// <summary>
         /// Required designer variable.

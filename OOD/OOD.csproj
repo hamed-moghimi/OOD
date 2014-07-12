@@ -117,6 +117,294 @@
     <Compile Include="EMS\Report\MetricReporter.cs" />
     <Compile Include="EMS\Report\ScheduleReport.cs" />
     <Compile Include="EMS\Report\ScheduleReporter.cs" />
+    <Compile Include="EMS\UI\Audit\Audit\AuditExecutiveForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EMS\UI\Audit\Audit\AuditExecutiveForm.Designer.cs">
+      <DependentUpon>AuditExecutiveForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EMS\UI\Audit\Audit\AuditExecutiveListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EMS\UI\Audit\Audit\AuditExecutiveListForm.Designer.cs">
+      <DependentUpon>AuditExecutiveListForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EMS\UI\Audit\Audit\AuditGeneralForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EMS\UI\Audit\Audit\AuditGeneralForm.Designer.cs">
+      <DependentUpon>AuditGeneralForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EMS\UI\Audit\Audit\AuditGeneralListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EMS\UI\Audit\Audit\AuditGeneralListForm.Designer.cs">
+      <DependentUpon>AuditGeneralListForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EMS\UI\Audit\Audit\AuditGeneralViewForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EMS\UI\Audit\Audit\AuditGeneralViewForm.Designer.cs">
+      <DependentUpon>AuditGeneralViewForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EMS\UI\Audit\Audit\AuditTaskForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EMS\UI\Audit\Audit\AuditTaskForm.Designer.cs">
+      <DependentUpon>AuditTaskForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EMS\UI\Audit\Audit\AuditTaskListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EMS\UI\Audit\Audit\AuditTaskListForm.Designer.cs">
+      <DependentUpon>AuditTaskListForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EMS\UI\Audit\Metric\AddMetricEntryForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EMS\UI\Audit\Metric\AddMetricEntryForm.Designer.cs">
+      <DependentUpon>AddMetricEntryForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EMS\UI\Audit\Metric\AddMetricForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EMS\UI\Audit\Metric\AddMetricForm.Designer.cs">
+      <DependentUpon>AddMetricForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EMS\UI\Audit\Metric\EditMetricEntryForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EMS\UI\Audit\Metric\EditMetricEntryForm.Designer.cs">
+      <DependentUpon>EditMetricEntryForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EMS\UI\Audit\Metric\MetricEntryForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EMS\UI\Audit\Metric\MetricEntryForm.Designer.cs">
+      <DependentUpon>MetricEntryForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EMS\UI\Audit\Metric\MetricForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EMS\UI\Audit\Metric\MetricForm.Designer.cs">
+      <DependentUpon>MetricForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EMS\UI\Audit\Report\ExecutiveReportForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EMS\UI\Audit\Report\ExecutiveReportForm.Designer.cs">
+      <DependentUpon>ExecutiveReportForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EMS\UI\Audit\Report\ExecutiveReportListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EMS\UI\Audit\Report\ExecutiveReportListForm.Designer.cs">
+      <DependentUpon>ExecutiveReportListForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EMS\UI\Audit\Report\PhysicalReportForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EMS\UI\Audit\Report\PhysicalReportForm.Designer.cs">
+      <DependentUpon>PhysicalReportForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EMS\UI\Audit\Report\PhysicalReportListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EMS\UI\Audit\Report\PhysicalReportListForm.Designer.cs">
+      <DependentUpon>PhysicalReportListForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EMS\UI\Audit\Report\ViewExecutiveReportForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EMS\UI\Audit\Report\ViewExecutiveReportForm.Designer.cs">
+      <DependentUpon>ViewExecutiveReportForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EMS\UI\Audit\Report\ViewPhysicalReportForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EMS\UI\Audit\Report\ViewPhysicalReportForm.Designer.cs">
+      <DependentUpon>ViewPhysicalReportForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EMS\UI\Execution\ExecutiveGoalEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EMS\UI\Execution\ExecutiveGoalEditForm.Designer.cs">
+      <DependentUpon>ExecutiveGoalEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EMS\UI\Execution\ExecutiveGoalForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EMS\UI\Execution\ExecutiveGoalForm.Designer.cs">
+      <DependentUpon>ExecutiveGoalForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EMS\UI\Execution\ResourceEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EMS\UI\Execution\ResourceEditForm.Designer.cs">
+      <DependentUpon>ResourceEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EMS\UI\Execution\ResourceForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EMS\UI\Execution\ResourceForm.Designer.cs">
+      <DependentUpon>ResourceForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EMS\UI\Execution\ScheduleEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EMS\UI\Execution\ScheduleEditForm.Designer.cs">
+      <DependentUpon>ScheduleEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EMS\UI\Execution\ScheduleForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EMS\UI\Execution\ScheduleForm.Designer.cs">
+      <DependentUpon>ScheduleForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EMS\UI\Execution\StructureForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EMS\UI\Execution\StructureForm.Designer.cs">
+      <DependentUpon>StructureForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EMS\UI\Execution\StructureSelectForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EMS\UI\Execution\StructureSelectForm.Designer.cs">
+      <DependentUpon>StructureSelectForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EMS\UI\MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EMS\UI\MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EMS\UI\Management\AddEffectForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EMS\UI\Management\AddEffectForm.Designer.cs">
+      <DependentUpon>AddEffectForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EMS\UI\Management\AddGeneralGoalsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EMS\UI\Management\AddGeneralGoalsForm.Designer.cs">
+      <DependentUpon>AddGeneralGoalsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EMS\UI\Management\AddLegalReqForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EMS\UI\Management\AddLegalReqForm.Designer.cs">
+      <DependentUpon>AddLegalReqForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EMS\UI\Management\ConventionForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EMS\UI\Management\ConventionForm.Designer.cs">
+      <DependentUpon>ConventionForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EMS\UI\Management\EffectForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EMS\UI\Management\EffectForm.Designer.cs">
+      <DependentUpon>EffectForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EMS\UI\Management\GeneralGoalsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EMS\UI\Management\GeneralGoalsForm.Designer.cs">
+      <DependentUpon>GeneralGoalsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EMS\UI\Management\LegalReqForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EMS\UI\Management\LegalReqForm.Designer.cs">
+      <DependentUpon>LegalReqForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EMS\UI\Management\RelationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EMS\UI\Management\RelationForm.Designer.cs">
+      <DependentUpon>RelationForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EMS\UI\Management\RelationManagementForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EMS\UI\Management\RelationManagementForm.Designer.cs">
+      <DependentUpon>RelationManagementForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EMS\UI\Management\ViewGeneralGoalForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EMS\UI\Management\ViewGeneralGoalForm.Designer.cs">
+      <DependentUpon>ViewGeneralGoalForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EMS\UI\Report\DashboardForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EMS\UI\Report\DashboardForm.Designer.cs">
+      <DependentUpon>DashboardForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EMS\UI\Report\MetricReportForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EMS\UI\Report\MetricReportForm.Designer.cs">
+      <DependentUpon>MetricReportForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EMS\UI\Report\OverallReportForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EMS\UI\Report\OverallReportForm.Designer.cs">
+      <DependentUpon>OverallReportForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EMS\UI\Report\ScheduleReportForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EMS\UI\Report\ScheduleReportForm.Designer.cs">
+      <DependentUpon>ScheduleReportForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EMS\UI\TemplateDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EMS\UI\TemplateDialog.Designer.cs">
+      <DependentUpon>TemplateDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EMS\UI\TemplateForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EMS\UI\TemplateForm.Designer.cs">
+      <DependentUpon>TemplateForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EMS\UI\Users\AddUserForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EMS\UI\Users\AddUserForm.Designer.cs">
+      <DependentUpon>AddUserForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EMS\UI\Users\EditUserForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EMS\UI\Users\EditUserForm.Designer.cs">
+      <DependentUpon>EditUserForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EMS\UI\Users\LoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EMS\UI\Users\LoginForm.Designer.cs">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EMS\UI\Users\UserManagementForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EMS\UI\Users\UserManagementForm.Designer.cs">
+      <DependentUpon>UserManagementForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EMS\UI\Users\ViewUserForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EMS\UI\Users\ViewUserForm.Designer.cs">
+      <DependentUpon>ViewUserForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="EMS\Users\AccessLevel.cs" />
     <Compile Include="EMS\Users\Administrator.cs" />
     <Compile Include="EMS\Users\Authentication.cs" />
@@ -126,422 +414,146 @@
     <Compile Include="EMS\Users\Manager.cs" />
     <Compile Include="EMS\Users\User.cs" />
     <Compile Include="EMS\Users\UserStorage.cs" />
-    <Compile Include="UI\Audit\Audit\Audit_Executive.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="UI\Audit\Audit\Audit_Executive.Designer.cs">
-      <DependentUpon>Audit_Executive.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UI\Audit\Audit\Audit_Executive_List.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="UI\Audit\Audit\Audit_Executive_List.Designer.cs">
-      <DependentUpon>Audit_Executive_List.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UI\Audit\Audit\Audit_Kalan.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="UI\Audit\Audit\Audit_Kalan.Designer.cs">
-      <DependentUpon>Audit_Kalan.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UI\Audit\Audit\Audit_Kalan_List.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="UI\Audit\Audit\Audit_Kalan_List.Designer.cs">
-      <DependentUpon>Audit_Kalan_List.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UI\Audit\Audit\Audit_Kalan_View.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="UI\Audit\Audit\Audit_Kalan_View.Designer.cs">
-      <DependentUpon>Audit_Kalan_View.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UI\Audit\Audit\Audit_Task.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="UI\Audit\Audit\Audit_Task.Designer.cs">
-      <DependentUpon>Audit_Task.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UI\Audit\Audit\Audit_Task_List.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="UI\Audit\Audit\Audit_Task_List.Designer.cs">
-      <DependentUpon>Audit_Task_List.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UI\Audit\Metric\AddMetricEntry.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="UI\Audit\Metric\AddMetricEntry.Designer.cs">
-      <DependentUpon>AddMetricEntry.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UI\Audit\Metric\Add_Metric.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="UI\Audit\Metric\Add_Metric.Designer.cs">
-      <DependentUpon>Add_Metric.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UI\Audit\Metric\EditMetricEntry.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="UI\Audit\Metric\EditMetricEntry.Designer.cs">
-      <DependentUpon>EditMetricEntry.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UI\Audit\Metric\Metric.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="UI\Audit\Metric\Metric.Designer.cs">
-      <DependentUpon>Metric.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UI\Audit\Metric\Metric_Entry.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="UI\Audit\Metric\Metric_Entry.Designer.cs">
-      <DependentUpon>Metric_Entry.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UI\Audit\Report\Executive_Report.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="UI\Audit\Report\Executive_Report.Designer.cs">
-      <DependentUpon>Executive_Report.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UI\Audit\Report\Executive_Report_List.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="UI\Audit\Report\Executive_Report_List.Designer.cs">
-      <DependentUpon>Executive_Report_List.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UI\Audit\Report\Physical_Report.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="UI\Audit\Report\Physical_Report.Designer.cs">
-      <DependentUpon>Physical_Report.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UI\Audit\Report\Physical_Report_List.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="UI\Audit\Report\Physical_Report_List.Designer.cs">
-      <DependentUpon>Physical_Report_List.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UI\Audit\Report\View_Executive_Report.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="UI\Audit\Report\View_Executive_Report.Designer.cs">
-      <DependentUpon>View_Executive_Report.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UI\Audit\Report\View_Physical_Report.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="UI\Audit\Report\View_Physical_Report.Designer.cs">
-      <DependentUpon>View_Physical_Report.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UI\DialogTemplate.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="UI\DialogTemplate.Designer.cs">
-      <DependentUpon>DialogTemplate.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UI\Execution\ExecutiveGoalEdit.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="UI\Execution\ExecutiveGoalEdit.Designer.cs">
-      <DependentUpon>ExecutiveGoalEdit.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UI\Execution\ExecutiveGoalForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="UI\Execution\ExecutiveGoalForm.Designer.cs">
-      <DependentUpon>ExecutiveGoalForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UI\Execution\ResourceEdit.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="UI\Execution\ResourceEdit.Designer.cs">
-      <DependentUpon>ResourceEdit.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UI\Execution\ScheduleEdit.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="UI\Execution\ScheduleEdit.Designer.cs">
-      <DependentUpon>ScheduleEdit.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UI\Execution\ScheduleForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="UI\Execution\ScheduleForm.Designer.cs">
-      <DependentUpon>ScheduleForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UI\Execution\StructureSelect.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="UI\Execution\StructureSelect.Designer.cs">
-      <DependentUpon>StructureSelect.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UI\Execution\TrainingResourceEdit.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="UI\Execution\TrainingResourceEdit.Designer.cs">
-      <DependentUpon>TrainingResourceEdit.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UI\Execution\TrainingResourceForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="UI\Execution\TrainingResourceForm.Designer.cs">
-      <DependentUpon>TrainingResourceForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UI\MainForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="UI\MainForm.Designer.cs">
-      <DependentUpon>MainForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UI\Management\AddEffect.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="UI\Management\AddEffect.Designer.cs">
-      <DependentUpon>AddEffect.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UI\Management\AddGeneralGoals.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="UI\Management\AddGeneralGoals.Designer.cs">
-      <DependentUpon>AddGeneralGoals.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UI\Management\AddLegalReq.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="UI\Management\AddLegalReq.Designer.cs">
-      <DependentUpon>AddLegalReq.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UI\Management\Effect.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="UI\Management\Effect.Designer.cs">
-      <DependentUpon>Effect.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UI\Management\GeneralGoals.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="UI\Management\GeneralGoals.Designer.cs">
-      <DependentUpon>GeneralGoals.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UI\Management\LegalReq.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="UI\Management\LegalReq.Designer.cs">
-      <DependentUpon>LegalReq.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UI\Management\Misaghname.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="UI\Management\Misaghname.Designer.cs">
-      <DependentUpon>Misaghname.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UI\Management\Relation.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="UI\Management\Relation.Designer.cs">
-      <DependentUpon>Relation.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UI\Management\RelationManagement.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="UI\Management\RelationManagement.Designer.cs">
-      <DependentUpon>RelationManagement.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UI\Management\ViewGeneralGoal.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="UI\Management\ViewGeneralGoal.Designer.cs">
-      <DependentUpon>ViewGeneralGoal.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UI\Report\OverallReportForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="UI\Report\OverallReportForm.Designer.cs">
-      <DependentUpon>OverallReportForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UI\Report\ScheduleReportForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="UI\Report\ScheduleReportForm.Designer.cs">
-      <DependentUpon>ScheduleReportForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UI\Report\TrainingResourceReport.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="UI\Report\TrainingResourceReport.Designer.cs">
-      <DependentUpon>TrainingResourceReport.cs</DependentUpon>
-    </Compile>
     <Compile Include="StaticData.cs" />
-    <Compile Include="UI\Execution\ResourceForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="UI\Execution\ResourceForm.Designer.cs">
-      <DependentUpon>ResourceForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UI\Execution\StructureForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="UI\Execution\StructureForm.Designer.cs">
-      <DependentUpon>StructureForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UI\Template.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="UI\Template.Designer.cs">
-      <DependentUpon>Template.cs</DependentUpon>
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="UI\Users\Add_User.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="UI\Users\Add_User.Designer.cs">
-      <DependentUpon>Add_User.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UI\Users\Edit_User.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="UI\Users\Edit_User.Designer.cs">
-      <DependentUpon>Edit_User.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UI\Users\login.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="UI\Users\login.Designer.cs">
-      <DependentUpon>login.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UI\Users\UserManagement.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="UI\Users\UserManagement.Designer.cs">
-      <DependentUpon>UserManagement.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UI\Users\View_User.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="UI\Users\View_User.Designer.cs">
-      <DependentUpon>View_User.cs</DependentUpon>
-    </Compile>
-    <EmbeddedResource Include="UI\Audit\Audit\Audit_Executive.resx">
-      <DependentUpon>Audit_Executive.cs</DependentUpon>
+    <EmbeddedResource Include="EMS\UI\Audit\Audit\AuditExecutiveForm.resx">
+      <DependentUpon>AuditExecutiveForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UI\Audit\Audit\Audit_Executive_List.resx">
-      <DependentUpon>Audit_Executive_List.cs</DependentUpon>
+    <EmbeddedResource Include="EMS\UI\Audit\Audit\AuditExecutiveListForm.resx">
+      <DependentUpon>AuditExecutiveListForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UI\Audit\Audit\Audit_Kalan.resx">
-      <DependentUpon>Audit_Kalan.cs</DependentUpon>
+    <EmbeddedResource Include="EMS\UI\Audit\Audit\AuditGeneralForm.resx">
+      <DependentUpon>AuditGeneralForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UI\Audit\Audit\Audit_Kalan_List.resx">
-      <DependentUpon>Audit_Kalan_List.cs</DependentUpon>
+    <EmbeddedResource Include="EMS\UI\Audit\Audit\AuditGeneralListForm.resx">
+      <DependentUpon>AuditGeneralListForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UI\Audit\Audit\Audit_Kalan_View.resx">
-      <DependentUpon>Audit_Kalan_View.cs</DependentUpon>
+    <EmbeddedResource Include="EMS\UI\Audit\Audit\AuditGeneralViewForm.resx">
+      <DependentUpon>AuditGeneralViewForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UI\Audit\Audit\Audit_Task.resx">
-      <DependentUpon>Audit_Task.cs</DependentUpon>
+    <EmbeddedResource Include="EMS\UI\Audit\Audit\AuditTaskForm.resx">
+      <DependentUpon>AuditTaskForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UI\Audit\Audit\Audit_Task_List.resx">
-      <DependentUpon>Audit_Task_List.cs</DependentUpon>
+    <EmbeddedResource Include="EMS\UI\Audit\Audit\AuditTaskListForm.resx">
+      <DependentUpon>AuditTaskListForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UI\Audit\Metric\AddMetricEntry.resx">
-      <DependentUpon>AddMetricEntry.cs</DependentUpon>
+    <EmbeddedResource Include="EMS\UI\Audit\Metric\AddMetricEntryForm.resx">
+      <DependentUpon>AddMetricEntryForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UI\Audit\Metric\Add_Metric.resx">
-      <DependentUpon>Add_Metric.cs</DependentUpon>
+    <EmbeddedResource Include="EMS\UI\Audit\Metric\AddMetricForm.resx">
+      <DependentUpon>AddMetricForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UI\Audit\Metric\EditMetricEntry.resx">
-      <DependentUpon>EditMetricEntry.cs</DependentUpon>
+    <EmbeddedResource Include="EMS\UI\Audit\Metric\EditMetricEntryForm.resx">
+      <DependentUpon>EditMetricEntryForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UI\Audit\Metric\Metric.resx">
-      <DependentUpon>Metric.cs</DependentUpon>
+    <EmbeddedResource Include="EMS\UI\Audit\Metric\MetricEntryForm.resx">
+      <DependentUpon>MetricEntryForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UI\Audit\Metric\Metric_Entry.resx">
-      <DependentUpon>Metric_Entry.cs</DependentUpon>
+    <EmbeddedResource Include="EMS\UI\Audit\Metric\MetricForm.resx">
+      <DependentUpon>MetricForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UI\Audit\Report\Executive_Report.resx">
-      <DependentUpon>Executive_Report.cs</DependentUpon>
+    <EmbeddedResource Include="EMS\UI\Audit\Report\ExecutiveReportForm.resx">
+      <DependentUpon>ExecutiveReportForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UI\Audit\Report\Executive_Report_List.resx">
-      <DependentUpon>Executive_Report_List.cs</DependentUpon>
+    <EmbeddedResource Include="EMS\UI\Audit\Report\ExecutiveReportListForm.resx">
+      <DependentUpon>ExecutiveReportListForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UI\Audit\Report\Physical_Report.resx">
-      <DependentUpon>Physical_Report.cs</DependentUpon>
+    <EmbeddedResource Include="EMS\UI\Audit\Report\PhysicalReportForm.resx">
+      <DependentUpon>PhysicalReportForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UI\Audit\Report\Physical_Report_List.resx">
-      <DependentUpon>Physical_Report_List.cs</DependentUpon>
+    <EmbeddedResource Include="EMS\UI\Audit\Report\PhysicalReportListForm.resx">
+      <DependentUpon>PhysicalReportListForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UI\Audit\Report\View_Executive_Report.resx">
-      <DependentUpon>View_Executive_Report.cs</DependentUpon>
+    <EmbeddedResource Include="EMS\UI\Audit\Report\ViewExecutiveReportForm.resx">
+      <DependentUpon>ViewExecutiveReportForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UI\Audit\Report\View_Physical_Report.resx">
-      <DependentUpon>View_Physical_Report.cs</DependentUpon>
+    <EmbeddedResource Include="EMS\UI\Audit\Report\ViewPhysicalReportForm.resx">
+      <DependentUpon>ViewPhysicalReportForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UI\DialogTemplate.resx">
-      <DependentUpon>DialogTemplate.cs</DependentUpon>
+    <EmbeddedResource Include="EMS\UI\Execution\ExecutiveGoalEditForm.resx">
+      <DependentUpon>ExecutiveGoalEditForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UI\Execution\ExecutiveGoalEdit.resx">
-      <DependentUpon>ExecutiveGoalEdit.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UI\Execution\ExecutiveGoalForm.resx">
+    <EmbeddedResource Include="EMS\UI\Execution\ExecutiveGoalForm.resx">
       <DependentUpon>ExecutiveGoalForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UI\Execution\ResourceEdit.resx">
-      <DependentUpon>ResourceEdit.cs</DependentUpon>
+    <EmbeddedResource Include="EMS\UI\Execution\ResourceEditForm.resx">
+      <DependentUpon>ResourceEditForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UI\Execution\ResourceForm.resx">
+    <EmbeddedResource Include="EMS\UI\Execution\ResourceForm.resx">
       <DependentUpon>ResourceForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UI\Execution\ScheduleEdit.resx">
-      <DependentUpon>ScheduleEdit.cs</DependentUpon>
+    <EmbeddedResource Include="EMS\UI\Execution\ScheduleEditForm.resx">
+      <DependentUpon>ScheduleEditForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UI\Execution\ScheduleForm.resx">
+    <EmbeddedResource Include="EMS\UI\Execution\ScheduleForm.resx">
       <DependentUpon>ScheduleForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UI\Execution\StructureForm.resx">
+    <EmbeddedResource Include="EMS\UI\Execution\StructureForm.resx">
       <DependentUpon>StructureForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UI\Execution\StructureSelect.resx">
-      <DependentUpon>StructureSelect.cs</DependentUpon>
+    <EmbeddedResource Include="EMS\UI\Execution\StructureSelectForm.resx">
+      <DependentUpon>StructureSelectForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UI\Execution\TrainingResourceEdit.resx">
-      <DependentUpon>TrainingResourceEdit.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UI\Execution\TrainingResourceForm.resx">
-      <DependentUpon>TrainingResourceForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UI\MainForm.resx">
+    <EmbeddedResource Include="EMS\UI\MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UI\Management\AddGeneralGoals.resx">
-      <DependentUpon>AddGeneralGoals.cs</DependentUpon>
+    <EmbeddedResource Include="EMS\UI\Management\AddGeneralGoalsForm.resx">
+      <DependentUpon>AddGeneralGoalsForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UI\Management\GeneralGoals.resx">
-      <DependentUpon>GeneralGoals.cs</DependentUpon>
+    <EmbeddedResource Include="EMS\UI\Management\ConventionForm.resx">
+      <DependentUpon>ConventionForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UI\Management\Misaghname.resx">
-      <DependentUpon>Misaghname.cs</DependentUpon>
+    <EmbeddedResource Include="EMS\UI\Management\EffectForm.resx">
+      <DependentUpon>EffectForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UI\Management\Relation.resx">
-      <DependentUpon>Relation.cs</DependentUpon>
+    <EmbeddedResource Include="EMS\UI\Management\GeneralGoalsForm.resx">
+      <DependentUpon>GeneralGoalsForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UI\Management\RelationManagement.resx">
-      <DependentUpon>RelationManagement.cs</DependentUpon>
+    <EmbeddedResource Include="EMS\UI\Management\LegalReqForm.resx">
+      <DependentUpon>LegalReqForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UI\Management\ViewGeneralGoal.resx">
-      <DependentUpon>ViewGeneralGoal.cs</DependentUpon>
+    <EmbeddedResource Include="EMS\UI\Management\RelationForm.resx">
+      <DependentUpon>RelationForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UI\Report\OverallReportForm.resx">
+    <EmbeddedResource Include="EMS\UI\Management\RelationManagementForm.resx">
+      <DependentUpon>RelationManagementForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EMS\UI\Management\ViewGeneralGoalForm.resx">
+      <DependentUpon>ViewGeneralGoalForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EMS\UI\Report\DashboardForm.resx">
+      <DependentUpon>DashboardForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EMS\UI\Report\MetricReportForm.resx">
+      <DependentUpon>MetricReportForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EMS\UI\Report\OverallReportForm.resx">
       <DependentUpon>OverallReportForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UI\Report\ScheduleReportForm.resx">
+    <EmbeddedResource Include="EMS\UI\Report\ScheduleReportForm.resx">
       <DependentUpon>ScheduleReportForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UI\Report\TrainingResourceReport.resx">
-      <DependentUpon>TrainingResourceReport.cs</DependentUpon>
+    <EmbeddedResource Include="EMS\UI\TemplateDialog.resx">
+      <DependentUpon>TemplateDialog.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UI\Template.resx">
-      <DependentUpon>Template.cs</DependentUpon>
+    <EmbeddedResource Include="EMS\UI\TemplateForm.resx">
+      <DependentUpon>TemplateForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EMS\UI\Users\AddUserForm.resx">
+      <DependentUpon>AddUserForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EMS\UI\Users\EditUserForm.resx">
+      <DependentUpon>EditUserForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EMS\UI\Users\LoginForm.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EMS\UI\Users\UserManagementForm.resx">
+      <DependentUpon>UserManagementForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EMS\UI\Users\ViewUserForm.resx">
+      <DependentUpon>ViewUserForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -553,21 +565,6 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="UI\Users\Add_User.resx">
-      <DependentUpon>Add_User.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UI\Users\Edit_User.resx">
-      <DependentUpon>Edit_User.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UI\Users\login.resx">
-      <DependentUpon>login.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UI\Users\UserManagement.resx">
-      <DependentUpon>UserManagement.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UI\Users\View_User.resx">
-      <DependentUpon>View_User.cs</DependentUpon>
-    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

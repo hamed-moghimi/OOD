@@ -1,6 +1,6 @@
 ﻿namespace OOD.Audit.Report
 {
-    partial class Executive_Report_List
+    partial class ExecutiveReportListForm
     {
         /// <summary>
         /// Required designer variable.

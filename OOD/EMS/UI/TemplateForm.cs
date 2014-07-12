@@ -18,24 +18,24 @@ using OOD.UserManagement;
 
 namespace OOD
 {
-    public partial class Template : Form
+    public partial class TemplateForm : Form
     {
-        public Template()
+        public TemplateForm()
         {
             InitializeComponent();
         }
 
         // fields
-        private Template parent;
+        private TemplateForm parent;
         private int childrenNum = 0;
 
         /// <summary>
         /// This function get a form, show it and hide this.
         /// It also sets parent field of the form to this.
         /// </summary>
-        private void newChild(Template childForm)
+        private void newChild(TemplateForm childForm)
         {
-            Template parent = this.parent == null ? this : this.parent;
+            TemplateForm parent = this.parent == null ? this : this.parent;
             childForm.parent = parent;
             parent.childrenNum++;
             parent.Hide();
@@ -47,7 +47,7 @@ namespace OOD
         /// if there is no children
         /// </summary>
         /// <param name="childForm"></param>
-        private void closeChild(Template childForm)
+        private void closeChild(TemplateForm childForm)
         {
             this.childrenNum--;
             if (childrenNum == 0)
@@ -78,11 +78,6 @@ namespace OOD
             newChild(new ResourceForm());
         }
 
-        private void trainingResourceSubmenu_Click(object sender, EventArgs e)
-        {
-            newChild(new TrainingResourceForm());
-        }
-
         private void executiveSubmenu_Click(object sender, EventArgs e)
         {
             newChild(new ExecutiveGoalForm());
@@ -103,64 +98,59 @@ namespace OOD
             newChild(new ScheduleReportForm());
         }
 
-        private void trainingResourceReport_Click(object sender, EventArgs e)
-        {
-            newChild(new TrainingResourceReport());
-        }
-
         private void generalGoalAuditSubmenu_Click(object sender, EventArgs e)
         {
-            newChild(new Audit_Kalan_List());
+            newChild(new AuditGeneralListForm());
         }
 
         private void executiveGoalAuditSubmenu_Click(object sender, EventArgs e)
         {
-            newChild(new Audit_Executive_List());
+            newChild(new AuditExecutiveListForm());
         }
 
         private void controlAuditSubmenu_Click(object sender, EventArgs e)
         {
-            newChild(new Physical_Report_List());
+            newChild(new PhysicalReportListForm());
         }
 
         private void executiveDocumentAuditSubmenu_Click(object sender, EventArgs e)
         {
-            newChild(new Executive_Report_List());
+            newChild(new ExecutiveReportListForm());
         }
 
         private void metricsCRUDSubmenu_Click(object sender, EventArgs e)
         {
-            newChild(new Metric());
+            newChild(new MetricForm());
         }
 
         private void metricsEvaluationSubmenu_Click(object sender, EventArgs e)
         {
-            newChild(new Metric_Entry());
+            newChild(new MetricEntryForm());
         }
 
         private void generalGoalsSubmenu_Click(object sender, EventArgs e)
         {
-            newChild(new GeneralGoals());
+            newChild(new GeneralGoalsForm());
         }
 
         private void obligationSubmenu_Click(object sender, EventArgs e)
         {
-            newChild(new LegalReq());
+            newChild(new LegalReqForm());
         }
 
         private void effectSubmenu_Click(object sender, EventArgs e)
         {
-            newChild(new Effect());
+            newChild(new EffectForm());
         }
 
         private void conventionSubmenu_Click(object sender, EventArgs e)
         {
-            newChild(new Misaghname());
+            newChild(new ConventionForm());
         }
 
         private void viewAccountSubmenu_Click(object sender, EventArgs e)
         {
-            newChild(new View_User());
+            newChild(new ViewUserForm());
         }
 
         private void exitSubmenu_Click(object sender, EventArgs e)
@@ -171,12 +161,12 @@ namespace OOD
 
         private void relationsSubmenu_Click(object sender, EventArgs e)
         {
-            newChild(new Relation());
+            newChild(new RelationForm());
         }
 
         private void responsibilitySubmenu_Click(object sender, EventArgs e)
         {
-            newChild(new Audit_Task_List());
+            newChild(new AuditTaskListForm());
         }
     }
 }

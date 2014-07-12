@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace OOD.UserManagement
 {
-    public partial class login : Template
+    public partial class LoginForm : TemplateForm
     {
-        public login()
+        public LoginForm()
         {
             this.menu.Visible = false;
             InitializeComponent();

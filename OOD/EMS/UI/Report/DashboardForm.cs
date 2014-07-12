@@ -8,9 +8,9 @@ using System.Windows.Forms;
 
 namespace OOD.ReportForms
 {
-    public partial class ScheduleReportForm : OOD.Template
+    public partial class DashboardForm : OOD.TemplateForm
     {
-        public ScheduleReportForm()
+        public DashboardForm()
         {
             InitializeComponent();
         }

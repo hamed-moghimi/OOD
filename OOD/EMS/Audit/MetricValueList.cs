@@ -14,7 +14,7 @@ namespace EMS.Audit
 
         public void update(double value)
         {
-            create(value);
+            create(new MetricValue(null, value));
         }
     }
 }

@@ -10,12 +10,12 @@ using System.Windows.Forms;
 
 namespace OOD.Audit.Metric
 {
-    public partial class EditMetricEntry : Template
+    public partial class EditMetricEntryForm : TemplateForm
     {
         public string name {get; set;}
         
 
-        public EditMetricEntry(string name, string val)
+        public EditMetricEntryForm(string name, string val)
         {
             this.menu.Visible = false;
             InitializeComponent();

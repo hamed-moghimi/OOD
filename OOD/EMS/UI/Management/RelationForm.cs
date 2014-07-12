@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace OOD.Management
 {
-    public partial class Relation : Template
+    public partial class RelationForm : TemplateForm
     {
-        public Relation()
+        public RelationForm()
         {
             InitializeComponent();
             foreach (object[] row in StaticData.relations)
@@ -28,12 +28,12 @@ namespace OOD.Management
 
         private void add_Click(object sender, EventArgs e)
         {
-            (new RelationManagement()).ShowDialog();
+            (new RelationManagementForm()).ShowDialog();
         }
 
         private void edit_Click(object sender, EventArgs e)
         {
-            (new RelationManagement()).ShowDialog();
+            (new RelationManagementForm()).ShowDialog();
         }
 
         private void delete_Click(object sender, EventArgs e)

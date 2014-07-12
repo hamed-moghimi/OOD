@@ -1,6 +1,6 @@
 ﻿namespace OOD.Management
 {
-    partial class AddLegalReq
+    partial class AddLegalReqForm
     {
         /// <summary>
         /// Required designer variable.

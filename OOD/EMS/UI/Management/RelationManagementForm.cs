@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace OOD.Management
 {
-    public partial class RelationManagement : Template
+    public partial class RelationManagementForm : TemplateForm
     {
-        public RelationManagement()
+        public RelationManagementForm()
         {
             this.menu.Visible = false;
             InitializeComponent();

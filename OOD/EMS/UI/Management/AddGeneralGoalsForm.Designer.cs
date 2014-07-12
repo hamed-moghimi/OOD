@@ -1,6 +1,6 @@
 ﻿namespace OOD.Management
 {
-    partial class AddGeneralGoals
+    partial class AddGeneralGoalsForm
     {
         /// <summary>
         /// Required designer variable.

@@ -1,6 +1,6 @@
 ﻿namespace OOD.Audit.Report
 {
-    partial class View_Executive_Report
+    partial class ViewExecutiveReportForm
     {
         /// <summary>
         /// Required designer variable.

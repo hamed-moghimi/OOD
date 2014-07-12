@@ -1,6 +1,6 @@
 ﻿namespace OOD.Management
 {
-    partial class Misaghname
+    partial class ConventionForm
     {
         /// <summary>
         /// Required designer variable.

@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace OOD.Audit.Metric
 {
-    public partial class Metric : Template
+    public partial class MetricForm : TemplateForm
     {
-        public Metric()
+        public MetricForm()
         {
             InitializeComponent();
             load_metrics();
@@ -29,7 +29,7 @@ namespace OOD.Audit.Metric
 
         private void Audit_Click(object sender, EventArgs e)
         {
-            (new Audit_Task()).ShowDialog();
+            (new AuditTaskForm()).ShowDialog();
         }
 
         private void Cancel_Click(object sender, EventArgs e)
@@ -39,7 +39,7 @@ namespace OOD.Audit.Metric
 
         private void add_Click(object sender, EventArgs e)
         {
-            Add_Metric add = new Add_Metric("");
+            AddMetricForm add = new AddMetricForm("");
             add.ShowDialog();
             this.dataGridView1.Rows.Add(add.name);
             object[] row = { add.name };
@@ -50,7 +50,7 @@ namespace OOD.Audit.Metric
 
         private void edit_Click(object sender, EventArgs e)
         {
-            Add_Metric add = new Add_Metric((string)(StaticData.Metrics[dataGridView1.SelectedRows[0].Index][0]));
+            AddMetricForm add = new AddMetricForm((string)(StaticData.Metrics[dataGridView1.SelectedRows[0].Index][0]));
             add.ShowDialog();
             StaticData.Metrics[dataGridView1.SelectedRows[0].Index][0] = add.name;
             load_metrics();

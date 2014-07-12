@@ -8,12 +8,12 @@ using System.Windows.Forms;
 
 namespace OOD.ExecutiveForms
 {
-    public partial class ScheduleEdit : OOD.DialogTemplate
+    public partial class ScheduleEditForm : OOD.TemplateDialog
     {
         private object[] resource;
         private bool canEdit = false;
 
-        public ScheduleEdit(bool canEdit, object[] resource)
+        public ScheduleEditForm(bool canEdit, object[] resource)
         {
             this.resource = resource;
             this.canEdit = canEdit;

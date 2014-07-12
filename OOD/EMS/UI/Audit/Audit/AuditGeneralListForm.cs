@@ -10,16 +10,16 @@ using System.Windows.Forms;
 
 namespace OOD.Audit
 {
-    public partial class Audit_Kalan_List : Template
+    public partial class AuditGeneralListForm : TemplateForm
     {
-        public Audit_Kalan_List()
+        public AuditGeneralListForm()
         {
             InitializeComponent();
         }
 
         private void Audit_Click(object sender, EventArgs e)
         {
-            (new Audit.Audit_Kalan_View()).ShowDialog();
+            (new Audit.AuditGeneralViewForm()).ShowDialog();
         }
 
         private void Cancel_Click(object sender, EventArgs e)

@@ -1,6 +1,6 @@
 ﻿namespace OOD.Management
 {
-    partial class Effect
+    partial class EffectForm
     {
         /// <summary>
         /// Required designer variable.

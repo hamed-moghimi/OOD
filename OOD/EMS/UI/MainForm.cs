@@ -8,7 +8,7 @@ using System.Windows.Forms;
 
 namespace OOD
 {
-    public partial class MainForm : OOD.Template
+    public partial class MainForm : OOD.TemplateForm
     {
         public MainForm()
         {

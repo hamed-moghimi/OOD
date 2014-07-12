@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace OOD.Audit
 {
-    public partial class Audit_Task_List : Template
+    public partial class AuditTaskListForm : TemplateForm
     {
-        public Audit_Task_List()
+        public AuditTaskListForm()
         {
             InitializeComponent();
             foreach (object[] row in StaticData.tasks)
@@ -23,7 +23,7 @@ namespace OOD.Audit
 
         private void Audit_Click(object sender, EventArgs e)
         {
-            (new Audit_Task()).ShowDialog();
+            (new AuditTaskForm()).ShowDialog();
         }
 
         private void Cancel_Click(object sender, EventArgs e)

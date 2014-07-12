@@ -10,12 +10,12 @@ using System.Windows.Forms;
 
 namespace OOD.Management
 {
-    public partial class AddGeneralGoals : Template
+    public partial class AddGeneralGoalsForm : TemplateForm
     {
 
         public string name { set; get; }
         public string dscp { set; get; }
-        public AddGeneralGoals(string name, string dscp)
+        public AddGeneralGoalsForm(string name, string dscp)
         {
             this.menu.Visible = false;
             InitializeComponent();
