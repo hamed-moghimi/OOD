@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using OOD.EMS.Management;
+using OOD.EMS.Exceptions;
 
 namespace OOD.EMS.UI.Management
 {
@@ -22,8 +24,9 @@ namespace OOD.EMS.UI.Management
         private void load_goals()
         {
             dataGridView1.Rows.Clear();
-            foreach (object[] row in StaticData.generalGoals)
+            foreach (GeneralGoal goal in GeneralGoalStorage.getInstance().all())
             {
+                object[] row = new object[] { goal.Title, goal.getDateString(), goal.Description };
                 this.dataGridView1.Rows.Add(row);
             }
         }
@@ -37,33 +40,58 @@ namespace OOD.EMS.UI.Management
         private void add_Click(object sender, EventArgs e)
         {
             AddGeneralGoalsForm add = new AddGeneralGoalsForm("", "");
-            add.ShowDialog();
-            dataGridView1.Rows.Add(add.name, add.dscp);
-            object[] row = {add.name, add.dscp, "file.pdf"};
-            StaticData.generalGoals.Add(row);
-        }
-
-        private void edit_Click(object sender, EventArgs e)
-        {
-            AddGeneralGoalsForm add = new AddGeneralGoalsForm((string)dataGridView1.Rows[dataGridView1.SelectedRows[0].Index].Cells[0].Value,
-                    (string)dataGridView1.Rows[dataGridView1.SelectedRows[0].Index].Cells[1].Value);
-            add.ShowDialog();
-            StaticData.generalGoals[dataGridView1.SelectedRows[0].Index][0] = add.name;
-            StaticData.generalGoals[dataGridView1.SelectedRows[0].Index][1] = add.dscp;
+            DialogResult res = add.ShowDialog();
+            if (res == DialogResult.OK)
+            {
+                GeneralGoal goal = new GeneralGoal(add.name, add.dscp);
+                GeneralGoalStorage.getInstance().create(goal);
+            }
             load_goals();
         }
 
-        private void delete_Click(object sender, EventArgs e)
+        /*private void edit_Click(object sender, EventArgs e)
         {
-            ask_confirm();
-            int i = dataGridView1.SelectedRows[0].Index;
-            dataGridView1.Rows.RemoveAt(i);
+            String goalName = (string)dataGridView1.Rows[dataGridView1.SelectedRows[0].Index].Cells[0].Value;
+            String goalDescp = (string)dataGridView1.Rows[dataGridView1.SelectedRows[0].Index].Cells[2].Value;
+            GeneralGoal goal = null;
+            GeneralGoalStorage goalList = GeneralGoalStorage.getInstance();
+            foreach (GeneralGoal g in goalList.all())
+            {
+                if (g.Title.Equals(goalName))
+                {
+                    goal = g;
+                    break;
+                }
+            }
+            AddGeneralGoalsForm add = new AddGeneralGoalsForm(goalName, goalDescp);
+            DialogResult res = add.ShowDialog();
+            if (res == DialogResult.OK)
+            {
+                goal.Title = add.name;
+                goal.Description = add.dscp;
+                goal.Date = DateTime.Now;
+                
+            }
+            load_goals();
+        }*/
 
-        }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void edit_Click(object sender, EventArgs e)
         {
-            (new ViewGeneralGoalForm()).ShowDialog();
+            String name = (string)dataGridView1.Rows[dataGridView1.SelectedRows[0].Index].Cells[0].Value;
+            GeneralGoal goal = null;
+            try
+            {
+                goal = GeneralGoalStorage.getInstance().all().Find(x => x.Title.Equals(name)); 
+            }
+            catch (Exception)
+            {
+            }
+            
+            if (goal != null)
+            {
+                (new ViewGeneralGoalForm(goal)).ShowDialog();
+            }
         }
     }
 }
