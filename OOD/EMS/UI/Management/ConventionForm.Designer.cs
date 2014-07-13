@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
-            this.richTextBox2 = new System.Windows.Forms.RichTextBox();
+            this.policyBox = new System.Windows.Forms.RichTextBox();
+            this.dscpBox = new System.Windows.Forms.RichTextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.label6 = new System.Windows.Forms.Label();
@@ -52,23 +52,25 @@
             this.label1.TabIndex = 3;
             this.label1.Text = "خط‌مشی:";
             // 
-            // richTextBox1
+            // policyBox
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(74, 106);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.richTextBox1.Size = new System.Drawing.Size(452, 96);
-            this.richTextBox1.TabIndex = 4;
-            this.richTextBox1.Text = "";
+            this.policyBox.Location = new System.Drawing.Point(74, 106);
+            this.policyBox.Name = "policyBox";
+            this.policyBox.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.policyBox.Size = new System.Drawing.Size(452, 96);
+            this.policyBox.TabIndex = 4;
+            this.policyBox.Text = "";
+            this.policyBox.TextChanged += new System.EventHandler(this.policyBox_TextChanged);
             // 
-            // richTextBox2
+            // dscpBox
             // 
-            this.richTextBox2.Location = new System.Drawing.Point(74, 260);
-            this.richTextBox2.Name = "richTextBox2";
-            this.richTextBox2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.richTextBox2.Size = new System.Drawing.Size(452, 96);
-            this.richTextBox2.TabIndex = 6;
-            this.richTextBox2.Text = "";
+            this.dscpBox.Location = new System.Drawing.Point(74, 260);
+            this.dscpBox.Name = "dscpBox";
+            this.dscpBox.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.dscpBox.Size = new System.Drawing.Size(452, 96);
+            this.dscpBox.TabIndex = 6;
+            this.dscpBox.Text = "";
+            this.dscpBox.TextChanged += new System.EventHandler(this.dscpBox_TextChanged);
             // 
             // label2
             // 
@@ -152,7 +154,7 @@
             // 
             this.addAtachment.FileName = "openFileDialog1";
             // 
-            // Misaghname
+            // ConventionForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -160,16 +162,16 @@
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.Cancel);
             this.Controls.Add(this.button2);
-            this.Controls.Add(this.richTextBox2);
+            this.Controls.Add(this.dscpBox);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.richTextBox1);
+            this.Controls.Add(this.policyBox);
             this.Controls.Add(this.label1);
-            this.Name = "Misaghname";
+            this.Name = "ConventionForm";
             this.Text = "Misaghname";
             this.Controls.SetChildIndex(this.label1, 0);
-            this.Controls.SetChildIndex(this.richTextBox1, 0);
+            this.Controls.SetChildIndex(this.policyBox, 0);
             this.Controls.SetChildIndex(this.label2, 0);
-            this.Controls.SetChildIndex(this.richTextBox2, 0);
+            this.Controls.SetChildIndex(this.dscpBox, 0);
             this.Controls.SetChildIndex(this.button2, 0);
             this.Controls.SetChildIndex(this.Cancel, 0);
             this.Controls.SetChildIndex(this.groupBox2, 0);
@@ -183,8 +185,8 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.RichTextBox richTextBox1;
-        private System.Windows.Forms.RichTextBox richTextBox2;
+        private System.Windows.Forms.RichTextBox policyBox;
+        private System.Windows.Forms.RichTextBox dscpBox;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Label label6;

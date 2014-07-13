@@ -15,13 +15,24 @@ namespace OOD.EMS.Management
         public List<Attachment> attachments { set; get; }
         public Users.User DocUser { set; get; }
 
-        public Convention(String policy, String description)
+        private static Convention instance;
+
+        private Convention(String policy, String description)
         {
             Policy = policy;
             Date = DateTime.Now;
             Description = description;
             DocUser = Authentication.getInstance().ActiveUser;
             attachments = new List<Attachment>();
+        }
+
+        public static Convention getInstance()
+        {
+            if (instance == null)
+            {
+                instance = new Convention("", "");
+            }
+            return instance;
         }
 
         public void addAttachment(Attachment attach)

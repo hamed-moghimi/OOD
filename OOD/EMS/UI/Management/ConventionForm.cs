@@ -7,14 +7,21 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using OOD.EMS.Management;
+using OOD.EMS.Users;
 
 namespace OOD.EMS.UI.Management
 {
     public partial class ConventionForm : TemplateForm
     {
+        bool changed;
         public ConventionForm()
         {
+            changed = false;
             InitializeComponent();
+            Convention conv = Convention.getInstance();
+            policyBox.Text = conv.Policy;
+            dscpBox.Text = conv.Description;
         }
 
         private void attach_Click(object sender, EventArgs e)
@@ -24,12 +31,30 @@ namespace OOD.EMS.UI.Management
 
         private void button2_Click(object sender, EventArgs e)
         {
+            if (changed)
+            {
+                Convention conv = Convention.getInstance();
+                conv.Policy = policyBox.Text;
+                conv.Description = dscpBox.Text;
+                conv.Date = DateTime.Today;
+                conv.DocUser = Authentication.getInstance().ActiveUser;
+            }
             this.Close();
         }
 
         private void Cancel_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void policyBox_TextChanged(object sender, EventArgs e)
+        {
+            changed = true;
+        }
+
+        private void dscpBox_TextChanged(object sender, EventArgs e)
+        {
+            changed = true;
         }
 
 
