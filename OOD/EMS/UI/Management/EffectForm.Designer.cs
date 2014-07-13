@@ -29,13 +29,12 @@
         private void InitializeComponent()
         {
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.Cancel = new System.Windows.Forms.Button();
-            this.edit = new System.Windows.Forms.Button();
-            this.add = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
             this.executive_target = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Date = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.desp = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Cancel = new System.Windows.Forms.Button();
+            this.edit = new System.Windows.Forms.Button();
+            this.add = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -60,6 +59,29 @@
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(391, 196);
             this.dataGridView1.TabIndex = 5;
+            // 
+            // executive_target
+            // 
+            this.executive_target.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.executive_target.HeaderText = "هدف اجرایی";
+            this.executive_target.Name = "executive_target";
+            this.executive_target.ReadOnly = true;
+            this.executive_target.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // Date
+            // 
+            this.Date.HeaderText = "تاریخ";
+            this.Date.Name = "Date";
+            this.Date.ReadOnly = true;
+            this.Date.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // desp
+            // 
+            this.desp.HeaderText = "descp";
+            this.desp.Name = "desp";
+            this.desp.ReadOnly = true;
+            this.desp.Visible = false;
+            this.desp.Width = 5;
             // 
             // Cancel
             // 
@@ -94,45 +116,11 @@
             this.add.UseVisualStyleBackColor = true;
             this.add.Click += new System.EventHandler(this.add_Click);
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(160, 270);
-            this.button1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(105, 33);
-            this.button1.TabIndex = 16;
-            this.button1.Text = "مشاهده";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // executive_target
-            // 
-            this.executive_target.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.executive_target.HeaderText = "هدف اجرایی";
-            this.executive_target.Name = "executive_target";
-            this.executive_target.ReadOnly = true;
-            this.executive_target.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
-            // Date
-            // 
-            this.Date.HeaderText = "تاریخ";
-            this.Date.Name = "Date";
-            this.Date.ReadOnly = true;
-            this.Date.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
-            // desp
-            // 
-            this.desp.HeaderText = "descp";
-            this.desp.Name = "desp";
-            this.desp.ReadOnly = true;
-            this.desp.Visible = false;
-            this.desp.Width = 5;
-            // 
             // EffectForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(538, 329);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.edit);
             this.Controls.Add(this.add);
             this.Controls.Add(this.Cancel);
@@ -143,7 +131,6 @@
             this.Controls.SetChildIndex(this.Cancel, 0);
             this.Controls.SetChildIndex(this.add, 0);
             this.Controls.SetChildIndex(this.edit, 0);
-            this.Controls.SetChildIndex(this.button1, 0);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -156,7 +143,6 @@
         private System.Windows.Forms.Button Cancel;
         private System.Windows.Forms.Button add;
         private System.Windows.Forms.Button edit;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.DataGridViewTextBoxColumn executive_target;
         private System.Windows.Forms.DataGridViewTextBoxColumn Date;
         private System.Windows.Forms.DataGridViewTextBoxColumn desp;
