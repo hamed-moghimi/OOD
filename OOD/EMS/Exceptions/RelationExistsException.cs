@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace OOD.EMS.Exceptions
 {
-    public class RelationExists : EMSException
+    public class RelationExistsException : EMSException
     {
-        public RelationExists() 
+        public RelationExistsException()
             : base("چنین ارتباطی پیش از این ثبت شده است")
         {
         }

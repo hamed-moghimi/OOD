@@ -70,7 +70,32 @@ namespace OOD.EMS.UI.Management
 
         private void edit_Click(object sender, EventArgs e)
         {
-            (new RelationManagementForm()).ShowDialog();
+            TabPage selected = tabRelations.SelectedTab;
+            ManagementDocumentRelation rel = null;
+            
+            if (selected.Text == "هدف کلان - الزام قانونی")
+            {
+                String firstName = (string)goalLegalGrid.Rows[goalLegalGrid.SelectedRows[0].Index].Cells[0].Value;
+                String secondName = (string)goalLegalGrid.Rows[goalLegalGrid.SelectedRows[0].Index].Cells[1].Value;
+                rel = GeneralGoal_LegalConstraintRelationStorage.getInstance().all().Find(x => x.GenGoal.Title.Equals(firstName)
+                       && x.LegConst.Title.Equals(secondName));
+            }
+            else if (selected.Text == "هدف کلان - تاثیر زیست‌محیطی")
+            {
+                String firstName = (string)goalEffectGrid.Rows[goalEffectGrid.SelectedRows[0].Index].Cells[0].Value;
+                String secondName = (string)goalEffectGrid.Rows[goalEffectGrid.SelectedRows[0].Index].Cells[1].Value;
+                rel = GeneralGoal_EnvironEffectRelationStorage.getInstance().all().Find(x => x.GenGoal.Title.Equals(firstName)
+                       && x.EnvEffect.Title.Equals(secondName));
+            }
+            else if (selected.Text == "الزام قانونی - تاثیر زیست‌محیطی")
+            {
+                String firstName = (string)legalEffectGrid.Rows[legalEffectGrid.SelectedRows[0].Index].Cells[0].Value;
+                String secondName = (string)legalEffectGrid.Rows[legalEffectGrid.SelectedRows[0].Index].Cells[1].Value;
+                rel = LegalConstraint_EnvironEffectRelationStorage.getInstance().all().Find(x => x.LegConst.Title.Equals(firstName)
+                       && x.EnvEffect.Title.Equals(secondName));
+            }
+
+            (new ViewRelationForm(rel)).ShowDialog();
         }
 
         
@@ -82,7 +107,7 @@ namespace OOD.EMS.UI.Management
             DataGridViewColumn first = new System.Windows.Forms.DataGridViewTextBoxColumn();
             DataGridViewColumn second = new System.Windows.Forms.DataGridViewTextBoxColumn();
             DataGridViewColumn Date = new System.Windows.Forms.DataGridViewTextBoxColumn();
-
+            
             dataGrid.AllowUserToAddRows = false;
             dataGrid.AllowUserToDeleteRows = false;
             dataGrid.AllowUserToOrderColumns = true;

@@ -29,80 +29,87 @@ namespace OOD.EMS.UI.Management
             }
             else
             {
-                String[] selected = new String[] { docType1.SelectedItem.ToString(), docType2.SelectedItem.ToString()};
-                int genIndex = Array.IndexOf(selected, "اهداف کلان");
-                int legalIndex = Array.IndexOf(selected, "الزامات قانونی");
-                int effectIndex = Array.IndexOf(selected, "تاثیرات زیست‌محیطی");
-                if (genIndex >= 0 && legalIndex >= 0)
+                try
                 {
-                    GeneralGoal goal = null;
-                    LegalConstraint doc = null;
-                    if (genIndex == 0)
+                    String[] selected = new String[] { docType1.SelectedItem.ToString(), docType2.SelectedItem.ToString() };
+                    int genIndex = Array.IndexOf(selected, "اهداف کلان");
+                    int legalIndex = Array.IndexOf(selected, "الزامات قانونی");
+                    int effectIndex = Array.IndexOf(selected, "تاثیرات زیست‌محیطی");
+                    if (genIndex >= 0 && legalIndex >= 0)
                     {
-                        String name = (string)rel1Grid.Rows[rel1Grid.SelectedRows[0].Index].Cells[0].Value;
-                        goal = GeneralGoalStorage.getInstance().all().Find(x => x.Title.Equals(name));
-                        name = (string)rel2Grid.Rows[rel2Grid.SelectedRows[0].Index].Cells[0].Value;
-                        doc = LegalConstraintStorage.getInstance().all().Find(x => x.Title.Equals(name));
-                        
-                    }
-                    else
-                    {
-                        String name = (string)rel2Grid.Rows[rel2Grid.SelectedRows[0].Index].Cells[0].Value;
-                        goal = GeneralGoalStorage.getInstance().all().Find(x => x.Title.Equals(name));
-                        name = (string)rel1Grid.Rows[rel1Grid.SelectedRows[0].Index].Cells[0].Value;
-                        doc = LegalConstraintStorage.getInstance().all().Find(x => x.Title.Equals(name));
-                    }
+                        GeneralGoal goal = null;
+                        LegalConstraint doc = null;
+                        if (genIndex == 0)
+                        {
+                            String name = (string)rel1Grid.Rows[rel1Grid.SelectedRows[0].Index].Cells[0].Value;
+                            goal = GeneralGoalStorage.getInstance().all().Find(x => x.Title.Equals(name));
+                            name = (string)rel2Grid.Rows[rel2Grid.SelectedRows[0].Index].Cells[0].Value;
+                            doc = LegalConstraintStorage.getInstance().all().Find(x => x.Title.Equals(name));
 
-                    GeneralGoal_LegalConstraintRelationStorage.getInstance().create(new GeneralGoal_LegalConstraintRelation
-                            (goal, doc));
+                        }
+                        else
+                        {
+                            String name = (string)rel2Grid.Rows[rel2Grid.SelectedRows[0].Index].Cells[0].Value;
+                            goal = GeneralGoalStorage.getInstance().all().Find(x => x.Title.Equals(name));
+                            name = (string)rel1Grid.Rows[rel1Grid.SelectedRows[0].Index].Cells[0].Value;
+                            doc = LegalConstraintStorage.getInstance().all().Find(x => x.Title.Equals(name));
+                        }
+
+                        GeneralGoal_LegalConstraintRelationStorage.getInstance().create(new GeneralGoal_LegalConstraintRelation
+                                (goal, doc));
+                    }
+                    else if (genIndex >= 0 && effectIndex >= 0)
+                    {
+                        GeneralGoal goal = null;
+                        EnvironEffect doc = null;
+                        if (genIndex == 0)
+                        {
+                            String name = (string)rel1Grid.Rows[rel1Grid.SelectedRows[0].Index].Cells[0].Value;
+                            goal = GeneralGoalStorage.getInstance().all().Find(x => x.Title.Equals(name));
+                            name = (string)rel2Grid.Rows[rel2Grid.SelectedRows[0].Index].Cells[0].Value;
+                            doc = EnvironEffectStorage.getInstance().all().Find(x => x.Title.Equals(name));
+
+                        }
+                        else
+                        {
+                            String name = (string)rel2Grid.Rows[rel2Grid.SelectedRows[0].Index].Cells[0].Value;
+                            goal = GeneralGoalStorage.getInstance().all().Find(x => x.Title.Equals(name));
+                            name = (string)rel1Grid.Rows[rel1Grid.SelectedRows[0].Index].Cells[0].Value;
+                            doc = EnvironEffectStorage.getInstance().all().Find(x => x.Title.Equals(name));
+                        }
+
+                        GeneralGoal_EnvironEffectRelationStorage.getInstance().create(new GeneralGoal_EnvironEffectRelation
+                                (goal, doc));
+                    }
+                    else if (legalIndex >= 0 && effectIndex >= 0)
+                    {
+                        EnvironEffect goal = null;
+                        LegalConstraint doc = null;
+                        if (effectIndex == 0)
+                        {
+                            String name = (string)rel1Grid.Rows[rel1Grid.SelectedRows[0].Index].Cells[0].Value;
+                            goal = EnvironEffectStorage.getInstance().all().Find(x => x.Title.Equals(name));
+                            name = (string)rel2Grid.Rows[rel2Grid.SelectedRows[0].Index].Cells[0].Value;
+                            doc = LegalConstraintStorage.getInstance().all().Find(x => x.Title.Equals(name));
+
+                        }
+                        else
+                        {
+                            String name = (string)rel2Grid.Rows[rel2Grid.SelectedRows[0].Index].Cells[0].Value;
+                            goal = EnvironEffectStorage.getInstance().all().Find(x => x.Title.Equals(name));
+                            name = (string)rel1Grid.Rows[rel1Grid.SelectedRows[0].Index].Cells[0].Value;
+                            doc = LegalConstraintStorage.getInstance().all().Find(x => x.Title.Equals(name));
+                        }
+
+                        LegalConstraint_EnvironEffectRelationStorage.getInstance().create(new LegalConstraint_EnvironEffectRelation
+                                (goal, doc));
+                    }
+                    Close();
                 }
-                else if (genIndex >= 0 && effectIndex >= 0)
+                catch (Exception e2)
                 {
-                    GeneralGoal goal = null;
-                    EnvironEffect doc = null;
-                    if (genIndex == 0)
-                    {
-                        String name = (string)rel1Grid.Rows[rel1Grid.SelectedRows[0].Index].Cells[0].Value;
-                        goal = GeneralGoalStorage.getInstance().all().Find(x => x.Title.Equals(name));
-                        name = (string)rel2Grid.Rows[rel2Grid.SelectedRows[0].Index].Cells[0].Value;
-                        doc = EnvironEffectStorage.getInstance().all().Find(x => x.Title.Equals(name));
-
-                    }
-                    else
-                    {
-                        String name = (string)rel2Grid.Rows[rel2Grid.SelectedRows[0].Index].Cells[0].Value;
-                        goal = GeneralGoalStorage.getInstance().all().Find(x => x.Title.Equals(name));
-                        name = (string)rel1Grid.Rows[rel1Grid.SelectedRows[0].Index].Cells[0].Value;
-                        doc = EnvironEffectStorage.getInstance().all().Find(x => x.Title.Equals(name));
-                    }
-
-                    GeneralGoal_EnvironEffectRelationStorage.getInstance().create(new GeneralGoal_EnvironEffectRelation
-                            (goal, doc));
+                    MessageBox.Show(e2.Message);
                 }
-                else if (legalIndex >= 0 && effectIndex >= 0)
-                {
-                    EnvironEffect goal = null;
-                    LegalConstraint doc = null;
-                    if (effectIndex == 0)
-                    {
-                        String name = (string)rel1Grid.Rows[rel1Grid.SelectedRows[0].Index].Cells[0].Value;
-                        goal = EnvironEffectStorage.getInstance().all().Find(x => x.Title.Equals(name));
-                        name = (string)rel2Grid.Rows[rel2Grid.SelectedRows[0].Index].Cells[0].Value;
-                        doc = LegalConstraintStorage.getInstance().all().Find(x => x.Title.Equals(name));
-
-                    }
-                    else
-                    {
-                        String name = (string)rel2Grid.Rows[rel2Grid.SelectedRows[0].Index].Cells[0].Value;
-                        goal = EnvironEffectStorage.getInstance().all().Find(x => x.Title.Equals(name));
-                        name = (string)rel1Grid.Rows[rel1Grid.SelectedRows[0].Index].Cells[0].Value;
-                        doc = LegalConstraintStorage.getInstance().all().Find(x => x.Title.Equals(name));
-                    }
-
-                    LegalConstraint_EnvironEffectRelationStorage.getInstance().create(new LegalConstraint_EnvironEffectRelation
-                            (goal, doc));
-                }
-                Close();
             }
 
             

@@ -85,7 +85,7 @@
     <Compile Include="EMS\Exceptions\GeneralGoalExists.cs" />
     <Compile Include="EMS\Exceptions\IncompleteFormException.cs" />
     <Compile Include="EMS\Exceptions\NoSuchUserException.cs" />
-    <Compile Include="EMS\Exceptions\RelationExists.cs" />
+    <Compile Include="EMS\Exceptions\RelationExistsException.cs" />
     <Compile Include="EMS\Execution\Allocation.cs" />
     <Compile Include="EMS\Execution\AllocationStorage.cs" />
     <Compile Include="EMS\Execution\Contribution.cs" />
@@ -352,6 +352,12 @@
     <Compile Include="EMS\UI\Management\ViewLegalReqForm.Designer.cs">
       <DependentUpon>ViewLegalReqForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="EMS\UI\Management\ViewRelationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EMS\UI\Management\ViewRelationForm.Designer.cs">
+      <DependentUpon>ViewRelationForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="EMS\UI\Management\ٰViewEffectForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -543,6 +549,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="EMS\UI\Management\ViewLegalReqForm.resx">
       <DependentUpon>ViewLegalReqForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EMS\UI\Management\ViewRelationForm.resx">
+      <DependentUpon>ViewRelationForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="EMS\UI\Management\ٰViewEffectForm.resx">
       <DependentUpon>ٰViewEffectForm.cs</DependentUpon>
