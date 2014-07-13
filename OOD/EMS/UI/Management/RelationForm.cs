@@ -65,6 +65,7 @@ namespace OOD.EMS.UI.Management
         private void add_Click(object sender, EventArgs e)
         {
             (new RelationManagementForm()).ShowDialog();
+            load_relations();
         }
 
         private void edit_Click(object sender, EventArgs e)

@@ -83,6 +83,7 @@
     <Compile Include="EMS\Exceptions\DocumentExsitsException.cs" />
     <Compile Include="EMS\Exceptions\EMSException.cs" />
     <Compile Include="EMS\Exceptions\GeneralGoalExists.cs" />
+    <Compile Include="EMS\Exceptions\IncompleteFormException.cs" />
     <Compile Include="EMS\Exceptions\NoSuchUserException.cs" />
     <Compile Include="EMS\Exceptions\RelationExists.cs" />
     <Compile Include="EMS\Execution\Allocation.cs" />

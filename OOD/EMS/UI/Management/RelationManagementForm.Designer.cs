@@ -72,6 +72,7 @@
             this.docType2.Name = "docType2";
             this.docType2.Size = new System.Drawing.Size(134, 32);
             this.docType2.TabIndex = 3;
+            this.docType2.SelectedIndexChanged += new System.EventHandler(this.docType2_SelectedIndexChanged);
             // 
             // docType1
             // 
@@ -156,10 +157,12 @@
             this.rel1Grid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.name});
             this.rel1Grid.Location = new System.Drawing.Point(379, 239);
+            this.rel1Grid.MultiSelect = false;
             this.rel1Grid.Name = "rel1Grid";
             this.rel1Grid.ReadOnly = true;
             this.rel1Grid.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.rel1Grid.RowHeadersVisible = false;
+            this.rel1Grid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.rel1Grid.Size = new System.Drawing.Size(277, 124);
             this.rel1Grid.TabIndex = 10;
             // 
@@ -180,10 +183,12 @@
             this.rel2Grid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1});
             this.rel2Grid.Location = new System.Drawing.Point(42, 239);
+            this.rel2Grid.MultiSelect = false;
             this.rel2Grid.Name = "rel2Grid";
             this.rel2Grid.ReadOnly = true;
             this.rel2Grid.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.rel2Grid.RowHeadersVisible = false;
+            this.rel2Grid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.rel2Grid.Size = new System.Drawing.Size(277, 124);
             this.rel2Grid.TabIndex = 11;
             // 
