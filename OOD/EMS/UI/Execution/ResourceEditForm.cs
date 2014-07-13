@@ -5,6 +5,8 @@ using System.Data;
 using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
+using OOD.EMS.Execution;
+using OOD.EMS.Exceptions;
 
 namespace OOD.EMS.UI.ExecutiveForms
 {
@@ -18,6 +20,11 @@ namespace OOD.EMS.UI.ExecutiveForms
             this.resource = resource;
             this.canEdit = canEdit;
             InitializeComponent();
+            if (!canEdit)
+            {
+                this.button2.Visible = false;
+                this.Cancel.Text = "بازگشت";
+            }
         }
 
         public object[] Resource
@@ -36,12 +43,10 @@ namespace OOD.EMS.UI.ExecutiveForms
             else
                 resource = new object[3];
             titleBox.ReadOnly = amountBox.ReadOnly = descBox.ReadOnly = !canEdit;
+            
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
+        
 
         private void ResourceEdit_FormClosing(object sender, FormClosingEventArgs e)
         {
@@ -49,5 +54,29 @@ namespace OOD.EMS.UI.ExecutiveForms
             resource[1] = amountBox.Text;
             resource[2] = descBox.Text;
         }
+
+        private void Cancel_Click(object sender, EventArgs e)
+        {
+            this.DialogResult = DialogResult.Cancel;
+            this.Close();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Resource res = ResourceStorage.getInstance().all().Find(x => x.Title.Equals(titleBox.Text));
+            if (res != null)
+            {
+                this.DialogResult = DialogResult.None;
+                MessageBox.Show(new ResourceExistsException().Message);
+            }
+            else
+            {
+                this.DialogResult = DialogResult.OK;
+                this.Close();
+            }
+            
+        }
+
+        
     }
 }

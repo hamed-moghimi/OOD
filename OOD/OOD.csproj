@@ -86,6 +86,7 @@
     <Compile Include="EMS\Exceptions\IncompleteFormException.cs" />
     <Compile Include="EMS\Exceptions\NoSuchUserException.cs" />
     <Compile Include="EMS\Exceptions\RelationExistsException.cs" />
+    <Compile Include="EMS\Exceptions\ResourceExistsException.cs" />
     <Compile Include="EMS\Execution\Allocation.cs" />
     <Compile Include="EMS\Execution\AllocationStorage.cs" />
     <Compile Include="EMS\Execution\Contribution.cs" />
