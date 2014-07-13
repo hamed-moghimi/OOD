@@ -11,9 +11,9 @@ using OOD.EMS.Management;
 
 namespace OOD.EMS.UI.Management
 {
-    public partial class ViewLegalReqForm : TemplateForm
+    public partial class ViewEffectForm : TemplateForm
     {
-        public ViewLegalReqForm(LegalConstraint goal)
+        public ViewEffectForm(EnvironEffect goal)
         {
             menu.Visible = false;
             InitializeComponent();
@@ -28,6 +28,11 @@ namespace OOD.EMS.UI.Management
             this.Close();
         }
 
-        
+        private void userBox_Click(object sender, EventArgs e)
+        {
+
+        }
+
+       
     }
 }

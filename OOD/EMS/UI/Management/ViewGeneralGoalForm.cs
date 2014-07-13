@@ -20,6 +20,7 @@ namespace OOD.EMS.UI.Management
             this.GoalNameLabel.Text = goal.Title;
             this.DateBox.Text = goal.getDateString();
             this.dscp_box.Text = goal.Description;
+            this.userBox.Text = goal.DocUser.Firstname + " " + goal.DocUser.Lastname;
         }
 
         private void Cancel_Click(object sender, EventArgs e)
@@ -27,9 +28,6 @@ namespace OOD.EMS.UI.Management
             this.Close();
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
+        
     }
 }

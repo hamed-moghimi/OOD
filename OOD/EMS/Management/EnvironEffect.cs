@@ -41,5 +41,10 @@ namespace OOD.EMS.Management
             else return Title.Equals(doc.Title);
 
         }
+
+        public String getDateString()
+        {
+            return Date.ToString("yyyy/MM/dd");
+        }
     }
 }

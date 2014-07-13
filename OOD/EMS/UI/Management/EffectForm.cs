@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using OOD.EMS.Management;
 
 namespace OOD.EMS.UI.Management
 {
@@ -22,8 +23,9 @@ namespace OOD.EMS.UI.Management
         private void load_goals()
         {
             dataGridView1.Rows.Clear();
-            foreach (object[] row in StaticData.effects)
+            foreach (EnvironEffect goal in EnvironEffectStorage.getInstance().all())
             {
+                object[] row = new object[] { goal.Title, goal.getDateString(), goal.Description };
                 this.dataGridView1.Rows.Add(row);
             }
         }
@@ -37,28 +39,33 @@ namespace OOD.EMS.UI.Management
         private void add_Click(object sender, EventArgs e)
         {
             AddEffectForm add = new AddEffectForm("", "");
-            add.ShowDialog();
-            dataGridView1.Rows.Add(add.name, add.dscp);
-            object[] row = {add.name, add.dscp, "file.pdf"};
-            StaticData.effects.Add(row);
+            DialogResult res = add.ShowDialog();
+            if (res == DialogResult.OK)
+            {
+                EnvironEffect goal = new EnvironEffect(add.name, add.dscp);
+                EnvironEffectStorage.getInstance().create(goal);
+            }
+            load_goals();
         }
 
         private void edit_Click(object sender, EventArgs e)
         {
-            AddEffectForm add = new AddEffectForm((string)dataGridView1.Rows[dataGridView1.SelectedRows[0].Index].Cells[0].Value,
-                    (string)dataGridView1.Rows[dataGridView1.SelectedRows[0].Index].Cells[1].Value);
-            add.ShowDialog();
-            StaticData.effects[dataGridView1.SelectedRows[0].Index][0] = add.name;
-            StaticData.effects[dataGridView1.SelectedRows[0].Index][1] = add.dscp;
-            load_goals();
+            String name = (string)dataGridView1.Rows[dataGridView1.SelectedRows[0].Index].Cells[0].Value;
+            EnvironEffect goal = null;
+            try
+            {
+                goal = EnvironEffectStorage.getInstance().all().Find(x => x.Title.Equals(name));
+            }
+            catch (Exception)
+            {
+            }
+
+            if (goal != null)
+            {
+                (new ViewEffectForm(goal)).ShowDialog();
+            }
         }
 
-        private void delete_Click(object sender, EventArgs e)
-        {
-            ask_confirm();
-            int i = dataGridView1.SelectedRows[0].Index;
-            dataGridView1.Rows.RemoveAt(i);
-
-        }
+        
     }
 }

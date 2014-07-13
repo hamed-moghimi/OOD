@@ -1,6 +1,6 @@
 ﻿namespace OOD.EMS.UI.Management
 {
-    partial class ViewGeneralGoalForm
+    partial class ViewEffectForm
     {
         /// <summary>
         /// Required designer variable.
@@ -45,17 +45,17 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(441, 22);
+            this.label5.Location = new System.Drawing.Point(441, 23);
             this.label5.Name = "label5";
             this.label5.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.label5.Size = new System.Drawing.Size(55, 24);
+            this.label5.Size = new System.Drawing.Size(51, 24);
             this.label5.TabIndex = 13;
-            this.label5.Text = "نام هدف:";
+            this.label5.Text = "نام سند:";
             // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.linkLabel1);
-            this.groupBox2.Location = new System.Drawing.Point(39, 259);
+            this.groupBox2.Location = new System.Drawing.Point(39, 258);
             this.groupBox2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -77,7 +77,7 @@
             // 
             // Cancel
             // 
-            this.Cancel.Location = new System.Drawing.Point(38, 375);
+            this.Cancel.Location = new System.Drawing.Point(38, 374);
             this.Cancel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Cancel.Name = "Cancel";
             this.Cancel.Size = new System.Drawing.Size(105, 33);
@@ -89,17 +89,17 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(438, 137);
+            this.label3.Location = new System.Drawing.Point(438, 136);
             this.label3.Name = "label3";
             this.label3.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.label3.Size = new System.Drawing.Size(60, 24);
             this.label3.TabIndex = 16;
             this.label3.Text = "توضیحات:";
-            
+            // 
             // dscp_box
             // 
             this.dscp_box.Enabled = false;
-            this.dscp_box.Location = new System.Drawing.Point(39, 170);
+            this.dscp_box.Location = new System.Drawing.Point(39, 169);
             this.dscp_box.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dscp_box.Name = "dscp_box";
             this.dscp_box.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -137,28 +137,29 @@
             // 
             // userBox
             // 
-            this.userBox.Location = new System.Drawing.Point(156, 90);
+            this.userBox.Location = new System.Drawing.Point(156, 92);
             this.userBox.Name = "userBox";
             this.userBox.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.userBox.Size = new System.Drawing.Size(244, 24);
-            this.userBox.TabIndex = 26;
+            this.userBox.TabIndex = 24;
             this.userBox.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.userBox.Click += new System.EventHandler(this.userBox_Click);
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(406, 90);
+            this.label4.Location = new System.Drawing.Point(406, 91);
             this.label4.Name = "label4";
             this.label4.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.label4.Size = new System.Drawing.Size(90, 24);
-            this.label4.TabIndex = 25;
+            this.label4.TabIndex = 23;
             this.label4.Text = "کاربر ثبت‌کننده:";
             // 
-            // ViewGeneralGoalForm
+            // ViewEffectForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(538, 424);
+            this.ClientSize = new System.Drawing.Size(538, 423);
             this.Controls.Add(this.userBox);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.DateBox);
@@ -169,8 +170,8 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.dscp_box);
             this.Controls.Add(this.label5);
-            this.Name = "ViewGeneralGoalForm";
-            this.Text = "مشاهده‌ی هدف کلان";
+            this.Name = "ViewEffectForm";
+            this.Text = "مشاهده‌ی سند تاثیرات زیست‌محیطی";
             this.Controls.SetChildIndex(this.label5, 0);
             this.Controls.SetChildIndex(this.dscp_box, 0);
             this.Controls.SetChildIndex(this.label3, 0);

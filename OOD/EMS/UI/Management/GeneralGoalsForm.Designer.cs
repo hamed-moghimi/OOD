@@ -97,7 +97,7 @@
             // edit
             // 
             this.edit.Image = global::OOD.Properties.Resources.edit;
-            this.edit.Location = new System.Drawing.Point(466, 161);
+            this.edit.Location = new System.Drawing.Point(466, 162);
             this.edit.Name = "edit";
             this.edit.Size = new System.Drawing.Size(38, 37);
             this.edit.TabIndex = 14;
