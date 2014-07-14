@@ -40,11 +40,7 @@ namespace OOD.EMS.UI.ExecutiveForms
             }
         }
 
-        private void dataGridView1_DoubleClick(object sender, EventArgs e)
-        {
-            new ResourceEditForm(false, StaticData.resources[dataGridView1.SelectedRows[0].Index]).ShowDialog();
-        }
-
+        
 
         private void editButton_Click(object sender, EventArgs e)
         {
