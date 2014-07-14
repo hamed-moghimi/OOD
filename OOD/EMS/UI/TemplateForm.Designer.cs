@@ -71,6 +71,7 @@ namespace OOD.EMS.UI
             this.viewAccountSubmenu = new System.Windows.Forms.ToolStripMenuItem();
             this.exitSubmenu = new System.Windows.Forms.ToolStripMenuItem();
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
+            this.مدیریتمسئولیتهاToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menu.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -158,7 +159,8 @@ namespace OOD.EMS.UI
             this.structureSubmenu,
             this.toolStripSeparator3,
             this.executiveSubmenu,
-            this.scheduleSubmenu});
+            this.scheduleSubmenu,
+            this.مدیریتمسئولیتهاToolStripMenuItem});
             this.executiveMenu.Name = "executiveMenu";
             this.executiveMenu.Size = new System.Drawing.Size(104, 28);
             this.executiveMenu.Text = "اسناد عملکردی";
@@ -344,6 +346,13 @@ namespace OOD.EMS.UI
             this.toolTip.ReshowDelay = 100;
             this.toolTip.ShowAlways = true;
             // 
+            // مدیریتمسئولیتهاToolStripMenuItem
+            // 
+            this.مدیریتمسئولیتهاToolStripMenuItem.Name = "مدیریتمسئولیتهاToolStripMenuItem";
+            this.مدیریتمسئولیتهاToolStripMenuItem.Size = new System.Drawing.Size(202, 28);
+            this.مدیریتمسئولیتهاToolStripMenuItem.Text = "مدیریت مسئولیت‌ها";
+            this.مدیریتمسئولیتهاToolStripMenuItem.Click += new System.EventHandler(this.مدیریتمسئولیتهاToolStripMenuItem_Click);
+            // 
             // TemplateForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 24F);
@@ -405,6 +414,7 @@ namespace OOD.EMS.UI
         protected MenuStrip menu;
         private ToolStripMenuItem relationsSubmenu;
         private ToolStripMenuItem responsibilitySubmenu;
+        private ToolStripMenuItem مدیریتمسئولیتهاToolStripMenuItem;
 
     }
 }

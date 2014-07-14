@@ -9,7 +9,7 @@ namespace OOD.EMS.Exceptions
     public class IncompleteFormException : EMSException
     {
         public IncompleteFormException() 
-            : base("فرم را کامل کنید") 
+            : base("فرم را درست و کامل پر کنید") 
         { 
         }
 

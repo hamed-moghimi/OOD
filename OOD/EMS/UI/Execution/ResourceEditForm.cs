@@ -14,11 +14,20 @@ namespace OOD.EMS.UI.ExecutiveForms
     {
         private object[] resource;
         private bool canEdit = false;
+        private String prevTitle;
 
         public ResourceEditForm(bool canEdit, object[] resource)
         {
             this.resource = resource;
             this.canEdit = canEdit;
+            if (resource != null)
+            {
+                prevTitle = (string)resource[0];
+            }
+            else
+            {
+                prevTitle = null;
+            }
             InitializeComponent();
             if (!canEdit)
             {
@@ -64,16 +73,25 @@ namespace OOD.EMS.UI.ExecutiveForms
         private void button2_Click(object sender, EventArgs e)
         {
             Resource res = ResourceStorage.getInstance().all().Find(x => x.Title.Equals(titleBox.Text));
-            if (res != null)
+            if ((prevTitle == null || !prevTitle.Equals((string)resource[0])) && res != null)
             {
                 this.DialogResult = DialogResult.None;
                 MessageBox.Show(new ResourceExistsException().Message);
             }
             else
             {
+                resource[1] = convert(amountBox.Text);
+                try
+                {
+                    Convert.ToInt32(resource[1]);
+                    this.DialogResult = DialogResult.OK;
+                    this.Close();
+                }
+                catch(Exception e2)
+                {
+                    MessageBox.Show(new IncompleteFormException().Message);
+                }
                 
-                this.DialogResult = DialogResult.OK;
-                this.Close();
             }
         }
 

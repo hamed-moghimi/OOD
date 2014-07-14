@@ -34,7 +34,7 @@ namespace OOD.EMS.UI.ExecutiveForms
         {
             StructureSelectForm s = new StructureSelectForm();
             s.ShowDialog();
-            responsibleBox.Text = s.Section;
+            responsibleBox.Text = s.Section.Name;
         }
 
         private void ExecutiveGoalEdit_Load(object sender, EventArgs e)

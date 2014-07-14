@@ -168,5 +168,23 @@ namespace OOD.EMS.UI
         {
             newChild(new AuditTaskListForm());
         }
+
+        protected String convert(String old)
+        {
+            char[][] numbers = new char[][]
+            {
+                "0123456789".ToCharArray(),"۰۱۲۳۴۵۶۷۸۹".ToCharArray()
+            };
+            for (int x = 0; x <= 9; x++)
+            {
+                old.Replace(numbers[0][x], numbers[1][x]);
+            }
+            return old;
+        }
+
+        private void مدیریتمسئولیتهاToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            newChild(new TaskForm());
+        }
     }
 }

@@ -88,6 +88,7 @@
     <Compile Include="EMS\Exceptions\NoSuchUserException.cs" />
     <Compile Include="EMS\Exceptions\RelationExistsException.cs" />
     <Compile Include="EMS\Exceptions\ResourceExistsException.cs" />
+    <Compile Include="EMS\Exceptions\TaskExistsException.cs" />
     <Compile Include="EMS\Execution\Allocation.cs" />
     <Compile Include="EMS\Execution\AllocationStorage.cs" />
     <Compile Include="EMS\Execution\Contribution.cs" />
@@ -287,6 +288,24 @@
     </Compile>
     <Compile Include="EMS\UI\Execution\StructureSelectForm.Designer.cs">
       <DependentUpon>StructureSelectForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EMS\UI\Execution\TaskEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EMS\UI\Execution\TaskEditForm.Designer.cs">
+      <DependentUpon>TaskEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EMS\UI\Execution\TaskForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EMS\UI\Execution\TaskForm.Designer.cs">
+      <DependentUpon>TaskForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EMS\UI\Execution\ViewTaskForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EMS\UI\Execution\ViewTaskForm.Designer.cs">
+      <DependentUpon>ViewTaskForm.cs</DependentUpon>
     </Compile>
     <Compile Include="EMS\UI\MainForm.cs">
       <SubType>Form</SubType>
@@ -530,6 +549,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="EMS\UI\Execution\StructureSelectForm.resx">
       <DependentUpon>StructureSelectForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EMS\UI\Execution\TaskEditForm.resx">
+      <DependentUpon>TaskEditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EMS\UI\Execution\TaskForm.resx">
+      <DependentUpon>TaskForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EMS\UI\Execution\ViewTaskForm.resx">
+      <DependentUpon>ViewTaskForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="EMS\UI\MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
