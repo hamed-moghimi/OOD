@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
+using OOD.EMS.Execution;
 
 namespace OOD.EMS.UI.ExecutiveForms
 {
@@ -13,18 +14,62 @@ namespace OOD.EMS.UI.ExecutiveForms
         public ScheduleForm()
         {
             InitializeComponent();
+            load_programs();
         }
 
-        private void ScheduleForm_Load(object sender, EventArgs e)
+        private void load_programs()
         {
             dataGridView1.Rows.Clear();
-            foreach (object[] row in StaticData.schedules)
-                dataGridView1.Rows.Add(row);
+            foreach (ExecutiveGoal goal in ExecutiveGoalStorage.getInstance().all())
+            {
+                if (goal.program != null)
+                {
+                    dataGridView1.Rows.Add(new Object[]{goal.Title, goal.program.getStartDateString(),
+                        goal.program.getEndDateString(), goal.getProgress().ToString()});
+                }
+            }
         }
 
-        private void dataGridView1_DoubleClick(object sender, EventArgs e)
+        
+        private void addButton_Click(object sender, EventArgs e)
         {
-            new ScheduleEditForm(false, StaticData.schedules[dataGridView1.SelectedRows[0].Index]).ShowDialog();
+            SelectExecutiveGoalForm f = new SelectExecutiveGoalForm();
+            DialogResult res = f.ShowDialog();
+            if (res == DialogResult.OK)
+            {
+                ScheduleEditForm f2 = new ScheduleEditForm(f.goal);
+                DialogResult res2 = f2.ShowDialog();
+                if (res2 == DialogResult.OK)
+                {
+                    load_programs();
+                }
+
+            }
+        }
+
+        private void editButton_Click(object sender, EventArgs e)
+        {
+            String name = (string)dataGridView1.Rows[dataGridView1.SelectedRows[0].Index].Cells[0].Value;
+            ExecutiveGoal goal = ExecutiveGoalStorage.getInstance().all().Find(x => x.Title.Equals(name));
+            ScheduleEditForm f2 = new ScheduleEditForm(goal);
+            DialogResult res2 = f2.ShowDialog();
+            if (res2 == DialogResult.OK)
+            {
+                load_programs();
+            }
+        }
+
+        private void deleteButton_Click(object sender, EventArgs e)
+        {
+            DialogResult res = ask_confirm();
+            if (res == DialogResult.Yes)
+            {
+                String name = (string)dataGridView1.Rows[dataGridView1.SelectedRows[0].Index].Cells[0].Value;
+                ExecutiveGoal goal = ExecutiveGoalStorage.getInstance().all().Find(x => x.Title.Equals(name));
+                goal.program = null;
+                load_programs();
+            }
+            
         }
     }
 }

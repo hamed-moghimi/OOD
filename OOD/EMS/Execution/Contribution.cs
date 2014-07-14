@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace OOD.EMS.Execution
 {
-    public class Contribution
+    public class Contribution : IEquatable<Contribution>
     {
         public Task ContTask { set; get; }
         public ExecutionProgram Program { set; get; }
@@ -19,5 +19,18 @@ namespace OOD.EMS.Execution
             Share = share;
         }
 
+        public override bool Equals(object obj)
+        {
+            if (obj == null) return false;
+            Contribution cont = obj as Contribution;
+            if (cont == null) return false;
+            return ContTask.Title.Equals(cont.ContTask.Title) && Program.Title.Equals(cont.Program.Title) ;
+        }
+
+        public bool Equals(Contribution cont)
+        {
+            if (cont == null) return false;
+            return ContTask.Title.Equals(cont.ContTask.Title) && Program.Title.Equals(cont.Program.Title);
+        }
     }
 }

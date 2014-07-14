@@ -271,11 +271,29 @@
     <Compile Include="EMS\UI\Execution\ScheduleForm.Designer.cs">
       <DependentUpon>ScheduleForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="EMS\UI\Execution\SelectExecutiveGoal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EMS\UI\Execution\SelectExecutiveGoal.Designer.cs">
+      <DependentUpon>SelectExecutiveGoal.cs</DependentUpon>
+    </Compile>
     <Compile Include="EMS\UI\Execution\SelectManagerForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="EMS\UI\Execution\SelectManagerForm.Designer.cs">
       <DependentUpon>SelectManagerForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EMS\UI\Execution\SelectResourceForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EMS\UI\Execution\SelectResourceForm.Designer.cs">
+      <DependentUpon>SelectResourceForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EMS\UI\Execution\SelectTaskForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EMS\UI\Execution\SelectTaskForm.Designer.cs">
+      <DependentUpon>SelectTaskForm.cs</DependentUpon>
     </Compile>
     <Compile Include="EMS\UI\Execution\StructureForm.cs">
       <SubType>Form</SubType>
@@ -541,8 +559,17 @@
     <EmbeddedResource Include="EMS\UI\Execution\ScheduleForm.resx">
       <DependentUpon>ScheduleForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="EMS\UI\Execution\SelectExecutiveGoal.resx">
+      <DependentUpon>SelectExecutiveGoal.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="EMS\UI\Execution\SelectManagerForm.resx">
       <DependentUpon>SelectManagerForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EMS\UI\Execution\SelectResourceForm.resx">
+      <DependentUpon>SelectResourceForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EMS\UI\Execution\SelectTaskForm.resx">
+      <DependentUpon>SelectTaskForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="EMS\UI\Execution\StructureForm.resx">
       <DependentUpon>StructureForm.cs</DependentUpon>

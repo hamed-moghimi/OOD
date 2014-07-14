@@ -22,7 +22,7 @@ namespace OOD.EMS.Execution
 
         public Boolean isConsistent(Allocation allocation)
         {
-            return false;
+            return true;
         }
     }
 }

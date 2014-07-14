@@ -67,6 +67,7 @@
             this.deleteButton.TabIndex = 2;
             this.toolTip.SetToolTip(this.deleteButton, "حذف");
             this.deleteButton.UseVisualStyleBackColor = true;
+            this.deleteButton.Click += new System.EventHandler(this.deleteButton_Click);
             // 
             // editButton
             // 
@@ -77,6 +78,7 @@
             this.editButton.TabIndex = 2;
             this.toolTip.SetToolTip(this.editButton, "ویرایش");
             this.editButton.UseVisualStyleBackColor = true;
+            this.editButton.Click += new System.EventHandler(this.editButton_Click);
             // 
             // addButton
             // 
@@ -87,6 +89,7 @@
             this.addButton.TabIndex = 2;
             this.toolTip.SetToolTip(this.addButton, "اضافه کردن");
             this.addButton.UseVisualStyleBackColor = true;
+            this.addButton.Click += new System.EventHandler(this.addButton_Click);
             // 
             // dataGridView1
             // 
@@ -105,7 +108,6 @@
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(603, 278);
             this.dataGridView1.TabIndex = 0;
-            this.dataGridView1.DoubleClick += new System.EventHandler(this.dataGridView1_DoubleClick);
             // 
             // title
             // 
@@ -140,7 +142,6 @@
             this.ClientSize = new System.Drawing.Size(698, 390);
             this.Controls.Add(this.groupBox1);
             this.Name = "ScheduleForm";
-            this.Load += new System.EventHandler(this.ScheduleForm_Load);
             this.Controls.SetChildIndex(this.groupBox1, 0);
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
