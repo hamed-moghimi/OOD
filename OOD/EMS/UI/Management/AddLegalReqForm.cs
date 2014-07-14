@@ -26,7 +26,14 @@ namespace OOD.EMS.UI.Management
 
         private void button2_Click(object sender, EventArgs e)
         {
+            
             name = this.name_box.Text;
+            if (name.Trim().Count() == 0)
+            {
+                MessageBox.Show(new IncompleteFormException().Message);
+                return;
+            }
+            
             dscp = this.dscp_box.Text;
             if (LegalConstraintStorage.getInstance().all().Contains(new LegalConstraint(name, dscp)))
             {

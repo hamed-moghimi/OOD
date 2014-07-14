@@ -1,8 +1,9 @@
-﻿using System;
+﻿﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Globalization;
 using OOD.EMS.UI.Users;
 
 namespace OOD
@@ -17,6 +18,12 @@ namespace OOD
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+            CultureInfo culture = new GSD.Globalization.PersianCulture();
+            culture.DateTimeFormat.ShortDatePattern = "yy/MM/dd";
+            culture.DateTimeFormat.LongDatePattern = "yyyy/MM/dd";
+            culture.DateTimeFormat.ShortTimePattern = "HH:mm:ss";
+            culture.DateTimeFormat.LongTimePattern = "";
+            Application.CurrentCulture = culture;
             Application.Run(new LoginForm());
         }
     }

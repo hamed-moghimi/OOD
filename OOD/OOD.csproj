@@ -121,6 +121,7 @@
     <Compile Include="EMS\Management\LegalConstraint_EnvironEffectRelationStorage.cs" />
     <Compile Include="EMS\Management\ManagementDocument.cs" />
     <Compile Include="EMS\Management\ManagementDocumentRelation.cs" />
+    <Compile Include="EMS\PersianCulture.cs" />
     <Compile Include="EMS\Report\Dashboard.cs" />
     <Compile Include="EMS\Report\DocumentReport.cs" />
     <Compile Include="EMS\Report\DocumentReporter.cs" />
