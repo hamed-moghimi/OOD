@@ -1,4 +1,4 @@
-﻿namespace OOD.EMS.UI.ExecutiveForms
+﻿namespace OOD.EMS.UI.Execution
 {
     partial class ExecutiveGoalForm
     {
@@ -124,6 +124,7 @@
             this.Cancel.TabIndex = 15;
             this.Cancel.Text = "بازگشت";
             this.Cancel.UseVisualStyleBackColor = true;
+            this.Cancel.Click += new System.EventHandler(this.Cancel_Click);
             // 
             // ExecutiveGoalForm
             // 

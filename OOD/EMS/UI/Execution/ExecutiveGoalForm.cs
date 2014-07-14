@@ -7,7 +7,7 @@ using System.Text;
 using System.Windows.Forms;
 using OOD.EMS.Execution;
 
-namespace OOD.EMS.UI.ExecutiveForms
+namespace OOD.EMS.UI.Execution
 {
     public partial class ExecutiveGoalForm : TemplateForm
     {
@@ -38,6 +38,11 @@ namespace OOD.EMS.UI.ExecutiveForms
             String name = (String)dataGridView1.Rows[dataGridView1.SelectedRows[0].Index].Cells[0].Value;
             ExecutiveGoal goal = ExecutiveGoalStorage.getInstance().all().Find(x => x.Title.Equals(name));
             (new ExecutiveGoalEditForm(false, goal)).ShowDialog();
+        }
+
+        private void Cancel_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

@@ -8,9 +8,9 @@ using System.Windows.Forms;
 using OOD.EMS.Execution;
 using OOD.EMS.Exceptions;
 
-namespace OOD.EMS.UI.ExecutiveForms
+namespace OOD.EMS.UI.Execution
 {
-    public partial class ExecutiveGoalEditForm : TemplateDialog
+    public partial class ExecutiveGoalEditForm : OOD.EMS.UI.TemplateDialog
     {
         private bool canEdit = false;
         private Department dept;

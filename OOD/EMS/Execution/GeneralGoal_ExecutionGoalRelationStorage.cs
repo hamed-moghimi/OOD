@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using OOD.EMS.Exceptions;
 
 namespace OOD.EMS.Execution
 {
@@ -32,6 +33,10 @@ namespace OOD.EMS.Execution
             if (!relations.Contains(rel))
             {
                 relations.Add(rel);
+            }
+            else
+            {
+                throw new RelationExistsException();
             }
         }
     }

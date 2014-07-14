@@ -236,6 +236,12 @@
     <Compile Include="EMS\UI\Audit\Report\ViewPhysicalReportForm.Designer.cs">
       <DependentUpon>ViewPhysicalReportForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="EMS\UI\Execution\AddGoalRelationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EMS\UI\Execution\AddGoalRelationForm.Designer.cs">
+      <DependentUpon>AddGoalRelationForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="EMS\UI\Execution\ExecutiveGoalEditForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -247,6 +253,12 @@
     </Compile>
     <Compile Include="EMS\UI\Execution\ExecutiveGoalForm.Designer.cs">
       <DependentUpon>ExecutiveGoalForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EMS\UI\Execution\ExecutiveGoal_GeneralGoalRelationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EMS\UI\Execution\ExecutiveGoal_GeneralGoalRelationForm.Designer.cs">
+      <DependentUpon>ExecutiveGoal_GeneralGoalRelationForm.cs</DependentUpon>
     </Compile>
     <Compile Include="EMS\UI\Execution\ResourceEditForm.cs">
       <SubType>Form</SubType>
@@ -325,6 +337,12 @@
     </Compile>
     <Compile Include="EMS\UI\Execution\ViewTaskForm.Designer.cs">
       <DependentUpon>ViewTaskForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EMS\UI\Execution\ViewGoalRelationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EMS\UI\Execution\ViewGoalRelationForm.Designer.cs">
+      <DependentUpon>ViewGoalRelationForm.cs</DependentUpon>
     </Compile>
     <Compile Include="EMS\UI\MainForm.cs">
       <SubType>Form</SubType>
@@ -542,11 +560,17 @@
     <EmbeddedResource Include="EMS\UI\Audit\Report\ViewPhysicalReportForm.resx">
       <DependentUpon>ViewPhysicalReportForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="EMS\UI\Execution\AddGoalRelationForm.resx">
+      <DependentUpon>AddGoalRelationForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="EMS\UI\Execution\ExecutiveGoalEditForm.resx">
       <DependentUpon>ExecutiveGoalEditForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="EMS\UI\Execution\ExecutiveGoalForm.resx">
       <DependentUpon>ExecutiveGoalForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EMS\UI\Execution\ExecutiveGoal_GeneralGoalRelationForm.resx">
+      <DependentUpon>ExecutiveGoal_GeneralGoalRelationForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="EMS\UI\Execution\ResourceEditForm.resx">
       <DependentUpon>ResourceEditForm.cs</DependentUpon>
@@ -583,6 +607,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="EMS\UI\Execution\TaskForm.resx">
       <DependentUpon>TaskForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EMS\UI\Execution\ViewGoalRelationForm.resx">
+      <DependentUpon>ViewGoalRelationForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="EMS\UI\Execution\ViewTaskForm.resx">
       <DependentUpon>ViewTaskForm.cs</DependentUpon>

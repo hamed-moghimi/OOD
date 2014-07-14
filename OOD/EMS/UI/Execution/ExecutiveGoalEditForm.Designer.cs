@@ -1,4 +1,4 @@
-﻿namespace OOD.EMS.UI.ExecutiveForms
+﻿namespace OOD.EMS.UI.Execution
 {
     partial class ExecutiveGoalEditForm
     {
@@ -53,7 +53,6 @@
             this.titleBox.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.titleBox.Size = new System.Drawing.Size(380, 31);
             this.titleBox.TabIndex = 22;
-            this.titleBox.Text = "کاهش ۲۵ درصدی شاخص آلاینده‌های نفتی در بندر خرمشهر";
             // 
             // label2
             // 
@@ -111,7 +110,6 @@
             this.responsibleBox.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.responsibleBox.Size = new System.Drawing.Size(312, 31);
             this.responsibleBox.TabIndex = 28;
-            this.responsibleBox.Text = "اداره کل بندر خرمشهر";
             // 
             // button2
             // 

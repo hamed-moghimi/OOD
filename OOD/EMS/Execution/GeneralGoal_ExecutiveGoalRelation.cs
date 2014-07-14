@@ -30,14 +30,18 @@ namespace OOD.EMS.Execution
             if (obj == null) return false;
             GeneralGoal_ExecutiveGoalRelation rel = obj as GeneralGoal_ExecutiveGoalRelation;
             if (rel == null) return false;
-            return GenGoal.Equals(rel.GenGoal) && ExecGoal.Equals(rel.ExecGoal) && (Contribution == rel.Contribution);
+            return GenGoal.Equals(rel.GenGoal) && ExecGoal.Equals(rel.ExecGoal);
         }
 
         public bool Equals(GeneralGoal_ExecutiveGoalRelation rel)
         {
             if (rel == null) return false;
-            return GenGoal.Equals(rel.GenGoal) && ExecGoal.Equals(rel.ExecGoal) && (Contribution == rel.Contribution);
+            return GenGoal.Equals(rel.GenGoal) && ExecGoal.Equals(rel.ExecGoal);
         }
 
+        public String getDateString()
+        {
+            return Date.ToString("yyyy/MM/dd");
+        }
     }
 }

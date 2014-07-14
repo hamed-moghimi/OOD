@@ -8,13 +8,14 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-using OOD.EMS.UI.ExecutiveForms;
+using OOD.EMS.UI.Execution;
 using OOD.EMS.UI.ReportForms;
 using OOD.EMS.UI.Audit;
 using OOD.EMS.UI.Audit.Report;
 using OOD.EMS.UI.Audit.Metric;
 using OOD.EMS.UI.Management;
 using OOD.EMS.UI.Users;
+using OOD.EMS.UI.Execution;
 
 namespace OOD.EMS.UI
 {
@@ -185,6 +186,11 @@ namespace OOD.EMS.UI
         private void مدیریتمسئولیتهاToolStripMenuItem_Click(object sender, EventArgs e)
         {
             newChild(new TaskForm());
+        }
+
+        private void مدیریتارتباطاهدافToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            newChild(new ExecutiveGoal_GeneralGoalRelationForm());
         }
     }
 }

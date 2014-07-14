@@ -7,7 +7,7 @@ using System.Text;
 using System.Windows.Forms;
 using OOD.EMS.Execution;
 
-namespace OOD.EMS.UI.ExecutiveForms
+namespace OOD.EMS.UI.Execution
 {
     public partial class ScheduleEditForm : TemplateDialog
     {

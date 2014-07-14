@@ -10,7 +10,7 @@ using OOD.EMS.Exceptions;
 using OOD.EMS.Users;
 using OOD.EMS.Exceptions;
 
-namespace OOD.EMS.UI.ExecutiveForms
+namespace OOD.EMS.UI.Execution
 {
     public partial class SelectManagerForm : TemplateDialog
     {
