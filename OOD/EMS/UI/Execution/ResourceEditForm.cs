@@ -71,10 +71,10 @@ namespace OOD.EMS.UI.ExecutiveForms
             }
             else
             {
+                
                 this.DialogResult = DialogResult.OK;
                 this.Close();
             }
-            
         }
 
         

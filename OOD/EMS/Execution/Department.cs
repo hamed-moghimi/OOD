@@ -24,7 +24,7 @@ namespace OOD.EMS.Execution
             List<Department> res = new List<Department>();
             foreach (Department d in OrganizationStructure.getInstance().all())
             {
-                if (d.Supervisor == this)
+                if (d.Supervisor != null && d.Supervisor.Equals(this))
                 {
                     res.Add(d);
                 }
