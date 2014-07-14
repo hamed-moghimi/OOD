@@ -37,6 +37,7 @@
             this.amount = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.desc = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.progress = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Cancel = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -53,7 +54,7 @@
             this.groupBox1.Location = new System.Drawing.Point(12, 45);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBox1.Size = new System.Drawing.Size(674, 333);
+            this.groupBox1.Size = new System.Drawing.Size(674, 330);
             this.groupBox1.TabIndex = 4;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "برنامه‌های اقدام";
@@ -136,13 +137,26 @@
             this.progress.ReadOnly = true;
             this.progress.Width = 107;
             // 
+            // Cancel
+            // 
+            this.Cancel.Location = new System.Drawing.Point(18, 389);
+            this.Cancel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.Cancel.Name = "Cancel";
+            this.Cancel.Size = new System.Drawing.Size(105, 33);
+            this.Cancel.TabIndex = 17;
+            this.Cancel.Text = "بازگشت";
+            this.Cancel.UseVisualStyleBackColor = true;
+            this.Cancel.Click += new System.EventHandler(this.Cancel_Click);
+            // 
             // ScheduleForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 24F);
-            this.ClientSize = new System.Drawing.Size(698, 390);
+            this.ClientSize = new System.Drawing.Size(698, 435);
+            this.Controls.Add(this.Cancel);
             this.Controls.Add(this.groupBox1);
             this.Name = "ScheduleForm";
             this.Controls.SetChildIndex(this.groupBox1, 0);
+            this.Controls.SetChildIndex(this.Cancel, 0);
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
@@ -161,6 +175,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn amount;
         private System.Windows.Forms.DataGridViewTextBoxColumn desc;
         private System.Windows.Forms.DataGridViewTextBoxColumn progress;
+        private System.Windows.Forms.Button Cancel;
 
 
     }

@@ -71,5 +71,10 @@ namespace OOD.EMS.UI.ExecutiveForms
             }
             
         }
+
+        private void Cancel_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

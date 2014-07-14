@@ -83,6 +83,7 @@
     <Compile Include="EMS\Exceptions\DepartmentExistsException.cs" />
     <Compile Include="EMS\Exceptions\DocumentExsitsException.cs" />
     <Compile Include="EMS\Exceptions\EMSException.cs" />
+    <Compile Include="EMS\Exceptions\ExecutiveGoalExistsException.cs" />
     <Compile Include="EMS\Exceptions\GeneralGoalExists.cs" />
     <Compile Include="EMS\Exceptions\IncompleteFormException.cs" />
     <Compile Include="EMS\Exceptions\NoSuchUserException.cs" />
