@@ -7,7 +7,8 @@ using OOD.EMS.Exceptions;
 
 namespace OOD.EMS.Management
 {
-    class GeneralGoal_LegalConstraintRelationStorage
+    [Serializable()]
+    public class GeneralGoal_LegalConstraintRelationStorage
     {
         private static GeneralGoal_LegalConstraintRelationStorage instance;
         private List<GeneralGoal_LegalConstraintRelation> relations;

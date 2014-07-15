@@ -7,6 +7,7 @@ using OOD.EMS.Users;
 
 namespace OOD.EMS.Management
 {
+    [Serializable()]
     public class GeneralGoal_LegalConstraintRelation : ManagementDocumentRelation, IEquatable<GeneralGoal_LegalConstraintRelation>
     {
         public GeneralGoal GenGoal { set; get; }

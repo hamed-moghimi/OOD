@@ -7,6 +7,7 @@ using OOD.EMS.Execution;
 
 namespace OOD.EMS.Execution
 {
+    [Serializable()]
     public class ExecutiveGoalStorage
     {
         private static ExecutiveGoalStorage instance;

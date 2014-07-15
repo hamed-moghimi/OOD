@@ -7,6 +7,7 @@ using OOD.EMS.Users;
 
 namespace OOD.EMS.Execution
 {
+    [Serializable()]
     public class OrganizationStructure
     {
         private static OrganizationStructure instance;

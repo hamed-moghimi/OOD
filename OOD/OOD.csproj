@@ -129,6 +129,7 @@
     <Compile Include="EMS\Report\MetricReporter.cs" />
     <Compile Include="EMS\Report\ScheduleReport.cs" />
     <Compile Include="EMS\Report\ScheduleReporter.cs" />
+    <Compile Include="EMS\Storage.cs" />
     <Compile Include="EMS\UI\Audit\Audit\AuditExecutiveForm.cs">
       <SubType>Form</SubType>
     </Compile>

@@ -7,6 +7,7 @@ using OOD.EMS.Exceptions;
 
 namespace OOD.EMS.Execution
 {
+    [Serializable()]
     public class ResourceStorage
     {
         private static ResourceStorage instance;

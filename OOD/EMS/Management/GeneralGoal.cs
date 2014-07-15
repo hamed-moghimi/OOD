@@ -7,6 +7,7 @@ using OOD.EMS.Users;
 
 namespace OOD.EMS.Management
 {
+    [Serializable()]
     public class GeneralGoal : ManagementDocument, IEquatable<GeneralGoal>
     {
 

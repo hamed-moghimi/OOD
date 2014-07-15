@@ -1,10 +1,12 @@
 ﻿﻿using System;
+using System.IO;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Globalization;
 using OOD.EMS.UI.Users;
+using OOD.EMS;
 
 namespace OOD
 {
@@ -16,6 +18,9 @@ namespace OOD
         [STAThread]
         static void Main()
         {
+            DirectoryInfo mainDir = new DirectoryInfo(@Application.StartupPath);
+            DirectoryInfo twoLevelsUp = mainDir.Parent.Parent;
+            Storage.getInstance().init(twoLevelsUp.FullName + @"\data");
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             CultureInfo culture = new GSD.Globalization.PersianCulture();

@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace OOD.EMS.Users
 {
+    [Serializable()]
     public class User : IEquatable<User>
     {
         public String Firstname { get; set; }

@@ -7,6 +7,7 @@ using OOD.EMS.Exceptions;
 
 namespace OOD.EMS.Management
 {
+    [Serializable()]
     public class LegalConstraintStorage
     {
         private static LegalConstraintStorage instance;

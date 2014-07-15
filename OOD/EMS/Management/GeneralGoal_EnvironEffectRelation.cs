@@ -7,6 +7,7 @@ using OOD.EMS.Users;
 
 namespace OOD.EMS.Management
 {
+    [Serializable()]
     public class GeneralGoal_EnvironEffectRelation : ManagementDocumentRelation, IEquatable<GeneralGoal_EnvironEffectRelation>
     {
         public GeneralGoal GenGoal { set; get; }

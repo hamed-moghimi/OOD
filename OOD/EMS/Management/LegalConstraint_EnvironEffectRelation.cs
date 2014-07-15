@@ -7,6 +7,7 @@ using OOD.EMS.Users;
 
 namespace OOD.EMS.Management
 {
+    [Serializable()]
     public class LegalConstraint_EnvironEffectRelation : ManagementDocumentRelation, IEquatable<LegalConstraint_EnvironEffectRelation>
     {
         public EnvironEffect EnvEffect { set; get; }

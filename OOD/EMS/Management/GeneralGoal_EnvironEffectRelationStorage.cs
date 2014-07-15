@@ -7,7 +7,8 @@ using OOD.EMS.Exceptions;
 
 namespace OOD.EMS.Management
 {
-    class GeneralGoal_EnvironEffectRelationStorage
+    [Serializable()]
+    public class GeneralGoal_EnvironEffectRelationStorage
     {
         private static GeneralGoal_EnvironEffectRelationStorage instance;
         private List<GeneralGoal_EnvironEffectRelation> relations;

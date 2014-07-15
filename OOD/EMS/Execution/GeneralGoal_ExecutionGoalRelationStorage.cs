@@ -7,7 +7,8 @@ using OOD.EMS.Exceptions;
 
 namespace OOD.EMS.Execution
 {
-    class GeneralGoal_ExecutiveGoalRelationStorage
+    [Serializable()]
+    public class GeneralGoal_ExecutiveGoalRelationStorage
     {
         private static GeneralGoal_ExecutiveGoalRelationStorage instance;
         private List<GeneralGoal_ExecutiveGoalRelation> relations;

@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace OOD.EMS.Execution
 {
+    [Serializable()]
     public class Allocation : IEquatable<Allocation>
     {
         public DateTime FromDate { set; get; }
