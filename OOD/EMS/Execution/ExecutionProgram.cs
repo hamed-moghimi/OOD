@@ -70,6 +70,10 @@ namespace OOD.EMS.Execution
         {
             return Resources;
         }
-        
+
+        public override string ToString()
+        {
+            return this.Title;
+        }
     }
 }

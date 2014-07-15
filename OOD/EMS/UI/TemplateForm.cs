@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 using OOD.EMS.UI.ExecutiveForms;
-using OOD.EMS.UI.ReportForms;
+using OOD.EMS.UI.Report;
 using OOD.EMS.UI.Audit;
 using OOD.EMS.UI.Audit.Report;
 using OOD.EMS.UI.Audit.Metric;
@@ -167,6 +167,19 @@ namespace OOD.EMS.UI
         private void responsibilitySubmenu_Click(object sender, EventArgs e)
         {
             newChild(new AuditTaskListForm());
+        }
+
+        private void DashboardToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (DashboardForm.hasInstance())
+                DashboardForm.getInstance().Activate();
+            else
+                DashboardForm.getInstance().Show();
+        }
+
+        private void metricsReport_Click(object sender, EventArgs e)
+        {
+            newChild(new MetricReportForm());
         }
     }
 }

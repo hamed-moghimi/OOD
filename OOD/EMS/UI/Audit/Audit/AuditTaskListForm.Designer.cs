@@ -30,16 +30,16 @@
         {
             this.Audit = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.Cancel = new System.Windows.Forms.Button();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.executive_target = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.desp = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Cancel = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // Audit
             // 
-            this.Audit.Location = new System.Drawing.Point(163, 270);
+            this.Audit.Location = new System.Drawing.Point(151, 271);
             this.Audit.Name = "Audit";
             this.Audit.Size = new System.Drawing.Size(105, 33);
             this.Audit.TabIndex = 4;
@@ -53,36 +53,27 @@
             this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.AllowUserToResizeColumns = false;
             this.dataGridView1.AllowUserToResizeRows = false;
+            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.Window;
-            this.dataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.ColumnHeadersVisible = false;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
             this.executive_target,
             this.desp});
-            this.dataGridView1.Location = new System.Drawing.Point(43, 59);
+            this.dataGridView1.Location = new System.Drawing.Point(31, 59);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.dataGridView1.RowHeadersVisible = false;
-            this.dataGridView1.Size = new System.Drawing.Size(452, 196);
+            this.dataGridView1.Size = new System.Drawing.Size(708, 196);
             this.dataGridView1.TabIndex = 5;
-            // 
-            // Cancel
-            // 
-            this.Cancel.Location = new System.Drawing.Point(43, 270);
-            this.Cancel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.Cancel.Name = "Cancel";
-            this.Cancel.Size = new System.Drawing.Size(105, 33);
-            this.Cancel.TabIndex = 11;
-            this.Cancel.Text = "بازگشت";
-            this.Cancel.UseVisualStyleBackColor = true;
-            this.Cancel.Click += new System.EventHandler(this.Cancel_Click);
             // 
             // Column1
             // 
             this.Column1.HeaderText = "Column1";
             this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
             // 
             // executive_target
             // 
@@ -100,15 +91,26 @@
             this.desp.Visible = false;
             this.desp.Width = 5;
             // 
-            // Audit_Task_List
+            // Cancel
+            // 
+            this.Cancel.Location = new System.Drawing.Point(31, 271);
+            this.Cancel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.Cancel.Name = "Cancel";
+            this.Cancel.Size = new System.Drawing.Size(105, 33);
+            this.Cancel.TabIndex = 11;
+            this.Cancel.Text = "بازگشت";
+            this.Cancel.UseVisualStyleBackColor = true;
+            this.Cancel.Click += new System.EventHandler(this.Cancel_Click);
+            // 
+            // AuditTaskListForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(538, 329);
+            this.ClientSize = new System.Drawing.Size(766, 329);
             this.Controls.Add(this.Cancel);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.Audit);
-            this.Name = "Audit_Task_List";
+            this.Name = "AuditTaskListForm";
             this.Text = "حسابرسی مسئولیت‌ها";
             this.Controls.SetChildIndex(this.Audit, 0);
             this.Controls.SetChildIndex(this.dataGridView1, 0);

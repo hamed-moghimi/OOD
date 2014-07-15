@@ -1,4 +1,4 @@
-﻿namespace OOD.EMS.UI.ReportForms
+﻿namespace OOD.EMS.UI.Report
 {
     partial class OverallReportForm
     {

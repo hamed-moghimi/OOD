@@ -67,6 +67,8 @@ namespace OOD.EMS.UI
             this.documentReport = new System.Windows.Forms.ToolStripMenuItem();
             this.scheduleReport = new System.Windows.Forms.ToolStripMenuItem();
             this.metricsReport = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
+            this.DashboardToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.AccountMenu = new System.Windows.Forms.ToolStripMenuItem();
             this.viewAccountSubmenu = new System.Windows.Forms.ToolStripMenuItem();
             this.exitSubmenu = new System.Windows.Forms.ToolStripMenuItem();
@@ -288,7 +290,9 @@ namespace OOD.EMS.UI
             this.reportMenu.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.documentReport,
             this.scheduleReport,
-            this.metricsReport});
+            this.metricsReport,
+            this.toolStripSeparator4,
+            this.DashboardToolStripMenuItem});
             this.reportMenu.Name = "reportMenu";
             this.reportMenu.Size = new System.Drawing.Size(69, 28);
             this.reportMenu.Text = "گزارش‌ها";
@@ -312,6 +316,19 @@ namespace OOD.EMS.UI
             this.metricsReport.Name = "metricsReport";
             this.metricsReport.Size = new System.Drawing.Size(175, 28);
             this.metricsReport.Text = "اندازه‌ها و سنجه‌ها";
+            this.metricsReport.Click += new System.EventHandler(this.metricsReport_Click);
+            // 
+            // toolStripSeparator4
+            // 
+            this.toolStripSeparator4.Name = "toolStripSeparator4";
+            this.toolStripSeparator4.Size = new System.Drawing.Size(172, 6);
+            // 
+            // DashboardToolStripMenuItem
+            // 
+            this.DashboardToolStripMenuItem.Name = "DashboardToolStripMenuItem";
+            this.DashboardToolStripMenuItem.Size = new System.Drawing.Size(175, 28);
+            this.DashboardToolStripMenuItem.Text = "نمایشگر بهنگام";
+            this.DashboardToolStripMenuItem.Click += new System.EventHandler(this.DashboardToolStripMenuItem_Click);
             // 
             // AccountMenu
             // 
@@ -405,6 +422,8 @@ namespace OOD.EMS.UI
         protected MenuStrip menu;
         private ToolStripMenuItem relationsSubmenu;
         private ToolStripMenuItem responsibilitySubmenu;
+        private ToolStripSeparator toolStripSeparator4;
+        private ToolStripMenuItem DashboardToolStripMenuItem;
 
     }
 }

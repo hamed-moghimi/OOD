@@ -10,9 +10,17 @@ namespace OOD.EMS.Audit
     {
         public String Name { set; get; }
 
-        public Metric(String name)
+        public String Unit { set; get; }
+
+        public Metric(String name, String unit)
         {
             Name = name;
+            Unit = unit;
+        }
+
+        public override string ToString()
+        {
+            return this.Name;
         }
     }
 }

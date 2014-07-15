@@ -2,78 +2,48 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-
-using OOD.EMS.Execution;
-using OOD.EMS.Users;
-using OOD.EMS.Management;
-using OOD.EMS.Audit;
+using System.Threading.Tasks;
 
 namespace OOD
 {
     class StaticData
     {
-        public static void initialize()
+        static StaticData()
         {
-            // get a user
-            User u = UserStorage.getInstance().all()[0];
+            // static constructor
+            // copy static data to lists so we can change them
+            foreach(object[] item in _resources)
+                resources.Add(item);
 
-            // initialize a department
-            Department d = new Department("اداره کل امور موقتی", null, u);
-            OrganizationStructure.getInstance().create(d);
+            foreach (object[] item in _trainings)
+                trainings.Add(item);
 
-            // general goal
-            GeneralGoal g = new GeneralGoal("رتبه‌ی اول در جهان", "بشیم دیگه!");
-            GeneralGoalStorage.getInstance().create(g);
+            foreach (object[] item in _executiveGoals)
+                executiveGoals.Add(item);
 
-            // executive goal
-            ExecutiveGoal e = new ExecutiveGoal("تجهیز بنادر کشور", "در سطح یک بینل");
-            ExecutionProgram p = new ExecutionProgram("تجهیز بنادر کشور", "در سطح یک بینل");
-            e.program = p;
-            ExecutiveGoalStorage.getInstance().create(e);
+            foreach (object[] item in _schedules)
+                schedules.Add(item);
+            
+            foreach (object[] item in _tasks)
+                tasks.Add(item);
 
-            // initialize tasks
-            Task t1 = new Task("خرید کشتی موقتی", DateTime.Today, DateTime.Today + TimeSpan.FromDays(10), 0, d);
-            TaskStorage.getInstance().create(t1);
-            Task t2 = new Task("برگزاری همایش ایمنی در بنادر", DateTime.Today - TimeSpan.FromDays(30), DateTime.Today + TimeSpan.FromDays(3), 35, d);
-            TaskStorage.getInstance().create(t2);
+            foreach (object[] item in _generalGoals)
+                generalGoals.Add(item);
 
-            // assign tasks
-            p.addTask(t1, 55);
-            p.addTask(t2, 45);
+            foreach (object[] item in _Metrics)
+                Metrics.Add(item);
 
-            var r = new Random();
+            foreach (object[] item in _LegalReq)
+                LegalReq.Add(item);
 
-            // metrics
-            Metric m = new Metric("حجم گاز دی‌اکسید کربن", "متر مکعب");
-            MetricStorage.getInstance().create(m);
-            var values = new double[] { 100.2, 120.0, 208.5, 100.2, 120.0, 208.5 };
-            foreach (double v in values)
-            {
-                var val = new MetricValue(m, v);
-                val.Date = DateTime.Today + TimeSpan.FromDays(r.Next(20));
-                MetricValueStorage.getInstance().create(val);
-            }
+            foreach (object[] item in _effects)
+                effects.Add(item);
 
-            m = new Metric("حجم گاز منواکسید کربن", "متر مکعب");
-            MetricStorage.getInstance().create(m);
-            values = new double[] { 10.2, 45.0, 20.5 };
-            foreach (double v in values)
-            {
-                var val = new MetricValue(m, v);
-                val.Date = DateTime.Today + TimeSpan.FromDays(r.Next(7));
-                MetricValueStorage.getInstance().create(val);
-            }
+            foreach (object[] item in _relations)
+                relations.Add(item);
 
-            // metrics
-            m = new Metric("حجم گاز تری‌اکسید کربن", "متر مکعب");
-            MetricStorage.getInstance().create(m);
-            values = new double[] { 70.2, 52.0, 98.5, 70.2, 60.0, 38.5 };
-            foreach (double v in values)
-            {
-                var val = new MetricValue(m, v);
-                val.Date = DateTime.Today + TimeSpan.FromDays(r.Next(20));
-                MetricValueStorage.getInstance().create(val);
-            }
+            foreach (object[] item in _users)
+                users.Add(item);
         }
 
         // resource: title, amount, description
@@ -108,8 +78,8 @@ namespace OOD
         // tasks: title, start date, end date, progress
         public static List<object[]> tasks = new List<object[]>();
         private static object[][] _tasks = new object[][] {
-            new object[] {5, "برگزاری مناقصه داخلی و خارجی", "روابط عمومی و امور بین‌الملل", "۲۶ / ۲ / ۱۳۹۳", "۲۶ / ۴ / ۱۳۹۳", "۲۳٪"},
-            new object[] {15, "طراحی و کنترل فنی طرح اولیه پیمانکار کشتی‌ساز", "اداره کل تجهیزات" ,"۲۶ / ۵ / ۱۳۹۳", "۲۶ / ۱۰ / ۱۳۹۳", "۵٪"},
+            new object[] {"۵٪", "برگزاری مناقصه داخلی و خارجی", "روابط عمومی و امور بین‌الملل", "۲۶ / ۲ / ۱۳۹۳", "۲۶ / ۴ / ۱۳۹۳", "۲۳٪"},
+            new object[] {"۱۵٪", "طراحی و کنترل فنی طرح اولیه پیمانکار کشتی‌ساز", "اداره کل تجهیزات" ,"۲۶ / ۵ / ۱۳۹۳", "۲۶ / ۱۰ / ۱۳۹۳", "۵٪"},
         };
 
         // general goal: title, description, attachment

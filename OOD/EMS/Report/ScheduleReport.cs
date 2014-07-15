@@ -2,15 +2,20 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
+using OOD.EMS.Execution;
 
 namespace OOD.EMS.Report
 {
-    class ScheduleReport
+    public class ScheduleReport
     {
-        public DateTime from { get; set; }
-        public DateTime to { get; set; }
-        public int tasksNumber { get; set; }
-        // some more fields
+        public DateTime fromDate { get; set; }
+        public DateTime toDate { get; set; }
+        public Contribution[] tasks { get; set; }
+
+        public ScheduleReport(DateTime fromDate, DateTime toDate)
+        {
+            this.fromDate = fromDate;
+            this.toDate = toDate;
+        }
     }
 }

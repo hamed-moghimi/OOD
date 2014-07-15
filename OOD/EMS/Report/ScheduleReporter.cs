@@ -10,12 +10,15 @@ namespace OOD.EMS.Report
 {
     class ScheduleReporter
     {
-        public ScheduleReport report()
+        public ScheduleReport report(ExecutionProgram program, DateTime fromDate, DateTime toDate)
         {
-            var report = new ScheduleReport();
-            var goals = ExecutiveGoalStorage.getInstance().all();
-            var tasks = TaskStorage.getInstance().all();
-            // set report values
+            var report = new ScheduleReport(fromDate, toDate);
+            var tasks = 
+                (from task in program.Tasks
+                where   (fromDate <= task.ContTask.StartDate && task.ContTask.StartDate <= toDate) ||
+                        (fromDate <= task.ContTask.DueDate && task.ContTask.DueDate <= toDate)
+                select task).OrderBy(item => item.ContTask.StartDate).ToArray();
+            report.tasks = tasks;
             return report;
         }
     }
