@@ -52,7 +52,7 @@ namespace OOD.EMS.UI
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
             this.executiveSubmenu = new System.Windows.Forms.ToolStripMenuItem();
             this.scheduleSubmenu = new System.Windows.Forms.ToolStripMenuItem();
-            this.مدیریتمسئولیتهاToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.TaskManagementToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.auditMenu = new System.Windows.Forms.ToolStripMenuItem();
             this.auditGoalSubmenu = new System.Windows.Forms.ToolStripMenuItem();
             this.generalGoalAuditSubmenu = new System.Windows.Forms.ToolStripMenuItem();
@@ -68,11 +68,13 @@ namespace OOD.EMS.UI
             this.documentReport = new System.Windows.Forms.ToolStripMenuItem();
             this.scheduleReport = new System.Windows.Forms.ToolStripMenuItem();
             this.metricsReport = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
+            this.DashboardToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.AccountMenu = new System.Windows.Forms.ToolStripMenuItem();
             this.viewAccountSubmenu = new System.Windows.Forms.ToolStripMenuItem();
             this.exitSubmenu = new System.Windows.Forms.ToolStripMenuItem();
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
-            this.مدیریتارتباطاهدافToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.GoalsRelationManagementToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menu.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -161,8 +163,8 @@ namespace OOD.EMS.UI
             this.toolStripSeparator3,
             this.executiveSubmenu,
             this.scheduleSubmenu,
-            this.مدیریتمسئولیتهاToolStripMenuItem,
-            this.مدیریتارتباطاهدافToolStripMenuItem});
+            this.TaskManagementToolStripMenuItem,
+            this.GoalsRelationManagementToolStripMenuItem});
             this.executiveMenu.Name = "executiveMenu";
             this.executiveMenu.Size = new System.Drawing.Size(104, 28);
             this.executiveMenu.Text = "اسناد عملکردی";
@@ -202,10 +204,10 @@ namespace OOD.EMS.UI
             // 
             // مدیریتمسئولیتهاToolStripMenuItem
             // 
-            this.مدیریتمسئولیتهاToolStripMenuItem.Name = "مدیریتمسئولیتهاToolStripMenuItem";
-            this.مدیریتمسئولیتهاToolStripMenuItem.Size = new System.Drawing.Size(202, 28);
-            this.مدیریتمسئولیتهاToolStripMenuItem.Text = "مدیریت مسئولیت‌ها";
-            this.مدیریتمسئولیتهاToolStripMenuItem.Click += new System.EventHandler(this.مدیریتمسئولیتهاToolStripMenuItem_Click);
+            this.TaskManagementToolStripMenuItem.Name = "TaskManagementToolStripMenuItem";
+            this.TaskManagementToolStripMenuItem.Size = new System.Drawing.Size(202, 28);
+            this.TaskManagementToolStripMenuItem.Text = "مدیریت مسئولیت‌ها";
+            this.TaskManagementToolStripMenuItem.Click += new System.EventHandler(this.TaskManagementToolStripMenuItem_Click);
             // 
             // auditMenu
             // 
@@ -299,7 +301,9 @@ namespace OOD.EMS.UI
             this.reportMenu.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.documentReport,
             this.scheduleReport,
-            this.metricsReport});
+            this.metricsReport,
+            this.toolStripSeparator4,
+            this.DashboardToolStripMenuItem});
             this.reportMenu.Name = "reportMenu";
             this.reportMenu.Size = new System.Drawing.Size(69, 28);
             this.reportMenu.Text = "گزارش‌ها";
@@ -323,6 +327,19 @@ namespace OOD.EMS.UI
             this.metricsReport.Name = "metricsReport";
             this.metricsReport.Size = new System.Drawing.Size(175, 28);
             this.metricsReport.Text = "اندازه‌ها و سنجه‌ها";
+            this.metricsReport.Click += new System.EventHandler(this.metricsReport_Click);
+            // 
+            // toolStripSeparator4
+            // 
+            this.toolStripSeparator4.Name = "toolStripSeparator4";
+            this.toolStripSeparator4.Size = new System.Drawing.Size(172, 6);
+            // 
+            // DashboardToolStripMenuItem
+            // 
+            this.DashboardToolStripMenuItem.Name = "DashboardToolStripMenuItem";
+            this.DashboardToolStripMenuItem.Size = new System.Drawing.Size(175, 28);
+            this.DashboardToolStripMenuItem.Text = "نمایشگر بهنگام";
+            this.DashboardToolStripMenuItem.Click += new System.EventHandler(this.DashboardToolStripMenuItem_Click);
             // 
             // AccountMenu
             // 
@@ -331,8 +348,7 @@ namespace OOD.EMS.UI
             this.exitSubmenu});
             this.AccountMenu.Name = "AccountMenu";
             this.AccountMenu.Size = new System.Drawing.Size(362, 28);
-            this.AccountMenu.Text = "حساب کاربری                                                                      " +
-    "                   ";
+            this.AccountMenu.Text = "حساب کاربری";
             // 
             // viewAccountSubmenu
             // 
@@ -357,10 +373,10 @@ namespace OOD.EMS.UI
             // 
             // مدیریتارتباطاهدافToolStripMenuItem
             // 
-            this.مدیریتارتباطاهدافToolStripMenuItem.Name = "مدیریتارتباطاهدافToolStripMenuItem";
-            this.مدیریتارتباطاهدافToolStripMenuItem.Size = new System.Drawing.Size(202, 28);
-            this.مدیریتارتباطاهدافToolStripMenuItem.Text = "مدیریت ارتباط اهداف";
-            this.مدیریتارتباطاهدافToolStripMenuItem.Click += new System.EventHandler(this.مدیریتارتباطاهدافToolStripMenuItem_Click);
+            this.GoalsRelationManagementToolStripMenuItem.Name = "GoalsRelationManagementToolStripMenuItem";
+            this.GoalsRelationManagementToolStripMenuItem.Size = new System.Drawing.Size(202, 28);
+            this.GoalsRelationManagementToolStripMenuItem.Text = "مدیریت ارتباط اهداف";
+            this.GoalsRelationManagementToolStripMenuItem.Click += new System.EventHandler(this.GoalsRelationManagementToolStripMenuItem_Click);
             // 
             // TemplateForm
             // 
@@ -423,9 +439,10 @@ namespace OOD.EMS.UI
         protected MenuStrip menu;
         private ToolStripMenuItem relationsSubmenu;
         private ToolStripMenuItem responsibilitySubmenu;
-        private ToolStripMenuItem مدیریتمسئولیتهاToolStripMenuItem;
-        private ToolStripMenuItem مدیریتارتباطاهدافToolStripMenuItem;
-
+        private ToolStripSeparator toolStripSeparator4;
+        private ToolStripMenuItem DashboardToolStripMenuItem;
+        private ToolStripMenuItem TaskManagementToolStripMenuItem;
+        private ToolStripMenuItem GoalsRelationManagementToolStripMenuItem;
     }
 }
 

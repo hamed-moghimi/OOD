@@ -173,7 +173,7 @@
             this.textBox1.Size = new System.Drawing.Size(100, 31);
             this.textBox1.TabIndex = 13;
             // 
-            // Audit_Task
+            // AuditTaskForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -188,7 +188,7 @@
             this.Controls.Add(this.richTextBox1);
             this.Controls.Add(this.label1);
             this.Margin = new System.Windows.Forms.Padding(7, 11, 7, 11);
-            this.Name = "Audit_Task";
+            this.Name = "AuditTaskForm";
             this.Text = "حسابرسی";
             this.Controls.SetChildIndex(this.label1, 0);
             this.Controls.SetChildIndex(this.richTextBox1, 0);

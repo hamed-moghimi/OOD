@@ -13,10 +13,12 @@ namespace OOD.EMS.Audit
 
         private MetricStorage()
         {
+            metrics = new List<Metric>();
         }
 
         public static MetricStorage getInstance()
         {
+            if (instance == null) instance = new MetricStorage();
             return instance;
         }
 

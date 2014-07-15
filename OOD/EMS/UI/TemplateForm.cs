@@ -9,13 +9,12 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 using OOD.EMS.UI.Execution;
-using OOD.EMS.UI.ReportForms;
+using OOD.EMS.UI.Report;
 using OOD.EMS.UI.Audit;
 using OOD.EMS.UI.Audit.Report;
 using OOD.EMS.UI.Audit.Metric;
 using OOD.EMS.UI.Management;
 using OOD.EMS.UI.Users;
-using OOD.EMS.UI.Execution;
 
 namespace OOD.EMS.UI
 {
@@ -65,6 +64,19 @@ namespace OOD.EMS.UI
         {
             return MessageBox.Show("آیا مطمئن هستید؟", "تایید", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
+        }
+
+        protected String convert(String old)
+        {
+            char[][] numbers = new char[][]
+            {
+                "0123456789".ToCharArray(),"۰۱۲۳۴۵۶۷۸۹".ToCharArray()
+            };
+            for (int x = 0; x <= 9; x++)
+            {
+                old.Replace(numbers[0][x], numbers[1][x]);
+            }
+            return old;
         }
 
         // ------------------------------------------------------------------
@@ -170,26 +182,23 @@ namespace OOD.EMS.UI
             newChild(new AuditTaskListForm());
         }
 
-        protected String convert(String old)
+        private void DashboardToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            String res = old;
-            char[][] numbers = new char[][]
-            {
-                "0123456789".ToCharArray(),"۰۱۲۳۴۵۶۷۸۹".ToCharArray()
-            };
-            for (int x = 0; x <= 9; x++)
-            {
-                res = res.Replace(numbers[1][x], numbers[0][x]);
-            }
-            return res;
+            DashboardForm.getInstance().Show();
+            DashboardForm.getInstance().Activate();
         }
 
-        private void مدیریتمسئولیتهاToolStripMenuItem_Click(object sender, EventArgs e)
+        private void metricsReport_Click(object sender, EventArgs e)
+        {
+            newChild(new MetricReportForm());
+        }
+
+        private void TaskManagementToolStripMenuItem_Click(object sender, EventArgs e)
         {
             newChild(new TaskForm());
         }
 
-        private void مدیریتارتباطاهدافToolStripMenuItem_Click(object sender, EventArgs e)
+        private void GoalsRelationManagementToolStripMenuItem_Click(object sender, EventArgs e)
         {
             newChild(new ExecutiveGoal_GeneralGoalRelationForm());
         }

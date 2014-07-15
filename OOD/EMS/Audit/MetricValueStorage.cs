@@ -13,10 +13,12 @@ namespace OOD.EMS.Audit
 
         protected MetricValueStorage()
         {
+            values = new List<MetricValue>();
         }
 
         public static MetricValueStorage getInstance()
         {
+            if (instance == null) instance = new MetricValueStorage();
             return instance;
         }
 

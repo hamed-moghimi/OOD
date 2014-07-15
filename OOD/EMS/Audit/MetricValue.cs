@@ -10,11 +10,13 @@ namespace OOD.EMS.Audit
     {
         public Metric pairMetric { set; get; }
         public double Value { set; get; }
+        public DateTime Date { set; get; }
 
         public MetricValue(Metric metric, double value)
         {
             pairMetric = metric;
             Value = value;
+            Date = DateTime.Today;
         }
     }
 }

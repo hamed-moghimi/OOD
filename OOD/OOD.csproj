@@ -442,6 +442,12 @@
     <Compile Include="EMS\UI\Report\MetricReportForm.Designer.cs">
       <DependentUpon>MetricReportForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="EMS\UI\Report\MetricReportResultForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EMS\UI\Report\MetricReportResultForm.Designer.cs">
+      <DependentUpon>MetricReportResultForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="EMS\UI\Report\OverallReportForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -453,6 +459,12 @@
     </Compile>
     <Compile Include="EMS\UI\Report\ScheduleReportForm.Designer.cs">
       <DependentUpon>ScheduleReportForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EMS\UI\Report\ScheduleReportResultForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EMS\UI\Report\ScheduleReportResultForm.Designer.cs">
+      <DependentUpon>ScheduleReportResultForm.cs</DependentUpon>
     </Compile>
     <Compile Include="EMS\UI\TemplateDialog.cs">
       <SubType>Form</SubType>
@@ -658,11 +670,17 @@
     <EmbeddedResource Include="EMS\UI\Report\MetricReportForm.resx">
       <DependentUpon>MetricReportForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="EMS\UI\Report\MetricReportResultForm.resx">
+      <DependentUpon>MetricReportResultForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="EMS\UI\Report\OverallReportForm.resx">
       <DependentUpon>OverallReportForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="EMS\UI\Report\ScheduleReportForm.resx">
       <DependentUpon>ScheduleReportForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EMS\UI\Report\ScheduleReportResultForm.resx">
+      <DependentUpon>ScheduleReportResultForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="EMS\UI\TemplateDialog.resx">
       <DependentUpon>TemplateDialog.cs</DependentUpon>
@@ -678,6 +696,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="EMS\UI\Users\LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="EMS\UI\Users\UserManagementForm.resx">
       <DependentUpon>UserManagementForm.cs</DependentUpon>
@@ -760,6 +779,9 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

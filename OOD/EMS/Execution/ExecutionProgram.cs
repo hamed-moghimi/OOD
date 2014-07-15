@@ -116,6 +116,11 @@ namespace OOD.EMS.Execution
             return Resources;
         }
 
+        public override string ToString()
+        {
+            return this.Title;
+        }
+
         public List<Resource> getResources()
         {
             List<Resource> rs = new List<Resource>();
@@ -149,6 +154,5 @@ namespace OOD.EMS.Execution
         {
             return getEndDate().ToString("yyyy/MM/dd");
         }
-
     }
 }

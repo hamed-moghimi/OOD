@@ -23,6 +23,7 @@ namespace OOD
             Storage.getInstance().init(twoLevelsUp.FullName + @"\data");
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+            StaticData.initialize(); //TODO: remove this line
             CultureInfo culture = new GSD.Globalization.PersianCulture();
             culture.DateTimeFormat.ShortDatePattern = "yy/MM/dd";
             culture.DateTimeFormat.LongDatePattern = "yyyy/MM/dd";
