@@ -115,7 +115,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(154, 313);
+            this.button2.Location = new System.Drawing.Point(154, 314);
             this.button2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(105, 33);
@@ -137,7 +137,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "ResourceEditForm";
-            this.Text = "ویرایش و مشاهده منبع";
+            this.Text = "منبع";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.ResourceEdit_FormClosing);
             this.Load += new System.EventHandler(this.ResourceEdit_Load);
             this.ResumeLayout(false);

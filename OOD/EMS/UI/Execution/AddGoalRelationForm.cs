@@ -50,19 +50,26 @@ namespace OOD.EMS.UI.Execution
             String execName = (string)execGrid.Rows[execGrid.SelectedRows[0].Index].Cells[0].Value;
             GeneralGoal genGoal = GeneralGoalStorage.getInstance().all().Find(x => x.Title.Equals(genName));
             ExecutiveGoal execGoal = ExecutiveGoalStorage.getInstance().all().Find(x => x.Title.Equals(execName));
-            GeneralGoal_ExecutiveGoalRelation grel = 
-                new GeneralGoal_ExecutiveGoalRelation(genGoal, execGoal, Convert.ToInt32(shareBox.Text));
-            if (GeneralGoal_ExecutiveGoalRelationStorage.getInstance().all().Contains(grel))
+            try
             {
-                MessageBox.Show(new RelationExistsException().Message);
+                GeneralGoal_ExecutiveGoalRelation grel =
+                    new GeneralGoal_ExecutiveGoalRelation(genGoal, execGoal, Convert.ToInt32(convert(shareBox.Text)));
+                if (GeneralGoal_ExecutiveGoalRelationStorage.getInstance().all().Contains(grel))
+                {
+                    MessageBox.Show(new RelationExistsException().Message);
+                }
+                else
+                {
+
+                    GeneralGoal_ExecutiveGoalRelationStorage.getInstance().create(grel);
+                    this.DialogResult = DialogResult.OK;
+                    this.Close();
+                }
             }
-            else
+            catch (Exception e2)
             {
-                GeneralGoal_ExecutiveGoalRelationStorage.getInstance().create(grel);
-                this.DialogResult = DialogResult.OK;
-                this.Close();
+                MessageBox.Show(new IncompleteFormException().Message);
             }
-           
         }
     }
 }

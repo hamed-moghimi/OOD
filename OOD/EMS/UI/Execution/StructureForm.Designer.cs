@@ -28,35 +28,35 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.TreeNode treeNode16 = new System.Windows.Forms.TreeNode("اداره کل امور اداری");
-            System.Windows.Forms.TreeNode treeNode17 = new System.Windows.Forms.TreeNode("اداره کل رفاه");
-            System.Windows.Forms.TreeNode treeNode18 = new System.Windows.Forms.TreeNode("اداره کل کارگزینی");
-            System.Windows.Forms.TreeNode treeNode19 = new System.Windows.Forms.TreeNode("معاونت اداری مالی", new System.Windows.Forms.TreeNode[] {
-            treeNode16,
-            treeNode17,
-            treeNode18});
-            System.Windows.Forms.TreeNode treeNode20 = new System.Windows.Forms.TreeNode("اداره کل ایمنی");
-            System.Windows.Forms.TreeNode treeNode21 = new System.Windows.Forms.TreeNode("اداره کل تجهیزات");
-            System.Windows.Forms.TreeNode treeNode22 = new System.Windows.Forms.TreeNode("معاونت فنی مهندسی", new System.Windows.Forms.TreeNode[] {
-            treeNode20,
-            treeNode21});
-            System.Windows.Forms.TreeNode treeNode23 = new System.Windows.Forms.TreeNode("اداره کل بندر شهید رجایی");
-            System.Windows.Forms.TreeNode treeNode24 = new System.Windows.Forms.TreeNode("اداره کل بندر امام خمینی");
-            System.Windows.Forms.TreeNode treeNode25 = new System.Windows.Forms.TreeNode("اداره کل بندر انزلی");
-            System.Windows.Forms.TreeNode treeNode26 = new System.Windows.Forms.TreeNode("معاونت بندری", new System.Windows.Forms.TreeNode[] {
-            treeNode23,
-            treeNode24,
-            treeNode25});
-            System.Windows.Forms.TreeNode treeNode27 = new System.Windows.Forms.TreeNode("اداره کل ترانزیت");
-            System.Windows.Forms.TreeNode treeNode28 = new System.Windows.Forms.TreeNode("معاونت دریایی", new System.Windows.Forms.TreeNode[] {
-            treeNode27});
-            System.Windows.Forms.TreeNode treeNode29 = new System.Windows.Forms.TreeNode("روابط عمومی و امور بین الملل");
-            System.Windows.Forms.TreeNode treeNode30 = new System.Windows.Forms.TreeNode("سازمان بنادر و دریانوردی", new System.Windows.Forms.TreeNode[] {
-            treeNode19,
-            treeNode22,
-            treeNode26,
-            treeNode28,
-            treeNode29});
+            System.Windows.Forms.TreeNode treeNode31 = new System.Windows.Forms.TreeNode("اداره کل امور اداری");
+            System.Windows.Forms.TreeNode treeNode32 = new System.Windows.Forms.TreeNode("اداره کل رفاه");
+            System.Windows.Forms.TreeNode treeNode33 = new System.Windows.Forms.TreeNode("اداره کل کارگزینی");
+            System.Windows.Forms.TreeNode treeNode34 = new System.Windows.Forms.TreeNode("معاونت اداری مالی", new System.Windows.Forms.TreeNode[] {
+            treeNode31,
+            treeNode32,
+            treeNode33});
+            System.Windows.Forms.TreeNode treeNode35 = new System.Windows.Forms.TreeNode("اداره کل ایمنی");
+            System.Windows.Forms.TreeNode treeNode36 = new System.Windows.Forms.TreeNode("اداره کل تجهیزات");
+            System.Windows.Forms.TreeNode treeNode37 = new System.Windows.Forms.TreeNode("معاونت فنی مهندسی", new System.Windows.Forms.TreeNode[] {
+            treeNode35,
+            treeNode36});
+            System.Windows.Forms.TreeNode treeNode38 = new System.Windows.Forms.TreeNode("اداره کل بندر شهید رجایی");
+            System.Windows.Forms.TreeNode treeNode39 = new System.Windows.Forms.TreeNode("اداره کل بندر امام خمینی");
+            System.Windows.Forms.TreeNode treeNode40 = new System.Windows.Forms.TreeNode("اداره کل بندر انزلی");
+            System.Windows.Forms.TreeNode treeNode41 = new System.Windows.Forms.TreeNode("معاونت بندری", new System.Windows.Forms.TreeNode[] {
+            treeNode38,
+            treeNode39,
+            treeNode40});
+            System.Windows.Forms.TreeNode treeNode42 = new System.Windows.Forms.TreeNode("اداره کل ترانزیت");
+            System.Windows.Forms.TreeNode treeNode43 = new System.Windows.Forms.TreeNode("معاونت دریایی", new System.Windows.Forms.TreeNode[] {
+            treeNode42});
+            System.Windows.Forms.TreeNode treeNode44 = new System.Windows.Forms.TreeNode("روابط عمومی و امور بین الملل");
+            System.Windows.Forms.TreeNode treeNode45 = new System.Windows.Forms.TreeNode("سازمان بنادر و دریانوردی", new System.Windows.Forms.TreeNode[] {
+            treeNode34,
+            treeNode37,
+            treeNode41,
+            treeNode43,
+            treeNode44});
             this.structureTree = new System.Windows.Forms.TreeView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.prev = new System.Windows.Forms.Button();
@@ -66,6 +66,7 @@
             this.addDepartment = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.deptName = new System.Windows.Forms.TextBox();
+            this.Cancel = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -74,38 +75,38 @@
             // 
             this.structureTree.Location = new System.Drawing.Point(12, 45);
             this.structureTree.Name = "structureTree";
-            treeNode16.Name = "Node7";
-            treeNode16.Text = "اداره کل امور اداری";
-            treeNode17.Name = "Node8";
-            treeNode17.Text = "اداره کل رفاه";
-            treeNode18.Name = "Node9";
-            treeNode18.Text = "اداره کل کارگزینی";
-            treeNode19.Name = "Node1";
-            treeNode19.Text = "معاونت اداری مالی";
-            treeNode20.Name = "Node10";
-            treeNode20.Text = "اداره کل ایمنی";
-            treeNode21.Name = "Node11";
-            treeNode21.Text = "اداره کل تجهیزات";
-            treeNode22.Name = "Node3";
-            treeNode22.Text = "معاونت فنی مهندسی";
-            treeNode23.Name = "Node0";
-            treeNode23.Text = "اداره کل بندر شهید رجایی";
-            treeNode24.Name = "Node1";
-            treeNode24.Text = "اداره کل بندر امام خمینی";
-            treeNode25.Name = "Node2";
-            treeNode25.Text = "اداره کل بندر انزلی";
-            treeNode26.Name = "Node4";
-            treeNode26.Text = "معاونت بندری";
-            treeNode27.Name = "Node3";
-            treeNode27.Text = "اداره کل ترانزیت";
-            treeNode28.Name = "Node5";
-            treeNode28.Text = "معاونت دریایی";
-            treeNode29.Name = "Node14";
-            treeNode29.Text = "روابط عمومی و امور بین الملل";
-            treeNode30.Name = "Node0";
-            treeNode30.Text = "سازمان بنادر و دریانوردی";
+            treeNode31.Name = "Node7";
+            treeNode31.Text = "اداره کل امور اداری";
+            treeNode32.Name = "Node8";
+            treeNode32.Text = "اداره کل رفاه";
+            treeNode33.Name = "Node9";
+            treeNode33.Text = "اداره کل کارگزینی";
+            treeNode34.Name = "Node1";
+            treeNode34.Text = "معاونت اداری مالی";
+            treeNode35.Name = "Node10";
+            treeNode35.Text = "اداره کل ایمنی";
+            treeNode36.Name = "Node11";
+            treeNode36.Text = "اداره کل تجهیزات";
+            treeNode37.Name = "Node3";
+            treeNode37.Text = "معاونت فنی مهندسی";
+            treeNode38.Name = "Node0";
+            treeNode38.Text = "اداره کل بندر شهید رجایی";
+            treeNode39.Name = "Node1";
+            treeNode39.Text = "اداره کل بندر امام خمینی";
+            treeNode40.Name = "Node2";
+            treeNode40.Text = "اداره کل بندر انزلی";
+            treeNode41.Name = "Node4";
+            treeNode41.Text = "معاونت بندری";
+            treeNode42.Name = "Node3";
+            treeNode42.Text = "اداره کل ترانزیت";
+            treeNode43.Name = "Node5";
+            treeNode43.Text = "معاونت دریایی";
+            treeNode44.Name = "Node14";
+            treeNode44.Text = "روابط عمومی و امور بین الملل";
+            treeNode45.Name = "Node0";
+            treeNode45.Text = "سازمان بنادر و دریانوردی";
             this.structureTree.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
-            treeNode30});
+            treeNode45});
             this.structureTree.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.structureTree.RightToLeftLayout = true;
             this.structureTree.Size = new System.Drawing.Size(325, 302);
@@ -196,11 +197,23 @@
             this.deptName.Size = new System.Drawing.Size(222, 31);
             this.deptName.TabIndex = 3;
             // 
+            // Cancel
+            // 
+            this.Cancel.Location = new System.Drawing.Point(12, 354);
+            this.Cancel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.Cancel.Name = "Cancel";
+            this.Cancel.Size = new System.Drawing.Size(105, 33);
+            this.Cancel.TabIndex = 19;
+            this.Cancel.Text = "بازگشت";
+            this.Cancel.UseVisualStyleBackColor = true;
+            this.Cancel.Click += new System.EventHandler(this.Cancel_Click);
+            // 
             // StructureForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(593, 359);
+            this.ClientSize = new System.Drawing.Size(593, 400);
+            this.Controls.Add(this.Cancel);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.structureTree);
@@ -209,6 +222,7 @@
             this.Controls.SetChildIndex(this.structureTree, 0);
             this.Controls.SetChildIndex(this.groupBox1, 0);
             this.Controls.SetChildIndex(this.groupBox2, 0);
+            this.Controls.SetChildIndex(this.Cancel, 0);
             this.groupBox1.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
@@ -228,5 +242,6 @@
         private System.Windows.Forms.Button delete;
         private System.Windows.Forms.Button prev;
         private System.Windows.Forms.Button next;
+        private System.Windows.Forms.Button Cancel;
     }
 }

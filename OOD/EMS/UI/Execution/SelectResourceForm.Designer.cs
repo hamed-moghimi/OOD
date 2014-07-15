@@ -92,7 +92,7 @@
             // 
             // Cancel
             // 
-            this.Cancel.Location = new System.Drawing.Point(222, 504);
+            this.Cancel.Location = new System.Drawing.Point(204, 504);
             this.Cancel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Cancel.Name = "Cancel";
             this.Cancel.Size = new System.Drawing.Size(105, 33);
@@ -103,7 +103,7 @@
             // 
             // selectBtn
             // 
-            this.selectBtn.Location = new System.Drawing.Point(343, 504);
+            this.selectBtn.Location = new System.Drawing.Point(325, 504);
             this.selectBtn.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.selectBtn.Name = "selectBtn";
             this.selectBtn.Size = new System.Drawing.Size(105, 33);
@@ -136,7 +136,7 @@
             this.toDateBox.Name = "toDateBox";
             this.toDateBox.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.toDateBox.Size = new System.Drawing.Size(118, 31);
-            this.toDateBox.TabIndex = 20;
+            this.toDateBox.TabIndex = 22;
             // 
             // label2
             // 
@@ -154,7 +154,7 @@
             this.fromDateBox.Name = "fromDateBox";
             this.fromDateBox.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.fromDateBox.Size = new System.Drawing.Size(118, 31);
-            this.fromDateBox.TabIndex = 22;
+            this.fromDateBox.TabIndex = 20;
             // 
             // label3
             // 

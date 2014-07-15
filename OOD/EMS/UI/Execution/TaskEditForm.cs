@@ -29,6 +29,8 @@ namespace OOD.EMS.UI.Execution
                 toDateBox.Text = t.getDueDateString();
                 dscp_box.Text = t.Description;
                 prevTitle = t.Title;
+                manager = t.department;
+                respBox.Text = manager.Name;
             }
         }
 
@@ -40,6 +42,12 @@ namespace OOD.EMS.UI.Execution
 
         private void button2_Click(object sender, EventArgs e)
         {
+            if (manager == null)
+            {
+                MessageBox.Show(new IncompleteFormException().Message);
+                return;
+            }
+
             EMS.Execution.Task res = TaskStorage.getInstance().all().Find(x => x.Title.Equals(name_box.Text));
             if ((prevTitle == null || !prevTitle.Equals(name_box.Text) ) && res != null)
             {
@@ -47,18 +55,33 @@ namespace OOD.EMS.UI.Execution
             }
             else
             {
-                StructureSelectForm f = new StructureSelectForm();
-                DialogResult res2 = f.ShowDialog();
-                if (res2 == DialogResult.OK)
+                try
                 {
-                    manager = f.Section;
                     name = name_box.Text;
-                    toDate = toDateBox.Text;
-                    fromDate = fromDateBox.Text;
+                    toDate = convert(toDateBox.Text);
+                    Convert.ToDateTime(toDate);
+                    fromDate = convert(fromDateBox.Text);
+                    Convert.ToDateTime(fromDate);
                     dscp = dscp_box.Text;
                     this.DialogResult = DialogResult.OK;
                     this.Close();
                 }
+                catch (Exception e2)
+                {
+                    MessageBox.Show(new IncompleteFormException().Message);
+                }
+                
+            }
+        }
+
+        private void selectButton_Click(object sender, EventArgs e)
+        {
+            StructureSelectForm f = new StructureSelectForm();
+            DialogResult res2 = f.ShowDialog();
+            if (res2 == DialogResult.OK)
+            {
+                manager = f.Section;
+                respBox.Text = manager.Name;
             }
         }
 

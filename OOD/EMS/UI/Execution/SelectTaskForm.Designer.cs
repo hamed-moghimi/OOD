@@ -30,11 +30,11 @@
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.Cancel = new System.Windows.Forms.Button();
-            this.selectBtn = new System.Windows.Forms.Button();
             this.title = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.startDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dueDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Cancel = new System.Windows.Forms.Button();
+            this.selectBtn = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.cont_box = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
@@ -72,28 +72,6 @@
             this.dataGridView1.Size = new System.Drawing.Size(553, 278);
             this.dataGridView1.TabIndex = 3;
             // 
-            // Cancel
-            // 
-            this.Cancel.Location = new System.Drawing.Point(222, 421);
-            this.Cancel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.Cancel.Name = "Cancel";
-            this.Cancel.Size = new System.Drawing.Size(105, 33);
-            this.Cancel.TabIndex = 16;
-            this.Cancel.Text = "انصراف";
-            this.Cancel.UseVisualStyleBackColor = true;
-            this.Cancel.Click += new System.EventHandler(this.Cancel_Click);
-            // 
-            // selectBtn
-            // 
-            this.selectBtn.Location = new System.Drawing.Point(343, 421);
-            this.selectBtn.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.selectBtn.Name = "selectBtn";
-            this.selectBtn.Size = new System.Drawing.Size(105, 33);
-            this.selectBtn.TabIndex = 15;
-            this.selectBtn.Text = "انتخاب";
-            this.selectBtn.UseVisualStyleBackColor = true;
-            this.selectBtn.Click += new System.EventHandler(this.selectBtn_Click);
-            // 
             // title
             // 
             this.title.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
@@ -117,6 +95,28 @@
             this.dueDate.HeaderText = "تاریخ پایان";
             this.dueDate.Name = "dueDate";
             this.dueDate.ReadOnly = true;
+            // 
+            // Cancel
+            // 
+            this.Cancel.Location = new System.Drawing.Point(222, 421);
+            this.Cancel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.Cancel.Name = "Cancel";
+            this.Cancel.Size = new System.Drawing.Size(105, 33);
+            this.Cancel.TabIndex = 16;
+            this.Cancel.Text = "انصراف";
+            this.Cancel.UseVisualStyleBackColor = true;
+            this.Cancel.Click += new System.EventHandler(this.Cancel_Click);
+            // 
+            // selectBtn
+            // 
+            this.selectBtn.Location = new System.Drawing.Point(343, 421);
+            this.selectBtn.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.selectBtn.Name = "selectBtn";
+            this.selectBtn.Size = new System.Drawing.Size(105, 33);
+            this.selectBtn.TabIndex = 15;
+            this.selectBtn.Text = "انتخاب";
+            this.selectBtn.UseVisualStyleBackColor = true;
+            this.selectBtn.Click += new System.EventHandler(this.selectBtn_Click);
             // 
             // label1
             // 
@@ -146,7 +146,7 @@
             this.Controls.Add(this.selectBtn);
             this.Controls.Add(this.groupBox1);
             this.Name = "SelectTaskForm";
-            this.Text = "اهداف اجرایی";
+            this.Text = "مسئولیت‌ها";
             this.Controls.SetChildIndex(this.groupBox1, 0);
             this.Controls.SetChildIndex(this.selectBtn, 0);
             this.Controls.SetChildIndex(this.Cancel, 0);

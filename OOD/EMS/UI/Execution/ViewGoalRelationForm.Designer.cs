@@ -181,7 +181,7 @@
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.Cancel);
             this.Name = "ViewGoalRelationForm";
-            this.Text = "_ٰViewGoalRelationForm";
+            this.Text = "مشاهده‌ی ارتباط اهداف";
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.ResumeLayout(false);

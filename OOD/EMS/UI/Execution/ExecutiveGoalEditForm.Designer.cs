@@ -107,6 +107,7 @@
             // 
             this.responsibleBox.Location = new System.Drawing.Point(104, 108);
             this.responsibleBox.Name = "responsibleBox";
+            this.responsibleBox.ReadOnly = true;
             this.responsibleBox.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.responsibleBox.Size = new System.Drawing.Size(312, 31);
             this.responsibleBox.TabIndex = 28;
