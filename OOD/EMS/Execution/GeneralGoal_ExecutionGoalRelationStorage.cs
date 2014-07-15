@@ -20,7 +20,12 @@ namespace OOD.EMS.Execution
 
         public static GeneralGoal_ExecutiveGoalRelationStorage getInstance()
         {
-            if (instance == null) instance = new GeneralGoal_ExecutiveGoalRelationStorage();
+            if (instance == null)
+            {
+                if (Storage.getInstance().genGoal_ExecGoalStorage == null)
+                    instance = new GeneralGoal_ExecutiveGoalRelationStorage();
+                else instance = Storage.getInstance().genGoal_ExecGoalStorage;
+            }
             return instance;
         }
 

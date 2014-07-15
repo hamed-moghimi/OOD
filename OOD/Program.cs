@@ -20,10 +20,12 @@ namespace OOD
         {
             DirectoryInfo mainDir = new DirectoryInfo(@Application.StartupPath);
             DirectoryInfo twoLevelsUp = mainDir.Parent.Parent;
-            Storage.getInstance().init(twoLevelsUp.FullName + @"\data");
+            Storage.getInstance().load(twoLevelsUp.FullName + @"\data");
+            Application.ApplicationExit += new EventHandler(OnApplicationExit);
+            
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            StaticData.initialize(); //TODO: remove this line
+            //StaticData.initialize(); //TODO: remove this line
             CultureInfo culture = new GSD.Globalization.PersianCulture();
             culture.DateTimeFormat.ShortDatePattern = "yy/MM/dd";
             culture.DateTimeFormat.LongDatePattern = "yyyy/MM/dd";
@@ -32,5 +34,14 @@ namespace OOD
             Application.CurrentCulture = culture;
             Application.Run(new LoginForm());
         }
+
+        private static void OnApplicationExit(object sender, EventArgs e)
+        {
+            DirectoryInfo mainDir = new DirectoryInfo(@Application.StartupPath);
+            DirectoryInfo twoLevelsUp = mainDir.Parent.Parent;
+            Storage.getInstance().save(twoLevelsUp.FullName + @"\data");
+            
+        }
     }
+
 }

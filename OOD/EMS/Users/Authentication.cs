@@ -7,6 +7,7 @@ using OOD.EMS.Exceptions;
 
 namespace OOD.EMS.Users
 {
+    [Serializable()]
     class Authentication
     {
         private static Authentication instance;

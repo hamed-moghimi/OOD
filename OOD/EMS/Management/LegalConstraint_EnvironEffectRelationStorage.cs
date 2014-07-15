@@ -20,7 +20,12 @@ namespace OOD.EMS.Management
 
         public static LegalConstraint_EnvironEffectRelationStorage getInstance()
         {
-            if (instance == null) instance = new LegalConstraint_EnvironEffectRelationStorage();
+            if (instance == null)
+            {
+                if (Storage.getInstance().legal_EnvironStorage == null)
+                    instance = new LegalConstraint_EnvironEffectRelationStorage();
+                else instance = Storage.getInstance().legal_EnvironStorage;
+            }
             return instance;
         }
 

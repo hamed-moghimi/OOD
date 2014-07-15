@@ -20,7 +20,12 @@ namespace OOD.EMS.Management
 
         public static GeneralGoal_LegalConstraintRelationStorage getInstance()
         {
-            if (instance == null) instance = new GeneralGoal_LegalConstraintRelationStorage();
+            if (instance == null)
+            {
+                if (Storage.getInstance().genGoal_LegalStorage == null)
+                    instance = new GeneralGoal_LegalConstraintRelationStorage();
+                else instance = Storage.getInstance().genGoal_LegalStorage;
+            }
             return instance;
         }
 

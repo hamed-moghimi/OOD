@@ -38,7 +38,12 @@ namespace OOD.EMS.Execution
 
         public static OrganizationStructure getInstance()
         {
-            if (instance == null) instance = new OrganizationStructure();
+            if (instance == null)
+            {
+                if (Storage.getInstance().structure == null)
+                    instance = new OrganizationStructure();
+                else instance = Storage.getInstance().structure;
+            }
             return instance;
         }
 

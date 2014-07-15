@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace OOD.EMS.Management
 {
+    [Serializable()]
     public abstract class ManagementDocumentRelation
     {
         public DateTime Date { set; get; }

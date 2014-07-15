@@ -20,7 +20,17 @@ namespace OOD.EMS.Management
 
         public static GeneralGoal_EnvironEffectRelationStorage getInstance()
         {
-            if (instance == null) instance = new GeneralGoal_EnvironEffectRelationStorage();
+            if (instance == null)
+            {
+                if (Storage.getInstance().genGoal_EnvironEffectStorage == null)
+                {
+                    instance = new GeneralGoal_EnvironEffectRelationStorage();
+                }
+                else
+                {
+                    instance = Storage.getInstance().genGoal_EnvironEffectStorage;
+                }
+            }
             return instance;
         }
 

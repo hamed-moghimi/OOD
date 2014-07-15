@@ -32,7 +32,17 @@ namespace OOD.EMS.Management
 
         public static LegalConstraintStorage getInstance()
         {
-            if (instance == null) instance = new LegalConstraintStorage();
+            if (instance == null)
+            {
+                if (Storage.getInstance().legalConstraintStorage == null)
+                {
+                    instance = new LegalConstraintStorage();
+                }
+                else
+                {
+                    instance = Storage.getInstance().legalConstraintStorage;
+                }
+            }
             return instance;
         }
 

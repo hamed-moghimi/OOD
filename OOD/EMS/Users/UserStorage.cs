@@ -44,7 +44,9 @@ namespace OOD.EMS.Users
         {
             if (instance == null)
             {
-                instance = new UserStorage();
+                if (Storage.getInstance().userStorage == null)
+                    instance = new UserStorage();
+                else instance = Storage.getInstance().userStorage;
             }
             return instance;
         }
