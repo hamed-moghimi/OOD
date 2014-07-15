@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace OOD.EMS.Audit
 {
-    class GeneralGoalAudit
+    [Serializable()]
+    public class GeneralGoalAudit
     {
         public String Title { get; set; }
         public String Description { get; set; }

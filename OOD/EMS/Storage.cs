@@ -39,6 +39,16 @@ namespace OOD.EMS
         //Users
         public UserStorage userStorage { get; set; }
 
+        //Audit
+        public GeneralGoalAuditStorage generalGoalAuditStorage { get; set; }
+        public ExecutiveGoalAuditStorage executiveGoalAuditStorage { get; set; }
+        public TaskAuditStorage taskAuditStorage { get; set; }
+        public MetricStorage metricStorage { get; set; }
+        public MetricValueStorage metricValueStorage { get; set; }
+        public PhysicalInspectionStorage physInspectionStorage { get; set; }
+        public ExecutionInspectionStorage executionInspectionStorage { get; set; }
+
+
         private Storage()
         {
         }
@@ -68,6 +78,16 @@ namespace OOD.EMS
 
             //Users
             userStorage = UserStorage.getInstance();
+
+            //Audit
+             generalGoalAuditStorage = GeneralGoalAuditStorage.getInstance();
+             executiveGoalAuditStorage = ExecutiveGoalAuditStorage.getInstance();
+             taskAuditStorage = TaskAuditStorage.getInstance();
+             metricStorage = MetricStorage.getInstance();
+             metricValueStorage = MetricValueStorage.getInstance();
+             physInspectionStorage = PhysicalInspectionStorage.getInstance();
+             executionInspectionStorage = ExecutionInspectionStorage.getInstance();
+
 
             List<Storage> list = new List<Storage>();
             list.Add(this);

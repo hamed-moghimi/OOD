@@ -6,17 +6,24 @@ using System.Threading.Tasks;
 
 namespace OOD.EMS.Audit
 {
-    class GeneralGoalAuditStorage
+    [Serializable()]
+    public class GeneralGoalAuditStorage
     {
-        private GeneralGoalAuditStorage instance;
+        private static GeneralGoalAuditStorage instance;
         private List<GeneralGoalAudit> audits;
 
         private GeneralGoalAuditStorage()
         {
         }
 
-        public GeneralGoalAuditStorage getInstance()
+        public static GeneralGoalAuditStorage getInstance()
         {
+            if (instance == null)
+            {
+                if (Storage.getInstance().generalGoalAuditStorage == null)
+                    instance = new GeneralGoalAuditStorage();
+                else instance = Storage.getInstance().generalGoalAuditStorage;
+            }
             return instance;
         }
 

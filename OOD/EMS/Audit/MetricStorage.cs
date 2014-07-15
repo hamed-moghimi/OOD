@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace OOD.EMS.Audit
 {
-    class MetricStorage
+    [Serializable()]
+    public class MetricStorage
     {
         private static MetricStorage instance;
         private List<Metric> metrics;
@@ -18,7 +19,12 @@ namespace OOD.EMS.Audit
 
         public static MetricStorage getInstance()
         {
-            if (instance == null) instance = new MetricStorage();
+            if (instance == null)
+            {
+                if (Storage.getInstance().metricStorage == null)
+                    instance = new MetricStorage();
+                else instance = Storage.getInstance().metricStorage;
+            }
             return instance;
         }
 
