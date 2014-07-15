@@ -18,6 +18,8 @@ namespace OOD.EMS.Users
             //TMP
             userList.Add(new User("مینا", "طهماسبی", "minmit", new Manager()));
             userList.Add(new User("حامد", "مقیمی", "shmoghimi70", new HeadManager()));
+            userList.Add(new User("بهروز", "ربیعی", "brabiee", new Inspector()));
+            userList.Add(new User("فرهاد", "شاه‌محمدی", "farhadfnr", new Administrator()));
         }
 
         public List<User> all()

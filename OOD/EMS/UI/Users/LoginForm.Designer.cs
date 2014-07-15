@@ -52,6 +52,7 @@
             // 
             this.usernameBox.Location = new System.Drawing.Point(20, 81);
             this.usernameBox.Name = "usernameBox";
+            this.usernameBox.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.usernameBox.Size = new System.Drawing.Size(159, 31);
             this.usernameBox.TabIndex = 6;
             this.usernameBox.Text = "minmit";

@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-using OOD.EMS.UI.ExecutiveForms;
+using OOD.EMS.UI.Execution;
 using OOD.EMS.UI.Report;
 using OOD.EMS.UI.Audit;
 using OOD.EMS.UI.Audit.Report;
@@ -64,6 +64,19 @@ namespace OOD.EMS.UI
         {
             return MessageBox.Show("آیا مطمئن هستید؟", "تایید", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
+        }
+
+        protected String convert(String old)
+        {
+            char[][] numbers = new char[][]
+            {
+                "0123456789".ToCharArray(),"۰۱۲۳۴۵۶۷۸۹".ToCharArray()
+            };
+            for (int x = 0; x <= 9; x++)
+            {
+                old.Replace(numbers[0][x], numbers[1][x]);
+            }
+            return old;
         }
 
         // ------------------------------------------------------------------
@@ -171,15 +184,23 @@ namespace OOD.EMS.UI
 
         private void DashboardToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (DashboardForm.hasInstance())
-                DashboardForm.getInstance().Activate();
-            else
-                DashboardForm.getInstance().Show();
+            DashboardForm.getInstance().Show();
+            DashboardForm.getInstance().Activate();
         }
 
         private void metricsReport_Click(object sender, EventArgs e)
         {
             newChild(new MetricReportForm());
+        }
+
+        private void TaskManagementToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            newChild(new TaskForm());
+        }
+
+        private void GoalsRelationManagementToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            newChild(new ExecutiveGoal_GeneralGoalRelationForm());
         }
     }
 }

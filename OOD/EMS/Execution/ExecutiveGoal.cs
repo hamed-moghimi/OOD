@@ -13,12 +13,14 @@ namespace OOD.EMS.Execution
         public DateTime Date { set; get; }
         public List<Management.Attachment> attachments { set; get; }
         public ExecutionProgram program { set; get; }
+        public Department Manager { set; get; }
 
-        public ExecutiveGoal(String title, String description)
+        public ExecutiveGoal(String title, String description, Department manager)
         {
             Title = title;
             Description = description;
             Date = DateTime.Now;
+            Manager = manager;
         }
 
         public int getProgress()
@@ -53,6 +55,11 @@ namespace OOD.EMS.Execution
         {
             if (goal == null) return false;
             return Title.Equals(goal.Title);
+        }
+
+        public String getDateString()
+        {
+            return Date.ToString("yyyy/MM/dd");
         }
     }
 }

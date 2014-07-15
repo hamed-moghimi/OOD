@@ -38,5 +38,15 @@ namespace OOD.EMS.Execution
             return FromDate.Equals(alloc.FromDate) && ToDate.Equals(alloc.ToDate) && Program.Equals(alloc.Program)
                 && (Amount == alloc.Amount) && AllocResource.Equals(alloc.AllocResource);
         }
+
+        public String getStartDateString()
+        {
+            return FromDate.ToString("yyyy/MM/dd");
+        }
+
+        public String getDueDateString()
+        {
+            return ToDate.ToString("yyyy/MM/dd");
+        }
     }
 }

@@ -72,6 +72,11 @@ namespace OOD.EMS.Management
             if (goal == null) return false;
             else return Title.Equals(goal.Title);
         }
+
+        public String getDateString()
+        {
+            return Date.ToString("yyyy/MM/dd");
+        }
        
     }
 }

@@ -14,7 +14,7 @@ namespace OOD
     {
         public static void initialize()
         {
-            // get a user
+            // create a user
             User u = UserStorage.getInstance().all()[0];
 
             // initialize a department
@@ -26,15 +26,15 @@ namespace OOD
             GeneralGoalStorage.getInstance().create(g);
 
             // executive goal
-            ExecutiveGoal e = new ExecutiveGoal("تجهیز بنادر کشور", "در سطح یک بینل");
+            ExecutiveGoal e = new ExecutiveGoal("تجهیز بنادر کشور", "در سطح یک بینل", d);
             ExecutionProgram p = new ExecutionProgram("تجهیز بنادر کشور", "در سطح یک بینل");
             e.program = p;
             ExecutiveGoalStorage.getInstance().create(e);
 
             // initialize tasks
-            Task t1 = new Task("خرید کشتی موقتی", DateTime.Today, DateTime.Today + TimeSpan.FromDays(10), 0, d);
+            Task t1 = new Task("خرید کشتی موقتی", DateTime.Today, DateTime.Today + TimeSpan.FromDays(10), 0, d, "");
             TaskStorage.getInstance().create(t1);
-            Task t2 = new Task("برگزاری همایش ایمنی در بنادر", DateTime.Today - TimeSpan.FromDays(30), DateTime.Today + TimeSpan.FromDays(3), 35, d);
+            Task t2 = new Task("برگزاری همایش ایمنی در بنادر", DateTime.Today - TimeSpan.FromDays(30), DateTime.Today + TimeSpan.FromDays(3), 35, d, "");
             TaskStorage.getInstance().create(t2);
 
             // assign tasks
@@ -76,6 +76,7 @@ namespace OOD
             }
         }
 
+        #region old_static_codes
         // resource: title, amount, description
         public static List<object[]> resources = new List<object[]>();
         private static object[][] _resources = new object[][] {
@@ -154,5 +155,6 @@ namespace OOD
             new object[] {"علی طبسی", "بازرس"},
             new object[] {"زینب نویدی", "مدبر سامانه"},
         };
+        #endregion
     }
 }

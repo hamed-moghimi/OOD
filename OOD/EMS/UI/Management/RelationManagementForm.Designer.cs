@@ -29,23 +29,27 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.docType2 = new System.Windows.Forms.ComboBox();
+            this.docType1 = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.listBox1 = new System.Windows.Forms.ListBox();
-            this.listBox2 = new System.Windows.Forms.ListBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
+            this.rel1Grid = new System.Windows.Forms.DataGridView();
+            this.name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.rel2Grid = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.rel1Grid)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rel2Grid)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.comboBox2);
-            this.groupBox1.Controls.Add(this.comboBox1);
+            this.groupBox1.Controls.Add(this.docType2);
+            this.groupBox1.Controls.Add(this.docType1);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Location = new System.Drawing.Point(107, 63);
@@ -56,29 +60,33 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "اسناد طرفین ارتباط";
             // 
-            // comboBox2
+            // docType2
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] {
+            this.docType2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.docType2.FormattingEnabled = true;
+            this.docType2.Items.AddRange(new object[] {
             "اهداف کلان",
             "الزامات قانونی",
             "تاثیرات زیست‌محیطی"});
-            this.comboBox2.Location = new System.Drawing.Point(72, 66);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(121, 32);
-            this.comboBox2.TabIndex = 3;
+            this.docType2.Location = new System.Drawing.Point(54, 63);
+            this.docType2.Name = "docType2";
+            this.docType2.Size = new System.Drawing.Size(134, 32);
+            this.docType2.TabIndex = 3;
+            this.docType2.SelectedIndexChanged += new System.EventHandler(this.docType2_SelectedIndexChanged);
             // 
-            // comboBox1
+            // docType1
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.docType1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.docType1.FormattingEnabled = true;
+            this.docType1.Items.AddRange(new object[] {
             "اهداف کلان",
             "الزامات قانونی",
             "تاثیرات زیست‌محیطی"});
-            this.comboBox1.Location = new System.Drawing.Point(314, 66);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 32);
-            this.comboBox1.TabIndex = 2;
+            this.docType1.Location = new System.Drawing.Point(306, 63);
+            this.docType1.Name = "docType1";
+            this.docType1.Size = new System.Drawing.Size(134, 32);
+            this.docType1.TabIndex = 2;
+            this.docType1.SelectedIndexChanged += new System.EventHandler(this.docType1_SelectedIndexChanged);
             // 
             // label2
             // 
@@ -97,33 +105,6 @@
             this.label1.Size = new System.Drawing.Size(71, 24);
             this.label1.TabIndex = 0;
             this.label1.Text = "نوع سند اول";
-            // 
-            // listBox1
-            // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 24;
-            this.listBox1.Items.AddRange(new object[] {
-            "کاهش آلاینده‌های زیست‌محیطی کشتی‌ها ",
-            "افزایش ایمنی در بنادر و کاهش احتمال آتش‌سوزی ",
-            "کاهش میزان آلودگی اسکله و بخش ترانزیت بنادر"});
-            this.listBox1.Location = new System.Drawing.Point(384, 239);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.listBox1.Size = new System.Drawing.Size(276, 124);
-            this.listBox1.TabIndex = 4;
-            // 
-            // listBox2
-            // 
-            this.listBox2.FormattingEnabled = true;
-            this.listBox2.ItemHeight = 24;
-            this.listBox2.Items.AddRange(new object[] {
-            "تضمین ضریب ایمنی پرسنل بندر ",
-            "خارج کردن نفت‌کش های فرسوده تا پایان سال ۹۵ "});
-            this.listBox2.Location = new System.Drawing.Point(42, 239);
-            this.listBox2.Name = "listBox2";
-            this.listBox2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.listBox2.Size = new System.Drawing.Size(276, 124);
-            this.listBox2.TabIndex = 5;
             // 
             // label3
             // 
@@ -167,29 +148,83 @@
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // RelationManagement
+            // rel1Grid
+            // 
+            this.rel1Grid.BackgroundColor = System.Drawing.SystemColors.Window;
+            this.rel1Grid.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.rel1Grid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.rel1Grid.ColumnHeadersVisible = false;
+            this.rel1Grid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.name});
+            this.rel1Grid.Location = new System.Drawing.Point(379, 239);
+            this.rel1Grid.MultiSelect = false;
+            this.rel1Grid.Name = "rel1Grid";
+            this.rel1Grid.ReadOnly = true;
+            this.rel1Grid.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.rel1Grid.RowHeadersVisible = false;
+            this.rel1Grid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.rel1Grid.Size = new System.Drawing.Size(277, 124);
+            this.rel1Grid.TabIndex = 10;
+            // 
+            // name
+            // 
+            this.name.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.name.HeaderText = "عنوان";
+            this.name.Name = "name";
+            this.name.ReadOnly = true;
+            this.name.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // rel2Grid
+            // 
+            this.rel2Grid.BackgroundColor = System.Drawing.SystemColors.Window;
+            this.rel2Grid.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.rel2Grid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.rel2Grid.ColumnHeadersVisible = false;
+            this.rel2Grid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn1});
+            this.rel2Grid.Location = new System.Drawing.Point(42, 239);
+            this.rel2Grid.MultiSelect = false;
+            this.rel2Grid.Name = "rel2Grid";
+            this.rel2Grid.ReadOnly = true;
+            this.rel2Grid.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.rel2Grid.RowHeadersVisible = false;
+            this.rel2Grid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.rel2Grid.Size = new System.Drawing.Size(277, 124);
+            this.rel2Grid.TabIndex = 11;
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridViewTextBoxColumn1.HeaderText = "عنوان";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            this.dataGridViewTextBoxColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // RelationManagementForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(725, 446);
+            this.Controls.Add(this.rel2Grid);
+            this.Controls.Add(this.rel1Grid);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.listBox2);
-            this.Controls.Add(this.listBox1);
             this.Controls.Add(this.groupBox1);
-            this.Name = "RelationManagement";
+            this.Name = "RelationManagementForm";
             this.Text = "اضافه‌کردن ارتباطات اسناد مدیریتی";
             this.Controls.SetChildIndex(this.groupBox1, 0);
-            this.Controls.SetChildIndex(this.listBox1, 0);
-            this.Controls.SetChildIndex(this.listBox2, 0);
             this.Controls.SetChildIndex(this.label3, 0);
             this.Controls.SetChildIndex(this.label4, 0);
             this.Controls.SetChildIndex(this.button1, 0);
             this.Controls.SetChildIndex(this.button2, 0);
+            this.Controls.SetChildIndex(this.rel1Grid, 0);
+            this.Controls.SetChildIndex(this.rel2Grid, 0);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.rel1Grid)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rel2Grid)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -200,13 +235,15 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.ListBox listBox1;
-        private System.Windows.Forms.ListBox listBox2;
+        private System.Windows.Forms.ComboBox docType1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.DataGridView rel1Grid;
+        private System.Windows.Forms.DataGridViewTextBoxColumn name;
+        private System.Windows.Forms.DataGridView rel2Grid;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.ComboBox docType2;
     }
 }

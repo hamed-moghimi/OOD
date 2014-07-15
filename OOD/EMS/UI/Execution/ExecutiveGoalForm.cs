@@ -5,49 +5,44 @@ using System.Data;
 using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
+using OOD.EMS.Execution;
 
-namespace OOD.EMS.UI.ExecutiveForms
+namespace OOD.EMS.UI.Execution
 {
     public partial class ExecutiveGoalForm : TemplateForm
     {
         public ExecutiveGoalForm()
         {
             InitializeComponent();
+            load_goals();
         }
 
-        private void ExecutiveGoalForm_Load(object sender, EventArgs e)
+        private void load_goals()
         {
             dataGridView1.Rows.Clear();
-            foreach (object[] row in StaticData.executiveGoals)
-                dataGridView1.Rows.Add(row);
+            foreach (ExecutiveGoal goal in ExecutiveGoalStorage.getInstance().all())
+            {
+                dataGridView1.Rows.Add(new Object[] {goal.Title, goal.getDateString(), goal.Manager.Name });
+            }
         }
 
-        private void deleteButton_Click(object sender, EventArgs e)
+        
+        private void addButton_Click_1(object sender, EventArgs e)
         {
-            int i = dataGridView1.SelectedRows[0].Index;
-            dataGridView1.Rows.RemoveAt(i);
-            StaticData.executiveGoals.RemoveAt(i);
+            (new ExecutiveGoalEditForm(true, null)).ShowDialog();
+            load_goals();
         }
 
-        private void dataGridView1_DoubleClick(object sender, EventArgs e)
+        private void editButton_Click_1(object sender, EventArgs e)
         {
-            new ExecutiveGoalEditForm(false, StaticData.executiveGoals[dataGridView1.SelectedRows[0].Index]).ShowDialog();
+            String name = (String)dataGridView1.Rows[dataGridView1.SelectedRows[0].Index].Cells[0].Value;
+            ExecutiveGoal goal = ExecutiveGoalStorage.getInstance().all().Find(x => x.Title.Equals(name));
+            (new ExecutiveGoalEditForm(false, goal)).ShowDialog();
         }
 
-        private void editButton_Click(object sender, EventArgs e)
+        private void Cancel_Click(object sender, EventArgs e)
         {
-            ResourceEditForm f = new ResourceEditForm(true, StaticData.executiveGoals[dataGridView1.SelectedRows[0].Index]);
-            f.ShowDialog();
-            StaticData.executiveGoals[dataGridView1.SelectedRows[0].Index] = f.Resource;
-            ExecutiveGoalForm_Load(this, null);
-        }
-
-        private void addButton_Click(object sender, EventArgs e)
-        {
-            ResourceEditForm f = new ResourceEditForm(true, null);
-            f.ShowDialog();
-            StaticData.executiveGoals.Add(f.Resource);
-            ExecutiveGoalForm_Load(this, null);
+            this.Close();
         }
     }
 }

@@ -15,10 +15,6 @@ namespace OOD.EMS.UI.Report
     public partial class DashboardForm : TemplateDialog
     {
         private static DashboardForm instance;
-        public static bool hasInstance()
-        {
-            return instance != null;
-        }
         public static DashboardForm getInstance()
         {
             if(instance == null)

@@ -39,5 +39,10 @@ namespace OOD.EMS.Users
             if (user == null) return false;
             return this.Username.Equals(user.Username);
         }
+
+        public String getName()
+        {
+            return Firstname + " " + Lastname;
+        }
     }
 }

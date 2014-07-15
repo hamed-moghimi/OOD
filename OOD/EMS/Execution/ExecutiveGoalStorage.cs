@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using OOD.EMS.Execution;
 
 namespace OOD.EMS.Execution
 {
@@ -14,6 +15,13 @@ namespace OOD.EMS.Execution
         private ExecutiveGoalStorage()
         {
             goals = new List<ExecutiveGoal>();
+
+            //TMP
+            Department dept = OrganizationStructure.getInstance().Root;
+            goals.Add(new ExecutiveGoal("هدف اجرایی ۱", "توضیحات", dept));
+            goals.Add(new ExecutiveGoal("هدف اجرایی ۲", "توضیحات", dept));
+            goals.Add(new ExecutiveGoal("هدف اجرایی ۳", "توضیحات", dept));
+            goals.Add(new ExecutiveGoal("هدف اجرایی ۴", "توضیحات", dept));
         }
 
         public static ExecutiveGoalStorage getInstance()

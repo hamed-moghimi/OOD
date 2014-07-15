@@ -52,6 +52,7 @@ namespace OOD.EMS.UI
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
             this.executiveSubmenu = new System.Windows.Forms.ToolStripMenuItem();
             this.scheduleSubmenu = new System.Windows.Forms.ToolStripMenuItem();
+            this.TaskManagementToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.auditMenu = new System.Windows.Forms.ToolStripMenuItem();
             this.auditGoalSubmenu = new System.Windows.Forms.ToolStripMenuItem();
             this.generalGoalAuditSubmenu = new System.Windows.Forms.ToolStripMenuItem();
@@ -73,6 +74,7 @@ namespace OOD.EMS.UI
             this.viewAccountSubmenu = new System.Windows.Forms.ToolStripMenuItem();
             this.exitSubmenu = new System.Windows.Forms.ToolStripMenuItem();
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
+            this.GoalsRelationManagementToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menu.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -160,7 +162,9 @@ namespace OOD.EMS.UI
             this.structureSubmenu,
             this.toolStripSeparator3,
             this.executiveSubmenu,
-            this.scheduleSubmenu});
+            this.scheduleSubmenu,
+            this.TaskManagementToolStripMenuItem,
+            this.GoalsRelationManagementToolStripMenuItem});
             this.executiveMenu.Name = "executiveMenu";
             this.executiveMenu.Size = new System.Drawing.Size(104, 28);
             this.executiveMenu.Text = "اسناد عملکردی";
@@ -197,6 +201,13 @@ namespace OOD.EMS.UI
             this.scheduleSubmenu.Size = new System.Drawing.Size(202, 28);
             this.scheduleSubmenu.Text = "مدیریت برنامه‌های اقدام";
             this.scheduleSubmenu.Click += new System.EventHandler(this.scheduleSubmenu_Click);
+            // 
+            // مدیریتمسئولیتهاToolStripMenuItem
+            // 
+            this.TaskManagementToolStripMenuItem.Name = "TaskManagementToolStripMenuItem";
+            this.TaskManagementToolStripMenuItem.Size = new System.Drawing.Size(202, 28);
+            this.TaskManagementToolStripMenuItem.Text = "مدیریت مسئولیت‌ها";
+            this.TaskManagementToolStripMenuItem.Click += new System.EventHandler(this.TaskManagementToolStripMenuItem_Click);
             // 
             // auditMenu
             // 
@@ -337,8 +348,7 @@ namespace OOD.EMS.UI
             this.exitSubmenu});
             this.AccountMenu.Name = "AccountMenu";
             this.AccountMenu.Size = new System.Drawing.Size(362, 28);
-            this.AccountMenu.Text = "حساب کاربری                                                                      " +
-    "                   ";
+            this.AccountMenu.Text = "حساب کاربری";
             // 
             // viewAccountSubmenu
             // 
@@ -360,6 +370,13 @@ namespace OOD.EMS.UI
             this.toolTip.InitialDelay = 200;
             this.toolTip.ReshowDelay = 100;
             this.toolTip.ShowAlways = true;
+            // 
+            // مدیریتارتباطاهدافToolStripMenuItem
+            // 
+            this.GoalsRelationManagementToolStripMenuItem.Name = "GoalsRelationManagementToolStripMenuItem";
+            this.GoalsRelationManagementToolStripMenuItem.Size = new System.Drawing.Size(202, 28);
+            this.GoalsRelationManagementToolStripMenuItem.Text = "مدیریت ارتباط اهداف";
+            this.GoalsRelationManagementToolStripMenuItem.Click += new System.EventHandler(this.GoalsRelationManagementToolStripMenuItem_Click);
             // 
             // TemplateForm
             // 
@@ -424,7 +441,8 @@ namespace OOD.EMS.UI
         private ToolStripMenuItem responsibilitySubmenu;
         private ToolStripSeparator toolStripSeparator4;
         private ToolStripMenuItem DashboardToolStripMenuItem;
-
+        private ToolStripMenuItem TaskManagementToolStripMenuItem;
+        private ToolStripMenuItem GoalsRelationManagementToolStripMenuItem;
     }
 }
 
