@@ -22,7 +22,7 @@ namespace OOD.EMS.UI.Execution
             InitializeComponent();
             managerList.Rows.Clear();
             foreach(User user in UserStorage.getInstance().all()){
-                if(user.ALevel is BasicUser){
+                if(user.ALevel is Manager || user.ALevel is HeadManager){
                     managerList.Rows.Add(new Object[]{user.getName()});
                 }
             }

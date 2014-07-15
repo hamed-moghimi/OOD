@@ -146,7 +146,7 @@
             this.name_box.Size = new System.Drawing.Size(222, 31);
             this.name_box.TabIndex = 20;
             // 
-            // AddGeneralGoals
+            // AddGeneralGoalsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -158,7 +158,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.dscp_box);
             this.Controls.Add(this.label5);
-            this.Name = "AddGeneralGoals";
+            this.Name = "AddGeneralGoalsForm";
             this.Text = "اضافه‌کردن هدف کلان";
             this.Controls.SetChildIndex(this.label5, 0);
             this.Controls.SetChildIndex(this.dscp_box, 0);

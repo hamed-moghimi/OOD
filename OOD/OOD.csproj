@@ -49,9 +49,6 @@
   <ItemGroup>
     <Reference Include="Microsoft.ReportViewer.Common, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
     <Reference Include="Microsoft.ReportViewer.WinForms, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
-    <Reference Include="PersianCultureExample2">
-      <HintPath>C:\Users\Hamed\Documents\Downloads\Compressed\pc\PersianCultureExample2\bin\PersianCultureExample2.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.DirectoryServices" />
@@ -124,6 +121,7 @@
     <Compile Include="EMS\Management\LegalConstraint_EnvironEffectRelationStorage.cs" />
     <Compile Include="EMS\Management\ManagementDocument.cs" />
     <Compile Include="EMS\Management\ManagementDocumentRelation.cs" />
+    <Compile Include="EMS\PersianCulture.cs" />
     <Compile Include="EMS\Report\Dashboard.cs" />
     <Compile Include="EMS\Report\DocumentReport.cs" />
     <Compile Include="EMS\Report\DocumentReporter.cs" />

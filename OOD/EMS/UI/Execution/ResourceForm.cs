@@ -51,7 +51,7 @@ namespace OOD.EMS.UI.Execution
             if (res == DialogResult.OK)
             {
                 prev.Title = (string)f.Resource[0];
-                prev.Amount = Convert.ToInt32((string)f.Resource[1]);
+                prev.Amount = Convert.ToInt32(convert((string)f.Resource[1]));
                 prev.Description = (string)f.Resource[2];
             }
             load_resources();

@@ -42,6 +42,9 @@
             this.label1 = new System.Windows.Forms.Label();
             this.toDateBox = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.respBox = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.selectButton = new System.Windows.Forms.Button();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -60,7 +63,7 @@
             this.groupBox2.Controls.Add(this.label6);
             this.groupBox2.Controls.Add(this.label4);
             this.groupBox2.Controls.Add(this.attach);
-            this.groupBox2.Location = new System.Drawing.Point(38, 267);
+            this.groupBox2.Location = new System.Drawing.Point(38, 313);
             this.groupBox2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -102,7 +105,7 @@
             // 
             // Cancel
             // 
-            this.Cancel.Location = new System.Drawing.Point(37, 409);
+            this.Cancel.Location = new System.Drawing.Point(37, 455);
             this.Cancel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Cancel.Name = "Cancel";
             this.Cancel.Size = new System.Drawing.Size(105, 33);
@@ -113,7 +116,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(158, 409);
+            this.button2.Location = new System.Drawing.Point(158, 455);
             this.button2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(105, 33);
@@ -125,7 +128,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(437, 145);
+            this.label3.Location = new System.Drawing.Point(437, 191);
             this.label3.Name = "label3";
             this.label3.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.label3.Size = new System.Drawing.Size(60, 24);
@@ -134,7 +137,7 @@
             // 
             // dscp_box
             // 
-            this.dscp_box.Location = new System.Drawing.Point(38, 178);
+            this.dscp_box.Location = new System.Drawing.Point(38, 224);
             this.dscp_box.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dscp_box.Name = "dscp_box";
             this.dscp_box.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -152,10 +155,10 @@
             // 
             // fromDateBox
             // 
-            this.fromDateBox.Location = new System.Drawing.Point(266, 60);
+            this.fromDateBox.Location = new System.Drawing.Point(244, 60);
             this.fromDateBox.Name = "fromDateBox";
             this.fromDateBox.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.fromDateBox.Size = new System.Drawing.Size(138, 31);
+            this.fromDateBox.Size = new System.Drawing.Size(160, 31);
             this.fromDateBox.TabIndex = 22;
             // 
             // label1
@@ -170,10 +173,10 @@
             // 
             // toDateBox
             // 
-            this.toDateBox.Location = new System.Drawing.Point(266, 99);
+            this.toDateBox.Location = new System.Drawing.Point(244, 99);
             this.toDateBox.Name = "toDateBox";
             this.toDateBox.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.toDateBox.Size = new System.Drawing.Size(138, 31);
+            this.toDateBox.Size = new System.Drawing.Size(160, 31);
             this.toDateBox.TabIndex = 24;
             // 
             // label2
@@ -186,11 +189,44 @@
             this.label2.TabIndex = 23;
             this.label2.Text = "تاریخ پایان:";
             // 
+            // respBox
+            // 
+            this.respBox.Location = new System.Drawing.Point(244, 142);
+            this.respBox.Name = "respBox";
+            this.respBox.ReadOnly = true;
+            this.respBox.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.respBox.Size = new System.Drawing.Size(160, 31);
+            this.respBox.TabIndex = 26;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(419, 145);
+            this.label7.Name = "label7";
+            this.label7.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.label7.Size = new System.Drawing.Size(78, 24);
+            this.label7.TabIndex = 25;
+            this.label7.Text = "بخش مسئول:";
+            // 
+            // selectButton
+            // 
+            this.selectButton.Image = global::OOD.Properties.Resources.edit;
+            this.selectButton.Location = new System.Drawing.Point(182, 137);
+            this.selectButton.Name = "selectButton";
+            this.selectButton.Size = new System.Drawing.Size(40, 40);
+            this.selectButton.TabIndex = 27;
+            this.toolTip.SetToolTip(this.selectButton, "ویرایش");
+            this.selectButton.UseVisualStyleBackColor = true;
+            this.selectButton.Click += new System.EventHandler(this.selectButton_Click);
+            // 
             // TaskEditForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(538, 460);
+            this.ClientSize = new System.Drawing.Size(538, 501);
+            this.Controls.Add(this.selectButton);
+            this.Controls.Add(this.respBox);
+            this.Controls.Add(this.label7);
             this.Controls.Add(this.toDateBox);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.fromDateBox);
@@ -203,7 +239,7 @@
             this.Controls.Add(this.dscp_box);
             this.Controls.Add(this.label5);
             this.Name = "TaskEditForm";
-            this.Text = "مدیریت مسئولیت";
+            this.Text = "مسئولیت";
             this.Controls.SetChildIndex(this.label5, 0);
             this.Controls.SetChildIndex(this.dscp_box, 0);
             this.Controls.SetChildIndex(this.label3, 0);
@@ -215,6 +251,9 @@
             this.Controls.SetChildIndex(this.fromDateBox, 0);
             this.Controls.SetChildIndex(this.label2, 0);
             this.Controls.SetChildIndex(this.toDateBox, 0);
+            this.Controls.SetChildIndex(this.label7, 0);
+            this.Controls.SetChildIndex(this.respBox, 0);
+            this.Controls.SetChildIndex(this.selectButton, 0);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
@@ -238,5 +277,8 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox toDateBox;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox respBox;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Button selectButton;
     }
 }

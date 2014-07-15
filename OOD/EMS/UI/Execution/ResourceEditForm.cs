@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using OOD.EMS.Execution;
@@ -55,12 +56,11 @@ namespace OOD.EMS.UI.Execution
             
         }
 
-        
-
+       
         private void ResourceEdit_FormClosing(object sender, FormClosingEventArgs e)
         {
             resource[0] = titleBox.Text;
-            resource[1] = amountBox.Text;
+            resource[1] = convert(amountBox.Text);
             resource[2] = descBox.Text;
         }
 
@@ -72,8 +72,14 @@ namespace OOD.EMS.UI.Execution
 
         private void button2_Click(object sender, EventArgs e)
         {
+            
+            if(titleBox.Text.Trim().Count() == 0)
+            {
+                MessageBox.Show(new IncompleteFormException().Message);
+                return;
+            }
             Resource res = ResourceStorage.getInstance().all().Find(x => x.Title.Equals(titleBox.Text));
-            if ((prevTitle == null || !prevTitle.Equals((string)resource[0])) && res != null)
+            if ((prevTitle == null || !prevTitle.Equals(titleBox.Text)) && res != null)
             {
                 this.DialogResult = DialogResult.None;
                 MessageBox.Show(new ResourceExistsException().Message);
@@ -81,6 +87,7 @@ namespace OOD.EMS.UI.Execution
             else
             {
                 resource[1] = convert(amountBox.Text);
+                
                 try
                 {
                     Convert.ToInt32(resource[1]);

@@ -4,8 +4,10 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Text;
+using System.Linq;
 using System.Windows.Forms;
 using OOD.EMS.Execution;
+using OOD.EMS.Exceptions;
 
 namespace OOD.EMS.UI.Execution
 {
@@ -43,10 +45,19 @@ namespace OOD.EMS.UI.Execution
         {
             String name = (string)dataGridView1.Rows[dataGridView1.SelectedRows[0].Index].Cells[0].Value;
             Resource r = ResourceStorage.getInstance().all().Find(x => x.Title.Equals(name));
-            alloc = new Allocation(Convert.ToDateTime(fromDateBox.Text), Convert.ToDateTime(toDateBox.Text),
-                                    r, null, Convert.ToInt32(cont_box.Text));
-            this.DialogResult = DialogResult.OK;
-            this.Close();
+            try
+            {
+                int amount = Convert.ToInt32(convert(cont_box.Text));
+                DateTime fromDate = Convert.ToDateTime(convert(fromDateBox.Text));
+                DateTime toDate = Convert.ToDateTime(convert(toDateBox.Text));
+                alloc = new Allocation(fromDate, toDate, r, null, amount);
+                this.DialogResult = DialogResult.OK;
+                this.Close();
+            }
+            catch (Exception e2)
+            {
+                MessageBox.Show(new IncompleteFormException().Message);
+            }
         }
 
 

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using OOD.EMS.Execution;
@@ -33,10 +34,15 @@ namespace OOD.EMS.UI.Execution
             {
                 dateBox.Text = DateTime.Now.ToString("yyyy/MM/dd");
                 prevTitle = null;
+                dept = null;
             }
             dateBox.ReadOnly = true;
-            titleBox.ReadOnly  = responsibleBox.ReadOnly = dscp_box.ReadOnly = !canEdit;
-            button2.Visible = canEdit;
+            titleBox.ReadOnly  =  dscp_box.ReadOnly = !canEdit;
+            button2.Visible = button1.Visible = canEdit;
+            if (!canEdit)
+            {
+                Cancel.Text = "بازگشت";
+            }
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -58,6 +64,11 @@ namespace OOD.EMS.UI.Execution
 
         private void button1_Click(object sender, EventArgs e)
         {
+            if (titleBox.Text.Trim().Count() == 0 || dept == null)
+            {
+                MessageBox.Show(new IncompleteFormException().Message);
+                return;
+            }
             ExecutiveGoal goal = ExecutiveGoalStorage.getInstance().all().Find(x => x.Title.Equals(titleBox.Text));
             if ((prevTitle == null || !prevTitle.Equals(titleBox.Text)) && goal != null)
             {

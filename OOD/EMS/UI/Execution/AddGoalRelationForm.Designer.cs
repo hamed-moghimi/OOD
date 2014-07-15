@@ -176,7 +176,7 @@
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Name = "AddGoalRelationForm";
-            this.Text = "AddGoalRelationForm";
+            this.Text = "اضافه‌کردن ارتباط";
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.genGrid)).EndInit();
             this.groupBox2.ResumeLayout(false);

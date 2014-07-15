@@ -87,7 +87,7 @@
             this.Controls.Add(this.Cancel);
             this.Controls.Add(this.ok);
             this.Name = "SelectManagerForm";
-            this.Text = "ویرایش و مشاهده منبع";
+            this.Text = "مدیران";
             ((System.ComponentModel.ISupportInitialize)(this.managerList)).EndInit();
             this.ResumeLayout(false);
 

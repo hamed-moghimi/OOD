@@ -83,7 +83,7 @@ namespace OOD.EMS.UI.Execution
 
         private void button1_Click(object sender, EventArgs e)
         {
-            SelectResourceForm f = new SelectResourceForm(program.getResources());
+            SelectResourceForm f = new SelectResourceForm(new List<Resource>());
             DialogResult res = f.ShowDialog();
             if (res == DialogResult.OK)
             {

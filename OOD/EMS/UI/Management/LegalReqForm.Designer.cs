@@ -96,7 +96,7 @@
             // executive_target
             // 
             this.executive_target.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.executive_target.HeaderText = "هدف اجرایی";
+            this.executive_target.HeaderText = "الزام قانونی";
             this.executive_target.Name = "executive_target";
             this.executive_target.ReadOnly = true;
             this.executive_target.Resizable = System.Windows.Forms.DataGridViewTriState.False;
