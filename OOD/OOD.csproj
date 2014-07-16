@@ -64,7 +64,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="EMS\Audit\Audit.cs" />
+    <Compile Include="EMS\Audit\BaseAudit.cs" />
     <Compile Include="EMS\Audit\ExecutionInspection.cs" />
     <Compile Include="EMS\Audit\ExecutionInspectionStorage.cs" />
     <Compile Include="EMS\Audit\ExecutiveGoalAudit.cs" />

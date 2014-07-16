@@ -7,6 +7,7 @@ using OOD.EMS.Users;
 
 namespace OOD.EMS.Audit
 {
+    [Serializable()]
     public abstract class BaseAudit
     {
         public User Creator { set; get; }
