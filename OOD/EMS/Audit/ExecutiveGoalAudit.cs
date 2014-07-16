@@ -6,23 +6,23 @@ using System.Threading.Tasks;
 
 namespace OOD.EMS.Audit
 {
-    class ExecutiveGoalAudit
+    public class ExecutiveGoalAudit : BaseAudit
     {
-        public String Title { set; get; }
-        public String Description { set; get; }
         public int Progress { set; get; }
         public Execution.ExecutiveGoal Goal { set; get; }
-        public List<Management.Attachment> Attachments { set; get; }
 
-        public ExecutiveGoalAudit(String title, String description, List<Management.Attachment> attachments, int progress,
-                Execution.ExecutiveGoal goal)
+        public ExecutiveGoalAudit(Execution.ExecutiveGoal goal,
+            Users.User creator, int progress, String description,
+            List<Management.Attachment> attachments)
+            : base(creator, description, attachments)
         {
-            Title = title;
-            Description = description;
             Progress = progress;
-            Attachments = attachments;
             Goal = goal;
         }
 
+        public override string ToString()
+        {
+            return Goal.Title;
+        }
     }
 }

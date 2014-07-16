@@ -8,15 +8,18 @@ namespace OOD.EMS.Audit
 {
     class GeneralGoalAuditStorage
     {
-        private GeneralGoalAuditStorage instance;
+        private static GeneralGoalAuditStorage instance;
         private List<GeneralGoalAudit> audits;
 
         private GeneralGoalAuditStorage()
         {
+            audits = new List<GeneralGoalAudit>();
         }
 
-        public GeneralGoalAuditStorage getInstance()
+        public static GeneralGoalAuditStorage getInstance()
         {
+            if (instance == null)
+                instance = new GeneralGoalAuditStorage();
             return instance;
         }
 

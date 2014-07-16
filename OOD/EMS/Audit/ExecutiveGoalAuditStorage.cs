@@ -8,15 +8,18 @@ namespace OOD.EMS.Audit
 {
     class ExecutiveGoalAuditStorage
     {
-        private ExecutiveGoalAuditStorage instance;
+        private static ExecutiveGoalAuditStorage instance;
         private List<ExecutiveGoalAudit> audits;
 
         private ExecutiveGoalAuditStorage()
         {
+            audits = new List<ExecutiveGoalAudit>();
         }
 
-        public ExecutiveGoalAuditStorage getInstance()
+        public static ExecutiveGoalAuditStorage getInstance()
         {
+            if (instance == null)
+                instance = new ExecutiveGoalAuditStorage();
             return instance;
         }
 

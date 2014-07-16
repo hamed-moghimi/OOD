@@ -53,5 +53,10 @@ namespace OOD.EMS.Execution
         {
             return DueDate.ToString("yyyy/MM/dd");
         }
+
+        public override string ToString()
+        {
+            return Title;
+        }
     }
 }

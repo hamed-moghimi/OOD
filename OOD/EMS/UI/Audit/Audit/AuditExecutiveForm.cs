@@ -5,37 +5,89 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+using OOD.EMS.Execution;
+using OOD.EMS.Audit;
+using OOD.EMS.Users;
 
-namespace OOD.EMS.UI.Audit
+namespace OOD.EMS.UI.Audit.Audit
 {
-    public partial class AuditExecutiveForm : TemplateForm
+    public partial class AuditExecutiveForm : TemplateDialog
     {
-        public AuditExecutiveForm()
+        private AuditExecutiveForm()
         {
-            this.menu.Visible = false;
             InitializeComponent();
-            this.dataGridView1.Rows.Add("مسئولیت ۱", "۳۰٪");
-            this.dataGridView1.Rows.Add("مسئولیت ۲", "۴۰٪");
-            this.dataGridView1.Rows.Add("مسئولیت ۳", "۵۰٪");
+        }
+        
+        private void fillList(IEnumerable<Task> items)
+        {
+            foreach (var item in items)
+            {
+                object[] row = new object[2];
+                row[0] = item.Title;
+                row[1] = item.Progress.ToString() + "٪";
+                tasksList.Rows.Add(row);
+            }
         }
 
-        private void attach_Click(object sender, EventArgs e)
+        public AuditExecutiveForm(ExecutiveGoal goal) : this()
         {
-            this.addAttachment.ShowDialog();
+            this.goal = goal;
+            targetName.Text = goal.Title;
+            if (goal.program != null)
+            {
+                progressBox.Text = goal.getProgress().ToString() + "٪";
+                var tasks =
+                    from contrib in goal.program.Tasks
+                    select contrib.ContTask;
+                fillList(tasks);
+            }
+            else
+            {
+                progressBox.Text = "هنوز برنامه‌ی اقدامی برای این هدف تعریف نشده است";
+            }
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        public AuditExecutiveForm(ExecutiveGoalAudit audit) : this()
         {
-            this.Close();
+            this.goal = audit.Goal;
+            targetName.Text = audit.Goal.Title;
+            progressBox.Text = audit.Progress.ToString() + "٪";
+            descBox.Text = audit.Description;
+            descBox.ReadOnly = true;
+            OK.Visible = false;
+            attach.Visible = false;
+            if (goal.program != null)
+            {
+                var tasks =
+                        from contrib in audit.Goal.program.Tasks
+                        select contrib.ContTask;
+                fillList(tasks);
+            }
         }
 
         private void Cancel_Click(object sender, EventArgs e)
         {
+            this.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.Close();
         }
 
-        
+        private ExecutiveGoal goal;
+        private ExecutiveGoalAudit audit;
+        public ExecutiveGoalAudit Audit { get { return audit; } }
+
+        private void OK_Click(object sender, EventArgs e)
+        {
+            if (descBox.Text == "")
+            {
+                MessageBox.Show("توضیحات برای ثبت حسابرسی الزامی است");
+                return;
+            }
+            this.audit = new ExecutiveGoalAudit(goal, Authentication.getInstance().ActiveUser,
+                goal.getProgress(), descBox.Text, null);
+            ExecutiveGoalAuditStorage.getInstance().create(audit);
+            this.DialogResult = DialogResult.OK;
+            this.Close();
+        }
     }
 }

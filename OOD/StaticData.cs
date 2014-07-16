@@ -41,6 +41,10 @@ namespace OOD
             p.addTask(t1, 55);
             p.addTask(t2, 45);
 
+            // audit tasks
+            var a = new TaskAudit(t2, u, "همه‌چی خیلی خیلی خوب داره پیش می‌ره!", 55, null);
+            TaskAuditStorage.getInstance().create(a);
+
             var r = new Random();
 
             // metrics

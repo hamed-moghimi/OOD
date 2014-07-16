@@ -64,6 +64,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="EMS\Audit\Audit.cs" />
     <Compile Include="EMS\Audit\ExecutionInspection.cs" />
     <Compile Include="EMS\Audit\ExecutionInspectionStorage.cs" />
     <Compile Include="EMS\Audit\ExecutiveGoalAudit.cs" />
@@ -150,14 +151,8 @@
     <Compile Include="EMS\UI\Audit\Audit\AuditGeneralListForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="EMS\UI\Audit\Audit\AuditGeneralListForm.Designer.cs">
+    <Compile Include="EMS\UI\Audit\Audit\AuditGeneralListForm.designer.cs">
       <DependentUpon>AuditGeneralListForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="EMS\UI\Audit\Audit\AuditGeneralViewForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="EMS\UI\Audit\Audit\AuditGeneralViewForm.Designer.cs">
-      <DependentUpon>AuditGeneralViewForm.cs</DependentUpon>
     </Compile>
     <Compile Include="EMS\UI\Audit\Audit\AuditTaskForm.cs">
       <SubType>Form</SubType>
@@ -170,6 +165,12 @@
     </Compile>
     <Compile Include="EMS\UI\Audit\Audit\AuditTaskListForm.Designer.cs">
       <DependentUpon>AuditTaskListForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EMS\UI\Audit\Audit\AuditSelectForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EMS\UI\Audit\Audit\AuditSelectForm.Designer.cs">
+      <DependentUpon>AuditSelectForm.cs</DependentUpon>
     </Compile>
     <Compile Include="EMS\UI\Audit\Metric\AddMetricEntryForm.cs">
       <SubType>Form</SubType>
@@ -531,14 +532,14 @@
     <EmbeddedResource Include="EMS\UI\Audit\Audit\AuditGeneralListForm.resx">
       <DependentUpon>AuditGeneralListForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="EMS\UI\Audit\Audit\AuditGeneralViewForm.resx">
-      <DependentUpon>AuditGeneralViewForm.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="EMS\UI\Audit\Audit\AuditTaskForm.resx">
       <DependentUpon>AuditTaskForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="EMS\UI\Audit\Audit\AuditTaskListForm.resx">
       <DependentUpon>AuditTaskListForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EMS\UI\Audit\Audit\AuditSelectForm.resx">
+      <DependentUpon>AuditSelectForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="EMS\UI\Audit\Metric\AddMetricEntryForm.resx">
       <DependentUpon>AddMetricEntryForm.cs</DependentUpon>

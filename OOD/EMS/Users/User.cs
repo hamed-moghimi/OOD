@@ -44,5 +44,10 @@ namespace OOD.EMS.Users
         {
             return Firstname + " " + Lastname;
         }
+
+        public override string ToString()
+        {
+            return getName();
+        }
     }
 }

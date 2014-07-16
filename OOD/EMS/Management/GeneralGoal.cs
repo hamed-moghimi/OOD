@@ -18,19 +18,13 @@ namespace OOD.EMS.Management
             DocUser = Authentication.getInstance().ActiveUser;
         }
 
-        private List<Execution.ExecutiveGoal> getExecutiveGoals()
+        public List<Execution.ExecutiveGoal> getExecutiveGoals()
         {
-            List<Execution.GeneralGoal_ExecutiveGoalRelation> goals = Execution.GeneralGoal_ExecutiveGoalRelationStorage.getInstance().all();
-            List<Execution.ExecutiveGoal> res = new List<Execution.ExecutiveGoal>();
-            foreach (Execution.GeneralGoal_ExecutiveGoalRelation rel in goals)
-            {
-                if (rel.GenGoal.Equals(this))
-                {
-                    res.Add(rel.ExecGoal);
-                }
-            }
-            return res;
-            
+            var res =
+                from rel in Execution.GeneralGoal_ExecutiveGoalRelationStorage.getInstance().all()
+                where rel.GenGoal.Equals(this)
+                select rel.ExecGoal;
+            return res.ToList();
         }
 
         public List<Execution.GeneralGoal_ExecutiveGoalRelation> getAuditInfo()
@@ -77,6 +71,10 @@ namespace OOD.EMS.Management
         {
             return Date.ToString("yyyy/MM/dd");
         }
-       
+
+        public override string ToString()
+        {
+            return Title;
+        }
     }
 }

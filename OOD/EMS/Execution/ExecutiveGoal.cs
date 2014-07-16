@@ -25,7 +25,7 @@ namespace OOD.EMS.Execution
 
         public int getProgress()
         {
-            return program.getProgress();
+            return program == null ? 0 : program.getProgress();
         }
 
         public List<Contribution> getAuditInfo()
@@ -60,6 +60,11 @@ namespace OOD.EMS.Execution
         public String getDateString()
         {
             return Date.ToString("yyyy/MM/dd");
+        }
+
+        public override string ToString()
+        {
+            return Title;
         }
     }
 }

@@ -27,11 +27,6 @@ namespace OOD.EMS.UI.Audit.Metric
             }
         }
 
-        private void Audit_Click(object sender, EventArgs e)
-        {
-            (new AuditTaskForm()).ShowDialog();
-        }
-
         private void Cancel_Click(object sender, EventArgs e)
         {
             this.Close();

@@ -8,15 +8,18 @@ namespace OOD.EMS.Audit
 {
     class TaskAuditStorage
     {
-        private TaskAuditStorage instance;
+        private static TaskAuditStorage instance;
         private List<TaskAudit> audits;
 
         private TaskAuditStorage()
         {
+            audits = new List<TaskAudit>();
         }
 
-        public TaskAuditStorage getInstance()
+        public static TaskAuditStorage getInstance()
         {
+            if (instance == null)
+                instance = new TaskAuditStorage();
             return instance;
         }
 
@@ -34,6 +37,5 @@ namespace OOD.EMS.Audit
         {
             audits.Remove(item);
         }
-
     }
 }
