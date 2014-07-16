@@ -7,6 +7,7 @@ using OOD.EMS.Users;
 
 namespace OOD.EMS.Management
 {
+    [Serializable()]
     public class LegalConstraint : ManagementDocument, IEquatable<LegalConstraint>
     {
         public LegalConstraint(String title, String descp)

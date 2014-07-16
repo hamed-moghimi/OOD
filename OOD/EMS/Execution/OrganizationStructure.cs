@@ -7,6 +7,7 @@ using OOD.EMS.Users;
 
 namespace OOD.EMS.Execution
 {
+    [Serializable()]
     public class OrganizationStructure
     {
         private static OrganizationStructure instance;
@@ -37,7 +38,12 @@ namespace OOD.EMS.Execution
 
         public static OrganizationStructure getInstance()
         {
-            if (instance == null) instance = new OrganizationStructure();
+            if (instance == null)
+            {
+                if (Storage.getInstance().structure == null)
+                    instance = new OrganizationStructure();
+                else instance = Storage.getInstance().structure;
+            }
             return instance;
         }
 

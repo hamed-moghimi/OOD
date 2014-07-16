@@ -7,6 +7,7 @@ using OOD.EMS.Exceptions;
 
 namespace OOD.EMS.Execution
 {
+    [Serializable()]
     public class ResourceStorage
     {
         private static ResourceStorage instance;
@@ -25,7 +26,12 @@ namespace OOD.EMS.Execution
 
         public static ResourceStorage getInstance()
         {
-            if (instance == null) instance = new ResourceStorage();
+            if (instance == null)
+            {
+                if (Storage.getInstance().resourceStorage == null)
+                    instance = new ResourceStorage();
+                else instance = Storage.getInstance().resourceStorage;
+            }
             return instance;
         }
 

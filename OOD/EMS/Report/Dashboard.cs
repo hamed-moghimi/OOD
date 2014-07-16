@@ -56,14 +56,17 @@ namespace OOD.EMS.Report
                  select user).Count();
 
 
-            this.progress = program.getProgress();
+            this.progress = program == null ? 0 : program.getProgress();
 
-            var values =
-                (from value in MetricValueStorage.getInstance().all()
-                where value.pairMetric == this.metric
-                select value).OrderBy(value => value.Date);
-            
-            this.metricValues = values.ToArray();
+            if (metric != null)
+            {
+                var values =
+                    (from value in MetricValueStorage.getInstance().all()
+                     where value.pairMetric == this.metric
+                     select value).OrderBy(value => value.Date);
+
+                this.metricValues = values.ToArray();
+            }
         }
         
         public void show(ExecutionProgram program, Metric metric)

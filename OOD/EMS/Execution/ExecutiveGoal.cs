@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace OOD.EMS.Execution
 {
+    [Serializable()]
     public class ExecutiveGoal : IEquatable<ExecutiveGoal>
     {
         public String Title { set; get; }

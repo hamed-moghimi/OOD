@@ -7,7 +7,8 @@ using OOD.EMS.Exceptions;
 
 namespace OOD.EMS.Execution
 {
-    class GeneralGoal_ExecutiveGoalRelationStorage
+    [Serializable()]
+    public class GeneralGoal_ExecutiveGoalRelationStorage
     {
         private static GeneralGoal_ExecutiveGoalRelationStorage instance;
         private List<GeneralGoal_ExecutiveGoalRelation> relations;
@@ -19,7 +20,12 @@ namespace OOD.EMS.Execution
 
         public static GeneralGoal_ExecutiveGoalRelationStorage getInstance()
         {
-            if (instance == null) instance = new GeneralGoal_ExecutiveGoalRelationStorage();
+            if (instance == null)
+            {
+                if (Storage.getInstance().genGoal_ExecGoalStorage == null)
+                    instance = new GeneralGoal_ExecutiveGoalRelationStorage();
+                else instance = Storage.getInstance().genGoal_ExecGoalStorage;
+            }
             return instance;
         }
 

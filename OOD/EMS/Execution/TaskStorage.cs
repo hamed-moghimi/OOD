@@ -7,6 +7,7 @@ using OOD.EMS.Exceptions;
 
 namespace OOD.EMS.Execution
 {
+    [Serializable()]
     public class TaskStorage
     {
         private static TaskStorage instance;
@@ -25,7 +26,12 @@ namespace OOD.EMS.Execution
 
         public static TaskStorage getInstance()
         {
-            if (instance == null) instance = new TaskStorage();
+            if (instance == null)
+            {
+                if (Storage.getInstance().taskStorage == null)
+                    instance = new TaskStorage();
+                else instance = Storage.getInstance().taskStorage;
+            }
             return instance;
         }
 

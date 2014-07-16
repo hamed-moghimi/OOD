@@ -7,6 +7,7 @@ using OOD.EMS.Users;
 
 namespace OOD.EMS.Execution
 {
+    [Serializable()]
     public class GeneralGoal_ExecutiveGoalRelation : IEquatable<GeneralGoal_ExecutiveGoalRelation>
     {
         public Management.GeneralGoal GenGoal { set; get; }

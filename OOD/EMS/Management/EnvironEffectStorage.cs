@@ -7,7 +7,8 @@ using OOD.EMS.Exceptions;
 
 namespace OOD.EMS.Management
 {
-    class EnvironEffectStorage
+    [Serializable()]
+    public class EnvironEffectStorage
     {
         private static EnvironEffectStorage instance;
         private List<EnvironEffect> environEffects;
@@ -26,7 +27,17 @@ namespace OOD.EMS.Management
 
         public static EnvironEffectStorage getInstance()
         {
-            if (instance == null) instance = new EnvironEffectStorage();
+            if (instance == null)
+            {
+                if (Storage.getInstance().environEffectStorage == null)
+                {
+                    instance = new EnvironEffectStorage();
+                }
+                else
+                {
+                    instance = Storage.getInstance().environEffectStorage;
+                }
+            }
             return instance;
         }
 

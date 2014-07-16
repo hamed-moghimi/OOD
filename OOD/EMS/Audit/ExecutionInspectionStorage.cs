@@ -6,17 +6,29 @@ using System.Threading.Tasks;
 
 namespace OOD.EMS.Audit
 {
-    class ExecutionInspectionStorage
+    [Serializable()]
+    public class ExecutionInspectionStorage
     {
-        private ExecutionInspectionStorage instance;
+        private static ExecutionInspectionStorage instance;
         private List<ExecutionInspection> audits;
 
         private ExecutionInspectionStorage()
         {
         }
 
-        public ExecutionInspectionStorage getInstance()
+        public static ExecutionInspectionStorage getInstance()
         {
+            if (instance == null)
+            {
+                if (Storage.getInstance().executionInspectionStorage == null)
+                {
+                    instance = new ExecutionInspectionStorage();
+                }
+                else
+                {
+                    instance = Storage.getInstance().executionInspectionStorage;
+                }
+            }
             return instance;
         }
 

@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace OOD.EMS.Audit
 {
+    [Serializable()]
     public class ExecutiveGoalAudit : BaseAudit
     {
         public int Progress { set; get; }

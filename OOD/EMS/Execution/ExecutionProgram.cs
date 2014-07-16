@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace OOD.EMS.Execution
 {
+    [Serializable()]
     public class ExecutionProgram
     {
         public String Title { set; get; }

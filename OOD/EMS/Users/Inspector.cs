@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace OOD.EMS.Users
 {
+    [Serializable()]
     public class Inspector : BasicUser
     {
         public Inspector()

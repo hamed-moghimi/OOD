@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace OOD.EMS.Audit
 {
-    class TaskAuditStorage
+    [Serializable()]
+    public class TaskAuditStorage
     {
         private static TaskAuditStorage instance;
         private List<TaskAudit> audits;
@@ -19,7 +20,12 @@ namespace OOD.EMS.Audit
         public static TaskAuditStorage getInstance()
         {
             if (instance == null)
-                instance = new TaskAuditStorage();
+            {
+                if (Storage.getInstance().taskAuditStorage == null)
+                    instance = new TaskAuditStorage();
+                else
+                    instance = Storage.getInstance().taskAuditStorage;
+            }
             return instance;
         }
 

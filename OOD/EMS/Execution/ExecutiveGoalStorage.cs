@@ -7,6 +7,7 @@ using OOD.EMS.Execution;
 
 namespace OOD.EMS.Execution
 {
+    [Serializable()]
     public class ExecutiveGoalStorage
     {
         private static ExecutiveGoalStorage instance;
@@ -26,7 +27,12 @@ namespace OOD.EMS.Execution
 
         public static ExecutiveGoalStorage getInstance()
         {
-            if (instance == null) instance = new ExecutiveGoalStorage();
+            if (instance == null)
+            {
+                if (Storage.getInstance().executiveGoalStorage == null)
+                    instance = new ExecutiveGoalStorage();
+                else instance = Storage.getInstance().executiveGoalStorage;
+            }
             return instance;
         }
 

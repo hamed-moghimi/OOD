@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace OOD.EMS.Audit
 {
-    class ExecutiveGoalAuditStorage
+    [Serializable()]
+    public class ExecutiveGoalAuditStorage
     {
         private static ExecutiveGoalAuditStorage instance;
         private List<ExecutiveGoalAudit> audits;
@@ -19,7 +20,12 @@ namespace OOD.EMS.Audit
         public static ExecutiveGoalAuditStorage getInstance()
         {
             if (instance == null)
-                instance = new ExecutiveGoalAuditStorage();
+            {
+                if (Storage.getInstance().executiveGoalAuditStorage == null)
+                    instance = new ExecutiveGoalAuditStorage();
+                else
+                    instance = Storage.getInstance().executiveGoalAuditStorage;
+            }
             return instance;
         }
 

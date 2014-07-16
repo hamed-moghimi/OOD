@@ -7,6 +7,7 @@ using OOD.EMS.Users;
 
 namespace OOD.EMS.Management
 {
+    [Serializable()]
     public class EnvironEffect : ManagementDocument, IEquatable<EnvironEffect>
     {
         public EnvironEffect(String title, String description)

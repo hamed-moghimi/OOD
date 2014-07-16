@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace OOD.EMS.Users
 {
+    [Serializable()]
     public class Administrator : AccessLevel
     {
         public override Boolean hasAccess(Object obj)

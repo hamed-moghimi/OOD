@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace OOD.EMS.Management
 {
+    [Serializable()]
     public class Attachment
     {
         public String Filename { get; set; }

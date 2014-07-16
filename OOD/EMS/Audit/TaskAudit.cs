@@ -7,6 +7,7 @@ using OOD.EMS.Users;
 
 namespace OOD.EMS.Audit
 {
+    [Serializable()]
     public class TaskAudit : BaseAudit
     {
         public int Progress { set; get; }

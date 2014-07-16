@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace OOD.EMS.Users
 {
+    [Serializable()]
     abstract public class AccessLevel
     {
         public abstract Boolean hasAccess(Object obj);

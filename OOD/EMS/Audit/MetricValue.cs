@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace OOD.EMS.Audit
 {
+    [Serializable()]
     public class MetricValue
     {
         public Metric pairMetric { set; get; }

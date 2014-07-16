@@ -1,10 +1,12 @@
 ﻿﻿using System;
+using System.IO;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Globalization;
 using OOD.EMS.UI.Users;
+using OOD.EMS;
 
 namespace OOD
 {
@@ -16,9 +18,13 @@ namespace OOD
         [STAThread]
         static void Main()
         {
+            DirectoryInfo mainDir = new DirectoryInfo(@Application.StartupPath);
+            DirectoryInfo twoLevelsUp = mainDir.Parent.Parent;
+            Storage.getInstance().load(twoLevelsUp.FullName + @"\data");
+            Application.ApplicationExit += new EventHandler(OnApplicationExit);
+            
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            StaticData.initialize(); //TODO: remove this line
             CultureInfo culture = new GSD.Globalization.PersianCulture();
             culture.DateTimeFormat.ShortDatePattern = "yy/MM/dd";
             culture.DateTimeFormat.LongDatePattern = "yyyy/MM/dd";
@@ -27,5 +33,14 @@ namespace OOD
             Application.CurrentCulture = culture;
             Application.Run(new LoginForm());
         }
+
+        private static void OnApplicationExit(object sender, EventArgs e)
+        {
+            DirectoryInfo mainDir = new DirectoryInfo(@Application.StartupPath);
+            DirectoryInfo twoLevelsUp = mainDir.Parent.Parent;
+            Storage.getInstance().save(twoLevelsUp.FullName + @"\data");
+            
+        }
     }
+
 }

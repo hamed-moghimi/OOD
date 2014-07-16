@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace OOD.EMS.Management
 {
+    [Serializable()]
     public class ManagementDocument
     {
         public String Description { set; get; }

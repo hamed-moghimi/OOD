@@ -6,17 +6,24 @@ using System.Threading.Tasks;
 
 namespace OOD.EMS.Audit
 {
-    class PhysicalInspectionStorage
+    [Serializable()]
+    public class PhysicalInspectionStorage
     {
-        private PhysicalInspectionStorage instance;
+        private static PhysicalInspectionStorage instance;
         private List<PhysicalInspection> audits;
 
         private PhysicalInspectionStorage()
         {
         }
 
-        public PhysicalInspectionStorage getInstance()
+        public static PhysicalInspectionStorage getInstance()
         {
+            if (instance == null)
+            {
+                if (Storage.getInstance().physInspectionStorage == null)
+                    instance = new PhysicalInspectionStorage();
+                else instance = Storage.getInstance().physInspectionStorage;
+            }
             return instance;
         }
 

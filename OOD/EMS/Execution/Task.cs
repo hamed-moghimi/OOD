@@ -5,6 +5,7 @@ using System.Text;
 
 namespace OOD.EMS.Execution
 {
+    [Serializable()]
     public class Task : IEquatable<Task>
     {
         public String Title { set; get; }

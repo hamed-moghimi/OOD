@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace OOD.EMS.Users
 {
-    class UserStorage
+    [Serializable()]
+    public class UserStorage
     {
         private static UserStorage instance;
         private List<User> userList;
@@ -43,7 +44,9 @@ namespace OOD.EMS.Users
         {
             if (instance == null)
             {
-                instance = new UserStorage();
+                if (Storage.getInstance().userStorage == null)
+                    instance = new UserStorage();
+                else instance = Storage.getInstance().userStorage;
             }
             return instance;
         }
