@@ -131,6 +131,12 @@
     <Compile Include="EMS\Report\ScheduleReport.cs" />
     <Compile Include="EMS\Report\ScheduleReporter.cs" />
     <Compile Include="EMS\Storage.cs" />
+    <Compile Include="EMS\UI\AttachmentPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="EMS\UI\AttachmentPanel.Designer.cs">
+      <DependentUpon>AttachmentPanel.cs</DependentUpon>
+    </Compile>
     <Compile Include="EMS\UI\Audit\Audit\AuditExecutiveForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -527,6 +533,9 @@
     <Compile Include="StaticData.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="EMS\UI\AttachmentPanel.resx">
+      <DependentUpon>AttachmentPanel.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="EMS\UI\Audit\Audit\AuditExecutiveForm.resx">
       <DependentUpon>AuditExecutiveForm.cs</DependentUpon>
     </EmbeddedResource>

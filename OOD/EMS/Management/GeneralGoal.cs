@@ -17,6 +17,7 @@ namespace OOD.EMS.Management
             Description = descp;
             Date = DateTime.Now;
             DocUser = Authentication.getInstance().ActiveUser;
+            attachments = new List<Attachment>();
         }
 
         public List<Execution.ExecutiveGoal> getExecutiveGoals()
