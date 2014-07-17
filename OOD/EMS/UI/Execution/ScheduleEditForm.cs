@@ -15,11 +15,19 @@ namespace OOD.EMS.UI.Execution
         public ExecutionProgram program { set; get; }
         private ExecutiveGoal goal;
 
-        public ScheduleEditForm(ExecutiveGoal goal)
+        public ScheduleEditForm(bool canEdit, ExecutiveGoal goal)
         {
             InitializeComponent();
             goal_name.Text = goal.Title;
             this.goal = goal;
+            if (!canEdit)
+            {
+                addButton.Visible = deleteButton.Visible = button1.Visible = button2.Visible
+                   = selectBtn.Visible = false;
+                Cancel.Text = "بازگشت";
+                Cancel.Location = new System.Drawing.Point(groupBox2.Location.X, Cancel.Location.Y);
+            }
+
             if (goal.program == null)
             {
                 program = new ExecutionProgram(goal.Title, "ندارد");

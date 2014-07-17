@@ -37,7 +37,7 @@ namespace OOD.EMS.UI.Execution
             DialogResult res = f.ShowDialog();
             if (res == DialogResult.OK)
             {
-                ScheduleEditForm f2 = new ScheduleEditForm(f.goal);
+                ScheduleEditForm f2 = new ScheduleEditForm(true, f.goal);
                 DialogResult res2 = f2.ShowDialog();
                 if (res2 == DialogResult.OK)
                 {
@@ -51,7 +51,7 @@ namespace OOD.EMS.UI.Execution
         {
             String name = (string)dataGridView1.Rows[dataGridView1.SelectedRows[0].Index].Cells[0].Value;
             ExecutiveGoal goal = ExecutiveGoalStorage.getInstance().all().Find(x => x.Title.Equals(name));
-            ScheduleEditForm f2 = new ScheduleEditForm(goal);
+            ScheduleEditForm f2 = new ScheduleEditForm(true, goal);
             DialogResult res2 = f2.ShowDialog();
             if (res2 == DialogResult.OK)
             {
@@ -75,6 +75,15 @@ namespace OOD.EMS.UI.Execution
         private void Cancel_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void ViewButton_Click(object sender, EventArgs e)
+        {
+            String name = (string)dataGridView1.Rows[dataGridView1.SelectedRows[0].Index].Cells[0].Value;
+            ExecutiveGoal goal = ExecutiveGoalStorage.getInstance().all().Find(x => x.Title.Equals(name));
+            ScheduleEditForm f2 = new ScheduleEditForm(false, goal);
+            DialogResult res2 = f2.ShowDialog();
+                        
         }
     }
 }

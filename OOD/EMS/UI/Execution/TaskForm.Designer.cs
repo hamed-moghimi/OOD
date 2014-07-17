@@ -32,10 +32,10 @@
             this.Cancel = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.addButton = new System.Windows.Forms.Button();
-            this.editButton = new System.Windows.Forms.Button();
             this.title = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.desc = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.addButton = new System.Windows.Forms.Button();
+            this.editButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -58,12 +58,12 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(157, 376);
+            this.button2.Image = global::OOD.Properties.Resources.search;
+            this.button2.Location = new System.Drawing.Point(549, 250);
             this.button2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(105, 33);
+            this.button2.Size = new System.Drawing.Size(40, 40);
             this.button2.TabIndex = 13;
-            this.button2.Text = "مشاهده";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
@@ -83,6 +83,20 @@
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(492, 278);
             this.dataGridView1.TabIndex = 0;
+            // 
+            // title
+            // 
+            this.title.HeaderText = "عنوان";
+            this.title.Name = "title";
+            this.title.ReadOnly = true;
+            this.title.Width = 150;
+            // 
+            // desc
+            // 
+            this.desc.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.desc.HeaderText = "توضیحات";
+            this.desc.Name = "desc";
+            this.desc.ReadOnly = true;
             // 
             // addButton
             // 
@@ -105,20 +119,6 @@
             this.toolTip.SetToolTip(this.editButton, "ویرایش");
             this.editButton.UseVisualStyleBackColor = true;
             this.editButton.Click += new System.EventHandler(this.editButton_Click);
-            // 
-            // title
-            // 
-            this.title.HeaderText = "عنوان";
-            this.title.Name = "title";
-            this.title.ReadOnly = true;
-            this.title.Width = 150;
-            // 
-            // desc
-            // 
-            this.desc.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.desc.HeaderText = "توضیحات";
-            this.desc.Name = "desc";
-            this.desc.ReadOnly = true;
             // 
             // TaskForm
             // 

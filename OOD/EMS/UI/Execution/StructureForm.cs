@@ -155,5 +155,14 @@ namespace OOD.EMS.UI.Execution
         {
             this.Close();
         }
+
+        private void ViewButton_Click(object sender, EventArgs e)
+        {
+            if (structureTree.SelectedNode != null)
+            {
+                Department dept = getDepartment(structureTree.SelectedNode);
+                (new ViewDepartmentForm(dept)).ShowDialog();
+            }
+        }
     }
 }

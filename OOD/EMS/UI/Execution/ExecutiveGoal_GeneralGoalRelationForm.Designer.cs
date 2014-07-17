@@ -29,13 +29,13 @@
         private void InitializeComponent()
         {
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.editButton = new System.Windows.Forms.Button();
-            this.addButton = new System.Windows.Forms.Button();
-            this.Cancel = new System.Windows.Forms.Button();
             this.genGoal = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.execGoal = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.share = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.date = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.editButton = new System.Windows.Forms.Button();
+            this.addButton = new System.Windows.Forms.Button();
+            this.Cancel = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -56,39 +56,6 @@
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(580, 187);
             this.dataGridView1.TabIndex = 3;
-            // 
-            // editButton
-            // 
-            this.editButton.Image = global::OOD.Properties.Resources.edit;
-            this.editButton.Location = new System.Drawing.Point(644, 155);
-            this.editButton.Name = "editButton";
-            this.editButton.Size = new System.Drawing.Size(40, 40);
-            this.editButton.TabIndex = 7;
-            this.toolTip.SetToolTip(this.editButton, "ویرایش");
-            this.editButton.UseVisualStyleBackColor = true;
-            this.editButton.Click += new System.EventHandler(this.editButton_Click);
-            // 
-            // addButton
-            // 
-            this.addButton.Image = global::OOD.Properties.Resources.add;
-            this.addButton.Location = new System.Drawing.Point(644, 109);
-            this.addButton.Name = "addButton";
-            this.addButton.Size = new System.Drawing.Size(40, 40);
-            this.addButton.TabIndex = 8;
-            this.toolTip.SetToolTip(this.addButton, "اضافه کردن");
-            this.addButton.UseVisualStyleBackColor = true;
-            this.addButton.Click += new System.EventHandler(this.addButton_Click);
-            // 
-            // Cancel
-            // 
-            this.Cancel.Location = new System.Drawing.Point(38, 259);
-            this.Cancel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.Cancel.Name = "Cancel";
-            this.Cancel.Size = new System.Drawing.Size(105, 33);
-            this.Cancel.TabIndex = 16;
-            this.Cancel.Text = "بازگشت";
-            this.Cancel.UseVisualStyleBackColor = true;
-            this.Cancel.Click += new System.EventHandler(this.Cancel_Click);
             // 
             // genGoal
             // 
@@ -121,6 +88,39 @@
             this.date.HeaderText = "تاریخ";
             this.date.Name = "date";
             this.date.ReadOnly = true;
+            // 
+            // editButton
+            // 
+            this.editButton.Image = global::OOD.Properties.Resources.search;
+            this.editButton.Location = new System.Drawing.Point(644, 155);
+            this.editButton.Name = "editButton";
+            this.editButton.Size = new System.Drawing.Size(40, 40);
+            this.editButton.TabIndex = 7;
+            this.toolTip.SetToolTip(this.editButton, "ویرایش");
+            this.editButton.UseVisualStyleBackColor = true;
+            this.editButton.Click += new System.EventHandler(this.editButton_Click);
+            // 
+            // addButton
+            // 
+            this.addButton.Image = global::OOD.Properties.Resources.add;
+            this.addButton.Location = new System.Drawing.Point(644, 109);
+            this.addButton.Name = "addButton";
+            this.addButton.Size = new System.Drawing.Size(40, 40);
+            this.addButton.TabIndex = 8;
+            this.toolTip.SetToolTip(this.addButton, "اضافه کردن");
+            this.addButton.UseVisualStyleBackColor = true;
+            this.addButton.Click += new System.EventHandler(this.addButton_Click);
+            // 
+            // Cancel
+            // 
+            this.Cancel.Location = new System.Drawing.Point(38, 259);
+            this.Cancel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.Cancel.Name = "Cancel";
+            this.Cancel.Size = new System.Drawing.Size(105, 33);
+            this.Cancel.TabIndex = 16;
+            this.Cancel.Text = "بازگشت";
+            this.Cancel.UseVisualStyleBackColor = true;
+            this.Cancel.Click += new System.EventHandler(this.Cancel_Click);
             // 
             // ExecutiveGoal_GeneralGoalRelationForm
             // 

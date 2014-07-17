@@ -335,6 +335,12 @@
     <Compile Include="EMS\UI\Execution\TaskForm.Designer.cs">
       <DependentUpon>TaskForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="EMS\UI\Execution\ViewDepartmentForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EMS\UI\Execution\ViewDepartmentForm.Designer.cs">
+      <DependentUpon>ViewDepartmentForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="EMS\UI\Execution\ViewTaskForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -622,6 +628,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="EMS\UI\Execution\TaskForm.resx">
       <DependentUpon>TaskForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EMS\UI\Execution\ViewDepartmentForm.resx">
+      <DependentUpon>ViewDepartmentForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="EMS\UI\Execution\ViewGoalRelationForm.resx">
       <DependentUpon>ViewGoalRelationForm.cs</DependentUpon>
