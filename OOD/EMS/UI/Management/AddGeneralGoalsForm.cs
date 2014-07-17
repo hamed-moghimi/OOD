@@ -59,6 +59,10 @@ namespace OOD.EMS.UI.Management
 
         private void Cancel_Click(object sender, EventArgs e)
         {
+            foreach(Attachment attach in attachmentPanel1.getNewlyAdded())
+            {
+                attach.delete();
+            }
             this.DialogResult = DialogResult.Cancel;
             this.Close();
         }

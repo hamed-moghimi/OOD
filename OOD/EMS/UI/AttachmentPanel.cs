@@ -15,6 +15,8 @@ namespace OOD.EMS.UI
     public partial class AttachmentPanel : UserControl
     {
         private Dictionary<String, Attachment> _attachments = new Dictionary<String, Attachment>();
+        public Dictionary<String, Attachment> newlyAdded = new Dictionary<string, Attachment>();
+        public bool Changed { get; set; }
 
         bool viewMode = false;
         public bool ViewMode { 
@@ -26,7 +28,7 @@ namespace OOD.EMS.UI
         {
             InitializeComponent();
             attachmentGrid.CellDoubleClick += new DataGridViewCellEventHandler(download_click);
-            
+            Changed = false;
         }
 
         public void populate(List<Attachment> attachments)
@@ -68,6 +70,8 @@ namespace OOD.EMS.UI
                         _FileStream.Close();
                         attachmentGrid.Rows.Add(new Object[] { attach.Filename, attach.Title });
                         _attachments.Add(attach.Title, attach);
+                        newlyAdded.Add(attach.Title, attach);
+                        Changed = true;
                     }
                     catch (Exception _Exception)
                     {
@@ -91,6 +95,8 @@ namespace OOD.EMS.UI
                 attach.delete();
                 attachmentGrid.Rows.RemoveAt(row.Index);
                 _attachments.Remove(key);
+                newlyAdded.Remove(key);
+                Changed = true;
             }
         }
 
@@ -122,6 +128,11 @@ namespace OOD.EMS.UI
         public List<Attachment> getAttachments()
         {
             return _attachments.Values.ToList<Attachment>();
+        }
+
+        public List<Attachment> getNewlyAdded()
+        {
+            return newlyAdded.Values.ToList<Attachment>();
         }
        
     }

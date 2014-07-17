@@ -86,7 +86,7 @@
             this.dscp_box.Name = "dscp_box";
             this.dscp_box.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.dscp_box.Size = new System.Drawing.Size(452, 78);
-            this.dscp_box.TabIndex = 15;
+            this.dscp_box.TabIndex = 20;
             this.dscp_box.Text = "";
             // 
             // name_box
@@ -95,14 +95,16 @@
             this.name_box.Name = "name_box";
             this.name_box.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.name_box.Size = new System.Drawing.Size(222, 31);
-            this.name_box.TabIndex = 20;
+            this.name_box.TabIndex = 15;
             // 
             // attachmentPanel1
             // 
+            this.attachmentPanel1.Changed = false;
             this.attachmentPanel1.Location = new System.Drawing.Point(35, 180);
             this.attachmentPanel1.Name = "attachmentPanel1";
             this.attachmentPanel1.Size = new System.Drawing.Size(461, 188);
             this.attachmentPanel1.TabIndex = 21;
+            this.attachmentPanel1.ViewMode = false;
             // 
             // AddGeneralGoalsForm
             // 

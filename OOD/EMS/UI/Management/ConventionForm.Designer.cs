@@ -32,14 +32,10 @@
             this.policyBox = new System.Windows.Forms.RichTextBox();
             this.dscpBox = new System.Windows.Forms.RichTextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.attach = new System.Windows.Forms.Button();
             this.Cancel = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.addAtachment = new System.Windows.Forms.OpenFileDialog();
-            this.groupBox2.SuspendLayout();
+            this.attachmentPanel1 = new OOD.EMS.UI.AttachmentPanel();
             this.SuspendLayout();
             // 
             // label1
@@ -82,55 +78,9 @@
             this.label2.TabIndex = 5;
             this.label2.Text = "توضیحات:";
             // 
-            // groupBox2
-            // 
-            this.groupBox2.Controls.Add(this.label6);
-            this.groupBox2.Controls.Add(this.label4);
-            this.groupBox2.Controls.Add(this.attach);
-            this.groupBox2.Location = new System.Drawing.Point(74, 375);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.groupBox2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBox2.Size = new System.Drawing.Size(448, 123);
-            this.groupBox2.TabIndex = 13;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "ضمیمه‌ها";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(284, 38);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(106, 24);
-            this.label6.TabIndex = 9;
-            this.label6.Text = "ضمیمه‌ی میثاق‌نامه";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Image = global::OOD.Properties.Resources.delete;
-            this.label4.Location = new System.Drawing.Point(396, 38);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(34, 24);
-            this.label4.TabIndex = 8;
-            this.label4.Text = "      ";
-            // 
-            // attach
-            // 
-            this.attach.Font = new System.Drawing.Font("B Nazanin", 10F);
-            this.attach.Location = new System.Drawing.Point(329, 76);
-            this.attach.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.attach.Name = "attach";
-            this.attach.Size = new System.Drawing.Size(105, 33);
-            this.attach.TabIndex = 7;
-            this.attach.Text = "اضافه‌کردن ضمیمه";
-            this.attach.UseVisualStyleBackColor = true;
-            this.attach.Click += new System.EventHandler(this.attach_Click);
-            // 
             // Cancel
             // 
-            this.Cancel.Location = new System.Drawing.Point(69, 517);
+            this.Cancel.Location = new System.Drawing.Point(69, 555);
             this.Cancel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Cancel.Name = "Cancel";
             this.Cancel.Size = new System.Drawing.Size(105, 33);
@@ -141,7 +91,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(190, 517);
+            this.button2.Location = new System.Drawing.Point(190, 555);
             this.button2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(105, 33);
@@ -154,12 +104,20 @@
             // 
             this.addAtachment.FileName = "openFileDialog1";
             // 
+            // attachmentPanel1
+            // 
+            this.attachmentPanel1.Location = new System.Drawing.Point(69, 358);
+            this.attachmentPanel1.Name = "attachmentPanel1";
+            this.attachmentPanel1.Size = new System.Drawing.Size(461, 188);
+            this.attachmentPanel1.TabIndex = 13;
+            this.attachmentPanel1.ViewMode = false;
+            // 
             // ConventionForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(569, 562);
-            this.Controls.Add(this.groupBox2);
+            this.ClientSize = new System.Drawing.Size(569, 602);
+            this.Controls.Add(this.attachmentPanel1);
             this.Controls.Add(this.Cancel);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.dscpBox);
@@ -174,9 +132,7 @@
             this.Controls.SetChildIndex(this.dscpBox, 0);
             this.Controls.SetChildIndex(this.button2, 0);
             this.Controls.SetChildIndex(this.Cancel, 0);
-            this.Controls.SetChildIndex(this.groupBox2, 0);
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
+            this.Controls.SetChildIndex(this.attachmentPanel1, 0);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -188,12 +144,9 @@
         private System.Windows.Forms.RichTextBox policyBox;
         private System.Windows.Forms.RichTextBox dscpBox;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Button attach;
         private System.Windows.Forms.Button Cancel;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.OpenFileDialog addAtachment;
+        private AttachmentPanel attachmentPanel1;
     }
 }
