@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using OOD.EMS.Execution;
 using OOD.EMS.Exceptions;
+using OOD.EMS.Management;
 
 namespace OOD.EMS.UI.Execution
 {
@@ -16,6 +17,7 @@ namespace OOD.EMS.UI.Execution
     {
         public String name, fromDate, toDate, dscp;
         public Department manager;
+        public List<Attachment> attachments;
         private String prevTitle;
 
         public TaskEditForm(EMS.Execution.Task t)
@@ -31,11 +33,16 @@ namespace OOD.EMS.UI.Execution
                 prevTitle = t.Title;
                 manager = t.department;
                 respBox.Text = manager.Name;
+                attachmentPanel1.populate(t.attachments);
             }
         }
 
         private void Cancel_Click(object sender, EventArgs e)
         {
+            foreach (Attachment attach in attachmentPanel1.getNewlyAdded())
+            {
+                attach.delete();
+            }
             this.DialogResult = DialogResult.Cancel;
             this.Close();
         }
@@ -63,6 +70,7 @@ namespace OOD.EMS.UI.Execution
                     fromDate = convert(fromDateBox.Text);
                     Convert.ToDateTime(fromDate);
                     dscp = dscp_box.Text;
+                    attachments = attachmentPanel1.getAttachments();
                     this.DialogResult = DialogResult.OK;
                     this.Close();
                 }

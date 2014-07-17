@@ -22,6 +22,7 @@ namespace OOD.EMS.Execution
             Description = description;
             Date = DateTime.Now;
             Manager = manager;
+            attachments = new List<Management.Attachment>();
         }
 
         public int getProgress()

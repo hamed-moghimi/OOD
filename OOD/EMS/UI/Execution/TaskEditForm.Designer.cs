@@ -29,10 +29,6 @@
         private void InitializeComponent()
         {
             this.label5 = new System.Windows.Forms.Label();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.attach = new System.Windows.Forms.Button();
             this.Cancel = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
@@ -45,7 +41,7 @@
             this.respBox = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.selectButton = new System.Windows.Forms.Button();
-            this.groupBox2.SuspendLayout();
+            this.attachmentPanel1 = new OOD.EMS.UI.AttachmentPanel();
             this.SuspendLayout();
             // 
             // label5
@@ -58,54 +54,9 @@
             this.label5.TabIndex = 13;
             this.label5.Text = "نام مسئولیت:";
             // 
-            // groupBox2
-            // 
-            this.groupBox2.Controls.Add(this.label6);
-            this.groupBox2.Controls.Add(this.label4);
-            this.groupBox2.Controls.Add(this.attach);
-            this.groupBox2.Location = new System.Drawing.Point(38, 313);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.groupBox2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBox2.Size = new System.Drawing.Size(452, 123);
-            this.groupBox2.TabIndex = 19;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "ضمیمه‌ها";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(284, 38);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(104, 24);
-            this.label6.TabIndex = 9;
-            this.label6.Text = "ضمیمه‌ی مسئولیت";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Image = global::OOD.Properties.Resources.delete;
-            this.label4.Location = new System.Drawing.Point(396, 38);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(34, 24);
-            this.label4.TabIndex = 8;
-            this.label4.Text = "      ";
-            // 
-            // attach
-            // 
-            this.attach.Font = new System.Drawing.Font("B Nazanin", 10F);
-            this.attach.Location = new System.Drawing.Point(329, 76);
-            this.attach.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.attach.Name = "attach";
-            this.attach.Size = new System.Drawing.Size(105, 33);
-            this.attach.TabIndex = 7;
-            this.attach.Text = "اضافه‌کردن ضمیمه";
-            this.attach.UseVisualStyleBackColor = true;
-            // 
             // Cancel
             // 
-            this.Cancel.Location = new System.Drawing.Point(37, 455);
+            this.Cancel.Location = new System.Drawing.Point(37, 503);
             this.Cancel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Cancel.Name = "Cancel";
             this.Cancel.Size = new System.Drawing.Size(105, 33);
@@ -116,7 +67,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(158, 455);
+            this.button2.Location = new System.Drawing.Point(158, 503);
             this.button2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(105, 33);
@@ -219,11 +170,21 @@
             this.selectButton.UseVisualStyleBackColor = true;
             this.selectButton.Click += new System.EventHandler(this.selectButton_Click);
             // 
+            // attachmentPanel1
+            // 
+            this.attachmentPanel1.Changed = false;
+            this.attachmentPanel1.Location = new System.Drawing.Point(34, 303);
+            this.attachmentPanel1.Name = "attachmentPanel1";
+            this.attachmentPanel1.Size = new System.Drawing.Size(461, 188);
+            this.attachmentPanel1.TabIndex = 28;
+            this.attachmentPanel1.ViewMode = false;
+            // 
             // TaskEditForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(538, 501);
+            this.ClientSize = new System.Drawing.Size(538, 553);
+            this.Controls.Add(this.attachmentPanel1);
             this.Controls.Add(this.selectButton);
             this.Controls.Add(this.respBox);
             this.Controls.Add(this.label7);
@@ -232,7 +193,6 @@
             this.Controls.Add(this.fromDateBox);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.name_box);
-            this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.Cancel);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.label3);
@@ -245,7 +205,6 @@
             this.Controls.SetChildIndex(this.label3, 0);
             this.Controls.SetChildIndex(this.button2, 0);
             this.Controls.SetChildIndex(this.Cancel, 0);
-            this.Controls.SetChildIndex(this.groupBox2, 0);
             this.Controls.SetChildIndex(this.name_box, 0);
             this.Controls.SetChildIndex(this.label1, 0);
             this.Controls.SetChildIndex(this.fromDateBox, 0);
@@ -254,8 +213,7 @@
             this.Controls.SetChildIndex(this.label7, 0);
             this.Controls.SetChildIndex(this.respBox, 0);
             this.Controls.SetChildIndex(this.selectButton, 0);
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
+            this.Controls.SetChildIndex(this.attachmentPanel1, 0);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -264,10 +222,6 @@
         #endregion
 
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Button attach;
         private System.Windows.Forms.Button Cancel;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label3;
@@ -280,5 +234,6 @@
         private System.Windows.Forms.TextBox respBox;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button selectButton;
+        private AttachmentPanel attachmentPanel1;
     }
 }

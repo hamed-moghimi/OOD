@@ -42,6 +42,7 @@ namespace OOD.EMS.UI.Execution
                 prev.DueDate = Convert.ToDateTime(f.toDate);
                 prev.Description = f.dscp;
                 prev.department = f.manager;
+                prev.attachments = f.attachments;
             }
             load_tasks();
         }
@@ -52,8 +53,10 @@ namespace OOD.EMS.UI.Execution
             DialogResult res = f.ShowDialog();
             if (res == DialogResult.OK)
             {
-                TaskStorage.getInstance().create(new EMS.Execution.Task(f.name, Convert.ToDateTime(f.fromDate),
-                            Convert.ToDateTime(f.toDate), 0, f.manager, f.dscp));
+                EMS.Execution.Task new_task = new EMS.Execution.Task(f.name, Convert.ToDateTime(f.fromDate),
+                            Convert.ToDateTime(f.toDate), 0, f.manager, f.dscp);
+                new_task.attachments = f.attachments;
+                TaskStorage.getInstance().create(new_task);
                 
             }
             load_tasks();

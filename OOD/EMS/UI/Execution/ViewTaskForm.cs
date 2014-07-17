@@ -22,6 +22,7 @@ namespace OOD.EMS.UI.Execution
         {
             InitializeComponent();
             this.menu.Visible = false;
+            attachmentPanel1.ViewMode = true;
             if (t != null)
             {
                 name_label.Text = t.Title;
@@ -30,6 +31,7 @@ namespace OOD.EMS.UI.Execution
                 manager_label.Text = t.department.Name;
                 progress_label.Text = t.Progress.ToString();
                 dscp_box.Text = t.Description;
+                attachmentPanel1.populate(t.attachments);
             }
         }
 

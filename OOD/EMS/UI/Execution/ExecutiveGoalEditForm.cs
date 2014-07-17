@@ -8,6 +8,7 @@ using System.Text;
 using System.Windows.Forms;
 using OOD.EMS.Execution;
 using OOD.EMS.Exceptions;
+using OOD.EMS.Management;
 
 namespace OOD.EMS.UI.Execution
 {
@@ -29,6 +30,7 @@ namespace OOD.EMS.UI.Execution
                 dscp_box.Text = goal.Description;
                 prevTitle = goal.Title;
                 dept = goal.Manager;
+                attachmentPanel1.populate(goal.attachments);
             }
             else
             {
@@ -42,6 +44,7 @@ namespace OOD.EMS.UI.Execution
             if (!canEdit)
             {
                 Cancel.Text = "بازگشت";
+                attachmentPanel1.ViewMode = true;
             }
         }
 
@@ -58,6 +61,10 @@ namespace OOD.EMS.UI.Execution
 
         private void Cancel_Click(object sender, EventArgs e)
         {
+            foreach (Attachment attach in attachmentPanel1.getNewlyAdded())
+            {
+                attach.delete();
+            }
             this.DialogResult = DialogResult.Cancel;
             this.Close();
         }
@@ -76,7 +83,9 @@ namespace OOD.EMS.UI.Execution
             }
             else
             {
-                ExecutiveGoalStorage.getInstance().create(new ExecutiveGoal(titleBox.Text, dscp_box.Text, dept));
+                ExecutiveGoal new_goal = new ExecutiveGoal(titleBox.Text, dscp_box.Text, dept);
+                new_goal.attachments = attachmentPanel1.getAttachments();
+                ExecutiveGoalStorage.getInstance().create(new_goal);
                 this.DialogResult = DialogResult.OK;
                 this.Close();
             }
