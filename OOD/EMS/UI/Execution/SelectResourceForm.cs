@@ -15,22 +15,26 @@ namespace OOD.EMS.UI.Execution
     {
 
         public Allocation alloc { set; get; }
+        private List<Resource> exclude;
 
         public SelectResourceForm(List<Resource> exclude)
         {
             InitializeComponent();
-            load_goals(exclude);
+            load_resources(exclude);
+            this.exclude = exclude;
         }
 
 
-        private void load_goals(List<Resource> exclude)
+        private void load_resources(List<Resource> exclude)
         {
             dataGridView1.Rows.Clear();
-            foreach (Resource goal in ResourceStorage.getInstance().all())
+            DateTime from = fromDateBox.Value;
+            DateTime to = toDateBox.Value;
+            foreach (Resource r in ResourceStorage.getInstance().all())
             {
-                if (!exclude.Contains(goal))
+                if (!exclude.Contains(r))
                 {
-                    dataGridView1.Rows.Add(new Object[] { goal.Title, goal.Amount.ToString() });
+                    dataGridView1.Rows.Add(new Object[] { r.Title, ResourceAllocator.getInstance().getRemainder(r, from, to) });
                 }
             }
         }
@@ -48,16 +52,37 @@ namespace OOD.EMS.UI.Execution
             try
             {
                 int amount = Convert.ToInt32(convert(cont_box.Text));
-                DateTime fromDate = Convert.ToDateTime(convert(fromDateBox.Text));
-                DateTime toDate = Convert.ToDateTime(convert(toDateBox.Text));
+                DateTime fromDate = fromDateBox.Value;
+                DateTime toDate = toDateBox.Value;
+                if (toDate < fromDate)
+                {
+                    MessageBox.Show("بازه‌ی زمانی صحیح نمی‌باشد");
+                }
                 alloc = new Allocation(fromDate, toDate, r, null, amount);
-                this.DialogResult = DialogResult.OK;
-                this.Close();
+                if (ResourceAllocator.getInstance().isConsistent(alloc))
+                {
+                    this.DialogResult = DialogResult.OK;
+                    this.Close();
+                }
+                else
+                {
+                    MessageBox.Show("منبع کافی نمی‌باشد");
+                }
             }
             catch (Exception e2)
             {
                 MessageBox.Show(new IncompleteFormException().Message);
             }
+        }
+
+        private void fromDateBox_ValueChanged(object sender, FreeControls.PersianMonthCalendarEventArgs e)
+        {
+            load_resources(exclude);
+        }
+
+        private void toDateBox_ValueChanged(object sender, FreeControls.PersianMonthCalendarEventArgs e)
+        {
+            load_resources(exclude);
         }
 
 

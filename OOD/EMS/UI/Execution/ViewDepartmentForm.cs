@@ -19,5 +19,10 @@ namespace OOD.EMS.UI.Execution
             name_label.Text = dept.Name;
             resp_label.Text = dept.Manager.getName();
         }
+
+        private void Cancel_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

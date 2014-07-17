@@ -44,6 +44,7 @@
             this.Cancel.TabIndex = 20;
             this.Cancel.Text = "بازگشت";
             this.Cancel.UseVisualStyleBackColor = true;
+            this.Cancel.Click += new System.EventHandler(this.Cancel_Click);
             // 
             // resp_label
             // 

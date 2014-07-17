@@ -20,7 +20,19 @@ namespace OOD.EMS.UI
 
         bool viewMode = false;
         public bool ViewMode { 
-            set { this.viewMode = value; removeButon.Visible = add.Visible = !value; } 
+            set 
+            { 
+                this.viewMode = value; 
+                removeButon.Visible = add.Visible = !value;
+                if (viewMode)
+                {
+                    int X = attachmentGrid.Location.X + 50;
+                    int Y = attachmentGrid.Location.Y;
+                    attachmentGrid.Location = new System.Drawing.Point(X, Y);
+                }
+                   
+            } 
+
             get { return this.viewMode; } 
         }
 
