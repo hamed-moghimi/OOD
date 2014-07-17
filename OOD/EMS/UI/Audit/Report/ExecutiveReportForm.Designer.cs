@@ -28,36 +28,37 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ExecutiveReportForm));
+            this.descBox = new System.Windows.Forms.RichTextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.Cancel = new System.Windows.Forms.Button();
+            this.titleBox = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.attach = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.OK = new System.Windows.Forms.Button();
             this.addAttachment = new System.Windows.Forms.OpenFileDialog();
+            this.dateBox = new FreeControls.PersianDateTimePicker();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
-            // richTextBox1
+            // descBox
             // 
-            this.richTextBox1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.richTextBox1.Location = new System.Drawing.Point(42, 125);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.richTextBox1.Size = new System.Drawing.Size(452, 131);
-            this.richTextBox1.TabIndex = 16;
-            this.richTextBox1.Text = "";
+            this.descBox.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.descBox.Location = new System.Drawing.Point(10, 116);
+            this.descBox.Name = "descBox";
+            this.descBox.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.descBox.Size = new System.Drawing.Size(452, 140);
+            this.descBox.TabIndex = 16;
+            this.descBox.Text = "";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(436, 89);
+            this.label5.Location = new System.Drawing.Point(404, 89);
             this.label5.Name = "label5";
             this.label5.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.label5.Size = new System.Drawing.Size(60, 24);
@@ -67,56 +68,49 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(421, 52);
+            this.label4.Location = new System.Drawing.Point(387, 52);
             this.label4.Name = "label4";
             this.label4.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.label4.Size = new System.Drawing.Size(75, 24);
+            this.label4.Size = new System.Drawing.Size(77, 24);
             this.label4.TabIndex = 13;
-            this.label4.Text = "تاریخ گزارش:";
+            this.label4.Text = "تاریخ بازرسی:";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(433, 14);
+            this.label1.Location = new System.Drawing.Point(401, 15);
             this.label1.Name = "label1";
             this.label1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.label1.Size = new System.Drawing.Size(63, 24);
             this.label1.TabIndex = 11;
             this.label1.Text = "نام گزارش:";
             // 
-            // button2
+            // Cancel
             // 
-            this.button2.Font = new System.Drawing.Font("B Nazanin", 12F);
-            this.button2.Location = new System.Drawing.Point(42, 399);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(95, 32);
-            this.button2.TabIndex = 18;
-            this.button2.Text = "انصراف";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.Cancel.Font = new System.Drawing.Font("B Nazanin", 12F);
+            this.Cancel.Location = new System.Drawing.Point(10, 399);
+            this.Cancel.Name = "Cancel";
+            this.Cancel.Size = new System.Drawing.Size(95, 32);
+            this.Cancel.TabIndex = 18;
+            this.Cancel.Text = "بازگشت";
+            this.Cancel.UseVisualStyleBackColor = true;
+            this.Cancel.Click += new System.EventHandler(this.Cancel_Click);
             // 
-            // textBox1
+            // titleBox
             // 
-            this.textBox1.Font = new System.Drawing.Font("B Nazanin", 12F);
-            this.textBox1.Location = new System.Drawing.Point(313, 12);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 31);
-            this.textBox1.TabIndex = 19;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Font = new System.Drawing.Font("B Nazanin", 12F);
-            this.textBox2.Location = new System.Drawing.Point(313, 52);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 31);
-            this.textBox2.TabIndex = 20;
+            this.titleBox.Font = new System.Drawing.Font("B Nazanin", 12F);
+            this.titleBox.Location = new System.Drawing.Point(12, 12);
+            this.titleBox.Name = "titleBox";
+            this.titleBox.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.titleBox.Size = new System.Drawing.Size(369, 31);
+            this.titleBox.TabIndex = 19;
             // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.label6);
             this.groupBox2.Controls.Add(this.label2);
             this.groupBox2.Controls.Add(this.attach);
-            this.groupBox2.Location = new System.Drawing.Point(43, 264);
+            this.groupBox2.Location = new System.Drawing.Point(11, 264);
             this.groupBox2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -157,46 +151,49 @@
             this.attach.UseVisualStyleBackColor = true;
             this.attach.Click += new System.EventHandler(this.attach_Click);
             // 
-            // button1
+            // OK
             // 
-            this.button1.Font = new System.Drawing.Font("B Nazanin", 12F);
-            this.button1.Location = new System.Drawing.Point(151, 399);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(95, 32);
-            this.button1.TabIndex = 22;
-            this.button1.Text = "ثبت";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.OK.Font = new System.Drawing.Font("B Nazanin", 12F);
+            this.OK.Location = new System.Drawing.Point(119, 399);
+            this.OK.Name = "OK";
+            this.OK.Size = new System.Drawing.Size(95, 32);
+            this.OK.TabIndex = 22;
+            this.OK.Text = "ثبت";
+            this.OK.UseVisualStyleBackColor = true;
+            this.OK.Click += new System.EventHandler(this.OK_Click);
             // 
             // addAttachment
             // 
             this.addAttachment.FileName = "openFileDialog1";
             // 
-            // Executive_Report
+            // dateBox
+            // 
+            this.dateBox.BackColor = System.Drawing.Color.White;
+            this.dateBox.Font = new System.Drawing.Font("B Nazanin", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.dateBox.Location = new System.Drawing.Point(266, 49);
+            this.dateBox.Name = "dateBox";
+            this.dateBox.ShowTime = false;
+            this.dateBox.Size = new System.Drawing.Size(115, 27);
+            this.dateBox.TabIndex = 23;
+            this.dateBox.Text = "persianDateTimePicker1";
+            this.dateBox.Value = ((FreeControls.PersianDate)(resources.GetObject("dateBox.Value")));
+            // 
+            // ExecutiveReportForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(538, 442);
-            this.Controls.Add(this.button1);
+            this.ClientSize = new System.Drawing.Size(477, 442);
+            this.Controls.Add(this.dateBox);
+            this.Controls.Add(this.OK);
             this.Controls.Add(this.groupBox2);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.richTextBox1);
+            this.Controls.Add(this.titleBox);
+            this.Controls.Add(this.descBox);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.button2);
-            this.Name = "Executive_Report";
-            this.Text = "ثبت گزارش بازرسی اسناد عملکردی";
-            this.Controls.SetChildIndex(this.button2, 0);
-            this.Controls.SetChildIndex(this.label1, 0);
-            this.Controls.SetChildIndex(this.label4, 0);
-            this.Controls.SetChildIndex(this.label5, 0);
-            this.Controls.SetChildIndex(this.richTextBox1, 0);
-            this.Controls.SetChildIndex(this.textBox1, 0);
-            this.Controls.SetChildIndex(this.textBox2, 0);
-            this.Controls.SetChildIndex(this.groupBox2, 0);
-            this.Controls.SetChildIndex(this.button1, 0);
+            this.Controls.Add(this.Cancel);
+            this.Name = "ExecutiveReportForm";
+            this.Text = "گزارش بازرسی اسناد عملکردی";
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
@@ -206,19 +203,19 @@
 
         #endregion
 
-        private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.RichTextBox descBox;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Button Cancel;
+        private System.Windows.Forms.TextBox titleBox;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button attach;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button OK;
         private System.Windows.Forms.OpenFileDialog addAttachment;
+        private FreeControls.PersianDateTimePicker dateBox;
 
     }
 }

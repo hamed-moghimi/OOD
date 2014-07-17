@@ -28,76 +28,123 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.ReportList = new System.Windows.Forms.ListBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.viewButton = new System.Windows.Forms.Button();
+            this.addButton = new System.Windows.Forms.Button();
+            this.list = new System.Windows.Forms.DataGridView();
+            this.Cancel = new System.Windows.Forms.Button();
+            this.targetName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lastAudit = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.inspector = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            ((System.ComponentModel.ISupportInitialize)(this.list)).BeginInit();
             this.SuspendLayout();
             // 
-            // ReportList
+            // viewButton
             // 
-            this.ReportList.FormattingEnabled = true;
-            this.ReportList.ItemHeight = 24;
-            this.ReportList.Items.AddRange(new object[] {
-            "گزارش ۱۰ اردیبهشت ۱۳۹۱",
-            "گزارش ۱۰ شهریور ۱۳۹۱",
-            "گزارش ۲۰ بهمن ۱۳۹۱",
-            "گزارش ۱۰ اردیبهشت ۱۳۹۲"});
-            this.ReportList.Location = new System.Drawing.Point(43, 60);
-            this.ReportList.Name = "ReportList";
-            this.ReportList.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.ReportList.Size = new System.Drawing.Size(452, 172);
-            this.ReportList.TabIndex = 3;
+            this.viewButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.viewButton.Image = global::OOD.Properties.Resources.search;
+            this.viewButton.Location = new System.Drawing.Point(629, 78);
+            this.viewButton.Name = "viewButton";
+            this.viewButton.Size = new System.Drawing.Size(38, 37);
+            this.viewButton.TabIndex = 20;
+            this.viewButton.Text = "   ";
+            this.toolTip.SetToolTip(this.viewButton, "مشاهده گزارش");
+            this.viewButton.UseVisualStyleBackColor = true;
+            this.viewButton.Click += new System.EventHandler(this.viewButton_Click);
             // 
-            // button1
+            // addButton
             // 
-            this.button1.Font = new System.Drawing.Font("B Nazanin", 10F);
-            this.button1.Location = new System.Drawing.Point(148, 253);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(95, 32);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "مشاهده";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.addButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.addButton.Image = global::OOD.Properties.Resources.add;
+            this.addButton.Location = new System.Drawing.Point(629, 121);
+            this.addButton.Name = "addButton";
+            this.addButton.Size = new System.Drawing.Size(38, 37);
+            this.addButton.TabIndex = 19;
+            this.addButton.Text = "   ";
+            this.toolTip.SetToolTip(this.addButton, "گزارش جدید");
+            this.addButton.UseVisualStyleBackColor = true;
+            this.addButton.Click += new System.EventHandler(this.addButton_Click);
             // 
-            // button2
+            // list
             // 
-            this.button2.Font = new System.Drawing.Font("B Nazanin", 12F);
-            this.button2.Location = new System.Drawing.Point(43, 253);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(95, 32);
-            this.button2.TabIndex = 5;
-            this.button2.Text = "بازگشت";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.list.AllowUserToAddRows = false;
+            this.list.AllowUserToDeleteRows = false;
+            this.list.AllowUserToResizeColumns = false;
+            this.list.AllowUserToResizeRows = false;
+            this.list.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.list.BackgroundColor = System.Drawing.SystemColors.Window;
+            this.list.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.list.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.targetName,
+            this.lastAudit,
+            this.inspector});
+            this.list.Location = new System.Drawing.Point(12, 44);
+            this.list.MultiSelect = false;
+            this.list.Name = "list";
+            this.list.ReadOnly = true;
+            this.list.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.list.RowHeadersVisible = false;
+            this.list.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.list.Size = new System.Drawing.Size(611, 196);
+            this.list.TabIndex = 17;
+            this.list.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.viewButton_Click);
             // 
-            // button3
+            // Cancel
             // 
-            this.button3.Font = new System.Drawing.Font("B Nazanin", 10F);
-            this.button3.Location = new System.Drawing.Point(252, 253);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(95, 32);
-            this.button3.TabIndex = 6;
-            this.button3.Text = "ثبت گزارش جدید";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.Cancel.Location = new System.Drawing.Point(12, 247);
+            this.Cancel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.Cancel.Name = "Cancel";
+            this.Cancel.Size = new System.Drawing.Size(105, 33);
+            this.Cancel.TabIndex = 21;
+            this.Cancel.Text = "بازگشت";
+            this.Cancel.UseVisualStyleBackColor = true;
+            this.Cancel.Click += new System.EventHandler(this.Cancel_Click);
             // 
-            // Physical_Report_List
+            // targetName
+            // 
+            this.targetName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.targetName.HeaderText = "عنوان گزارش";
+            this.targetName.Name = "targetName";
+            this.targetName.ReadOnly = true;
+            this.targetName.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            // 
+            // lastAudit
+            // 
+            this.lastAudit.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            dataGridViewCellStyle2.NullValue = "-";
+            this.lastAudit.DefaultCellStyle = dataGridViewCellStyle2;
+            this.lastAudit.HeaderText = "تاریخ ثبت گزارش";
+            this.lastAudit.Name = "lastAudit";
+            this.lastAudit.ReadOnly = true;
+            this.lastAudit.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            this.lastAudit.Width = 121;
+            // 
+            // inspector
+            // 
+            this.inspector.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.inspector.HeaderText = "حسابرس";
+            this.inspector.Name = "inspector";
+            this.inspector.ReadOnly = true;
+            this.inspector.Width = 79;
+            // 
+            // PhysicalReportListForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(538, 321);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.ReportList);
+            this.ClientSize = new System.Drawing.Size(677, 288);
+            this.Controls.Add(this.Cancel);
+            this.Controls.Add(this.viewButton);
+            this.Controls.Add(this.addButton);
+            this.Controls.Add(this.list);
             this.Margin = new System.Windows.Forms.Padding(7, 11, 7, 11);
-            this.Name = "Physical_Report_List";
+            this.Name = "PhysicalReportListForm";
             this.Text = "گزارش‌های بازرسی فیزیکی";
-            this.Controls.SetChildIndex(this.ReportList, 0);
-            this.Controls.SetChildIndex(this.button1, 0);
-            this.Controls.SetChildIndex(this.button2, 0);
-            this.Controls.SetChildIndex(this.button3, 0);
+            this.Controls.SetChildIndex(this.list, 0);
+            this.Controls.SetChildIndex(this.addButton, 0);
+            this.Controls.SetChildIndex(this.viewButton, 0);
+            this.Controls.SetChildIndex(this.Cancel, 0);
+            ((System.ComponentModel.ISupportInitialize)(this.list)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -105,10 +152,13 @@
 
         #endregion
 
-        private System.Windows.Forms.ListBox ReportList;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button viewButton;
+        private System.Windows.Forms.Button addButton;
+        private System.Windows.Forms.DataGridView list;
+        private System.Windows.Forms.Button Cancel;
+        private System.Windows.Forms.DataGridViewTextBoxColumn targetName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn lastAudit;
+        private System.Windows.Forms.DataGridViewTextBoxColumn inspector;
 
     }
 }

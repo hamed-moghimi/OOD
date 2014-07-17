@@ -13,17 +13,23 @@ namespace OOD.EMS.Audit
         public String Description { set; get; }
         public DateTime InspectionDate { set; get; }
         public DateTime ReportDate { set; get; }
+        public Users.User Inspector { set; get; }
         public List<Management.Attachment> Attachments { set; get; }
 
-        public PhysicalInspection(String title, String description, DateTime inspectionDate, DateTime reportDate,
-                    List<Management.Attachment> attachments)
+        public PhysicalInspection(String title, String description, DateTime inspectionDate,
+                    Users.User inspector, List<Management.Attachment> attachments)
         {
             Title = title;
             Description = description;
             InspectionDate = inspectionDate;
-            ReportDate = reportDate;
+            ReportDate = DateTime.Now;
+            Inspector = inspector;
             Attachments = attachments;
         }
 
+        public override string ToString()
+        {
+            return Title;
+        }
     }
 }

@@ -14,6 +14,7 @@ namespace OOD.EMS.Audit
 
         private PhysicalInspectionStorage()
         {
+            audits = new List<PhysicalInspection>();
         }
 
         public static PhysicalInspectionStorage getInstance()
