@@ -14,6 +14,7 @@ namespace OOD.EMS.Audit
 
         private ExecutionInspectionStorage()
         {
+            audits = new List<ExecutionInspection>();
         }
 
         public static ExecutionInspectionStorage getInstance()

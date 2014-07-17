@@ -49,6 +49,9 @@
   <ItemGroup>
     <Reference Include="Microsoft.ReportViewer.Common, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
     <Reference Include="Microsoft.ReportViewer.WinForms, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
+    <Reference Include="PersianDate">
+      <HintPath>C:\Users\Hamed\Desktop\PersianDate\PersianDate\PersianDate\bin\Release\PersianDate.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.DirectoryServices" />
@@ -218,7 +221,7 @@
     <Compile Include="EMS\UI\Audit\Report\PhysicalReportForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="EMS\UI\Audit\Report\PhysicalReportForm.Designer.cs">
+    <Compile Include="EMS\UI\Audit\Report\PhysicalReportForm.designer.cs">
       <DependentUpon>PhysicalReportForm.cs</DependentUpon>
     </Compile>
     <Compile Include="EMS\UI\Audit\Report\PhysicalReportListForm.cs">
@@ -226,12 +229,6 @@
     </Compile>
     <Compile Include="EMS\UI\Audit\Report\PhysicalReportListForm.Designer.cs">
       <DependentUpon>PhysicalReportListForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="EMS\UI\Audit\Report\ViewExecutiveReportForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="EMS\UI\Audit\Report\ViewExecutiveReportForm.Designer.cs">
-      <DependentUpon>ViewExecutiveReportForm.cs</DependentUpon>
     </Compile>
     <Compile Include="EMS\UI\Audit\Report\ViewPhysicalReportForm.cs">
       <SubType>Form</SubType>
@@ -568,9 +565,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="EMS\UI\Audit\Report\PhysicalReportListForm.resx">
       <DependentUpon>PhysicalReportListForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="EMS\UI\Audit\Report\ViewExecutiveReportForm.resx">
-      <DependentUpon>ViewExecutiveReportForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="EMS\UI\Audit\Report\ViewPhysicalReportForm.resx">
       <DependentUpon>ViewPhysicalReportForm.cs</DependentUpon>
