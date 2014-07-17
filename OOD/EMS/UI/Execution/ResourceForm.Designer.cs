@@ -60,12 +60,12 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(157, 376);
+            this.button2.Image = global::OOD.Properties.Resources.search;
+            this.button2.Location = new System.Drawing.Point(628, 260);
             this.button2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(105, 33);
+            this.button2.Size = new System.Drawing.Size(40, 40);
             this.button2.TabIndex = 13;
-            this.button2.Text = "مشاهده";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 

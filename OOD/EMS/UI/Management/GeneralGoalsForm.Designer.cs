@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.Cancel = new System.Windows.Forms.Button();
-            this.edit = new System.Windows.Forms.Button();
-            this.add = new System.Windows.Forms.Button();
             this.executive_target = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Date = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.desp = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Cancel = new System.Windows.Forms.Button();
+            this.edit = new System.Windows.Forms.Button();
+            this.add = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -60,39 +60,6 @@
             this.dataGridView1.Size = new System.Drawing.Size(391, 196);
             this.dataGridView1.TabIndex = 5;
             // 
-            // Cancel
-            // 
-            this.Cancel.Location = new System.Drawing.Point(43, 270);
-            this.Cancel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.Cancel.Name = "Cancel";
-            this.Cancel.Size = new System.Drawing.Size(105, 33);
-            this.Cancel.TabIndex = 11;
-            this.Cancel.Text = "بازگشت";
-            this.Cancel.UseVisualStyleBackColor = true;
-            this.Cancel.Click += new System.EventHandler(this.Cancel_Click);
-            // 
-            // edit
-            // 
-            this.edit.Image = global::OOD.Properties.Resources.edit;
-            this.edit.Location = new System.Drawing.Point(466, 162);
-            this.edit.Name = "edit";
-            this.edit.Size = new System.Drawing.Size(38, 37);
-            this.edit.TabIndex = 14;
-            this.edit.Text = "   ";
-            this.edit.UseVisualStyleBackColor = true;
-            this.edit.Click += new System.EventHandler(this.edit_Click);
-            // 
-            // add
-            // 
-            this.add.Image = global::OOD.Properties.Resources.add;
-            this.add.Location = new System.Drawing.Point(466, 118);
-            this.add.Name = "add";
-            this.add.Size = new System.Drawing.Size(38, 37);
-            this.add.TabIndex = 12;
-            this.add.Text = "   ";
-            this.add.UseVisualStyleBackColor = true;
-            this.add.Click += new System.EventHandler(this.add_Click);
-            // 
             // executive_target
             // 
             this.executive_target.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
@@ -115,6 +82,39 @@
             this.desp.ReadOnly = true;
             this.desp.Visible = false;
             this.desp.Width = 5;
+            // 
+            // Cancel
+            // 
+            this.Cancel.Location = new System.Drawing.Point(43, 270);
+            this.Cancel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.Cancel.Name = "Cancel";
+            this.Cancel.Size = new System.Drawing.Size(105, 33);
+            this.Cancel.TabIndex = 11;
+            this.Cancel.Text = "بازگشت";
+            this.Cancel.UseVisualStyleBackColor = true;
+            this.Cancel.Click += new System.EventHandler(this.Cancel_Click);
+            // 
+            // edit
+            // 
+            this.edit.Image = global::OOD.Properties.Resources.search;
+            this.edit.Location = new System.Drawing.Point(466, 162);
+            this.edit.Name = "edit";
+            this.edit.Size = new System.Drawing.Size(38, 37);
+            this.edit.TabIndex = 14;
+            this.edit.Text = "   ";
+            this.edit.UseVisualStyleBackColor = true;
+            this.edit.Click += new System.EventHandler(this.view_Click);
+            // 
+            // add
+            // 
+            this.add.Image = global::OOD.Properties.Resources.add;
+            this.add.Location = new System.Drawing.Point(466, 118);
+            this.add.Name = "add";
+            this.add.Size = new System.Drawing.Size(38, 37);
+            this.add.TabIndex = 12;
+            this.add.Text = "   ";
+            this.add.UseVisualStyleBackColor = true;
+            this.add.Click += new System.EventHandler(this.add_Click);
             // 
             // GeneralGoalsForm
             // 

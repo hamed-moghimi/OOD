@@ -22,28 +22,30 @@ namespace OOD.EMS.UI.Management
             Convention conv = Convention.getInstance();
             policyBox.Text = conv.Policy;
             dscpBox.Text = conv.Description;
+            attachmentPanel1.populate(conv.attachments);
         }
 
-        private void attach_Click(object sender, EventArgs e)
-        {
-            addAtachment.ShowDialog();
-        }
-
+        
         private void button2_Click(object sender, EventArgs e)
         {
-            if (changed)
+            if (changed || attachmentPanel1.Changed)
             {
                 Convention conv = Convention.getInstance();
                 conv.Policy = policyBox.Text;
                 conv.Description = dscpBox.Text;
                 conv.Date = DateTime.Today;
                 conv.DocUser = Authentication.getInstance().ActiveUser;
+                conv.attachments = attachmentPanel1.getAttachments();
             }
             this.Close();
         }
 
         private void Cancel_Click(object sender, EventArgs e)
         {
+            foreach (Attachment attach in attachmentPanel1.getNewlyAdded())
+            {
+                attach.delete();
+            }
             this.Close();
         }
 

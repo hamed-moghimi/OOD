@@ -44,6 +44,10 @@ namespace OOD.EMS.UI.Management
             if (res == DialogResult.OK)
             {
                 GeneralGoal goal = new GeneralGoal(add.name, add.dscp);
+                foreach (Attachment attach in add.attachments)
+                {
+                    goal.addAttachment(attach);
+                }
                 GeneralGoalStorage.getInstance().create(goal);
             }
             load_goals();
@@ -76,7 +80,7 @@ namespace OOD.EMS.UI.Management
         }*/
 
 
-        private void edit_Click(object sender, EventArgs e)
+        private void view_Click(object sender, EventArgs e)
         {
             String name = (string)dataGridView1.Rows[dataGridView1.SelectedRows[0].Index].Cells[0].Value;
             GeneralGoal goal = null;

@@ -134,6 +134,12 @@
     <Compile Include="EMS\Report\ScheduleReport.cs" />
     <Compile Include="EMS\Report\ScheduleReporter.cs" />
     <Compile Include="EMS\Storage.cs" />
+    <Compile Include="EMS\UI\AttachmentPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="EMS\UI\AttachmentPanel.Designer.cs">
+      <DependentUpon>AttachmentPanel.cs</DependentUpon>
+    </Compile>
     <Compile Include="EMS\UI\Audit\Audit\AuditExecutiveForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -332,6 +338,12 @@
     <Compile Include="EMS\UI\Execution\TaskForm.Designer.cs">
       <DependentUpon>TaskForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="EMS\UI\Execution\ViewDepartmentForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EMS\UI\Execution\ViewDepartmentForm.Designer.cs">
+      <DependentUpon>ViewDepartmentForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="EMS\UI\Execution\ViewTaskForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -518,6 +530,9 @@
     <Compile Include="StaticData.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="EMS\UI\AttachmentPanel.resx">
+      <DependentUpon>AttachmentPanel.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="EMS\UI\Audit\Audit\AuditExecutiveForm.resx">
       <DependentUpon>AuditExecutiveForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -617,6 +632,9 @@
     <EmbeddedResource Include="EMS\UI\Execution\TaskForm.resx">
       <DependentUpon>TaskForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="EMS\UI\Execution\ViewDepartmentForm.resx">
+      <DependentUpon>ViewDepartmentForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="EMS\UI\Execution\ViewGoalRelationForm.resx">
       <DependentUpon>ViewGoalRelationForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -626,8 +644,14 @@
     <EmbeddedResource Include="EMS\UI\MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="EMS\UI\Management\AddEffectForm.resx">
+      <DependentUpon>AddEffectForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="EMS\UI\Management\AddGeneralGoalsForm.resx">
       <DependentUpon>AddGeneralGoalsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EMS\UI\Management\AddLegalReqForm.resx">
+      <DependentUpon>AddLegalReqForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="EMS\UI\Management\ConventionForm.resx">
       <DependentUpon>ConventionForm.cs</DependentUpon>

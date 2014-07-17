@@ -16,6 +16,7 @@ namespace OOD.EMS.Management
             Description = description;
             Date = DateTime.Now;
             DocUser = Authentication.getInstance().ActiveUser;
+            attachments = new List<Attachment>();
         }
 
         public override bool Equals(object obj)

@@ -40,7 +40,7 @@
             // 
             // edit
             // 
-            this.edit.Image = global::OOD.Properties.Resources.edit;
+            this.edit.Image = global::OOD.Properties.Resources.search;
             this.edit.Location = new System.Drawing.Point(646, 172);
             this.edit.Name = "edit";
             this.edit.Size = new System.Drawing.Size(38, 37);

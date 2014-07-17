@@ -16,6 +16,8 @@ namespace OOD.EMS.UI.Management
     {
         public string name { set; get; }
         public string dscp { set; get; }
+        public List<Attachment> attachments { set; get; }
+
         public AddLegalReqForm(string name, string dscp)
         {
             this.menu.Visible = false;
@@ -35,6 +37,8 @@ namespace OOD.EMS.UI.Management
             }
             
             dscp = this.dscp_box.Text;
+            attachments = attachmentPanel1.getAttachments();
+
             if (LegalConstraintStorage.getInstance().all().Contains(new LegalConstraint(name, dscp)))
             {
                 MessageBox.Show(new DocumentExsitsException().Message);
@@ -50,6 +54,11 @@ namespace OOD.EMS.UI.Management
 
         private void Cancel_Click(object sender, EventArgs e)
         {
+            foreach (Attachment attach in attachmentPanel1.getNewlyAdded())
+            {
+                attach.delete();
+            }
+            
             this.DialogResult = DialogResult.Cancel;
             this.Close();
         }

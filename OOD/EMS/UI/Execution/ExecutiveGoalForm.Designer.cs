@@ -58,7 +58,7 @@
             // 
             // editButton
             // 
-            this.editButton.Image = global::OOD.Properties.Resources.edit;
+            this.editButton.Image = global::OOD.Properties.Resources.search;
             this.editButton.Location = new System.Drawing.Point(592, 178);
             this.editButton.Name = "editButton";
             this.editButton.Size = new System.Drawing.Size(40, 40);

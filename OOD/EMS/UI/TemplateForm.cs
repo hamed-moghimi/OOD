@@ -68,15 +68,16 @@ namespace OOD.EMS.UI
 
         protected String convert(String old)
         {
+            String res = old;
             char[][] numbers = new char[][]
             {
                 "0123456789".ToCharArray(),"۰۱۲۳۴۵۶۷۸۹".ToCharArray()
             };
             for (int x = 0; x <= 9; x++)
             {
-                old.Replace(numbers[0][x], numbers[1][x]);
+                res = res.Replace(numbers[1][x], numbers[0][x]);
             }
-            return old;
+            return res;
         }
 
         // ------------------------------------------------------------------
