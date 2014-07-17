@@ -17,16 +17,16 @@ namespace OOD.EMS.UI
         private Dictionary<String, Attachment> _attachments = new Dictionary<String, Attachment>();
 
         bool viewMode = false;
-        public bool ViewMode { set { this.viewMode = value; } get { return this.viewMode; } }
+        public bool ViewMode { 
+            set { this.viewMode = value; removeButon.Visible = add.Visible = !value; } 
+            get { return this.viewMode; } 
+        }
 
         public AttachmentPanel()
         {
             InitializeComponent();
             attachmentGrid.CellDoubleClick += new DataGridViewCellEventHandler(download_click);
-            if (viewMode)
-            {
-                removeButon.Visible = add.Visible = false;
-            }
+            
         }
 
         public void populate(List<Attachment> attachments)

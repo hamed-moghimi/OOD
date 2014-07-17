@@ -43,12 +43,16 @@ namespace OOD.EMS.UI.Management
             if (res == DialogResult.OK)
             {
                 EnvironEffect goal = new EnvironEffect(add.name, add.dscp);
+                foreach (Attachment attach in add.attachments)
+                {
+                    goal.addAttachment(attach);
+                }
                 EnvironEffectStorage.getInstance().create(goal);
             }
             load_goals();
         }
 
-        private void edit_Click(object sender, EventArgs e)
+        private void view_Click(object sender, EventArgs e)
         {
             String name = (string)dataGridView1.Rows[dataGridView1.SelectedRows[0].Index].Cells[0].Value;
             EnvironEffect goal = null;

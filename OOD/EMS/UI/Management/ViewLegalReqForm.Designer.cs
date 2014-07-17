@@ -29,8 +29,6 @@
         private void InitializeComponent()
         {
             this.label5 = new System.Windows.Forms.Label();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.Cancel = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.dscp_box = new System.Windows.Forms.RichTextBox();
@@ -39,7 +37,7 @@
             this.DateBox = new System.Windows.Forms.Label();
             this.userBox = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.groupBox2.SuspendLayout();
+            this.attachmentPanel1 = new OOD.EMS.UI.AttachmentPanel();
             this.SuspendLayout();
             // 
             // label5
@@ -52,32 +50,9 @@
             this.label5.TabIndex = 13;
             this.label5.Text = "نام سند:";
             // 
-            // groupBox2
-            // 
-            this.groupBox2.Controls.Add(this.linkLabel1);
-            this.groupBox2.Location = new System.Drawing.Point(39, 262);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.groupBox2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBox2.Size = new System.Drawing.Size(452, 88);
-            this.groupBox2.TabIndex = 19;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "ضمیمه‌ها";
-            // 
-            // linkLabel1
-            // 
-            this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Location = new System.Drawing.Point(362, 37);
-            this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(80, 24);
-            this.linkLabel1.TabIndex = 0;
-            this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "ضمیمه‌ی سند";
-            // 
             // Cancel
             // 
-            this.Cancel.Location = new System.Drawing.Point(38, 379);
+            this.Cancel.Location = new System.Drawing.Point(38, 446);
             this.Cancel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Cancel.Name = "Cancel";
             this.Cancel.Size = new System.Drawing.Size(105, 33);
@@ -154,17 +129,25 @@
             this.label4.TabIndex = 25;
             this.label4.Text = "کاربر ثبت‌کننده:";
             // 
+            // attachmentPanel1
+            // 
+            this.attachmentPanel1.Location = new System.Drawing.Point(38, 249);
+            this.attachmentPanel1.Name = "attachmentPanel1";
+            this.attachmentPanel1.Size = new System.Drawing.Size(461, 188);
+            this.attachmentPanel1.TabIndex = 0;
+            this.attachmentPanel1.ViewMode = false;
+            // 
             // ViewLegalReqForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(538, 430);
+            this.ClientSize = new System.Drawing.Size(538, 489);
+            this.Controls.Add(this.attachmentPanel1);
             this.Controls.Add(this.userBox);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.DateBox);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.GoalNameLabel);
-            this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.Cancel);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.dscp_box);
@@ -175,14 +158,12 @@
             this.Controls.SetChildIndex(this.dscp_box, 0);
             this.Controls.SetChildIndex(this.label3, 0);
             this.Controls.SetChildIndex(this.Cancel, 0);
-            this.Controls.SetChildIndex(this.groupBox2, 0);
             this.Controls.SetChildIndex(this.GoalNameLabel, 0);
             this.Controls.SetChildIndex(this.label1, 0);
             this.Controls.SetChildIndex(this.DateBox, 0);
             this.Controls.SetChildIndex(this.label4, 0);
             this.Controls.SetChildIndex(this.userBox, 0);
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
+            this.Controls.SetChildIndex(this.attachmentPanel1, 0);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -191,15 +172,14 @@
         #endregion
 
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Button Cancel;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.RichTextBox dscp_box;
         private System.Windows.Forms.Label GoalNameLabel;
-        private System.Windows.Forms.LinkLabel linkLabel1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label DateBox;
         private System.Windows.Forms.Label userBox;
         private System.Windows.Forms.Label label4;
+        private AttachmentPanel attachmentPanel1;
     }
 }

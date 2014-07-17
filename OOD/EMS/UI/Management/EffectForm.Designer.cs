@@ -103,7 +103,7 @@
             this.edit.TabIndex = 14;
             this.edit.Text = "   ";
             this.edit.UseVisualStyleBackColor = true;
-            this.edit.Click += new System.EventHandler(this.edit_Click);
+            this.edit.Click += new System.EventHandler(this.view_Click);
             // 
             // add
             // 

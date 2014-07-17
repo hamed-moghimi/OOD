@@ -21,6 +21,8 @@ namespace OOD.EMS.UI.Management
 
         public string name { set; get; }
         public string dscp { set; get; }
+        public List<Attachment> attachments { get; set; }
+
         public AddEffectForm(string name, string dscp)
         {
             this.menu.Visible = false;
@@ -38,6 +40,7 @@ namespace OOD.EMS.UI.Management
                 return;
             }
             dscp = this.dscp_box.Text;
+            attachments = attachmentPanel1.getAttachments();
             if (EnvironEffectStorage.getInstance().all().Contains(new EnvironEffect(name, dscp)))
             {
                 MessageBox.Show(new DocumentExsitsException().Message);

@@ -650,8 +650,14 @@
     <EmbeddedResource Include="EMS\UI\MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="EMS\UI\Management\AddEffectForm.resx">
+      <DependentUpon>AddEffectForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="EMS\UI\Management\AddGeneralGoalsForm.resx">
       <DependentUpon>AddGeneralGoalsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EMS\UI\Management\AddLegalReqForm.resx">
+      <DependentUpon>AddLegalReqForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="EMS\UI\Management\ConventionForm.resx">
       <DependentUpon>ConventionForm.cs</DependentUpon>

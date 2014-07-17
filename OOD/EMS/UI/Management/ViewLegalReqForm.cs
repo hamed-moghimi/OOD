@@ -21,6 +21,8 @@ namespace OOD.EMS.UI.Management
             this.DateBox.Text = goal.getDateString();
             this.dscp_box.Text = goal.Description;
             this.userBox.Text = goal.DocUser.Firstname + " " + goal.DocUser.Lastname;
+            attachmentPanel1.populate(goal.attachments);
+            attachmentPanel1.ViewMode = true;
         }
 
         private void Cancel_Click(object sender, EventArgs e)

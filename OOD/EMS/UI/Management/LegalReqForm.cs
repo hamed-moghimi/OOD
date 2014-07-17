@@ -43,12 +43,16 @@ namespace OOD.EMS.UI.Management
             if (res == DialogResult.OK)
             {
                 LegalConstraint doc = new LegalConstraint(add.name, add.dscp);
+                foreach (Attachment attach in add.attachments)
+                {
+                    doc.addAttachment(attach);
+                }
                 LegalConstraintStorage.getInstance().create(doc);
             }
             load_goals();
         }
 
-        private void edit_Click(object sender, EventArgs e)
+        private void view_Click(object sender, EventArgs e)
         {
             String name = (string)dataGridView1.Rows[dataGridView1.SelectedRows[0].Index].Cells[0].Value;
             LegalConstraint goal = null;
