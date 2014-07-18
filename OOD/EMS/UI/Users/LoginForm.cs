@@ -29,16 +29,23 @@ namespace OOD.EMS.UI.Users
             try
             {
                 Authentication auth = Authentication.getInstance();
-                auth.login(usernameBox.Text);
-                if (auth.ActiveUser.ALevel is Administrator)
+                bool res = auth.login(usernameBox.Text);
+                if (res)
                 {
-                    (new UserManagementForm()).Show();
+                    if (auth.ActiveUser.ALevel is Administrator)
+                    {
+                        (new UserManagementForm()).Show();
+                    }
+                    else
+                    {
+                        (new MainForm()).Show();
+                    }
+                    this.Hide();
                 }
                 else
                 {
-                    (new MainForm()).Show();
+                    MessageBox.Show(new NoSuchUserException().Message);
                 }
-                this.Hide();
             }
             catch (ActiveUserExistsException ex)
             {

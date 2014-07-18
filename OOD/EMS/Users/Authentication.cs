@@ -27,7 +27,7 @@ namespace OOD.EMS.Users
             return instance;
         }
 
-        public void login(String username)
+        public bool login(String username)
         {
             //TODO: exception
             if (ActiveUser == null)
@@ -45,10 +45,11 @@ namespace OOD.EMS.Users
                 if (user != null)
                 {
                     ActiveUser = user;
+                    return true;
                 }
                 else
                 {
-                    throw new NoSuchUserException();
+                    return false;
                 }
             }
             else
