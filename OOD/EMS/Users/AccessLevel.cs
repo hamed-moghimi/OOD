@@ -27,5 +27,10 @@ namespace OOD.EMS.Users
         public abstract Boolean canViewDashboard();
         //Admin
         public abstract Boolean canManageUsers();
+
+        public String toString()
+        {
+            return "کاربر";
+        }
     }
 }

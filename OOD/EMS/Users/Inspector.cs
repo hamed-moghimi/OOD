@@ -25,6 +25,9 @@ namespace OOD.EMS.Users
 
         public override Boolean canModifyAuditDocs() { return true; }
         public override Boolean canDeleteAuditDocs() { return true; }
-        
+        public override string ToString()
+        {
+            return "بازرس";
+        }
     }
 }

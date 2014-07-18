@@ -34,5 +34,10 @@ namespace OOD.EMS.Users
         public override Boolean canViewDashboard() { return false; }
         //Admin
         public override Boolean canManageUsers() { return true; }
+
+        public override string ToString()
+        {
+            return "مدیر سیستم";
+        }
     }
 }

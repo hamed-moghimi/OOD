@@ -28,8 +28,16 @@ namespace OOD.EMS.UI.Users
         {
             try
             {
-                Authentication.getInstance().login(usernameBox.Text);
-                (new MainForm()).Show();
+                Authentication auth = Authentication.getInstance();
+                auth.login(usernameBox.Text);
+                if (auth.ActiveUser.ALevel is Administrator)
+                {
+                    (new UserManagementForm()).Show();
+                }
+                else
+                {
+                    (new MainForm()).Show();
+                }
                 this.Hide();
             }
             catch (ActiveUserExistsException ex)
