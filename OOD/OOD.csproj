@@ -50,7 +50,10 @@
     <Reference Include="Microsoft.ReportViewer.Common, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
     <Reference Include="Microsoft.ReportViewer.WinForms, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
     <Reference Include="PersianDate">
-      <HintPath>C:\Users\Hamed\Desktop\PersianDate\PersianDate\PersianDate\bin\Release\PersianDate.dll</HintPath>
+      <HintPath>.\PersianDate.dll</HintPath>
+    </Reference>
+    <Reference Include="PopupControl">
+      <HintPath>.\PopupControl.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -571,12 +574,14 @@
     </EmbeddedResource>
     <EmbeddedResource Include="EMS\UI\Audit\Report\ExecutiveReportForm.resx">
       <DependentUpon>ExecutiveReportForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="EMS\UI\Audit\Report\ExecutiveReportListForm.resx">
       <DependentUpon>ExecutiveReportListForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="EMS\UI\Audit\Report\PhysicalReportForm.resx">
       <DependentUpon>PhysicalReportForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="EMS\UI\Audit\Report\PhysicalReportListForm.resx">
       <DependentUpon>PhysicalReportListForm.cs</DependentUpon>

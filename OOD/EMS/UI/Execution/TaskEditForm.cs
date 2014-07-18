@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using OOD.EMS.Execution;
 using OOD.EMS.Exceptions;
+using OOD.EMS.Management;
 
 namespace OOD.EMS.UI.Execution
 {
@@ -16,6 +17,7 @@ namespace OOD.EMS.UI.Execution
     {
         public String name, fromDate, toDate, dscp;
         public Department manager;
+        public List<Attachment> attachments;
         private String prevTitle;
 
         public TaskEditForm(EMS.Execution.Task t)
@@ -25,17 +27,22 @@ namespace OOD.EMS.UI.Execution
             if (t != null)
             {
                 name_box.Text = t.Title;
-                fromDateBox.Text = t.getStartDateString();
-                toDateBox.Text = t.getDueDateString();
+                fromDateBox.Value = t.StartDate;
+                toDateBox.Value = t.DueDate;
                 dscp_box.Text = t.Description;
                 prevTitle = t.Title;
                 manager = t.department;
                 respBox.Text = manager.Name;
+                attachmentPanel1.populate(t.attachments);
             }
         }
 
         private void Cancel_Click(object sender, EventArgs e)
         {
+            foreach (Attachment attach in attachmentPanel1.getNewlyAdded())
+            {
+                attach.delete();
+            }
             this.DialogResult = DialogResult.Cancel;
             this.Close();
         }
@@ -57,12 +64,18 @@ namespace OOD.EMS.UI.Execution
             {
                 try
                 {
+                    if (toDateBox.Value < fromDateBox.Value)
+                    {
+                        MessageBox.Show("بازه‌ی زمانی صحیح نمی‌باشد");
+                    }
+                
                     name = name_box.Text;
-                    toDate = convert(toDateBox.Text);
+                    toDate = convert(toDateBox.Value.ToString());
                     Convert.ToDateTime(toDate);
-                    fromDate = convert(fromDateBox.Text);
+                    fromDate = convert(fromDateBox.Value.ToString());
                     Convert.ToDateTime(fromDate);
                     dscp = dscp_box.Text;
+                    attachments = attachmentPanel1.getAttachments();
                     this.DialogResult = DialogResult.OK;
                     this.Close();
                 }

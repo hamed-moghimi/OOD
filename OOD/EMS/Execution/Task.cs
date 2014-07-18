@@ -24,6 +24,7 @@ namespace OOD.EMS.Execution
             Progress = progress;
             department = responsible;
             Description = dscp;
+            attachments = new List<Management.Attachment>();
         }
 
         public void addAttachment(Management.Attachment attach)
