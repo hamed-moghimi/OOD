@@ -24,6 +24,9 @@ namespace OOD.EMS.Users
 
         public override Boolean canModifyManagementDocs() { return true; }
         public override Boolean canDeleteManagementDocs() { return true; }
-        
+        public override string ToString()
+        {
+            return "کاربر ارشد";
+        }        
     }
 }

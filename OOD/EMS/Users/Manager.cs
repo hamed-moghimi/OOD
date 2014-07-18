@@ -25,6 +25,10 @@ namespace OOD.EMS.Users
 
         public override Boolean canModifyExecutiveDocs() { return true; }
         public override Boolean canDeleteExecutiveDocs() { return true; }
-        
+
+        public override string ToString()
+        {
+            return "کاربر میانی";
+        }
     }
 }

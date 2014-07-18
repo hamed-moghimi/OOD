@@ -97,6 +97,7 @@
     <Compile Include="EMS\Exceptions\RelationExistsException.cs" />
     <Compile Include="EMS\Exceptions\ResourceExistsException.cs" />
     <Compile Include="EMS\Exceptions\TaskExistsException.cs" />
+    <Compile Include="EMS\Exceptions\UserExistsException.cs" />
     <Compile Include="EMS\Execution\Allocation.cs" />
     <Compile Include="EMS\Execution\AllocationStorage.cs" />
     <Compile Include="EMS\Execution\Contribution.cs" />
