@@ -53,7 +53,7 @@ namespace OOD
             var values = new double[] { 100.2, 120.0, 208.5, 100.2, 120.0, 208.5 };
             foreach (double v in values)
             {
-                var val = new MetricValue(m, v);
+                var val = new MetricValue(m, v, DateTime.Now);
                 val.Date = DateTime.Today + TimeSpan.FromDays(r.Next(20));
                 MetricValueStorage.getInstance().create(val);
             }
@@ -63,7 +63,7 @@ namespace OOD
             values = new double[] { 10.2, 45.0, 20.5 };
             foreach (double v in values)
             {
-                var val = new MetricValue(m, v);
+                var val = new MetricValue(m, v, DateTime.Now);
                 val.Date = DateTime.Today + TimeSpan.FromDays(r.Next(7));
                 MetricValueStorage.getInstance().create(val);
             }
@@ -74,7 +74,7 @@ namespace OOD
             values = new double[] { 70.2, 52.0, 98.5, 70.2, 60.0, 38.5 };
             foreach (double v in values)
             {
-                var val = new MetricValue(m, v);
+                var val = new MetricValue(m, v, DateTime.Now);
                 val.Date = DateTime.Today + TimeSpan.FromDays(r.Next(20));
                 MetricValueStorage.getInstance().create(val);
             }

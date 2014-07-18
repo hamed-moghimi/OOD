@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.attachPanel = new System.Windows.Forms.GroupBox();
             this.removeButon = new System.Windows.Forms.Button();
             this.add = new System.Windows.Forms.Button();
@@ -82,9 +83,22 @@
             this.attachmentGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.attachment_filename,
             this.hash});
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.attachmentGrid.DefaultCellStyle = dataGridViewCellStyle2;
             this.attachmentGrid.Location = new System.Drawing.Point(18, 31);
+            this.attachmentGrid.MultiSelect = false;
             this.attachmentGrid.Name = "attachmentGrid";
+            this.attachmentGrid.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.attachmentGrid.RowHeadersVisible = false;
+            this.attachmentGrid.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            this.attachmentGrid.RowTemplate.ReadOnly = true;
+            this.attachmentGrid.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.attachmentGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.attachmentGrid.Size = new System.Drawing.Size(336, 130);
             this.attachmentGrid.TabIndex = 21;

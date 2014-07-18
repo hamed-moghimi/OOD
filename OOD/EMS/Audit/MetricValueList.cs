@@ -12,9 +12,10 @@ namespace OOD.EMS.Audit
         {
         }
 
+        // TODO: What is this?!
         public void update(double value)
         {
-            create(new MetricValue(null, value));
+            create(new MetricValue(null, value, DateTime.Now));
         }
     }
 }

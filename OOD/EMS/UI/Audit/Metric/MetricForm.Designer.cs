@@ -28,116 +28,92 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.label1 = new System.Windows.Forms.Label();
+            this.titleBox = new System.Windows.Forms.TextBox();
             this.Cancel = new System.Windows.Forms.Button();
-            this.edit = new System.Windows.Forms.Button();
-            this.delete = new System.Windows.Forms.Button();
-            this.add = new System.Windows.Forms.Button();
-            this.executive_target = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.desp = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.OK = new System.Windows.Forms.Button();
+            this.unitBox = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // label1
             // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.AllowUserToResizeColumns = false;
-            this.dataGridView1.AllowUserToResizeRows = false;
-            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.Window;
-            this.dataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.ColumnHeadersVisible = false;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.executive_target,
-            this.desp});
-            this.dataGridView1.Location = new System.Drawing.Point(43, 59);
-            this.dataGridView1.MultiSelect = false;
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.dataGridView1.RowHeadersVisible = false;
-            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(391, 196);
-            this.dataGridView1.TabIndex = 5;
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(236, 18);
+            this.label1.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.label1.Name = "label1";
+            this.label1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.label1.Size = new System.Drawing.Size(41, 24);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "عنوان:";
+            // 
+            // titleBox
+            // 
+            this.titleBox.Location = new System.Drawing.Point(14, 15);
+            this.titleBox.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            this.titleBox.Name = "titleBox";
+            this.titleBox.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.titleBox.Size = new System.Drawing.Size(212, 31);
+            this.titleBox.TabIndex = 1;
             // 
             // Cancel
             // 
-            this.Cancel.Location = new System.Drawing.Point(43, 270);
-            this.Cancel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.Cancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.Cancel.Location = new System.Drawing.Point(14, 90);
             this.Cancel.Name = "Cancel";
-            this.Cancel.Size = new System.Drawing.Size(105, 33);
-            this.Cancel.TabIndex = 11;
-            this.Cancel.Text = "بازگشت";
+            this.Cancel.Size = new System.Drawing.Size(103, 30);
+            this.Cancel.TabIndex = 3;
+            this.Cancel.Text = "انصراف";
             this.Cancel.UseVisualStyleBackColor = true;
             this.Cancel.Click += new System.EventHandler(this.Cancel_Click);
             // 
-            // edit
+            // OK
             // 
-            this.edit.Image = global::OOD.Properties.Resources.edit;
-            this.edit.Location = new System.Drawing.Point(466, 139);
-            this.edit.Name = "edit";
-            this.edit.Size = new System.Drawing.Size(38, 37);
-            this.edit.TabIndex = 14;
-            this.edit.Text = "   ";
-            this.edit.UseVisualStyleBackColor = true;
-            this.edit.Click += new System.EventHandler(this.edit_Click);
+            this.OK.Location = new System.Drawing.Point(123, 90);
+            this.OK.Name = "OK";
+            this.OK.Size = new System.Drawing.Size(103, 30);
+            this.OK.TabIndex = 4;
+            this.OK.Text = "ثبت";
+            this.OK.UseVisualStyleBackColor = true;
+            this.OK.Click += new System.EventHandler(this.OK_Click);
             // 
-            // delete
+            // unitBox
             // 
-            this.delete.Image = global::OOD.Properties.Resources.delete;
-            this.delete.Location = new System.Drawing.Point(466, 182);
-            this.delete.Name = "delete";
-            this.delete.Size = new System.Drawing.Size(38, 37);
-            this.delete.TabIndex = 13;
-            this.delete.Text = "   ";
-            this.delete.UseVisualStyleBackColor = true;
-            this.delete.Click += new System.EventHandler(this.delete_Click);
+            this.unitBox.Location = new System.Drawing.Point(14, 50);
+            this.unitBox.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            this.unitBox.Name = "unitBox";
+            this.unitBox.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.unitBox.Size = new System.Drawing.Size(212, 31);
+            this.unitBox.TabIndex = 6;
             // 
-            // add
+            // label2
             // 
-            this.add.Image = global::OOD.Properties.Resources.add;
-            this.add.Location = new System.Drawing.Point(466, 96);
-            this.add.Name = "add";
-            this.add.Size = new System.Drawing.Size(38, 37);
-            this.add.TabIndex = 12;
-            this.add.Text = "   ";
-            this.add.UseVisualStyleBackColor = true;
-            this.add.Click += new System.EventHandler(this.add_Click);
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(236, 53);
+            this.label2.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.label2.Name = "label2";
+            this.label2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.label2.Size = new System.Drawing.Size(36, 24);
+            this.label2.TabIndex = 5;
+            this.label2.Text = "واحد:";
             // 
-            // executive_target
+            // MetricForm
             // 
-            this.executive_target.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.executive_target.HeaderText = "هدف اجرایی";
-            this.executive_target.Name = "executive_target";
-            this.executive_target.ReadOnly = true;
-            this.executive_target.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
-            // desp
-            // 
-            this.desp.HeaderText = "descp";
-            this.desp.Name = "desp";
-            this.desp.ReadOnly = true;
-            this.desp.Visible = false;
-            this.desp.Width = 5;
-            // 
-            // Metric
-            // 
+            this.AcceptButton = this.OK;
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(538, 329);
-            this.Controls.Add(this.edit);
-            this.Controls.Add(this.delete);
-            this.Controls.Add(this.add);
+            this.CancelButton = this.Cancel;
+            this.ClientSize = new System.Drawing.Size(280, 132);
+            this.Controls.Add(this.unitBox);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.OK);
             this.Controls.Add(this.Cancel);
-            this.Controls.Add(this.dataGridView1);
-            this.Name = "Metric";
-            this.Text = "مدیریت سنجه‌ها";
-            this.Controls.SetChildIndex(this.dataGridView1, 0);
-            this.Controls.SetChildIndex(this.Cancel, 0);
-            this.Controls.SetChildIndex(this.add, 0);
-            this.Controls.SetChildIndex(this.delete, 0);
-            this.Controls.SetChildIndex(this.edit, 0);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.Controls.Add(this.titleBox);
+            this.Controls.Add(this.label1);
+            this.Margin = new System.Windows.Forms.Padding(7, 11, 7, 11);
+            this.Name = "MetricForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.Text = "اضافه‌کردن سنجه";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -145,12 +121,11 @@
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox titleBox;
         private System.Windows.Forms.Button Cancel;
-        private System.Windows.Forms.Button add;
-        private System.Windows.Forms.Button delete;
-        private System.Windows.Forms.Button edit;
-        private System.Windows.Forms.DataGridViewTextBoxColumn executive_target;
-        private System.Windows.Forms.DataGridViewTextBoxColumn desp;
+        private System.Windows.Forms.Button OK;
+        private System.Windows.Forms.TextBox unitBox;
+        private System.Windows.Forms.Label label2;
     }
 }

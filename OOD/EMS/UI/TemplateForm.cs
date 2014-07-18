@@ -134,12 +134,12 @@ namespace OOD.EMS.UI
 
         private void metricsCRUDSubmenu_Click(object sender, EventArgs e)
         {
-            newChild(new MetricForm());
+            newChild(new MetricListForm());
         }
 
         private void metricsEvaluationSubmenu_Click(object sender, EventArgs e)
         {
-            newChild(new MetricEntryForm());
+            newChild(new MetricValueListForm());
         }
 
         private void generalGoalsSubmenu_Click(object sender, EventArgs e)

@@ -7,56 +7,60 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using OOD.EMS.Audit;
 
 namespace OOD.EMS.UI.Audit.Metric
 {
-    public partial class MetricForm : TemplateForm
+    using Metric = OOD.EMS.Audit.Metric;
+    public partial class MetricForm : TemplateDialog
     {
+        public Metric Metric { get; set; }
+        
+        public MetricForm(Metric metric)
+        {
+            InitializeComponent();
+            Metric = metric;
+            titleBox.Text = metric.Name;
+            unitBox.Text = metric.Unit;
+            this.Text = "تغییر سنجه";
+        }
+
         public MetricForm()
         {
             InitializeComponent();
-            load_metrics();
-        }
-
-        private void load_metrics()
-        {
-            dataGridView1.Rows.Clear();
-            foreach (object[] row in StaticData.Metrics)
-            {
-                this.dataGridView1.Rows.Add(row);
-            }
         }
 
         private void Cancel_Click(object sender, EventArgs e)
         {
+            this.DialogResult = DialogResult.Cancel;
             this.Close();
         }
 
-        private void add_Click(object sender, EventArgs e)
+        private void OK_Click(object sender, EventArgs e)
         {
-            AddMetricForm add = new AddMetricForm("");
-            add.ShowDialog();
-            this.dataGridView1.Rows.Add(add.name);
-            object[] row = { add.name };
-            StaticData.Metrics.Add(row);
-            load_metrics();
+            if (titleBox.Text.Equals("") || unitBox.Text.Equals(""))
+            {
+                MessageBox.Show("فرم را درست و کامل پر کنید");
+                return;
+            }
             
-        }
-
-        private void edit_Click(object sender, EventArgs e)
-        {
-            AddMetricForm add = new AddMetricForm((string)(StaticData.Metrics[dataGridView1.SelectedRows[0].Index][0]));
-            add.ShowDialog();
-            StaticData.Metrics[dataGridView1.SelectedRows[0].Index][0] = add.name;
-            load_metrics();
-        }
-
-        private void delete_Click(object sender, EventArgs e)
-        {
-            ask_confirm();
-            int i = dataGridView1.SelectedRows[0].Index;
-            dataGridView1.Rows.RemoveAt(i);
-            
+            if (Metric == null)
+            {
+                Metric = new Metric(titleBox.Text, unitBox.Text);
+                if (MetricStorage.getInstance().all().Contains(Metric))
+                {
+                    MessageBox.Show("سنجه‌ای با این نام پیش از این در سیستم ثبت شده است");
+                    return;
+                }
+                MetricStorage.getInstance().create(Metric);
+            }
+            else
+            {
+                Metric.Name = titleBox.Text;
+                Metric.Unit = unitBox.Text;
+            }
+            this.DialogResult = DialogResult.OK;
+            this.Close();
         }
     }
 }

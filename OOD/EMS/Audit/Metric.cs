@@ -23,5 +23,13 @@ namespace OOD.EMS.Audit
         {
             return this.Name;
         }
+
+        public override bool Equals(object obj)
+        {
+            if (obj == null) return false;
+            Metric metric = obj as Metric;
+            if (metric == null) return false;
+            return this.Name.Equals(metric.Name);
+        }
     }
 }

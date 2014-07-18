@@ -188,29 +188,29 @@
     <Compile Include="EMS\UI\Audit\Metric\AddMetricEntryForm.Designer.cs">
       <DependentUpon>AddMetricEntryForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="EMS\UI\Audit\Metric\AddMetricForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="EMS\UI\Audit\Metric\AddMetricForm.Designer.cs">
-      <DependentUpon>AddMetricForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="EMS\UI\Audit\Metric\EditMetricEntryForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="EMS\UI\Audit\Metric\EditMetricEntryForm.Designer.cs">
-      <DependentUpon>EditMetricEntryForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="EMS\UI\Audit\Metric\MetricEntryForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="EMS\UI\Audit\Metric\MetricEntryForm.Designer.cs">
-      <DependentUpon>MetricEntryForm.cs</DependentUpon>
-    </Compile>
     <Compile Include="EMS\UI\Audit\Metric\MetricForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="EMS\UI\Audit\Metric\MetricForm.Designer.cs">
       <DependentUpon>MetricForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EMS\UI\Audit\Metric\MetricValueForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EMS\UI\Audit\Metric\MetricValueForm.Designer.cs">
+      <DependentUpon>MetricValueForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EMS\UI\Audit\Metric\MetricValueListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EMS\UI\Audit\Metric\MetricValueListForm.Designer.cs">
+      <DependentUpon>MetricValueListForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EMS\UI\Audit\Metric\MetricListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EMS\UI\Audit\Metric\MetricListForm.Designer.cs">
+      <DependentUpon>MetricListForm.cs</DependentUpon>
     </Compile>
     <Compile Include="EMS\UI\Audit\Report\ExecutiveReportForm.cs">
       <SubType>Form</SubType>
@@ -557,17 +557,17 @@
     <EmbeddedResource Include="EMS\UI\Audit\Metric\AddMetricEntryForm.resx">
       <DependentUpon>AddMetricEntryForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="EMS\UI\Audit\Metric\AddMetricForm.resx">
-      <DependentUpon>AddMetricForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="EMS\UI\Audit\Metric\EditMetricEntryForm.resx">
-      <DependentUpon>EditMetricEntryForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="EMS\UI\Audit\Metric\MetricEntryForm.resx">
-      <DependentUpon>MetricEntryForm.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="EMS\UI\Audit\Metric\MetricForm.resx">
       <DependentUpon>MetricForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EMS\UI\Audit\Metric\MetricValueForm.resx">
+      <DependentUpon>MetricValueForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EMS\UI\Audit\Metric\MetricValueListForm.resx">
+      <DependentUpon>MetricValueListForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EMS\UI\Audit\Metric\MetricListForm.resx">
+      <DependentUpon>MetricListForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="EMS\UI\Audit\Report\ExecutiveReportForm.resx">
       <DependentUpon>ExecutiveReportForm.cs</DependentUpon>
