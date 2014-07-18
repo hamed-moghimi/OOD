@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace OOD.EMS.UI.Users
 {
-    public partial class ViewUserForm : TemplateForm
+    public partial class ViewUserForm : TemplateDialog
     {
         public ViewUserForm()
         {

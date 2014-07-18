@@ -9,7 +9,7 @@ using OOD.EMS.Execution;
 
 namespace OOD.EMS.UI.Execution
 {
-    public partial class SelectExecutiveGoalForm : TemplateForm
+    public partial class SelectExecutiveGoalForm : TemplateDialog
     {
 
         public ExecutiveGoal goal { get; set; }

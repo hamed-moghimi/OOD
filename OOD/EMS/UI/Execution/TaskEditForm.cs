@@ -13,7 +13,7 @@ using OOD.EMS.Management;
 
 namespace OOD.EMS.UI.Execution
 {
-    public partial class TaskEditForm : TemplateForm
+    public partial class TaskEditForm : TemplateDialog
     {
         public String name, fromDate, toDate, dscp;
         public Department manager;
@@ -23,7 +23,6 @@ namespace OOD.EMS.UI.Execution
         public TaskEditForm(EMS.Execution.Task t)
         {
             InitializeComponent();
-            this.menu.Visible = false;
             if (t != null)
             {
                 name_box.Text = t.Title;

@@ -43,7 +43,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(441, 22);
+            this.label5.Location = new System.Drawing.Point(421, 9);
             this.label5.Name = "label5";
             this.label5.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.label5.Size = new System.Drawing.Size(55, 24);
@@ -52,7 +52,7 @@
             // 
             // Cancel
             // 
-            this.Cancel.Location = new System.Drawing.Point(39, 457);
+            this.Cancel.Location = new System.Drawing.Point(13, 437);
             this.Cancel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Cancel.Name = "Cancel";
             this.Cancel.Size = new System.Drawing.Size(105, 33);
@@ -64,7 +64,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(438, 137);
+            this.label3.Location = new System.Drawing.Point(418, 124);
             this.label3.Name = "label3";
             this.label3.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.label3.Size = new System.Drawing.Size(60, 24);
@@ -74,17 +74,17 @@
             // dscp_box
             // 
             this.dscp_box.Enabled = false;
-            this.dscp_box.Location = new System.Drawing.Point(39, 170);
+            this.dscp_box.Location = new System.Drawing.Point(13, 157);
             this.dscp_box.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dscp_box.Name = "dscp_box";
             this.dscp_box.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.dscp_box.Size = new System.Drawing.Size(452, 78);
+            this.dscp_box.Size = new System.Drawing.Size(458, 78);
             this.dscp_box.TabIndex = 15;
             this.dscp_box.Text = "باید آلاینده‌ها را کاهش دهیم.";
             // 
             // GoalNameLabel
             // 
-            this.GoalNameLabel.Location = new System.Drawing.Point(156, 22);
+            this.GoalNameLabel.Location = new System.Drawing.Point(136, 9);
             this.GoalNameLabel.Name = "GoalNameLabel";
             this.GoalNameLabel.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.GoalNameLabel.Size = new System.Drawing.Size(244, 24);
@@ -94,7 +94,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(457, 55);
+            this.label1.Location = new System.Drawing.Point(437, 42);
             this.label1.Name = "label1";
             this.label1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.label1.Size = new System.Drawing.Size(38, 24);
@@ -103,7 +103,7 @@
             // 
             // DateBox
             // 
-            this.DateBox.Location = new System.Drawing.Point(156, 55);
+            this.DateBox.Location = new System.Drawing.Point(136, 42);
             this.DateBox.Name = "DateBox";
             this.DateBox.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.DateBox.Size = new System.Drawing.Size(244, 24);
@@ -112,7 +112,7 @@
             // 
             // userBox
             // 
-            this.userBox.Location = new System.Drawing.Point(156, 90);
+            this.userBox.Location = new System.Drawing.Point(136, 77);
             this.userBox.Name = "userBox";
             this.userBox.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.userBox.Size = new System.Drawing.Size(244, 24);
@@ -122,7 +122,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(406, 90);
+            this.label4.Location = new System.Drawing.Point(386, 77);
             this.label4.Name = "label4";
             this.label4.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.label4.Size = new System.Drawing.Size(90, 24);
@@ -131,16 +131,18 @@
             // 
             // attachmentPanel1
             // 
-            this.attachmentPanel1.Location = new System.Drawing.Point(33, 255);
+            this.attachmentPanel1.Changed = false;
+            this.attachmentPanel1.Location = new System.Drawing.Point(13, 242);
             this.attachmentPanel1.Name = "attachmentPanel1";
             this.attachmentPanel1.Size = new System.Drawing.Size(461, 188);
             this.attachmentPanel1.TabIndex = 27;
+            this.attachmentPanel1.ViewMode = false;
             // 
             // ViewGeneralGoalForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(538, 502);
+            this.ClientSize = new System.Drawing.Size(486, 477);
             this.Controls.Add(this.attachmentPanel1);
             this.Controls.Add(this.userBox);
             this.Controls.Add(this.label4);
@@ -153,16 +155,6 @@
             this.Controls.Add(this.label5);
             this.Name = "ViewGeneralGoalForm";
             this.Text = "مشاهده‌ی هدف کلان";
-            this.Controls.SetChildIndex(this.label5, 0);
-            this.Controls.SetChildIndex(this.dscp_box, 0);
-            this.Controls.SetChildIndex(this.label3, 0);
-            this.Controls.SetChildIndex(this.Cancel, 0);
-            this.Controls.SetChildIndex(this.GoalNameLabel, 0);
-            this.Controls.SetChildIndex(this.label1, 0);
-            this.Controls.SetChildIndex(this.DateBox, 0);
-            this.Controls.SetChildIndex(this.label4, 0);
-            this.Controls.SetChildIndex(this.userBox, 0);
-            this.Controls.SetChildIndex(this.attachmentPanel1, 0);
             this.ResumeLayout(false);
             this.PerformLayout();
 

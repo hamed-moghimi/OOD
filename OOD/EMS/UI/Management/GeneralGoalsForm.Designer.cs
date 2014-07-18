@@ -51,13 +51,13 @@
             this.executive_target,
             this.Date,
             this.desp});
-            this.dataGridView1.Location = new System.Drawing.Point(43, 59);
+            this.dataGridView1.Location = new System.Drawing.Point(12, 45);
             this.dataGridView1.MultiSelect = false;
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(391, 196);
+            this.dataGridView1.Size = new System.Drawing.Size(420, 196);
             this.dataGridView1.TabIndex = 5;
             // 
             // executive_target
@@ -85,7 +85,7 @@
             // 
             // Cancel
             // 
-            this.Cancel.Location = new System.Drawing.Point(43, 270);
+            this.Cancel.Location = new System.Drawing.Point(12, 248);
             this.Cancel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Cancel.Name = "Cancel";
             this.Cancel.Size = new System.Drawing.Size(105, 33);
@@ -97,22 +97,24 @@
             // edit
             // 
             this.edit.Image = global::OOD.Properties.Resources.search;
-            this.edit.Location = new System.Drawing.Point(466, 162);
+            this.edit.Location = new System.Drawing.Point(438, 79);
             this.edit.Name = "edit";
             this.edit.Size = new System.Drawing.Size(38, 37);
             this.edit.TabIndex = 14;
             this.edit.Text = "   ";
+            this.toolTip.SetToolTip(this.edit, "مشاهده سند");
             this.edit.UseVisualStyleBackColor = true;
             this.edit.Click += new System.EventHandler(this.view_Click);
             // 
             // add
             // 
             this.add.Image = global::OOD.Properties.Resources.add;
-            this.add.Location = new System.Drawing.Point(466, 118);
+            this.add.Location = new System.Drawing.Point(438, 122);
             this.add.Name = "add";
             this.add.Size = new System.Drawing.Size(38, 37);
             this.add.TabIndex = 12;
             this.add.Text = "   ";
+            this.toolTip.SetToolTip(this.add, "ثبت سند");
             this.add.UseVisualStyleBackColor = true;
             this.add.Click += new System.EventHandler(this.add_Click);
             // 
@@ -120,7 +122,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(538, 329);
+            this.ClientSize = new System.Drawing.Size(488, 288);
             this.Controls.Add(this.edit);
             this.Controls.Add(this.add);
             this.Controls.Add(this.Cancel);

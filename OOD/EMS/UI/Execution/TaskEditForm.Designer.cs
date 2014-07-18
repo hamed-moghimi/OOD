@@ -48,7 +48,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(422, 22);
+            this.label5.Location = new System.Drawing.Point(391, 15);
             this.label5.Name = "label5";
             this.label5.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.label5.Size = new System.Drawing.Size(75, 24);
@@ -57,7 +57,7 @@
             // 
             // Cancel
             // 
-            this.Cancel.Location = new System.Drawing.Point(37, 503);
+            this.Cancel.Location = new System.Drawing.Point(12, 436);
             this.Cancel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Cancel.Name = "Cancel";
             this.Cancel.Size = new System.Drawing.Size(105, 33);
@@ -68,7 +68,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(158, 503);
+            this.button2.Location = new System.Drawing.Point(123, 436);
             this.button2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(105, 33);
@@ -80,7 +80,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(437, 191);
+            this.label3.Location = new System.Drawing.Point(415, 129);
             this.label3.Name = "label3";
             this.label3.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.label3.Size = new System.Drawing.Size(60, 24);
@@ -89,26 +89,26 @@
             // 
             // dscp_box
             // 
-            this.dscp_box.Location = new System.Drawing.Point(38, 224);
+            this.dscp_box.Location = new System.Drawing.Point(12, 162);
             this.dscp_box.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dscp_box.Name = "dscp_box";
             this.dscp_box.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.dscp_box.Size = new System.Drawing.Size(452, 78);
+            this.dscp_box.Size = new System.Drawing.Size(456, 78);
             this.dscp_box.TabIndex = 15;
             this.dscp_box.Text = "";
             // 
             // name_box
             // 
-            this.name_box.Location = new System.Drawing.Point(182, 19);
+            this.name_box.Location = new System.Drawing.Point(129, 12);
             this.name_box.Name = "name_box";
             this.name_box.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.name_box.Size = new System.Drawing.Size(222, 31);
+            this.name_box.Size = new System.Drawing.Size(253, 31);
             this.name_box.TabIndex = 20;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(429, 63);
+            this.label1.Location = new System.Drawing.Point(398, 94);
             this.label1.Name = "label1";
             this.label1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.label1.Size = new System.Drawing.Size(68, 24);
@@ -118,7 +118,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(427, 102);
+            this.label2.Location = new System.Drawing.Point(204, 94);
             this.label2.Name = "label2";
             this.label2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.label2.Size = new System.Drawing.Size(67, 24);
@@ -127,17 +127,17 @@
             // 
             // respBox
             // 
-            this.respBox.Location = new System.Drawing.Point(244, 142);
+            this.respBox.Location = new System.Drawing.Point(129, 51);
             this.respBox.Name = "respBox";
             this.respBox.ReadOnly = true;
             this.respBox.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.respBox.Size = new System.Drawing.Size(160, 31);
+            this.respBox.Size = new System.Drawing.Size(253, 31);
             this.respBox.TabIndex = 26;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(419, 145);
+            this.label7.Location = new System.Drawing.Point(388, 54);
             this.label7.Name = "label7";
             this.label7.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.label7.Size = new System.Drawing.Size(78, 24);
@@ -147,7 +147,7 @@
             // selectButton
             // 
             this.selectButton.Image = global::OOD.Properties.Resources.edit;
-            this.selectButton.Location = new System.Drawing.Point(182, 137);
+            this.selectButton.Location = new System.Drawing.Point(83, 45);
             this.selectButton.Name = "selectButton";
             this.selectButton.Size = new System.Drawing.Size(40, 40);
             this.selectButton.TabIndex = 27;
@@ -158,7 +158,7 @@
             // attachmentPanel1
             // 
             this.attachmentPanel1.Changed = false;
-            this.attachmentPanel1.Location = new System.Drawing.Point(34, 303);
+            this.attachmentPanel1.Location = new System.Drawing.Point(12, 241);
             this.attachmentPanel1.Name = "attachmentPanel1";
             this.attachmentPanel1.Size = new System.Drawing.Size(461, 188);
             this.attachmentPanel1.TabIndex = 28;
@@ -168,7 +168,7 @@
             // 
             this.fromDateBox.BackColor = System.Drawing.Color.White;
             this.fromDateBox.Font = new System.Drawing.Font("B Nazanin", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.fromDateBox.Location = new System.Drawing.Point(289, 60);
+            this.fromDateBox.Location = new System.Drawing.Point(277, 91);
             this.fromDateBox.Name = "fromDateBox";
             this.fromDateBox.ShowTime = false;
             this.fromDateBox.Size = new System.Drawing.Size(115, 27);
@@ -180,7 +180,7 @@
             // 
             this.toDateBox.BackColor = System.Drawing.Color.White;
             this.toDateBox.Font = new System.Drawing.Font("B Nazanin", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.toDateBox.Location = new System.Drawing.Point(289, 99);
+            this.toDateBox.Location = new System.Drawing.Point(83, 91);
             this.toDateBox.Name = "toDateBox";
             this.toDateBox.ShowTime = false;
             this.toDateBox.Size = new System.Drawing.Size(115, 27);
@@ -192,7 +192,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(538, 553);
+            this.ClientSize = new System.Drawing.Size(487, 477);
             this.Controls.Add(this.toDateBox);
             this.Controls.Add(this.fromDateBox);
             this.Controls.Add(this.attachmentPanel1);
@@ -209,20 +209,6 @@
             this.Controls.Add(this.label5);
             this.Name = "TaskEditForm";
             this.Text = "مسئولیت";
-            this.Controls.SetChildIndex(this.label5, 0);
-            this.Controls.SetChildIndex(this.dscp_box, 0);
-            this.Controls.SetChildIndex(this.label3, 0);
-            this.Controls.SetChildIndex(this.button2, 0);
-            this.Controls.SetChildIndex(this.Cancel, 0);
-            this.Controls.SetChildIndex(this.name_box, 0);
-            this.Controls.SetChildIndex(this.label1, 0);
-            this.Controls.SetChildIndex(this.label2, 0);
-            this.Controls.SetChildIndex(this.label7, 0);
-            this.Controls.SetChildIndex(this.respBox, 0);
-            this.Controls.SetChildIndex(this.selectButton, 0);
-            this.Controls.SetChildIndex(this.attachmentPanel1, 0);
-            this.Controls.SetChildIndex(this.fromDateBox, 0);
-            this.Controls.SetChildIndex(this.toDateBox, 0);
             this.ResumeLayout(false);
             this.PerformLayout();
 

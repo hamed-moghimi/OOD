@@ -164,7 +164,7 @@ namespace OOD.EMS.UI
 
         private void viewAccountSubmenu_Click(object sender, EventArgs e)
         {
-            newChild(new ViewUserForm());
+            (new ViewUserForm()).ShowDialog();
         }
 
         private void exitSubmenu_Click(object sender, EventArgs e)

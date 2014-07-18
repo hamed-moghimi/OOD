@@ -12,7 +12,7 @@ using OOD.EMS.Exceptions;
 
 namespace OOD.EMS.UI.Management
 {
-    public partial class AddEffectForm : TemplateForm
+    public partial class AddEffectForm : TemplateDialog
     {
         public AddEffectForm()
         {
@@ -25,7 +25,6 @@ namespace OOD.EMS.UI.Management
 
         public AddEffectForm(string name, string dscp)
         {
-            this.menu.Visible = false;
             InitializeComponent();
             this.name_box.Text = name;
             this.dscp_box.Text = dscp;

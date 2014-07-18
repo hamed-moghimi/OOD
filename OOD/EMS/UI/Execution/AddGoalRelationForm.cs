@@ -60,7 +60,6 @@ namespace OOD.EMS.UI.Execution
                 }
                 else
                 {
-
                     GeneralGoal_ExecutiveGoalRelationStorage.getInstance().create(grel);
                     this.DialogResult = DialogResult.OK;
                     this.Close();

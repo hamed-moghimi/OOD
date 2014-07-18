@@ -39,7 +39,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(196, 16);
+            this.label1.Location = new System.Drawing.Point(196, 15);
             this.label1.Name = "label1";
             this.label1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.label1.Size = new System.Drawing.Size(64, 24);
@@ -49,7 +49,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(179, 65);
+            this.label2.Location = new System.Drawing.Point(179, 49);
             this.label2.Name = "label2";
             this.label2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.label2.Size = new System.Drawing.Size(85, 24);
@@ -58,19 +58,21 @@
             // 
             // comboBox1
             // 
+            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Items.AddRange(new object[] {
             "کاربر میانی",
             "کاربر ارشد",
             "بازرس"});
-            this.comboBox1.Location = new System.Drawing.Point(12, 65);
+            this.comboBox1.Location = new System.Drawing.Point(12, 49);
             this.comboBox1.Name = "comboBox1";
+            this.comboBox1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.comboBox1.Size = new System.Drawing.Size(161, 32);
             this.comboBox1.TabIndex = 6;
             // 
             // Cancel
             // 
-            this.Cancel.Location = new System.Drawing.Point(20, 114);
+            this.Cancel.Location = new System.Drawing.Point(30, 88);
             this.Cancel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Cancel.Name = "Cancel";
             this.Cancel.Size = new System.Drawing.Size(105, 33);
@@ -81,7 +83,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(141, 114);
+            this.button2.Location = new System.Drawing.Point(141, 88);
             this.button2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(105, 33);
@@ -93,18 +95,17 @@
             // textBox1
             // 
             this.textBox1.Enabled = false;
-            this.textBox1.Location = new System.Drawing.Point(12, 13);
+            this.textBox1.Location = new System.Drawing.Point(12, 12);
             this.textBox1.Name = "textBox1";
             this.textBox1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.textBox1.Size = new System.Drawing.Size(161, 31);
             this.textBox1.TabIndex = 4;
-            this.textBox1.Text = "مینا طهماسبی";
             // 
             // EditUserForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(278, 155);
+            this.ClientSize = new System.Drawing.Size(278, 130);
             this.Controls.Add(this.Cancel);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.comboBox1);

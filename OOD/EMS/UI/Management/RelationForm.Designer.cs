@@ -41,28 +41,30 @@
             // edit
             // 
             this.edit.Image = global::OOD.Properties.Resources.search;
-            this.edit.Location = new System.Drawing.Point(646, 172);
+            this.edit.Location = new System.Drawing.Point(617, 86);
             this.edit.Name = "edit";
             this.edit.Size = new System.Drawing.Size(38, 37);
             this.edit.TabIndex = 18;
             this.edit.Text = "   ";
+            this.toolTip.SetToolTip(this.edit, "مشاهده سند");
             this.edit.UseVisualStyleBackColor = true;
             this.edit.Click += new System.EventHandler(this.edit_Click);
             // 
             // add
             // 
             this.add.Image = global::OOD.Properties.Resources.add;
-            this.add.Location = new System.Drawing.Point(646, 129);
+            this.add.Location = new System.Drawing.Point(617, 129);
             this.add.Name = "add";
             this.add.Size = new System.Drawing.Size(38, 37);
             this.add.TabIndex = 16;
             this.add.Text = "   ";
+            this.toolTip.SetToolTip(this.add, "ثبت سند");
             this.add.UseVisualStyleBackColor = true;
             this.add.Click += new System.EventHandler(this.add_Click);
             // 
             // Cancel
             // 
-            this.Cancel.Location = new System.Drawing.Point(30, 297);
+            this.Cancel.Location = new System.Drawing.Point(12, 297);
             this.Cancel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Cancel.Name = "Cancel";
             this.Cancel.Size = new System.Drawing.Size(105, 33);
@@ -76,7 +78,7 @@
             this.tabRelations.Controls.Add(this.tabPage1);
             this.tabRelations.Controls.Add(this.tabPage2);
             this.tabRelations.Controls.Add(this.tabPage3);
-            this.tabRelations.Location = new System.Drawing.Point(30, 46);
+            this.tabRelations.Location = new System.Drawing.Point(12, 46);
             this.tabRelations.Name = "tabRelations";
             this.tabRelations.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.tabRelations.RightToLeftLayout = true;
@@ -118,7 +120,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(720, 349);
+            this.ClientSize = new System.Drawing.Size(665, 339);
             this.Controls.Add(this.tabRelations);
             this.Controls.Add(this.edit);
             this.Controls.Add(this.add);

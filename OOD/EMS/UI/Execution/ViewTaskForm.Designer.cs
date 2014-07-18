@@ -47,7 +47,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(422, 22);
+            this.label5.Location = new System.Drawing.Point(399, 9);
             this.label5.Name = "label5";
             this.label5.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.label5.Size = new System.Drawing.Size(75, 24);
@@ -56,7 +56,7 @@
             // 
             // Cancel
             // 
-            this.Cancel.Location = new System.Drawing.Point(37, 542);
+            this.Cancel.Location = new System.Drawing.Point(12, 503);
             this.Cancel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Cancel.Name = "Cancel";
             this.Cancel.Size = new System.Drawing.Size(105, 33);
@@ -68,7 +68,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(437, 235);
+            this.label3.Location = new System.Drawing.Point(415, 174);
             this.label3.Name = "label3";
             this.label3.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.label3.Size = new System.Drawing.Size(60, 24);
@@ -77,19 +77,19 @@
             // 
             // dscp_box
             // 
-            this.dscp_box.Location = new System.Drawing.Point(38, 268);
+            this.dscp_box.Location = new System.Drawing.Point(12, 202);
             this.dscp_box.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dscp_box.Name = "dscp_box";
             this.dscp_box.ReadOnly = true;
             this.dscp_box.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.dscp_box.Size = new System.Drawing.Size(452, 78);
+            this.dscp_box.Size = new System.Drawing.Size(459, 105);
             this.dscp_box.TabIndex = 15;
             this.dscp_box.Text = "";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(429, 63);
+            this.label1.Location = new System.Drawing.Point(406, 75);
             this.label1.Name = "label1";
             this.label1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.label1.Size = new System.Drawing.Size(68, 24);
@@ -99,7 +99,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(427, 102);
+            this.label2.Location = new System.Drawing.Point(407, 109);
             this.label2.Name = "label2";
             this.label2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.label2.Size = new System.Drawing.Size(67, 24);
@@ -108,7 +108,7 @@
             // 
             // name_label
             // 
-            this.name_label.Location = new System.Drawing.Point(158, 22);
+            this.name_label.Location = new System.Drawing.Point(122, 9);
             this.name_label.Name = "name_label";
             this.name_label.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.name_label.Size = new System.Drawing.Size(258, 24);
@@ -118,7 +118,7 @@
             // 
             // toDate_label
             // 
-            this.toDate_label.Location = new System.Drawing.Point(158, 102);
+            this.toDate_label.Location = new System.Drawing.Point(122, 109);
             this.toDate_label.Name = "toDate_label";
             this.toDate_label.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.toDate_label.Size = new System.Drawing.Size(258, 24);
@@ -128,7 +128,7 @@
             // 
             // fromDate_label
             // 
-            this.fromDate_label.Location = new System.Drawing.Point(158, 63);
+            this.fromDate_label.Location = new System.Drawing.Point(122, 75);
             this.fromDate_label.Name = "fromDate_label";
             this.fromDate_label.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.fromDate_label.Size = new System.Drawing.Size(258, 24);
@@ -138,7 +138,7 @@
             // 
             // manager_label
             // 
-            this.manager_label.Location = new System.Drawing.Point(146, 140);
+            this.manager_label.Location = new System.Drawing.Point(122, 42);
             this.manager_label.Name = "manager_label";
             this.manager_label.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.manager_label.Size = new System.Drawing.Size(258, 24);
@@ -148,7 +148,7 @@
             // 
             // progress_label
             // 
-            this.progress_label.Location = new System.Drawing.Point(143, 179);
+            this.progress_label.Location = new System.Drawing.Point(122, 143);
             this.progress_label.Name = "progress_label";
             this.progress_label.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.progress_label.Size = new System.Drawing.Size(258, 24);
@@ -159,7 +159,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(412, 179);
+            this.label9.Location = new System.Drawing.Point(389, 143);
             this.label9.Name = "label9";
             this.label9.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.label9.Size = new System.Drawing.Size(85, 24);
@@ -169,7 +169,7 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(417, 140);
+            this.label10.Location = new System.Drawing.Point(396, 42);
             this.label10.Name = "label10";
             this.label10.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.label10.Size = new System.Drawing.Size(78, 24);
@@ -179,7 +179,7 @@
             // attachmentPanel1
             // 
             this.attachmentPanel1.Changed = false;
-            this.attachmentPanel1.Location = new System.Drawing.Point(34, 347);
+            this.attachmentPanel1.Location = new System.Drawing.Point(12, 308);
             this.attachmentPanel1.Name = "attachmentPanel1";
             this.attachmentPanel1.Size = new System.Drawing.Size(461, 188);
             this.attachmentPanel1.TabIndex = 31;
@@ -189,7 +189,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(538, 586);
+            this.ClientSize = new System.Drawing.Size(487, 541);
             this.Controls.Add(this.attachmentPanel1);
             this.Controls.Add(this.manager_label);
             this.Controls.Add(this.progress_label);
@@ -206,20 +206,6 @@
             this.Controls.Add(this.label5);
             this.Name = "ViewTaskForm";
             this.Text = "مشاهده‌ی مسئولیت";
-            this.Controls.SetChildIndex(this.label5, 0);
-            this.Controls.SetChildIndex(this.dscp_box, 0);
-            this.Controls.SetChildIndex(this.label3, 0);
-            this.Controls.SetChildIndex(this.Cancel, 0);
-            this.Controls.SetChildIndex(this.label1, 0);
-            this.Controls.SetChildIndex(this.label2, 0);
-            this.Controls.SetChildIndex(this.name_label, 0);
-            this.Controls.SetChildIndex(this.toDate_label, 0);
-            this.Controls.SetChildIndex(this.fromDate_label, 0);
-            this.Controls.SetChildIndex(this.label10, 0);
-            this.Controls.SetChildIndex(this.label9, 0);
-            this.Controls.SetChildIndex(this.progress_label, 0);
-            this.Controls.SetChildIndex(this.manager_label, 0);
-            this.Controls.SetChildIndex(this.attachmentPanel1, 0);
             this.ResumeLayout(false);
             this.PerformLayout();
 

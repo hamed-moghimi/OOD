@@ -11,11 +11,10 @@ using OOD.EMS.Management;
 
 namespace OOD.EMS.UI.Management
 {
-    public partial class ViewEffectForm : TemplateForm
+    public partial class ViewEffectForm : TemplateDialog
     {
         public ViewEffectForm(EnvironEffect goal)
         {
-            menu.Visible = false;
             InitializeComponent();
             this.GoalNameLabel.Text = goal.Title;
             this.DateBox.Text = goal.getDateString();

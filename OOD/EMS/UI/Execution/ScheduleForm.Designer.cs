@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.ViewButton = new System.Windows.Forms.Button();
             this.deleteButton = new System.Windows.Forms.Button();
             this.editButton = new System.Windows.Forms.Button();
             this.addButton = new System.Windows.Forms.Button();
@@ -38,16 +39,12 @@
             this.desc = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.progress = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Cancel = new System.Windows.Forms.Button();
-            this.ViewButton = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
-            this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox1.Controls.Add(this.ViewButton);
             this.groupBox1.Controls.Add(this.deleteButton);
             this.groupBox1.Controls.Add(this.editButton);
@@ -56,15 +53,26 @@
             this.groupBox1.Location = new System.Drawing.Point(12, 45);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBox1.Size = new System.Drawing.Size(674, 330);
+            this.groupBox1.Size = new System.Drawing.Size(674, 318);
             this.groupBox1.TabIndex = 4;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "برنامه‌های اقدام";
             // 
+            // ViewButton
+            // 
+            this.ViewButton.Image = global::OOD.Properties.Resources.search;
+            this.ViewButton.Location = new System.Drawing.Point(619, 63);
+            this.ViewButton.Name = "ViewButton";
+            this.ViewButton.Size = new System.Drawing.Size(40, 40);
+            this.ViewButton.TabIndex = 3;
+            this.toolTip.SetToolTip(this.ViewButton, "مشاهده");
+            this.ViewButton.UseVisualStyleBackColor = true;
+            this.ViewButton.Click += new System.EventHandler(this.ViewButton_Click);
+            // 
             // deleteButton
             // 
             this.deleteButton.Image = global::OOD.Properties.Resources.remove;
-            this.deleteButton.Location = new System.Drawing.Point(619, 176);
+            this.deleteButton.Location = new System.Drawing.Point(619, 155);
             this.deleteButton.Name = "deleteButton";
             this.deleteButton.Size = new System.Drawing.Size(40, 40);
             this.deleteButton.TabIndex = 2;
@@ -75,7 +83,7 @@
             // editButton
             // 
             this.editButton.Image = global::OOD.Properties.Resources.edit;
-            this.editButton.Location = new System.Drawing.Point(619, 130);
+            this.editButton.Location = new System.Drawing.Point(619, 201);
             this.editButton.Name = "editButton";
             this.editButton.Size = new System.Drawing.Size(40, 40);
             this.editButton.TabIndex = 2;
@@ -86,7 +94,7 @@
             // addButton
             // 
             this.addButton.Image = global::OOD.Properties.Resources.add;
-            this.addButton.Location = new System.Drawing.Point(619, 84);
+            this.addButton.Location = new System.Drawing.Point(619, 109);
             this.addButton.Name = "addButton";
             this.addButton.Size = new System.Drawing.Size(40, 40);
             this.addButton.TabIndex = 2;
@@ -104,7 +112,7 @@
             this.amount,
             this.desc,
             this.progress});
-            this.dataGridView1.Location = new System.Drawing.Point(6, 42);
+            this.dataGridView1.Location = new System.Drawing.Point(10, 30);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersVisible = false;
@@ -141,7 +149,7 @@
             // 
             // Cancel
             // 
-            this.Cancel.Location = new System.Drawing.Point(18, 389);
+            this.Cancel.Location = new System.Drawing.Point(12, 370);
             this.Cancel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Cancel.Name = "Cancel";
             this.Cancel.Size = new System.Drawing.Size(105, 33);
@@ -150,21 +158,10 @@
             this.Cancel.UseVisualStyleBackColor = true;
             this.Cancel.Click += new System.EventHandler(this.Cancel_Click);
             // 
-            // ViewButton
-            // 
-            this.ViewButton.Image = global::OOD.Properties.Resources.search;
-            this.ViewButton.Location = new System.Drawing.Point(619, 222);
-            this.ViewButton.Name = "ViewButton";
-            this.ViewButton.Size = new System.Drawing.Size(40, 40);
-            this.ViewButton.TabIndex = 3;
-            this.toolTip.SetToolTip(this.ViewButton, "مشاهده");
-            this.ViewButton.UseVisualStyleBackColor = true;
-            this.ViewButton.Click += new System.EventHandler(this.ViewButton_Click);
-            // 
             // ScheduleForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 24F);
-            this.ClientSize = new System.Drawing.Size(698, 435);
+            this.ClientSize = new System.Drawing.Size(698, 410);
             this.Controls.Add(this.Cancel);
             this.Controls.Add(this.groupBox1);
             this.Name = "ScheduleForm";

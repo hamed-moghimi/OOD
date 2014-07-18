@@ -11,13 +11,12 @@ using OOD.EMS.Management;
 
 namespace OOD.EMS.UI.Management
 {
-    public partial class ViewRelationForm : TemplateForm
+    public partial class ViewRelationForm : TemplateDialog
     {
         ManagementDocument first, second;
         
         public ViewRelationForm(ManagementDocumentRelation relation)
         {
-            menu.Visible = false;
             InitializeComponent();
             if (relation is GeneralGoal_LegalConstraintRelation)
             {
@@ -38,8 +37,8 @@ namespace OOD.EMS.UI.Management
 
             DateBox.Text = relation.getDateString();
             userBox.Text = relation.RelationUser.Firstname + " " + relation.RelationUser.Lastname;
-            doc1.Text = first.Title;
-            doc2.Text = second.Title;
+            viewDoc1.Text = first.Title;
+            viewDoc2.Text = second.Title;
         }
 
 
@@ -52,15 +51,15 @@ namespace OOD.EMS.UI.Management
         {
             if (first is GeneralGoal)
             {
-                (new ViewGeneralGoalForm((GeneralGoal)first)).ShowDialog();
+                (new ViewGeneralGoalForm((GeneralGoal)first)).Show();
             }
             else if (first is LegalConstraint)
             {
-                (new ViewLegalReqForm((LegalConstraint)first)).ShowDialog();
+                (new ViewLegalReqForm((LegalConstraint)first)).Show();
             }
             else if (first is EnvironEffect)
             {
-                (new ViewEffectForm((EnvironEffect)first)).ShowDialog();
+                (new ViewEffectForm((EnvironEffect)first)).Show();
             }
         }
 
@@ -68,15 +67,15 @@ namespace OOD.EMS.UI.Management
         {
             if (second is GeneralGoal)
             {
-                (new ViewGeneralGoalForm((GeneralGoal)second)).ShowDialog();
+                (new ViewGeneralGoalForm((GeneralGoal)second)).Show();
             }
             else if (second is LegalConstraint)
             {
-                (new ViewLegalReqForm((LegalConstraint)second)).ShowDialog();
+                (new ViewLegalReqForm((LegalConstraint)second)).Show();
             }
             else if (second is EnvironEffect)
             {
-                (new ViewEffectForm((EnvironEffect)second)).ShowDialog();
+                (new ViewEffectForm((EnvironEffect)second)).Show();
             }
         }
 

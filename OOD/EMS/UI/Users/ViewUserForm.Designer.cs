@@ -39,7 +39,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(187, 9);
+            this.label1.Location = new System.Drawing.Point(184, 9);
             this.label1.Name = "label1";
             this.label1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.label1.Size = new System.Drawing.Size(64, 24);
@@ -48,28 +48,26 @@
             // 
             // label2
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(73, 9);
+            this.label2.Location = new System.Drawing.Point(12, 9);
             this.label2.Name = "label2";
             this.label2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.label2.Size = new System.Drawing.Size(71, 24);
+            this.label2.Size = new System.Drawing.Size(144, 24);
             this.label2.TabIndex = 4;
             this.label2.Text = "حامد مقیمی";
             // 
             // label3
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(83, 48);
+            this.label3.Location = new System.Drawing.Point(12, 39);
             this.label3.Name = "label3";
             this.label3.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.label3.Size = new System.Drawing.Size(61, 24);
+            this.label3.Size = new System.Drawing.Size(144, 24);
             this.label3.TabIndex = 6;
             this.label3.Text = "کاربر ارشد";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(166, 48);
+            this.label4.Location = new System.Drawing.Point(163, 39);
             this.label4.Name = "label4";
             this.label4.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.label4.Size = new System.Drawing.Size(85, 24);
@@ -78,7 +76,7 @@
             // 
             // Cancel
             // 
-            this.Cancel.Location = new System.Drawing.Point(73, 87);
+            this.Cancel.Location = new System.Drawing.Point(76, 69);
             this.Cancel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Cancel.Name = "Cancel";
             this.Cancel.Size = new System.Drawing.Size(105, 33);
@@ -91,7 +89,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(262, 133);
+            this.ClientSize = new System.Drawing.Size(262, 111);
             this.Controls.Add(this.Cancel);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label4);

@@ -49,7 +49,7 @@
             // 
             // Cancel
             // 
-            this.Cancel.Location = new System.Drawing.Point(36, 376);
+            this.Cancel.Location = new System.Drawing.Point(12, 330);
             this.Cancel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Cancel.Name = "Cancel";
             this.Cancel.Size = new System.Drawing.Size(105, 33);
@@ -61,7 +61,7 @@
             // button2
             // 
             this.button2.Image = global::OOD.Properties.Resources.search;
-            this.button2.Location = new System.Drawing.Point(628, 260);
+            this.button2.Location = new System.Drawing.Point(591, 82);
             this.button2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(40, 40);
@@ -73,12 +73,13 @@
             // 
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.Window;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.title,
             this.amount,
             this.desc});
-            this.dataGridView1.Location = new System.Drawing.Point(36, 69);
+            this.dataGridView1.Location = new System.Drawing.Point(12, 45);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -110,7 +111,7 @@
             // addButton
             // 
             this.addButton.Image = global::OOD.Properties.Resources.add;
-            this.addButton.Location = new System.Drawing.Point(628, 121);
+            this.addButton.Location = new System.Drawing.Point(591, 129);
             this.addButton.Name = "addButton";
             this.addButton.Size = new System.Drawing.Size(40, 40);
             this.addButton.TabIndex = 2;
@@ -121,7 +122,7 @@
             // editButton
             // 
             this.editButton.Image = global::OOD.Properties.Resources.edit;
-            this.editButton.Location = new System.Drawing.Point(628, 167);
+            this.editButton.Location = new System.Drawing.Point(591, 221);
             this.editButton.Name = "editButton";
             this.editButton.Size = new System.Drawing.Size(40, 40);
             this.editButton.TabIndex = 2;
@@ -132,7 +133,7 @@
             // deleteButton
             // 
             this.deleteButton.Image = global::OOD.Properties.Resources.remove;
-            this.deleteButton.Location = new System.Drawing.Point(628, 213);
+            this.deleteButton.Location = new System.Drawing.Point(591, 175);
             this.deleteButton.Name = "deleteButton";
             this.deleteButton.Size = new System.Drawing.Size(40, 40);
             this.deleteButton.TabIndex = 2;
@@ -144,7 +145,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(693, 426);
+            this.ClientSize = new System.Drawing.Size(640, 371);
             this.Controls.Add(this.deleteButton);
             this.Controls.Add(this.editButton);
             this.Controls.Add(this.Cancel);

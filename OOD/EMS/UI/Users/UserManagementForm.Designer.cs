@@ -49,11 +49,11 @@
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.UserName,
             this.Role});
-            this.dataGridView1.Location = new System.Drawing.Point(37, 71);
+            this.dataGridView1.Location = new System.Drawing.Point(12, 47);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.dataGridView1.RowHeadersVisible = false;
-            this.dataGridView1.Size = new System.Drawing.Size(416, 150);
+            this.dataGridView1.Size = new System.Drawing.Size(416, 155);
             this.dataGridView1.TabIndex = 3;
             // 
             // UserName
@@ -72,7 +72,7 @@
             // 
             // Cancel
             // 
-            this.Cancel.Location = new System.Drawing.Point(37, 250);
+            this.Cancel.Location = new System.Drawing.Point(12, 209);
             this.Cancel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Cancel.Name = "Cancel";
             this.Cancel.Size = new System.Drawing.Size(105, 33);
@@ -84,7 +84,7 @@
             // edit
             // 
             this.edit.Image = global::OOD.Properties.Resources.edit;
-            this.edit.Location = new System.Drawing.Point(500, 129);
+            this.edit.Location = new System.Drawing.Point(434, 122);
             this.edit.Name = "edit";
             this.edit.Size = new System.Drawing.Size(38, 37);
             this.edit.TabIndex = 21;
@@ -94,8 +94,8 @@
             // 
             // delete
             // 
-            this.delete.Image = global::OOD.Properties.Resources.delete;
-            this.delete.Location = new System.Drawing.Point(500, 172);
+            this.delete.Image = global::OOD.Properties.Resources.remove;
+            this.delete.Location = new System.Drawing.Point(434, 165);
             this.delete.Name = "delete";
             this.delete.Size = new System.Drawing.Size(38, 37);
             this.delete.TabIndex = 20;
@@ -106,7 +106,7 @@
             // add
             // 
             this.add.Image = global::OOD.Properties.Resources.add;
-            this.add.Location = new System.Drawing.Point(500, 86);
+            this.add.Location = new System.Drawing.Point(434, 79);
             this.add.Name = "add";
             this.add.Size = new System.Drawing.Size(38, 37);
             this.add.TabIndex = 19;
@@ -118,7 +118,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(569, 310);
+            this.ClientSize = new System.Drawing.Size(483, 250);
             this.Controls.Add(this.Cancel);
             this.Controls.Add(this.edit);
             this.Controls.Add(this.delete);

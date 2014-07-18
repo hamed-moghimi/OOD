@@ -49,7 +49,7 @@
             this.execGoal,
             this.share,
             this.date});
-            this.dataGridView1.Location = new System.Drawing.Point(38, 61);
+            this.dataGridView1.Location = new System.Drawing.Point(12, 45);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.dataGridView1.RowHeadersVisible = false;
@@ -92,18 +92,18 @@
             // editButton
             // 
             this.editButton.Image = global::OOD.Properties.Resources.search;
-            this.editButton.Location = new System.Drawing.Point(644, 155);
+            this.editButton.Location = new System.Drawing.Point(598, 82);
             this.editButton.Name = "editButton";
             this.editButton.Size = new System.Drawing.Size(40, 40);
             this.editButton.TabIndex = 7;
-            this.toolTip.SetToolTip(this.editButton, "ویرایش");
+            this.toolTip.SetToolTip(this.editButton, "مشاهده");
             this.editButton.UseVisualStyleBackColor = true;
             this.editButton.Click += new System.EventHandler(this.editButton_Click);
             // 
             // addButton
             // 
             this.addButton.Image = global::OOD.Properties.Resources.add;
-            this.addButton.Location = new System.Drawing.Point(644, 109);
+            this.addButton.Location = new System.Drawing.Point(598, 128);
             this.addButton.Name = "addButton";
             this.addButton.Size = new System.Drawing.Size(40, 40);
             this.addButton.TabIndex = 8;
@@ -113,7 +113,7 @@
             // 
             // Cancel
             // 
-            this.Cancel.Location = new System.Drawing.Point(38, 259);
+            this.Cancel.Location = new System.Drawing.Point(12, 239);
             this.Cancel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Cancel.Name = "Cancel";
             this.Cancel.Size = new System.Drawing.Size(105, 33);
@@ -126,7 +126,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(715, 305);
+            this.ClientSize = new System.Drawing.Size(647, 279);
             this.Controls.Add(this.Cancel);
             this.Controls.Add(this.editButton);
             this.Controls.Add(this.addButton);

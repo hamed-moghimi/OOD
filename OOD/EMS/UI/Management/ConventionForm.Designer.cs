@@ -34,14 +34,13 @@
             this.label2 = new System.Windows.Forms.Label();
             this.Cancel = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.addAtachment = new System.Windows.Forms.OpenFileDialog();
             this.attachmentPanel1 = new OOD.EMS.UI.AttachmentPanel();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(474, 63);
+            this.label1.Location = new System.Drawing.Point(421, 40);
             this.label1.Name = "label1";
             this.label1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.label1.Size = new System.Drawing.Size(56, 24);
@@ -50,20 +49,20 @@
             // 
             // policyBox
             // 
-            this.policyBox.Location = new System.Drawing.Point(74, 106);
+            this.policyBox.Location = new System.Drawing.Point(12, 67);
             this.policyBox.Name = "policyBox";
             this.policyBox.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.policyBox.Size = new System.Drawing.Size(452, 96);
+            this.policyBox.Size = new System.Drawing.Size(461, 96);
             this.policyBox.TabIndex = 4;
             this.policyBox.Text = "";
             this.policyBox.TextChanged += new System.EventHandler(this.policyBox_TextChanged);
             // 
             // dscpBox
             // 
-            this.dscpBox.Location = new System.Drawing.Point(74, 260);
+            this.dscpBox.Location = new System.Drawing.Point(12, 193);
             this.dscpBox.Name = "dscpBox";
             this.dscpBox.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.dscpBox.Size = new System.Drawing.Size(452, 96);
+            this.dscpBox.Size = new System.Drawing.Size(461, 96);
             this.dscpBox.TabIndex = 6;
             this.dscpBox.Text = "";
             this.dscpBox.TextChanged += new System.EventHandler(this.dscpBox_TextChanged);
@@ -71,7 +70,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(466, 217);
+            this.label2.Location = new System.Drawing.Point(417, 166);
             this.label2.Name = "label2";
             this.label2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.label2.Size = new System.Drawing.Size(60, 24);
@@ -80,7 +79,7 @@
             // 
             // Cancel
             // 
-            this.Cancel.Location = new System.Drawing.Point(69, 555);
+            this.Cancel.Location = new System.Drawing.Point(12, 490);
             this.Cancel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Cancel.Name = "Cancel";
             this.Cancel.Size = new System.Drawing.Size(105, 33);
@@ -91,7 +90,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(190, 555);
+            this.button2.Location = new System.Drawing.Point(123, 490);
             this.button2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(105, 33);
@@ -100,13 +99,10 @@
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // addAtachment
-            // 
-            this.addAtachment.FileName = "openFileDialog1";
-            // 
             // attachmentPanel1
             // 
-            this.attachmentPanel1.Location = new System.Drawing.Point(69, 358);
+            this.attachmentPanel1.Changed = false;
+            this.attachmentPanel1.Location = new System.Drawing.Point(12, 295);
             this.attachmentPanel1.Name = "attachmentPanel1";
             this.attachmentPanel1.Size = new System.Drawing.Size(461, 188);
             this.attachmentPanel1.TabIndex = 13;
@@ -116,7 +112,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(569, 602);
+            this.ClientSize = new System.Drawing.Size(487, 533);
             this.Controls.Add(this.attachmentPanel1);
             this.Controls.Add(this.Cancel);
             this.Controls.Add(this.button2);
@@ -125,7 +121,7 @@
             this.Controls.Add(this.policyBox);
             this.Controls.Add(this.label1);
             this.Name = "ConventionForm";
-            this.Text = "Misaghname";
+            this.Text = "میثاق‌نامه زیست‌محیطی سازمان";
             this.Controls.SetChildIndex(this.label1, 0);
             this.Controls.SetChildIndex(this.policyBox, 0);
             this.Controls.SetChildIndex(this.label2, 0);
@@ -146,7 +142,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button Cancel;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.OpenFileDialog addAtachment;
         private AttachmentPanel attachmentPanel1;
     }
 }
