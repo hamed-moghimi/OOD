@@ -93,5 +93,15 @@ namespace OOD.EMS.UI.Report
         {
             showDashboard();
         }
+
+        private void refreshTimer_Tick(object sender, EventArgs e)
+        {
+            refreshDashboard();
+        }
+
+        private void DashboardForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            instance = null;
+        }
     }
 }

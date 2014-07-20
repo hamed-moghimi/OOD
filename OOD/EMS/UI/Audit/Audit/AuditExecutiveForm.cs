@@ -17,6 +17,7 @@ namespace OOD.EMS.UI.Audit.Audit
         private AuditExecutiveForm()
         {
             InitializeComponent();
+            this.DialogResult = System.Windows.Forms.DialogResult.Cancel;
         }
         
         private void fillList(IEnumerable<Task> items)
@@ -56,7 +57,8 @@ namespace OOD.EMS.UI.Audit.Audit
             descBox.Text = audit.Description;
             descBox.ReadOnly = true;
             OK.Visible = false;
-            attach.Visible = false;
+            attachmentBox.populate(audit.Attachments);
+            attachmentBox.ViewMode = true;
             if (goal.program != null)
             {
                 var tasks =
@@ -68,7 +70,6 @@ namespace OOD.EMS.UI.Audit.Audit
 
         private void Cancel_Click(object sender, EventArgs e)
         {
-            this.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.Close();
         }
 
@@ -84,10 +85,16 @@ namespace OOD.EMS.UI.Audit.Audit
                 return;
             }
             this.audit = new ExecutiveGoalAudit(goal, Authentication.getInstance().ActiveUser,
-                goal.getProgress(), descBox.Text, null);
+                goal.getProgress(), descBox.Text, attachmentBox.getAttachments());
             ExecutiveGoalAuditStorage.getInstance().create(audit);
             this.DialogResult = DialogResult.OK;
             this.Close();
+        }
+
+        private void AuditExecutiveForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (DialogResult == System.Windows.Forms.DialogResult.Cancel)
+                attachmentBox.getNewlyAdded().ForEach(item => item.delete());
         }
     }
 }

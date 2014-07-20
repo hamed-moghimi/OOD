@@ -16,6 +16,7 @@ namespace OOD.EMS.UI.Audit.Report
         public PhysicalReportForm()
         {
             InitializeComponent();
+            DialogResult = System.Windows.Forms.DialogResult.Cancel;
         }
 
         public PhysicalReportForm(PhysicalInspection item) : this()
@@ -27,7 +28,8 @@ namespace OOD.EMS.UI.Audit.Report
             dateBox.Enabled = false;
             dateBox.Value = item.InspectionDate;
             OK.Visible = false;
-            attach.Visible = false;
+            attachmentPanel1.populate(item.Attachments);
+            attachmentPanel1.ViewMode = true;
         }
 
         private void attach_Click(object sender, EventArgs e)
@@ -37,7 +39,6 @@ namespace OOD.EMS.UI.Audit.Report
 
         private void Cancel_Click(object sender, EventArgs e)
         {
-            this.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.Close();
         }
 
@@ -52,10 +53,16 @@ namespace OOD.EMS.UI.Audit.Report
                 return;
             }
             inspection = new PhysicalInspection(titleBox.Text, descBox.Text, dateBox.Value,
-                Authentication.getInstance().ActiveUser, null);
+                Authentication.getInstance().ActiveUser, attachmentPanel1.getAttachments());
             PhysicalInspectionStorage.getInstance().create(inspection);
             this.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.Close();
+        }
+
+        private void PhysicalReportForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (DialogResult == System.Windows.Forms.DialogResult.Cancel)
+                attachmentPanel1.getNewlyAdded().ForEach(item => item.delete());
         }
     }
 }

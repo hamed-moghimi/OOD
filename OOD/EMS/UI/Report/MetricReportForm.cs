@@ -25,8 +25,8 @@ namespace OOD.EMS.UI.Report
         {
             try
             {
-                DateTime fromDate = DateTime.Parse(fromDateBox.Text);
-                DateTime toDate = DateTime.Parse(toDateBox.Text);
+                DateTime fromDate = fromDateBox.Value;
+                DateTime toDate = toDateBox.Value;
                 if (metricsBox.CheckedItems.Count == 0)
                     throw new ArgumentNullException();
                 var metrics = new Metric[metricsBox.CheckedItems.Count];
@@ -34,10 +34,6 @@ namespace OOD.EMS.UI.Report
                 MetricReporter reporter = new MetricReporter();
                 MetricReport report = reporter.report(metrics, fromDate, toDate);
                 (new MetricReportResultForm(report)).Show();
-            }
-            catch (FormatException)
-            {
-                MessageBox.Show("تاریخ شروع یا پایان گزارش نادرست است");
             }
             catch (ArgumentNullException)
             {

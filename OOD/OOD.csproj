@@ -186,12 +186,6 @@
     <Compile Include="EMS\UI\Audit\Audit\AuditSelectForm.Designer.cs">
       <DependentUpon>AuditSelectForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="EMS\UI\Audit\Metric\AddMetricEntryForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="EMS\UI\Audit\Metric\AddMetricEntryForm.Designer.cs">
-      <DependentUpon>AddMetricEntryForm.cs</DependentUpon>
-    </Compile>
     <Compile Include="EMS\UI\Audit\Metric\MetricForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -557,9 +551,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="EMS\UI\Audit\Audit\AuditSelectForm.resx">
       <DependentUpon>AuditSelectForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="EMS\UI\Audit\Metric\AddMetricEntryForm.resx">
-      <DependentUpon>AddMetricEntryForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="EMS\UI\Audit\Metric\MetricForm.resx">
       <DependentUpon>MetricForm.cs</DependentUpon>

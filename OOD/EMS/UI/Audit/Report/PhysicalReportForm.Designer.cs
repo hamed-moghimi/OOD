@@ -28,37 +28,33 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ExecutiveReportForm));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PhysicalReportForm));
             this.descBox = new System.Windows.Forms.RichTextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.Cancel = new System.Windows.Forms.Button();
             this.titleBox = new System.Windows.Forms.TextBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.attach = new System.Windows.Forms.Button();
             this.OK = new System.Windows.Forms.Button();
             this.addAttachment = new System.Windows.Forms.OpenFileDialog();
             this.dateBox = new FreeControls.PersianDateTimePicker();
-            this.groupBox2.SuspendLayout();
+            this.attachmentPanel1 = new OOD.EMS.UI.AttachmentPanel();
             this.SuspendLayout();
             // 
             // descBox
             // 
             this.descBox.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.descBox.Location = new System.Drawing.Point(10, 116);
+            this.descBox.Location = new System.Drawing.Point(12, 115);
             this.descBox.Name = "descBox";
             this.descBox.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.descBox.Size = new System.Drawing.Size(452, 140);
+            this.descBox.Size = new System.Drawing.Size(463, 140);
             this.descBox.TabIndex = 16;
             this.descBox.Text = "";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(404, 89);
+            this.label5.Location = new System.Drawing.Point(417, 88);
             this.label5.Name = "label5";
             this.label5.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.label5.Size = new System.Drawing.Size(60, 24);
@@ -68,7 +64,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(387, 52);
+            this.label4.Location = new System.Drawing.Point(400, 51);
             this.label4.Name = "label4";
             this.label4.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.label4.Size = new System.Drawing.Size(77, 24);
@@ -78,7 +74,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(401, 15);
+            this.label1.Location = new System.Drawing.Point(414, 14);
             this.label1.Name = "label1";
             this.label1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.label1.Size = new System.Drawing.Size(63, 24);
@@ -88,7 +84,7 @@
             // Cancel
             // 
             this.Cancel.Font = new System.Drawing.Font("B Nazanin", 12F);
-            this.Cancel.Location = new System.Drawing.Point(10, 399);
+            this.Cancel.Location = new System.Drawing.Point(12, 455);
             this.Cancel.Name = "Cancel";
             this.Cancel.Size = new System.Drawing.Size(95, 32);
             this.Cancel.TabIndex = 18;
@@ -99,62 +95,16 @@
             // titleBox
             // 
             this.titleBox.Font = new System.Drawing.Font("B Nazanin", 12F);
-            this.titleBox.Location = new System.Drawing.Point(12, 12);
+            this.titleBox.Location = new System.Drawing.Point(25, 11);
             this.titleBox.Name = "titleBox";
             this.titleBox.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.titleBox.Size = new System.Drawing.Size(369, 31);
             this.titleBox.TabIndex = 19;
             // 
-            // groupBox2
-            // 
-            this.groupBox2.Controls.Add(this.label6);
-            this.groupBox2.Controls.Add(this.label2);
-            this.groupBox2.Controls.Add(this.attach);
-            this.groupBox2.Location = new System.Drawing.Point(11, 264);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.groupBox2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBox2.Size = new System.Drawing.Size(452, 123);
-            this.groupBox2.TabIndex = 21;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "ضمیمه‌ها";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(183, 38);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(210, 24);
-            this.label6.TabIndex = 9;
-            this.label6.Text = "ضمیمه‌ی گزارش بازرسی اسناد عملکردی";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Image = global::OOD.Properties.Resources.delete;
-            this.label2.Location = new System.Drawing.Point(396, 38);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(34, 24);
-            this.label2.TabIndex = 8;
-            this.label2.Text = "      ";
-            // 
-            // attach
-            // 
-            this.attach.Font = new System.Drawing.Font("B Nazanin", 10F);
-            this.attach.Location = new System.Drawing.Point(329, 76);
-            this.attach.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.attach.Name = "attach";
-            this.attach.Size = new System.Drawing.Size(105, 33);
-            this.attach.TabIndex = 7;
-            this.attach.Text = "اضافه‌کردن ضمیمه";
-            this.attach.UseVisualStyleBackColor = true;
-            this.attach.Click += new System.EventHandler(this.attach_Click);
-            // 
             // OK
             // 
             this.OK.Font = new System.Drawing.Font("B Nazanin", 12F);
-            this.OK.Location = new System.Drawing.Point(119, 399);
+            this.OK.Location = new System.Drawing.Point(113, 455);
             this.OK.Name = "OK";
             this.OK.Size = new System.Drawing.Size(95, 32);
             this.OK.TabIndex = 22;
@@ -170,7 +120,7 @@
             // 
             this.dateBox.BackColor = System.Drawing.Color.White;
             this.dateBox.Font = new System.Drawing.Font("B Nazanin", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.dateBox.Location = new System.Drawing.Point(266, 49);
+            this.dateBox.Location = new System.Drawing.Point(279, 48);
             this.dateBox.Name = "dateBox";
             this.dateBox.ShowTime = false;
             this.dateBox.Size = new System.Drawing.Size(115, 27);
@@ -178,24 +128,32 @@
             this.dateBox.Text = "persianDateTimePicker1";
             this.dateBox.Value = ((FreeControls.PersianDate)(resources.GetObject("dateBox.Value")));
             // 
-            // ExecutiveReportForm
+            // attachmentPanel1
+            // 
+            this.attachmentPanel1.Changed = false;
+            this.attachmentPanel1.Location = new System.Drawing.Point(12, 261);
+            this.attachmentPanel1.Name = "attachmentPanel1";
+            this.attachmentPanel1.Size = new System.Drawing.Size(461, 188);
+            this.attachmentPanel1.TabIndex = 24;
+            this.attachmentPanel1.ViewMode = false;
+            // 
+            // PhysicalReportForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(477, 442);
+            this.ClientSize = new System.Drawing.Size(488, 496);
+            this.Controls.Add(this.attachmentPanel1);
             this.Controls.Add(this.dateBox);
             this.Controls.Add(this.OK);
-            this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.titleBox);
             this.Controls.Add(this.descBox);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.Cancel);
-            this.Name = "ExecutiveReportForm";
+            this.Name = "PhysicalReportForm";
             this.Text = "گزارش بازرسی اسناد عملکردی";
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.PhysicalReportForm_FormClosing);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -209,13 +167,10 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button Cancel;
         private System.Windows.Forms.TextBox titleBox;
-        private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button attach;
         private System.Windows.Forms.Button OK;
         private System.Windows.Forms.OpenFileDialog addAttachment;
         private FreeControls.PersianDateTimePicker dateBox;
+        private AttachmentPanel attachmentPanel1;
 
     }
 }
