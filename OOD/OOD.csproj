@@ -47,9 +47,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="GanttChart">
-      <HintPath>.\GanttChart.dll</HintPath>
-    </Reference>
     <Reference Include="Microsoft.ReportViewer.Common, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
     <Reference Include="Microsoft.ReportViewer.WinForms, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
     <Reference Include="PersianDate">
@@ -89,6 +86,12 @@
     <Compile Include="EMS\Audit\PhysicalInspectionStorage.cs" />
     <Compile Include="EMS\Audit\TaskAudit.cs" />
     <Compile Include="EMS\Audit\TaskAuditStorage.cs" />
+    <Compile Include="EMS\Chart.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="EMS\Chart.Designer.cs">
+      <DependentUpon>Chart.cs</DependentUpon>
+    </Compile>
     <Compile Include="EMS\Exceptions\ActiveUserExistsException.cs" />
     <Compile Include="EMS\Exceptions\DepartmentExistsException.cs" />
     <Compile Include="EMS\Exceptions\DocumentExsitsException.cs" />
@@ -116,6 +119,7 @@
     <Compile Include="EMS\Execution\ResourceStorage.cs" />
     <Compile Include="EMS\Execution\Task.cs" />
     <Compile Include="EMS\Execution\TaskStorage.cs" />
+    <Compile Include="EMS\IProject.cs" />
     <Compile Include="EMS\Management\Attachment.cs" />
     <Compile Include="EMS\Management\Convention.cs" />
     <Compile Include="EMS\Management\EnvironEffect.cs" />
@@ -133,6 +137,7 @@
     <Compile Include="EMS\Management\ManagementDocument.cs" />
     <Compile Include="EMS\Management\ManagementDocumentRelation.cs" />
     <Compile Include="EMS\PersianCulture.cs" />
+    <Compile Include="EMS\Project.cs" />
     <Compile Include="EMS\Report\Dashboard.cs" />
     <Compile Include="EMS\Report\DocumentReport.cs" />
     <Compile Include="EMS\Report\DocumentReporter.cs" />
@@ -534,6 +539,7 @@
     <Compile Include="EMS\Users\Manager.cs" />
     <Compile Include="EMS\Users\User.cs" />
     <Compile Include="EMS\Users\UserStorage.cs" />
+    <Compile Include="EMS\Viewport.cs" />
     <Compile Include="StaticData.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
