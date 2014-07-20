@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using OOD.EMS.Management;
+using OOD.EMS.Users;
 
 namespace OOD.EMS.UI.Management
 {
@@ -30,6 +31,13 @@ namespace OOD.EMS.UI.Management
             tabRelations.TabPages[2].Controls.Add(legalEffectGrid);
 
             load_relations();
+
+            AccessLevel level = Authentication.getInstance().ActiveUser.ALevel;
+            if (!level.canModifyManagementDocs())
+            {
+                add.Visible = false;
+                edit.Location = new System.Drawing.Point(edit.Location.X, edit.Location.Y + 60);
+            }
         }
 
         private void load_relations()

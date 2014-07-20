@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using OOD.EMS.Execution;
 using OOD.EMS.Exceptions;
+using OOD.EMS.Users;
 
 namespace OOD.EMS.UI.Execution
 {
@@ -17,7 +18,18 @@ namespace OOD.EMS.UI.Execution
         public StructureForm()
         {
             InitializeComponent();
-            load_structure();    
+            load_structure();
+
+            AccessLevel level = Authentication.getInstance().ActiveUser.ALevel;
+            if (!level.canModifyExecutiveDocs())
+            {
+                groupBox2.Visible = false;
+                groupBox1.Location = new System.Drawing.Point(groupBox1.Location.X, groupBox1.Location.Y + 80);
+                delete.Visible = false;
+                ViewButton.Location = new System.Drawing.Point(ViewButton.Location.X + 23, ViewButton.Location.Y);
+                next.Location = new System.Drawing.Point(next.Location.X - 22, next.Location.Y);
+                prev.Location = new System.Drawing.Point(prev.Location.X - 22, prev.Location.Y);
+            }
         }
 
         private void load_structure()

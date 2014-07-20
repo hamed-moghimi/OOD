@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 using OOD.EMS.Execution;
+using OOD.EMS.Users;
 
 namespace OOD.EMS.UI.Execution
 {
@@ -15,6 +16,13 @@ namespace OOD.EMS.UI.Execution
         {
             InitializeComponent();
             load_programs();
+
+            AccessLevel level = Authentication.getInstance().ActiveUser.ALevel;
+            if (!level.canModifyExecutiveDocs())
+            {
+                addButton.Visible = editButton.Visible = deleteButton.Visible = false ;
+                ViewButton.Location = new System.Drawing.Point(ViewButton.Location.X, ViewButton.Location.Y + 80);
+            }
         }
 
         private void load_programs()

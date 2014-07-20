@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using OOD.EMS.Management;
 using OOD.EMS.Exceptions;
+using OOD.EMS.Users;
 
 namespace OOD.EMS.UI.Management
 {
@@ -18,6 +19,13 @@ namespace OOD.EMS.UI.Management
         {
             InitializeComponent();
             load_goals();
+
+            AccessLevel level = Authentication.getInstance().ActiveUser.ALevel;
+            if (!level.canModifyManagementDocs())
+            {
+                add.Visible = false;
+                edit.Location = new System.Drawing.Point(edit.Location.X, edit.Location.Y + 45);
+            }
         }
        
 

@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using OOD.EMS.Audit;
+using OOD.EMS.Users;
 
 namespace OOD.EMS.UI.Audit.Report
 {
@@ -17,6 +18,16 @@ namespace OOD.EMS.UI.Audit.Report
             InitializeComponent();
             foreach (var inspection in PhysicalInspectionStorage.getInstance().all())
                 addListRow(inspection);
+
+            AccessLevel level = Authentication.getInstance().ActiveUser.ALevel;
+
+            if (!level.canModifyAuditDocs())
+            {
+                addButton.Visible = false;
+                int Y = (addButton.Location.Y);
+                viewButton.Location = new System.Drawing.Point(viewButton.Location.X, Y);
+            }
+            
         }
 
         private void addListRow(PhysicalInspection inspection)

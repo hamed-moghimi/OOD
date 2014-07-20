@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using OOD.EMS.Execution;
 using OOD.EMS.Management;
+using OOD.EMS.Users;
 
 namespace OOD.EMS.UI.Execution
 {
@@ -18,6 +19,13 @@ namespace OOD.EMS.UI.Execution
         {
             InitializeComponent();
             load_relations();
+
+            AccessLevel level = Authentication.getInstance().ActiveUser.ALevel;
+            if (!level.canModifyExecutiveDocs())
+            {
+                addButton.Visible  = false;
+                editButton.Location = new System.Drawing.Point(editButton.Location.X, editButton.Location.Y + 40);
+            }
         }
 
         private void Cancel_Click(object sender, EventArgs e)

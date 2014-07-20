@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using OOD.EMS.Execution;
+using OOD.EMS.Users;
 
 namespace OOD.EMS.UI.Execution
 {
@@ -26,6 +27,13 @@ namespace OOD.EMS.UI.Execution
             {
                 object[] row = new object[] {r.Title, r.Amount, r.Description };
                 dataGridView1.Rows.Add(row);
+            }
+
+            AccessLevel level = Authentication.getInstance().ActiveUser.ALevel;
+            if (!level.canModifyExecutiveDocs())
+            {
+                addButton.Visible = editButton.Visible = deleteButton.Visible = false;
+                button2.Location = new System.Drawing.Point(button2.Location.X, button2.Location.Y + 80);
             }
         }
 
