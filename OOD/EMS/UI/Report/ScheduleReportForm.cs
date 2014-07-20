@@ -36,7 +36,8 @@ namespace OOD.EMS.UI.Report
                     throw new ArgumentNullException();
                 var reporter = new ScheduleReporter();
                 var report = reporter.report(program, fromDate, toDate);
-                (new ScheduleReportResultForm(report)).Show();
+                //(new ScheduleReportResultForm(report)).Show();
+                (new TimeReportForm(program)).Show();
             }
             catch (FormatException)
             {
