@@ -47,17 +47,14 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox1.Controls.Add(this.dataGridView1);
-            this.groupBox1.Location = new System.Drawing.Point(12, 170);
+            this.groupBox1.Location = new System.Drawing.Point(12, 49);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBox1.Size = new System.Drawing.Size(626, 327);
+            this.groupBox1.Size = new System.Drawing.Size(539, 327);
             this.groupBox1.TabIndex = 4;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "منابع";
+            this.groupBox1.Text = "منبع مورد نیاز";
             // 
             // dataGridView1
             // 
@@ -67,12 +64,13 @@
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.title,
             this.startDate});
-            this.dataGridView1.Location = new System.Drawing.Point(36, 30);
+            this.dataGridView1.Location = new System.Drawing.Point(16, 30);
+            this.dataGridView1.MultiSelect = false;
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(553, 278);
+            this.dataGridView1.Size = new System.Drawing.Size(506, 278);
             this.dataGridView1.TabIndex = 3;
             // 
             // title
@@ -93,7 +91,7 @@
             // 
             // Cancel
             // 
-            this.Cancel.Location = new System.Drawing.Point(204, 504);
+            this.Cancel.Location = new System.Drawing.Point(12, 383);
             this.Cancel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Cancel.Name = "Cancel";
             this.Cancel.Size = new System.Drawing.Size(105, 33);
@@ -104,7 +102,7 @@
             // 
             // selectBtn
             // 
-            this.selectBtn.Location = new System.Drawing.Point(325, 504);
+            this.selectBtn.Location = new System.Drawing.Point(123, 383);
             this.selectBtn.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.selectBtn.Name = "selectBtn";
             this.selectBtn.Size = new System.Drawing.Size(105, 33);
@@ -116,7 +114,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(590, 49);
+            this.label1.Location = new System.Drawing.Point(500, 15);
             this.label1.Name = "label1";
             this.label1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.label1.Size = new System.Drawing.Size(38, 24);
@@ -125,7 +123,7 @@
             // 
             // cont_box
             // 
-            this.cont_box.Location = new System.Drawing.Point(436, 46);
+            this.cont_box.Location = new System.Drawing.Point(368, 12);
             this.cont_box.Name = "cont_box";
             this.cont_box.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.cont_box.Size = new System.Drawing.Size(118, 31);
@@ -134,28 +132,28 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(560, 132);
+            this.label2.Location = new System.Drawing.Point(133, 15);
             this.label2.Name = "label2";
             this.label2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.label2.Size = new System.Drawing.Size(67, 24);
+            this.label2.Size = new System.Drawing.Size(49, 24);
             this.label2.TabIndex = 19;
-            this.label2.Text = "تاریخ پایان:";
+            this.label2.Text = "تا تاریخ:";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(560, 91);
+            this.label3.Location = new System.Drawing.Point(313, 15);
             this.label3.Name = "label3";
             this.label3.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.label3.Size = new System.Drawing.Size(68, 24);
+            this.label3.Size = new System.Drawing.Size(49, 24);
             this.label3.TabIndex = 21;
-            this.label3.Text = "تاریخ شروع:";
+            this.label3.Text = "از تاریخ:";
             // 
             // fromDateBox
             // 
             this.fromDateBox.BackColor = System.Drawing.Color.White;
             this.fromDateBox.Font = new System.Drawing.Font("B Nazanin", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.fromDateBox.Location = new System.Drawing.Point(439, 91);
+            this.fromDateBox.Location = new System.Drawing.Point(192, 12);
             this.fromDateBox.Name = "fromDateBox";
             this.fromDateBox.ShowTime = false;
             this.fromDateBox.Size = new System.Drawing.Size(115, 27);
@@ -168,7 +166,7 @@
             // 
             this.toDateBox.BackColor = System.Drawing.Color.White;
             this.toDateBox.Font = new System.Drawing.Font("B Nazanin", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.toDateBox.Location = new System.Drawing.Point(439, 132);
+            this.toDateBox.Location = new System.Drawing.Point(12, 12);
             this.toDateBox.Name = "toDateBox";
             this.toDateBox.ShowTime = false;
             this.toDateBox.Size = new System.Drawing.Size(115, 27);
@@ -180,7 +178,7 @@
             // SelectResourceForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 24F);
-            this.ClientSize = new System.Drawing.Size(650, 551);
+            this.ClientSize = new System.Drawing.Size(566, 423);
             this.Controls.Add(this.toDateBox);
             this.Controls.Add(this.fromDateBox);
             this.Controls.Add(this.label3);
@@ -191,16 +189,7 @@
             this.Controls.Add(this.selectBtn);
             this.Controls.Add(this.groupBox1);
             this.Name = "SelectResourceForm";
-            this.Text = "منابع";
-            this.Controls.SetChildIndex(this.groupBox1, 0);
-            this.Controls.SetChildIndex(this.selectBtn, 0);
-            this.Controls.SetChildIndex(this.Cancel, 0);
-            this.Controls.SetChildIndex(this.label1, 0);
-            this.Controls.SetChildIndex(this.cont_box, 0);
-            this.Controls.SetChildIndex(this.label2, 0);
-            this.Controls.SetChildIndex(this.label3, 0);
-            this.Controls.SetChildIndex(this.fromDateBox, 0);
-            this.Controls.SetChildIndex(this.toDateBox, 0);
+            this.Text = "اختصاص منبع";
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);

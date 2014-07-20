@@ -37,20 +37,18 @@
             this.selectBtn = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.cont_box = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
-            this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox1.Controls.Add(this.dataGridView1);
-            this.groupBox1.Location = new System.Drawing.Point(12, 87);
+            this.groupBox1.Location = new System.Drawing.Point(12, 49);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBox1.Size = new System.Drawing.Size(626, 325);
+            this.groupBox1.Size = new System.Drawing.Size(581, 325);
             this.groupBox1.TabIndex = 4;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "مسئولیت‌ها";
@@ -64,7 +62,7 @@
             this.title,
             this.startDate,
             this.dueDate});
-            this.dataGridView1.Location = new System.Drawing.Point(36, 30);
+            this.dataGridView1.Location = new System.Drawing.Point(13, 30);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersVisible = false;
@@ -98,7 +96,7 @@
             // 
             // Cancel
             // 
-            this.Cancel.Location = new System.Drawing.Point(222, 421);
+            this.Cancel.Location = new System.Drawing.Point(12, 381);
             this.Cancel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Cancel.Name = "Cancel";
             this.Cancel.Size = new System.Drawing.Size(105, 33);
@@ -109,7 +107,7 @@
             // 
             // selectBtn
             // 
-            this.selectBtn.Location = new System.Drawing.Point(343, 421);
+            this.selectBtn.Location = new System.Drawing.Point(123, 381);
             this.selectBtn.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.selectBtn.Name = "selectBtn";
             this.selectBtn.Size = new System.Drawing.Size(105, 33);
@@ -121,7 +119,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(520, 51);
+            this.label1.Location = new System.Drawing.Point(473, 15);
             this.label1.Name = "label1";
             this.label1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.label1.Size = new System.Drawing.Size(118, 24);
@@ -130,16 +128,30 @@
             // 
             // cont_box
             // 
-            this.cont_box.Location = new System.Drawing.Point(396, 48);
+            this.cont_box.Location = new System.Drawing.Point(402, 12);
+            this.cont_box.MaxLength = 3;
             this.cont_box.Name = "cont_box";
             this.cont_box.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.cont_box.Size = new System.Drawing.Size(118, 31);
+            this.cont_box.Size = new System.Drawing.Size(65, 31);
             this.cont_box.TabIndex = 18;
+            this.cont_box.Text = "1";
+            this.cont_box.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(358, 15);
+            this.label2.Name = "label2";
+            this.label2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.label2.Size = new System.Drawing.Size(38, 24);
+            this.label2.TabIndex = 19;
+            this.label2.Text = "درصد";
             // 
             // SelectTaskForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 24F);
-            this.ClientSize = new System.Drawing.Size(650, 462);
+            this.ClientSize = new System.Drawing.Size(603, 422);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.cont_box);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.Cancel);
@@ -147,11 +159,6 @@
             this.Controls.Add(this.groupBox1);
             this.Name = "SelectTaskForm";
             this.Text = "مسئولیت‌ها";
-            this.Controls.SetChildIndex(this.groupBox1, 0);
-            this.Controls.SetChildIndex(this.selectBtn, 0);
-            this.Controls.SetChildIndex(this.Cancel, 0);
-            this.Controls.SetChildIndex(this.label1, 0);
-            this.Controls.SetChildIndex(this.cont_box, 0);
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
@@ -170,5 +177,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dueDate;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox cont_box;
+        private System.Windows.Forms.Label label2;
     }
 }

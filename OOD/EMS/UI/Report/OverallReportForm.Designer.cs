@@ -54,7 +54,7 @@
             this.groupBox1.Location = new System.Drawing.Point(12, 35);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBox1.Size = new System.Drawing.Size(464, 249);
+            this.groupBox1.Size = new System.Drawing.Size(466, 249);
             this.groupBox1.TabIndex = 5;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = " گزارش‌گیری از سند زیست‌محیطی ";
@@ -80,7 +80,7 @@
             // 
             // maskedTextBox2
             // 
-            this.maskedTextBox2.Location = new System.Drawing.Point(21, 37);
+            this.maskedTextBox2.Location = new System.Drawing.Point(21, 35);
             this.maskedTextBox2.Mask = "0000/00/00";
             this.maskedTextBox2.Name = "maskedTextBox2";
             this.maskedTextBox2.Size = new System.Drawing.Size(137, 31);
@@ -100,7 +100,7 @@
             // 
             // maskedTextBox1
             // 
-            this.maskedTextBox1.Location = new System.Drawing.Point(245, 37);
+            this.maskedTextBox1.Location = new System.Drawing.Point(245, 35);
             this.maskedTextBox1.Mask = "0000/00/00";
             this.maskedTextBox1.Name = "maskedTextBox1";
             this.maskedTextBox1.Size = new System.Drawing.Size(137, 31);
@@ -122,18 +122,17 @@
             // 
             this.checkedListBox1.FormattingEnabled = true;
             this.checkedListBox1.Items.AddRange(new object[] {
-            "اهداف کلان، الزامات قانونی، تاثیرات محیطی و ارتباط آنان",
-            "اهداف اجرایی تکمیل‌شده و تکمیل‌نشده",
-            "برنامه‌های اقدام و درصد پیشرفت"});
+            "وضعیت تخصیص منابع سازمان",
+            "برنامه‌های اقدام و پیشرفت آن‌ها"});
             this.checkedListBox1.Location = new System.Drawing.Point(21, 85);
             this.checkedListBox1.Name = "checkedListBox1";
-            this.checkedListBox1.Size = new System.Drawing.Size(361, 108);
+            this.checkedListBox1.Size = new System.Drawing.Size(365, 108);
             this.checkedListBox1.TabIndex = 0;
             // 
             // OverallReportForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 24F);
-            this.ClientSize = new System.Drawing.Size(488, 296);
+            this.ClientSize = new System.Drawing.Size(490, 296);
             this.Controls.Add(this.groupBox1);
             this.Name = "OverallReportForm";
             this.Controls.SetChildIndex(this.groupBox1, 0);

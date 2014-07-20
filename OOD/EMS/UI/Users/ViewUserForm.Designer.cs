@@ -43,7 +43,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(187, 9);
+            this.label1.Location = new System.Drawing.Point(163, 9);
             this.label1.Name = "label1";
             this.label1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.label1.Size = new System.Drawing.Size(64, 24);
@@ -62,7 +62,7 @@
             // 
             // level_label
             // 
-            this.level_label.Location = new System.Drawing.Point(23, 124);
+            this.level_label.Location = new System.Drawing.Point(23, 107);
             this.level_label.Name = "level_label";
             this.level_label.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.level_label.Size = new System.Drawing.Size(121, 24);
@@ -73,7 +73,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(166, 124);
+            this.label4.Location = new System.Drawing.Point(163, 107);
             this.label4.Name = "label4";
             this.label4.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.label4.Size = new System.Drawing.Size(85, 24);
@@ -82,7 +82,7 @@
             // 
             // Cancel
             // 
-            this.Cancel.Location = new System.Drawing.Point(83, 171);
+            this.Cancel.Location = new System.Drawing.Point(73, 142);
             this.Cancel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Cancel.Name = "Cancel";
             this.Cancel.Size = new System.Drawing.Size(105, 33);
@@ -93,7 +93,7 @@
             // 
             // family_label
             // 
-            this.family_label.Location = new System.Drawing.Point(22, 86);
+            this.family_label.Location = new System.Drawing.Point(23, 75);
             this.family_label.Name = "family_label";
             this.family_label.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.family_label.Size = new System.Drawing.Size(121, 24);
@@ -104,7 +104,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(175, 86);
+            this.label6.Location = new System.Drawing.Point(163, 75);
             this.label6.Name = "label6";
             this.label6.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.label6.Size = new System.Drawing.Size(75, 24);
@@ -113,7 +113,7 @@
             // 
             // name_label
             // 
-            this.name_label.Location = new System.Drawing.Point(22, 44);
+            this.name_label.Location = new System.Drawing.Point(23, 42);
             this.name_label.Name = "name_label";
             this.name_label.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.name_label.Size = new System.Drawing.Size(121, 24);
@@ -124,7 +124,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(224, 44);
+            this.label8.Location = new System.Drawing.Point(163, 42);
             this.label8.Name = "label8";
             this.label8.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.label8.Size = new System.Drawing.Size(26, 24);
@@ -135,7 +135,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(262, 217);
+            this.ClientSize = new System.Drawing.Size(262, 186);
             this.Controls.Add(this.name_label);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.family_label);
@@ -147,15 +147,6 @@
             this.Controls.Add(this.label1);
             this.Name = "ViewUserForm";
             this.Text = "مشاهده‌ی مشخصات کاربری";
-            this.Controls.SetChildIndex(this.label1, 0);
-            this.Controls.SetChildIndex(this.username_label, 0);
-            this.Controls.SetChildIndex(this.label4, 0);
-            this.Controls.SetChildIndex(this.level_label, 0);
-            this.Controls.SetChildIndex(this.Cancel, 0);
-            this.Controls.SetChildIndex(this.label6, 0);
-            this.Controls.SetChildIndex(this.family_label, 0);
-            this.Controls.SetChildIndex(this.label8, 0);
-            this.Controls.SetChildIndex(this.name_label, 0);
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -12,11 +12,10 @@ using OOD.EMS.Exceptions;
 
 namespace OOD.EMS.UI.Management
 {
-    public partial class RelationManagementForm : TemplateForm
+    public partial class RelationManagementForm : TemplateDialog
     {
         public RelationManagementForm()
         {
-            this.menu.Visible = false;
             InitializeComponent();
         }
 
@@ -210,6 +209,6 @@ namespace OOD.EMS.UI.Management
                     docType1.SelectedIndex = index;
                 }
             }
-        }       
+        }
     }
 }

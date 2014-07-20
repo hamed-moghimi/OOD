@@ -63,7 +63,7 @@
             this.progress_num.AutoSize = true;
             this.progress_num.BackColor = System.Drawing.Color.Transparent;
             this.progress_num.Font = new System.Drawing.Font("B Nazanin", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.progress_num.Location = new System.Drawing.Point(609, 49);
+            this.progress_num.Location = new System.Drawing.Point(609, 46);
             this.progress_num.Name = "progress_num";
             this.progress_num.Size = new System.Drawing.Size(37, 26);
             this.progress_num.TabIndex = 33;
@@ -74,10 +74,10 @@
             this.groupBox2.Controls.Add(this.button1);
             this.groupBox2.Controls.Add(this.button2);
             this.groupBox2.Controls.Add(this.resourceGrid);
-            this.groupBox2.Location = new System.Drawing.Point(12, 330);
+            this.groupBox2.Location = new System.Drawing.Point(12, 320);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBox2.Size = new System.Drawing.Size(722, 246);
+            this.groupBox2.Size = new System.Drawing.Size(706, 246);
             this.groupBox2.TabIndex = 30;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "منابع";
@@ -85,7 +85,7 @@
             // button1
             // 
             this.button1.Image = global::OOD.Properties.Resources.add;
-            this.button1.Location = new System.Drawing.Point(666, 100);
+            this.button1.Location = new System.Drawing.Point(657, 66);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(40, 40);
             this.button1.TabIndex = 27;
@@ -96,7 +96,7 @@
             // button2
             // 
             this.button2.Image = global::OOD.Properties.Resources.remove;
-            this.button2.Location = new System.Drawing.Point(666, 146);
+            this.button2.Location = new System.Drawing.Point(657, 112);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(40, 40);
             this.button2.TabIndex = 25;
@@ -109,6 +109,7 @@
             this.resourceGrid.AllowUserToAddRows = false;
             this.resourceGrid.AllowUserToDeleteRows = false;
             this.resourceGrid.AllowUserToOrderColumns = true;
+            this.resourceGrid.BackgroundColor = System.Drawing.SystemColors.Window;
             this.resourceGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.resourceGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn2,
@@ -157,10 +158,10 @@
             this.groupBox1.Controls.Add(this.addButton);
             this.groupBox1.Controls.Add(this.deleteButton);
             this.groupBox1.Controls.Add(this.taskGrid);
-            this.groupBox1.Location = new System.Drawing.Point(12, 89);
+            this.groupBox1.Location = new System.Drawing.Point(12, 79);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBox1.Size = new System.Drawing.Size(722, 238);
+            this.groupBox1.Size = new System.Drawing.Size(706, 238);
             this.groupBox1.TabIndex = 29;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "وظایف";
@@ -168,7 +169,7 @@
             // addButton
             // 
             this.addButton.Image = global::OOD.Properties.Resources.add;
-            this.addButton.Location = new System.Drawing.Point(666, 83);
+            this.addButton.Location = new System.Drawing.Point(657, 65);
             this.addButton.Name = "addButton";
             this.addButton.Size = new System.Drawing.Size(40, 40);
             this.addButton.TabIndex = 27;
@@ -179,7 +180,7 @@
             // deleteButton
             // 
             this.deleteButton.Image = global::OOD.Properties.Resources.remove;
-            this.deleteButton.Location = new System.Drawing.Point(666, 129);
+            this.deleteButton.Location = new System.Drawing.Point(656, 111);
             this.deleteButton.Name = "deleteButton";
             this.deleteButton.Size = new System.Drawing.Size(40, 40);
             this.deleteButton.TabIndex = 25;
@@ -192,6 +193,7 @@
             this.taskGrid.AllowUserToAddRows = false;
             this.taskGrid.AllowUserToDeleteRows = false;
             this.taskGrid.AllowUserToOrderColumns = true;
+            this.taskGrid.BackgroundColor = System.Drawing.SystemColors.Window;
             this.taskGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.taskGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.priority,
@@ -245,7 +247,7 @@
             // 
             // progressBar1
             // 
-            this.progressBar1.Location = new System.Drawing.Point(202, 49);
+            this.progressBar1.Location = new System.Drawing.Point(202, 46);
             this.progressBar1.Name = "progressBar1";
             this.progressBar1.Size = new System.Drawing.Size(401, 23);
             this.progressBar1.TabIndex = 32;
@@ -253,10 +255,10 @@
             // 
             // goal_name
             // 
-            this.goal_name.Location = new System.Drawing.Point(405, 19);
+            this.goal_name.Location = new System.Drawing.Point(202, 9);
             this.goal_name.Name = "goal_name";
             this.goal_name.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.goal_name.Size = new System.Drawing.Size(237, 25);
+            this.goal_name.Size = new System.Drawing.Size(440, 25);
             this.goal_name.TabIndex = 28;
             this.goal_name.Text = "نام هدف";
             this.goal_name.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -265,7 +267,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("B Nazanin", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.label1.Location = new System.Drawing.Point(668, 18);
+            this.label1.Location = new System.Drawing.Point(668, 8);
             this.label1.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label1.Name = "label1";
             this.label1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -278,7 +280,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("B Nazanin", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.label2.Location = new System.Drawing.Point(650, 49);
+            this.label2.Location = new System.Drawing.Point(650, 46);
             this.label2.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label2.Name = "label2";
             this.label2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -289,7 +291,7 @@
             // 
             // Cancel
             // 
-            this.Cancel.Location = new System.Drawing.Point(254, 583);
+            this.Cancel.Location = new System.Drawing.Point(12, 573);
             this.Cancel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Cancel.Name = "Cancel";
             this.Cancel.Size = new System.Drawing.Size(105, 33);
@@ -300,7 +302,7 @@
             // 
             // selectBtn
             // 
-            this.selectBtn.Location = new System.Drawing.Point(375, 583);
+            this.selectBtn.Location = new System.Drawing.Point(123, 573);
             this.selectBtn.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.selectBtn.Name = "selectBtn";
             this.selectBtn.Size = new System.Drawing.Size(105, 33);
@@ -309,10 +311,10 @@
             this.selectBtn.UseVisualStyleBackColor = true;
             this.selectBtn.Click += new System.EventHandler(this.selectBtn_Click);
             // 
-            // DefineProgramForm
+            // ScheduleEditForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 24F);
-            this.ClientSize = new System.Drawing.Size(746, 629);
+            this.ClientSize = new System.Drawing.Size(731, 615);
             this.Controls.Add(this.Cancel);
             this.Controls.Add(this.progress_num);
             this.Controls.Add(this.selectBtn);
@@ -322,7 +324,7 @@
             this.Controls.Add(this.goal_name);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label2);
-            this.Name = "DefineProgramForm";
+            this.Name = "ScheduleEditForm";
             this.Text = "برنامه اقدام";
             this.groupBox2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.resourceGrid)).EndInit();

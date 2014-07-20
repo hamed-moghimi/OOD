@@ -37,7 +37,7 @@
             // 
             // Cancel
             // 
-            this.Cancel.Location = new System.Drawing.Point(61, 241);
+            this.Cancel.Location = new System.Drawing.Point(12, 202);
             this.Cancel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Cancel.Name = "Cancel";
             this.Cancel.Size = new System.Drawing.Size(105, 33);
@@ -48,7 +48,7 @@
             // 
             // ok
             // 
-            this.ok.Location = new System.Drawing.Point(182, 241);
+            this.ok.Location = new System.Drawing.Point(123, 202);
             this.ok.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.ok.Name = "ok";
             this.ok.Size = new System.Drawing.Size(105, 33);
@@ -64,12 +64,12 @@
             this.managerList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.managerList.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.managerName});
-            this.managerList.Location = new System.Drawing.Point(25, 37);
+            this.managerList.Location = new System.Drawing.Point(12, 12);
             this.managerList.Name = "managerList";
             this.managerList.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.managerList.RowHeadersVisible = false;
             this.managerList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.managerList.Size = new System.Drawing.Size(291, 183);
+            this.managerList.Size = new System.Drawing.Size(318, 183);
             this.managerList.TabIndex = 21;
             // 
             // managerName
@@ -82,7 +82,7 @@
             // SelectManagerForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 24F);
-            this.ClientSize = new System.Drawing.Size(342, 292);
+            this.ClientSize = new System.Drawing.Size(342, 243);
             this.Controls.Add(this.managerList);
             this.Controls.Add(this.Cancel);
             this.Controls.Add(this.ok);

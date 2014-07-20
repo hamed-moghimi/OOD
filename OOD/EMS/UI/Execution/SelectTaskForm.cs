@@ -11,7 +11,7 @@ using OOD.EMS.Exceptions;
 
 namespace OOD.EMS.UI.Execution
 {
-    public partial class SelectTaskForm : TemplateForm
+    public partial class SelectTaskForm : TemplateDialog
     {
 
         public Task goal { get; set; }

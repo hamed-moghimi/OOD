@@ -40,7 +40,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(441, 22);
+            this.label5.Location = new System.Drawing.Point(420, 16);
             this.label5.Name = "label5";
             this.label5.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.label5.Size = new System.Drawing.Size(51, 24);
@@ -49,7 +49,7 @@
             // 
             // Cancel
             // 
-            this.Cancel.Location = new System.Drawing.Point(38, 374);
+            this.Cancel.Location = new System.Drawing.Point(12, 336);
             this.Cancel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Cancel.Name = "Cancel";
             this.Cancel.Size = new System.Drawing.Size(105, 33);
@@ -60,7 +60,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(159, 374);
+            this.button2.Location = new System.Drawing.Point(123, 336);
             this.button2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(105, 33);
@@ -72,7 +72,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(438, 69);
+            this.label3.Location = new System.Drawing.Point(411, 43);
             this.label3.Name = "label3";
             this.label3.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.label3.Size = new System.Drawing.Size(60, 24);
@@ -81,26 +81,26 @@
             // 
             // dscp_box
             // 
-            this.dscp_box.Location = new System.Drawing.Point(39, 102);
+            this.dscp_box.Location = new System.Drawing.Point(12, 71);
             this.dscp_box.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dscp_box.Name = "dscp_box";
             this.dscp_box.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.dscp_box.Size = new System.Drawing.Size(452, 78);
+            this.dscp_box.Size = new System.Drawing.Size(461, 78);
             this.dscp_box.TabIndex = 20;
             this.dscp_box.Text = "";
             // 
             // name_box
             // 
-            this.name_box.Location = new System.Drawing.Point(201, 19);
+            this.name_box.Location = new System.Drawing.Point(150, 13);
             this.name_box.Name = "name_box";
             this.name_box.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.name_box.Size = new System.Drawing.Size(222, 31);
+            this.name_box.Size = new System.Drawing.Size(264, 31);
             this.name_box.TabIndex = 15;
             // 
             // attachmentPanel1
             // 
             this.attachmentPanel1.Changed = false;
-            this.attachmentPanel1.Location = new System.Drawing.Point(36, 172);
+            this.attachmentPanel1.Location = new System.Drawing.Point(12, 141);
             this.attachmentPanel1.Name = "attachmentPanel1";
             this.attachmentPanel1.Size = new System.Drawing.Size(461, 188);
             this.attachmentPanel1.TabIndex = 21;
@@ -110,7 +110,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(538, 422);
+            this.ClientSize = new System.Drawing.Size(485, 379);
             this.Controls.Add(this.attachmentPanel1);
             this.Controls.Add(this.name_box);
             this.Controls.Add(this.Cancel);
@@ -120,13 +120,6 @@
             this.Controls.Add(this.label5);
             this.Name = "AddLegalReqForm";
             this.Text = "اضافه‌کردن الزامات قانونی";
-            this.Controls.SetChildIndex(this.label5, 0);
-            this.Controls.SetChildIndex(this.dscp_box, 0);
-            this.Controls.SetChildIndex(this.label3, 0);
-            this.Controls.SetChildIndex(this.button2, 0);
-            this.Controls.SetChildIndex(this.Cancel, 0);
-            this.Controls.SetChildIndex(this.name_box, 0);
-            this.Controls.SetChildIndex(this.attachmentPanel1, 0);
             this.ResumeLayout(false);
             this.PerformLayout();
 

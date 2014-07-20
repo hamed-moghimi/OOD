@@ -42,16 +42,13 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox1.Controls.Add(this.editButton);
             this.groupBox1.Controls.Add(this.addButton);
             this.groupBox1.Controls.Add(this.dataGridView1);
-            this.groupBox1.Location = new System.Drawing.Point(41, 35);
+            this.groupBox1.Location = new System.Drawing.Point(12, 35);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBox1.Size = new System.Drawing.Size(646, 330);
+            this.groupBox1.Size = new System.Drawing.Size(639, 330);
             this.groupBox1.TabIndex = 4;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "اهداف اجرایی سازمان";
@@ -59,7 +56,7 @@
             // editButton
             // 
             this.editButton.Image = global::OOD.Properties.Resources.search;
-            this.editButton.Location = new System.Drawing.Point(592, 178);
+            this.editButton.Location = new System.Drawing.Point(587, 70);
             this.editButton.Name = "editButton";
             this.editButton.Size = new System.Drawing.Size(40, 40);
             this.editButton.TabIndex = 5;
@@ -70,7 +67,7 @@
             // addButton
             // 
             this.addButton.Image = global::OOD.Properties.Resources.add;
-            this.addButton.Location = new System.Drawing.Point(592, 132);
+            this.addButton.Location = new System.Drawing.Point(587, 116);
             this.addButton.Name = "addButton";
             this.addButton.Size = new System.Drawing.Size(40, 40);
             this.addButton.TabIndex = 6;
@@ -82,6 +79,7 @@
             // 
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.Window;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.title,
@@ -117,7 +115,7 @@
             // 
             // Cancel
             // 
-            this.Cancel.Location = new System.Drawing.Point(41, 372);
+            this.Cancel.Location = new System.Drawing.Point(12, 372);
             this.Cancel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Cancel.Name = "Cancel";
             this.Cancel.Size = new System.Drawing.Size(105, 33);
@@ -129,7 +127,7 @@
             // ExecutiveGoalForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 24F);
-            this.ClientSize = new System.Drawing.Size(699, 418);
+            this.ClientSize = new System.Drawing.Size(663, 414);
             this.Controls.Add(this.Cancel);
             this.Controls.Add(this.groupBox1);
             this.Name = "ExecutiveGoalForm";

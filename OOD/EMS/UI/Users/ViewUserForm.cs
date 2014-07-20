@@ -11,12 +11,11 @@ using OOD.EMS.Users;
 
 namespace OOD.EMS.UI.Users
 {
-    public partial class ViewUserForm : TemplateForm
+    public partial class ViewUserForm : TemplateDialog
     {
         public ViewUserForm(User user)
         {
             InitializeComponent();
-            menu.Visible = false;
             if (user != null)
             {
                 username_label.Text = user.Username;

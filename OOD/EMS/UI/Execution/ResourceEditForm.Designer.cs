@@ -40,7 +40,7 @@
             // 
             // descBox
             // 
-            this.descBox.Location = new System.Drawing.Point(33, 143);
+            this.descBox.Location = new System.Drawing.Point(12, 138);
             this.descBox.Multiline = true;
             this.descBox.Name = "descBox";
             this.descBox.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -49,7 +49,7 @@
             // 
             // amountBox
             // 
-            this.amountBox.Location = new System.Drawing.Point(225, 64);
+            this.amountBox.Location = new System.Drawing.Point(204, 59);
             this.amountBox.Name = "amountBox";
             this.amountBox.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.amountBox.Size = new System.Drawing.Size(217, 31);
@@ -57,7 +57,7 @@
             // 
             // titleBox
             // 
-            this.titleBox.Location = new System.Drawing.Point(225, 17);
+            this.titleBox.Location = new System.Drawing.Point(204, 12);
             this.titleBox.Name = "titleBox";
             this.titleBox.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.titleBox.Size = new System.Drawing.Size(217, 31);
@@ -67,7 +67,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("B Nazanin", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.label3.Location = new System.Drawing.Point(429, 108);
+            this.label3.Location = new System.Drawing.Point(408, 103);
             this.label3.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label3.Name = "label3";
             this.label3.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -80,7 +80,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("B Nazanin", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.label2.Location = new System.Drawing.Point(453, 66);
+            this.label2.Location = new System.Drawing.Point(432, 61);
             this.label2.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label2.Name = "label2";
             this.label2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -93,7 +93,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("B Nazanin", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.label1.Location = new System.Drawing.Point(450, 19);
+            this.label1.Location = new System.Drawing.Point(429, 14);
             this.label1.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label1.Name = "label1";
             this.label1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -104,7 +104,7 @@
             // 
             // Cancel
             // 
-            this.Cancel.Location = new System.Drawing.Point(33, 313);
+            this.Cancel.Location = new System.Drawing.Point(12, 293);
             this.Cancel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Cancel.Name = "Cancel";
             this.Cancel.Size = new System.Drawing.Size(105, 33);
@@ -115,7 +115,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(154, 314);
+            this.button2.Location = new System.Drawing.Point(123, 293);
             this.button2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(105, 33);
@@ -127,7 +127,7 @@
             // ResourceEditForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 24F);
-            this.ClientSize = new System.Drawing.Size(527, 362);
+            this.ClientSize = new System.Drawing.Size(489, 333);
             this.Controls.Add(this.Cancel);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.descBox);

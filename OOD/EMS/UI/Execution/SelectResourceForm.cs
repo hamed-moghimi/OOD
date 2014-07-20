@@ -11,7 +11,7 @@ using OOD.EMS.Exceptions;
 
 namespace OOD.EMS.UI.Execution
 {
-    public partial class SelectResourceForm : TemplateForm
+    public partial class SelectResourceForm : TemplateDialog
     {
 
         public Allocation alloc { set; get; }

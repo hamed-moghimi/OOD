@@ -45,6 +45,9 @@ namespace OOD.EMS.UI
 
         public void populate(List<Attachment> attachments)
         {
+            //TODO: fix this
+            if (attachments == null)
+                return;
             foreach (Attachment attach in attachments)
             {
                 _attachments.Add(attach.Title, attach);

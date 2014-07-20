@@ -12,7 +12,7 @@ using OOD.EMS.Exceptions;
 
 namespace OOD.EMS.UI.Execution
 {
-    public partial class ViewTaskForm : TemplateForm
+    public partial class ViewTaskForm : TemplateDialog
     {
         public String name, fromDate, toDate, dscp;
         public Department manager;
@@ -21,7 +21,6 @@ namespace OOD.EMS.UI.Execution
         public ViewTaskForm(EMS.Execution.Task t)
         {
             InitializeComponent();
-            this.menu.Visible = false;
             attachmentPanel1.ViewMode = true;
             if (t != null)
             {

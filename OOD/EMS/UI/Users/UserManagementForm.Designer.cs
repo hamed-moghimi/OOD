@@ -50,13 +50,13 @@
             this.userGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.UserName,
             this.Role});
-            this.userGrid.Location = new System.Drawing.Point(37, 43);
+            this.userGrid.Location = new System.Drawing.Point(12, 44);
             this.userGrid.MultiSelect = false;
             this.userGrid.Name = "userGrid";
             this.userGrid.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.userGrid.RowHeadersVisible = false;
             this.userGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.userGrid.Size = new System.Drawing.Size(416, 196);
+            this.userGrid.Size = new System.Drawing.Size(416, 199);
             this.userGrid.TabIndex = 3;
             // 
             // UserName
@@ -75,56 +75,60 @@
             // 
             // Cancel
             // 
-            this.Cancel.Location = new System.Drawing.Point(37, 250);
+            this.Cancel.Location = new System.Drawing.Point(12, 250);
             this.Cancel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Cancel.Name = "Cancel";
             this.Cancel.Size = new System.Drawing.Size(105, 33);
             this.Cancel.TabIndex = 22;
-            this.Cancel.Text = "بازگشت";
+            this.Cancel.Text = "خروج";
             this.Cancel.UseVisualStyleBackColor = true;
             this.Cancel.Click += new System.EventHandler(this.Cancel_Click);
             // 
             // edit
             // 
             this.edit.Image = global::OOD.Properties.Resources.edit;
-            this.edit.Location = new System.Drawing.Point(500, 100);
+            this.edit.Location = new System.Drawing.Point(434, 206);
             this.edit.Name = "edit";
             this.edit.Size = new System.Drawing.Size(38, 37);
             this.edit.TabIndex = 21;
             this.edit.Text = "   ";
+            this.toolTip.SetToolTip(this.edit, "ویرایش");
             this.edit.UseVisualStyleBackColor = true;
             this.edit.Click += new System.EventHandler(this.edit_Click);
             // 
             // delete
             // 
             this.delete.Image = global::OOD.Properties.Resources.remove;
-            this.delete.Location = new System.Drawing.Point(500, 143);
+            this.delete.Location = new System.Drawing.Point(434, 163);
             this.delete.Name = "delete";
             this.delete.Size = new System.Drawing.Size(38, 37);
             this.delete.TabIndex = 20;
             this.delete.Text = "   ";
+            this.toolTip.SetToolTip(this.delete, "حذف");
             this.delete.UseVisualStyleBackColor = true;
             this.delete.Click += new System.EventHandler(this.delete_Click);
             // 
             // add
             // 
             this.add.Image = global::OOD.Properties.Resources.add;
-            this.add.Location = new System.Drawing.Point(500, 57);
+            this.add.Location = new System.Drawing.Point(434, 120);
             this.add.Name = "add";
             this.add.Size = new System.Drawing.Size(38, 37);
             this.add.TabIndex = 19;
             this.add.Text = "   ";
+            this.toolTip.SetToolTip(this.add, "اضافه‌کردن");
             this.add.UseVisualStyleBackColor = true;
             this.add.Click += new System.EventHandler(this.add_Click);
             // 
             // viewButton
             // 
             this.viewButton.Image = global::OOD.Properties.Resources.search;
-            this.viewButton.Location = new System.Drawing.Point(500, 186);
+            this.viewButton.Location = new System.Drawing.Point(434, 77);
             this.viewButton.Name = "viewButton";
             this.viewButton.Size = new System.Drawing.Size(38, 37);
             this.viewButton.TabIndex = 23;
             this.viewButton.Text = "   ";
+            this.toolTip.SetToolTip(this.viewButton, "مشاهده");
             this.viewButton.UseVisualStyleBackColor = true;
             this.viewButton.Click += new System.EventHandler(this.viewButton_Click);
             // 
@@ -132,7 +136,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(569, 310);
+            this.ClientSize = new System.Drawing.Size(487, 293);
             this.Controls.Add(this.viewButton);
             this.Controls.Add(this.Cancel);
             this.Controls.Add(this.edit);

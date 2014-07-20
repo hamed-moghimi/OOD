@@ -25,8 +25,8 @@ namespace OOD.EMS.UI.Execution
             shareBox.Text = rel.Contribution.ToString();
             DateBox.Text = rel.getDateString();
             userBox.Text = rel.RelUser.getName();
-            doc1.Text = genGoal.Title;
-            doc2.Text = execGoal.Title;
+            viewDoc1.Text = genGoal.Title;
+            viewDoc2.Text = execGoal.Title;
         }
 
         private void viewDoc1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)

@@ -34,8 +34,6 @@
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.viewDoc2 = new System.Windows.Forms.LinkLabel();
             this.viewDoc1 = new System.Windows.Forms.LinkLabel();
-            this.doc2 = new System.Windows.Forms.Label();
-            this.doc1 = new System.Windows.Forms.Label();
             this.Cancel = new System.Windows.Forms.Button();
             this.shareBox = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -46,7 +44,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(403, 98);
+            this.label4.Location = new System.Drawing.Point(261, 79);
             this.label4.Name = "label4";
             this.label4.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.label4.Size = new System.Drawing.Size(90, 24);
@@ -55,7 +53,7 @@
             // 
             // DateBox
             // 
-            this.DateBox.Location = new System.Drawing.Point(153, 62);
+            this.DateBox.Location = new System.Drawing.Point(12, 45);
             this.DateBox.Name = "DateBox";
             this.DateBox.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.DateBox.Size = new System.Drawing.Size(244, 24);
@@ -65,7 +63,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(456, 62);
+            this.label1.Location = new System.Drawing.Point(313, 45);
             this.label1.Name = "label1";
             this.label1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.label1.Size = new System.Drawing.Size(38, 24);
@@ -76,24 +74,21 @@
             // 
             this.groupBox2.Controls.Add(this.viewDoc2);
             this.groupBox2.Controls.Add(this.viewDoc1);
-            this.groupBox2.Controls.Add(this.doc2);
-            this.groupBox2.Controls.Add(this.doc1);
-            this.groupBox2.Location = new System.Drawing.Point(38, 148);
+            this.groupBox2.Location = new System.Drawing.Point(12, 121);
             this.groupBox2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.groupBox2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBox2.Size = new System.Drawing.Size(452, 130);
+            this.groupBox2.Size = new System.Drawing.Size(335, 101);
             this.groupBox2.TabIndex = 27;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "اهداف";
             // 
             // viewDoc2
             // 
-            this.viewDoc2.AutoSize = true;
-            this.viewDoc2.Location = new System.Drawing.Point(25, 72);
+            this.viewDoc2.Location = new System.Drawing.Point(19, 66);
             this.viewDoc2.Name = "viewDoc2";
-            this.viewDoc2.Size = new System.Drawing.Size(47, 24);
+            this.viewDoc2.Size = new System.Drawing.Size(311, 24);
             this.viewDoc2.TabIndex = 3;
             this.viewDoc2.TabStop = true;
             this.viewDoc2.Text = "مشاهده";
@@ -101,36 +96,17 @@
             // 
             // viewDoc1
             // 
-            this.viewDoc1.AutoSize = true;
-            this.viewDoc1.Location = new System.Drawing.Point(25, 38);
+            this.viewDoc1.Location = new System.Drawing.Point(19, 32);
             this.viewDoc1.Name = "viewDoc1";
-            this.viewDoc1.Size = new System.Drawing.Size(47, 24);
+            this.viewDoc1.Size = new System.Drawing.Size(311, 24);
             this.viewDoc1.TabIndex = 2;
             this.viewDoc1.TabStop = true;
             this.viewDoc1.Text = "مشاهده";
             this.viewDoc1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.viewDoc1_LinkClicked);
             // 
-            // doc2
-            // 
-            this.doc2.Location = new System.Drawing.Point(100, 69);
-            this.doc2.Name = "doc2";
-            this.doc2.Size = new System.Drawing.Size(317, 27);
-            this.doc2.TabIndex = 1;
-            this.doc2.Text = "سند ۲";
-            this.doc2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // doc1
-            // 
-            this.doc1.Location = new System.Drawing.Point(100, 38);
-            this.doc1.Name = "doc1";
-            this.doc1.Size = new System.Drawing.Size(317, 27);
-            this.doc1.TabIndex = 0;
-            this.doc1.Text = "سند ۱";
-            this.doc1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
             // Cancel
             // 
-            this.Cancel.Location = new System.Drawing.Point(38, 293);
+            this.Cancel.Location = new System.Drawing.Point(12, 230);
             this.Cancel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Cancel.Name = "Cancel";
             this.Cancel.Size = new System.Drawing.Size(105, 33);
@@ -141,7 +117,7 @@
             // 
             // shareBox
             // 
-            this.shareBox.Location = new System.Drawing.Point(152, 29);
+            this.shareBox.Location = new System.Drawing.Point(12, 10);
             this.shareBox.Name = "shareBox";
             this.shareBox.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.shareBox.Size = new System.Drawing.Size(244, 24);
@@ -151,16 +127,16 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(455, 29);
+            this.label3.Location = new System.Drawing.Point(274, 10);
             this.label3.Name = "label3";
             this.label3.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.label3.Size = new System.Drawing.Size(35, 24);
+            this.label3.Size = new System.Drawing.Size(77, 24);
             this.label3.TabIndex = 31;
-            this.label3.Text = "سهم:";
+            this.label3.Text = "سهم (درصد):";
             // 
             // userBox
             // 
-            this.userBox.Location = new System.Drawing.Point(152, 98);
+            this.userBox.Location = new System.Drawing.Point(12, 79);
             this.userBox.Name = "userBox";
             this.userBox.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.userBox.Size = new System.Drawing.Size(244, 24);
@@ -171,7 +147,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(533, 346);
+            this.ClientSize = new System.Drawing.Size(363, 272);
             this.Controls.Add(this.userBox);
             this.Controls.Add(this.shareBox);
             this.Controls.Add(this.label3);
@@ -183,7 +159,6 @@
             this.Name = "ViewGoalRelationForm";
             this.Text = "مشاهده‌ی ارتباط اهداف";
             this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -197,8 +172,6 @@
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.LinkLabel viewDoc2;
         private System.Windows.Forms.LinkLabel viewDoc1;
-        private System.Windows.Forms.Label doc2;
-        private System.Windows.Forms.Label doc1;
         private System.Windows.Forms.Button Cancel;
         private System.Windows.Forms.Label shareBox;
         private System.Windows.Forms.Label label3;

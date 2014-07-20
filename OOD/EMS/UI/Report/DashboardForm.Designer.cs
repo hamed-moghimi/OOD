@@ -367,7 +367,9 @@
             // 
             // refreshTimer
             // 
+            this.refreshTimer.Enabled = true;
             this.refreshTimer.Interval = 1000;
+            this.refreshTimer.Tick += new System.EventHandler(this.refreshTimer_Tick);
             // 
             // DashboardForm
             // 
@@ -380,6 +382,7 @@
             this.Name = "DashboardForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "نمایشگر بهنگام اطلاعات";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.DashboardForm_FormClosed);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);

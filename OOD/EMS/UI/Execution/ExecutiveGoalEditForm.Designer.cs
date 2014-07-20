@@ -44,17 +44,17 @@
             // 
             // titleBox
             // 
-            this.titleBox.Location = new System.Drawing.Point(37, 11);
+            this.titleBox.Location = new System.Drawing.Point(29, 12);
             this.titleBox.Name = "titleBox";
             this.titleBox.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.titleBox.Size = new System.Drawing.Size(380, 31);
+            this.titleBox.Size = new System.Drawing.Size(358, 31);
             this.titleBox.TabIndex = 22;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("B Nazanin", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.label2.Location = new System.Drawing.Point(439, 60);
+            this.label2.Location = new System.Drawing.Point(408, 54);
             this.label2.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label2.Name = "label2";
             this.label2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -67,7 +67,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("B Nazanin", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.label1.Location = new System.Drawing.Point(458, 14);
+            this.label1.Location = new System.Drawing.Point(429, 15);
             this.label1.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label1.Name = "label1";
             this.label1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -80,7 +80,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("B Nazanin", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.label5.Location = new System.Drawing.Point(424, 108);
+            this.label5.Location = new System.Drawing.Point(392, 96);
             this.label5.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label5.Name = "label5";
             this.label5.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -91,17 +91,17 @@
             // 
             // dateBox
             // 
-            this.dateBox.Location = new System.Drawing.Point(36, 60);
+            this.dateBox.Location = new System.Drawing.Point(29, 51);
             this.dateBox.Name = "dateBox";
             this.dateBox.ReadOnly = true;
             this.dateBox.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.dateBox.Size = new System.Drawing.Size(380, 31);
+            this.dateBox.Size = new System.Drawing.Size(358, 31);
             this.dateBox.TabIndex = 27;
             this.dateBox.Text = "۲۶ / ۲ / ۱۳۹۳";
             // 
             // responsibleBox
             // 
-            this.responsibleBox.Location = new System.Drawing.Point(104, 108);
+            this.responsibleBox.Location = new System.Drawing.Point(75, 93);
             this.responsibleBox.Name = "responsibleBox";
             this.responsibleBox.ReadOnly = true;
             this.responsibleBox.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -111,7 +111,7 @@
             // button2
             // 
             this.button2.Image = global::OOD.Properties.Resources.edit;
-            this.button2.Location = new System.Drawing.Point(36, 103);
+            this.button2.Location = new System.Drawing.Point(29, 88);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(40, 40);
             this.button2.TabIndex = 29;
@@ -121,7 +121,7 @@
             // 
             // Cancel
             // 
-            this.Cancel.Location = new System.Drawing.Point(36, 477);
+            this.Cancel.Location = new System.Drawing.Point(14, 478);
             this.Cancel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Cancel.Name = "Cancel";
             this.Cancel.Size = new System.Drawing.Size(105, 33);
@@ -132,7 +132,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(157, 477);
+            this.button1.Location = new System.Drawing.Point(125, 478);
             this.button1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(105, 33);
@@ -144,7 +144,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(436, 165);
+            this.label3.Location = new System.Drawing.Point(414, 134);
             this.label3.Name = "label3";
             this.label3.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.label3.Size = new System.Drawing.Size(60, 24);
@@ -153,18 +153,18 @@
             // 
             // dscp_box
             // 
-            this.dscp_box.Location = new System.Drawing.Point(37, 198);
+            this.dscp_box.Location = new System.Drawing.Point(14, 162);
             this.dscp_box.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dscp_box.Name = "dscp_box";
             this.dscp_box.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.dscp_box.Size = new System.Drawing.Size(452, 78);
+            this.dscp_box.Size = new System.Drawing.Size(461, 115);
             this.dscp_box.TabIndex = 30;
             this.dscp_box.Text = "";
             // 
             // attachmentPanel1
             // 
             this.attachmentPanel1.Changed = false;
-            this.attachmentPanel1.Location = new System.Drawing.Point(31, 283);
+            this.attachmentPanel1.Location = new System.Drawing.Point(14, 283);
             this.attachmentPanel1.Name = "attachmentPanel1";
             this.attachmentPanel1.Size = new System.Drawing.Size(461, 188);
             this.attachmentPanel1.TabIndex = 34;
@@ -173,7 +173,7 @@
             // ExecutiveGoalEditForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 24F);
-            this.ClientSize = new System.Drawing.Size(533, 524);
+            this.ClientSize = new System.Drawing.Size(488, 524);
             this.Controls.Add(this.attachmentPanel1);
             this.Controls.Add(this.Cancel);
             this.Controls.Add(this.button1);

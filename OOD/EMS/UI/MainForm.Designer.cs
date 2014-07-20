@@ -33,15 +33,17 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.NameTextBox = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(376, 49);
+            this.pictureBox1.Location = new System.Drawing.Point(363, 47);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(187, 278);
+            this.pictureBox1.Size = new System.Drawing.Size(143, 216);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 3;
             this.pictureBox1.TabStop = false;
@@ -50,7 +52,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("B Roya", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.label1.Location = new System.Drawing.Point(12, 130);
+            this.label1.Location = new System.Drawing.Point(24, 49);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(333, 53);
             this.label1.TabIndex = 4;
@@ -60,7 +62,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("B Roya", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.label2.Location = new System.Drawing.Point(216, 183);
+            this.label2.Location = new System.Drawing.Point(241, 135);
             this.label2.Name = "label2";
             this.label2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.label2.Size = new System.Drawing.Size(104, 70);
@@ -70,7 +72,7 @@
             // NameTextBox
             // 
             this.NameTextBox.Font = new System.Drawing.Font("B Roya", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.NameTextBox.Location = new System.Drawing.Point(33, 184);
+            this.NameTextBox.Location = new System.Drawing.Point(58, 136);
             this.NameTextBox.Name = "NameTextBox";
             this.NameTextBox.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.NameTextBox.Size = new System.Drawing.Size(189, 31);
@@ -79,10 +81,34 @@
             this.NameTextBox.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.NameTextBox.Click += new System.EventHandler(this.label3_Click);
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("B Roya", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.label3.Location = new System.Drawing.Point(286, 102);
+            this.label3.Name = "label3";
+            this.label3.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.label3.Size = new System.Drawing.Size(57, 24);
+            this.label3.TabIndex = 7;
+            this.label3.Text = "نسخه ۰.۱";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("B Roya", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.label4.Location = new System.Drawing.Point(3, 238);
+            this.label4.Name = "label4";
+            this.label4.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.label4.Size = new System.Drawing.Size(358, 24);
+            this.label4.TabIndex = 8;
+            this.label4.Text = "کلیه حقوق مادی و معنوی این نرم‌افزار متعلق به دانشگاه صنعتی شریف است";
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 24F);
-            this.ClientSize = new System.Drawing.Size(596, 356);
+            this.ClientSize = new System.Drawing.Size(521, 270);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.NameTextBox);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.pictureBox1);
@@ -94,6 +120,8 @@
             this.Controls.SetChildIndex(this.pictureBox1, 0);
             this.Controls.SetChildIndex(this.label2, 0);
             this.Controls.SetChildIndex(this.NameTextBox, 0);
+            this.Controls.SetChildIndex(this.label3, 0);
+            this.Controls.SetChildIndex(this.label4, 0);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -106,5 +134,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label NameTextBox;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
     }
 }

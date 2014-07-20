@@ -12,7 +12,7 @@ using OOD.EMS.Exceptions;
 
 namespace OOD.EMS.UI.Management
 {
-    public partial class AddLegalReqForm : TemplateForm
+    public partial class AddLegalReqForm : TemplateDialog
     {
         public string name { set; get; }
         public string dscp { set; get; }
@@ -20,7 +20,6 @@ namespace OOD.EMS.UI.Management
 
         public AddLegalReqForm(string name, string dscp)
         {
-            this.menu.Visible = false;
             InitializeComponent();
             this.name_box.Text = name;
             this.dscp_box.Text = dscp;

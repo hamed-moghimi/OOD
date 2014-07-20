@@ -14,7 +14,7 @@ using OOD.EMS.Exceptions;
 
 namespace OOD.EMS.UI.Management
 {
-    public partial class AddGeneralGoalsForm : TemplateForm
+    public partial class AddGeneralGoalsForm : TemplateDialog
     {
 
         public string name { set; get; }
@@ -24,13 +24,9 @@ namespace OOD.EMS.UI.Management
         
         public AddGeneralGoalsForm(string name, string dscp)
         {
-            this.menu.Visible = false;
             InitializeComponent();
             this.name_box.Text = name;
             this.dscp_box.Text = dscp;
-            
-            
-            
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -66,10 +62,5 @@ namespace OOD.EMS.UI.Management
             this.DialogResult = DialogResult.Cancel;
             this.Close();
         }
-
-        
     }
-
-    
-
 }

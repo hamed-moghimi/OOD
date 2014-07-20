@@ -43,7 +43,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(200, 19);
+            this.label1.Location = new System.Drawing.Point(190, 19);
             this.label1.Name = "label1";
             this.label1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.label1.Size = new System.Drawing.Size(64, 24);
@@ -52,7 +52,7 @@
             // 
             // username_box
             // 
-            this.username_box.Location = new System.Drawing.Point(12, 16);
+            this.username_box.Location = new System.Drawing.Point(12, 12);
             this.username_box.Name = "username_box";
             this.username_box.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.username_box.Size = new System.Drawing.Size(165, 31);
@@ -61,7 +61,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(182, 153);
+            this.label2.Location = new System.Drawing.Point(190, 127);
             this.label2.Name = "label2";
             this.label2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.label2.Size = new System.Drawing.Size(85, 24);
@@ -70,19 +70,21 @@
             // 
             // accessLevel
             // 
+            this.accessLevel.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.accessLevel.FormattingEnabled = true;
             this.accessLevel.Items.AddRange(new object[] {
             "کاربر میانی",
             "کاربر ارشد",
             "بازرس"});
-            this.accessLevel.Location = new System.Drawing.Point(11, 153);
+            this.accessLevel.Location = new System.Drawing.Point(12, 123);
             this.accessLevel.Name = "accessLevel";
+            this.accessLevel.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.accessLevel.Size = new System.Drawing.Size(165, 32);
             this.accessLevel.TabIndex = 6;
             // 
             // Cancel
             // 
-            this.Cancel.Location = new System.Drawing.Point(24, 199);
+            this.Cancel.Location = new System.Drawing.Point(34, 162);
             this.Cancel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Cancel.Name = "Cancel";
             this.Cancel.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -94,7 +96,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(145, 199);
+            this.button2.Location = new System.Drawing.Point(145, 162);
             this.button2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(105, 33);
@@ -105,7 +107,7 @@
             // 
             // familiy_box
             // 
-            this.familiy_box.Location = new System.Drawing.Point(12, 107);
+            this.familiy_box.Location = new System.Drawing.Point(12, 86);
             this.familiy_box.Name = "familiy_box";
             this.familiy_box.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.familiy_box.Size = new System.Drawing.Size(165, 31);
@@ -114,7 +116,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(189, 110);
+            this.label3.Location = new System.Drawing.Point(190, 93);
             this.label3.Name = "label3";
             this.label3.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.label3.Size = new System.Drawing.Size(75, 24);
@@ -123,7 +125,7 @@
             // 
             // name_box
             // 
-            this.name_box.Location = new System.Drawing.Point(12, 63);
+            this.name_box.Location = new System.Drawing.Point(12, 49);
             this.name_box.Name = "name_box";
             this.name_box.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.name_box.Size = new System.Drawing.Size(165, 31);
@@ -132,7 +134,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(236, 66);
+            this.label4.Location = new System.Drawing.Point(190, 56);
             this.label4.Name = "label4";
             this.label4.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.label4.Size = new System.Drawing.Size(26, 24);
@@ -143,7 +145,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(279, 243);
+            this.ClientSize = new System.Drawing.Size(279, 205);
             this.Controls.Add(this.name_box);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.familiy_box);
