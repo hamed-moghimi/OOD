@@ -8,7 +8,7 @@ using System.Windows.Forms;
 
 namespace OOD.EMS.UI.Report
 {
-    public partial class OverallReportForm : TemplateForm
+    public partial class OverallReportForm : TemplateDialog
     {
         public OverallReportForm()
         {
