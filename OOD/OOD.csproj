@@ -435,6 +435,12 @@
     <Compile Include="EMS\UI\Management\RelationManagementForm.Designer.cs">
       <DependentUpon>RelationManagementForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="EMS\UI\Management\SelectGeneralGoalForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EMS\UI\Management\SelectGeneralGoalForm.Designer.cs">
+      <DependentUpon>SelectGeneralGoalForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="EMS\UI\Management\ViewGeneralGoalForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -695,6 +701,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="EMS\UI\Management\RelationManagementForm.resx">
       <DependentUpon>RelationManagementForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EMS\UI\Management\SelectGeneralGoalForm.resx">
+      <DependentUpon>SelectGeneralGoalForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="EMS\UI\Management\ViewGeneralGoalForm.resx">
       <DependentUpon>ViewGeneralGoalForm.cs</DependentUpon>

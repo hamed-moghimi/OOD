@@ -73,16 +73,7 @@ namespace OOD.EMS.UI
                     Attachment attach = new Attachment(fileDialog.SafeFileName);
                     try
                     {
-                        // Open file for reading
-                        System.IO.FileStream _FileStream =
-                           new System.IO.FileStream(attach.path + @"\" + attach.Title, System.IO.FileMode.Create,
-                                                    System.IO.FileAccess.Write);
-                        // Writes a block of bytes to this stream using data from
-                        // a byte array.
-                        _FileStream.Write(binaryData, 0, binaryData.Length);
-
-                        // close file stream
-                        _FileStream.Close();
+                        attach.save(binaryData);
                         attachmentGrid.Rows.Add(new Object[] { attach.Filename, attach.Title });
                         _attachments.Add(attach.Title, attach);
                         newlyAdded.Add(attach.Title, attach);
@@ -123,7 +114,7 @@ namespace OOD.EMS.UI
             if (attach == null) return;
             FileInfo fileInfo = new FileInfo(attach.path + @"\" + attach.Title);
             string fileExtension = fileInfo.Extension;
-            byte[] binaryData = File.ReadAllBytes(attach.path + @"\" + attach.Title);
+            
 
             using (SaveFileDialog saveFileDialog1 = new SaveFileDialog())
             {
@@ -135,7 +126,7 @@ namespace OOD.EMS.UI
 
                 if (saveFileDialog1.ShowDialog() == DialogResult.OK)
                 {
-                    File.WriteAllBytes(saveFileDialog1.FileName, binaryData);
+                    attach.download(saveFileDialog1.FileName);
                 }
             }
         }
