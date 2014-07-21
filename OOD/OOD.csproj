@@ -503,12 +503,6 @@
     <Compile Include="EMS\UI\Report\ScheduleReportResultForm.Designer.cs">
       <DependentUpon>ScheduleReportResultForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="EMS\UI\Report\TimeReportForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="EMS\UI\Report\TimeReportForm.Designer.cs">
-      <DependentUpon>TimeReportForm.cs</DependentUpon>
-    </Compile>
     <Compile Include="EMS\UI\TemplateDialog.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -736,9 +730,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="EMS\UI\Report\ScheduleReportResultForm.resx">
       <DependentUpon>ScheduleReportResultForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="EMS\UI\Report\TimeReportForm.resx">
-      <DependentUpon>TimeReportForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="EMS\UI\TemplateDialog.resx">
       <DependentUpon>TemplateDialog.cs</DependentUpon>

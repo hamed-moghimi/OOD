@@ -106,7 +106,14 @@ namespace OOD.EMS.UI.Execution
             TreeNode selected = structureTree.SelectedNode;
             if (selected != null)
             {
+
                 Department dept = getDepartment(selected);
+                if (dept.Equals(OrganizationStructure.getInstance().Root))
+                {
+                    MessageBox.Show("سازمان نمی‌تواند حذف شود", "خطا", MessageBoxButtons.OK, MessageBoxIcon.Warning,
+                    MessageBoxDefaultButton.Button1, MessageBoxOptions.RightAlign | MessageBoxOptions.RtlReading);
+                    return;
+                }
                 Department resp = dept.getResponsible();
                 if (resp != null)
                 {
@@ -185,7 +192,15 @@ namespace OOD.EMS.UI.Execution
             if (structureTree.SelectedNode != null)
             {
                 Department dept = getDepartment(structureTree.SelectedNode);
-                (new ViewDepartmentForm(dept)).ShowDialog();
+                if (dept.Equals(OrganizationStructure.getInstance().Root))
+                {
+                    MessageBox.Show("سازمان نمی‌تواند برای مشاهده انتخاب شود", "خطا", MessageBoxButtons.OK, MessageBoxIcon.Warning,
+                    MessageBoxDefaultButton.Button1, MessageBoxOptions.RightAlign | MessageBoxOptions.RtlReading);
+                }
+                else
+                {
+                    (new ViewDepartmentForm(dept)).ShowDialog();
+                }
             }
         }
     }

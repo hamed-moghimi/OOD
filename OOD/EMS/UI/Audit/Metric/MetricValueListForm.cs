@@ -82,8 +82,10 @@ namespace OOD.EMS.UI.Audit.Metric
             var res = MessageBox.Show("با پایان حسابرسی، تمامی مقادیر واردشده در سیستم ثبت شده و دیگر قادر به تغییر یا حذف آن‌ها نیستید\nآیا مطمئن هستید که می‌خواهید به حسابرسی پایان دهید؟",
                 "تایید", MessageBoxButtons.YesNo, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button2, MessageBoxOptions.RtlReading | MessageBoxOptions.RightAlign);
             if (res == System.Windows.Forms.DialogResult.Yes)
+            {
                 MetricValueStorage.getInstance().addAll(audit.all());
-            this.Close();
+                this.Close();
+            }
         }
     }
 }
