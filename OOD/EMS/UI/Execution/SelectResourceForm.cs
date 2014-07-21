@@ -47,31 +47,34 @@ namespace OOD.EMS.UI.Execution
 
         private void selectBtn_Click(object sender, EventArgs e)
         {
-            String name = (string)dataGridView1.Rows[dataGridView1.SelectedRows[0].Index].Cells[0].Value;
-            Resource r = ResourceStorage.getInstance().all().Find(x => x.Title.Equals(name));
-            try
+            if (dataGridView1.SelectedRows.Count > 0)
             {
-                int amount = Convert.ToInt32(convert(cont_box.Text));
-                DateTime fromDate = fromDateBox.Value;
-                DateTime toDate = toDateBox.Value;
-                if (toDate < fromDate)
+                String name = (string)dataGridView1.Rows[dataGridView1.SelectedRows[0].Index].Cells[0].Value;
+                Resource r = ResourceStorage.getInstance().all().Find(x => x.Title.Equals(name));
+                try
                 {
-                    MessageBox.Show("بازه‌ی زمانی صحیح نمی‌باشد");
+                    int amount = Convert.ToInt32(convert(cont_box.Text));
+                    DateTime fromDate = fromDateBox.Value;
+                    DateTime toDate = toDateBox.Value;
+                    if (toDate < fromDate)
+                    {
+                        MessageBox.Show("بازه‌ی زمانی صحیح نمی‌باشد");
+                    }
+                    alloc = new Allocation(fromDate, toDate, r, null, amount);
+                    if (ResourceAllocator.getInstance().isConsistent(alloc))
+                    {
+                        this.DialogResult = DialogResult.OK;
+                        this.Close();
+                    }
+                    else
+                    {
+                        MessageBox.Show("منبع کافی نمی‌باشد");
+                    }
                 }
-                alloc = new Allocation(fromDate, toDate, r, null, amount);
-                if (ResourceAllocator.getInstance().isConsistent(alloc))
+                catch (Exception e2)
                 {
-                    this.DialogResult = DialogResult.OK;
-                    this.Close();
+                    MessageBox.Show(new IncompleteFormException().Message);
                 }
-                else
-                {
-                    MessageBox.Show("منبع کافی نمی‌باشد");
-                }
-            }
-            catch (Exception e2)
-            {
-                MessageBox.Show(new IncompleteFormException().Message);
             }
         }
 

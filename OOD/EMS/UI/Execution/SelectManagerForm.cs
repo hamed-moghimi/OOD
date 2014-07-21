@@ -30,7 +30,7 @@ namespace OOD.EMS.UI.Execution
 
         private void ok_Click(object sender, EventArgs e)
         {
-            if (managerList.SelectedRows == null)
+            if (managerList.SelectedRows.Count == 0)
             {
                 MessageBox.Show(new IncompleteFormException().Message);
             }

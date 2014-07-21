@@ -39,12 +39,23 @@ namespace OOD.EMS.UI.Execution
 
         private void deleteButton_Click(object sender, EventArgs e)
         {
-            DialogResult res = ask_confirm();
-            if (res == DialogResult.Yes)
+            if (dataGridView1.SelectedRows.Count > 0)
             {
-                String title = (string)dataGridView1.Rows[dataGridView1.SelectedRows[0].Index].Cells[0].Value;
-                ResourceStorage.getInstance().all().RemoveAll(x => x.Title.Equals(title));
-                load_resources();
+                DialogResult res = ask_confirm();
+                if (res == DialogResult.Yes)
+                {
+                    String title = (string)dataGridView1.Rows[dataGridView1.SelectedRows[0].Index].Cells[0].Value;
+                    ResourceStorage.getInstance().all().RemoveAll(x => x.Title.Equals(title));
+                    AllocationStorage.getInstance().all().RemoveAll(x => x.AllocResource.Title.Equals(title));
+                    foreach (ExecutiveGoal goal in ExecutiveGoalStorage.getInstance().all())
+                    {
+                        if (goal.program != null)
+                        {
+                            goal.program.Resources.RemoveAll(x => x.AllocResource.Title.Equals(title));
+                        }
+                    }
+                    load_resources();
+                }
             }
         }
 
@@ -52,17 +63,20 @@ namespace OOD.EMS.UI.Execution
 
         private void editButton_Click(object sender, EventArgs e)
         {
-            String title = (string)dataGridView1.Rows[dataGridView1.SelectedRows[0].Index].Cells[0].Value;
-            Resource prev = ResourceStorage.getInstance().all().Find(x => x.Title.Equals(title));
-            ResourceEditForm f = new ResourceEditForm(true, new Object[]{prev.Title, prev.Amount.ToString(), prev.Description});
-            DialogResult res = f.ShowDialog();
-            if (res == DialogResult.OK)
+            if (dataGridView1.SelectedRows.Count > 0)
             {
-                prev.Title = (string)f.Resource[0];
-                prev.Amount = Convert.ToInt32(convert((string)f.Resource[1]));
-                prev.Description = (string)f.Resource[2];
+                String title = (string)dataGridView1.Rows[dataGridView1.SelectedRows[0].Index].Cells[0].Value;
+                Resource prev = ResourceStorage.getInstance().all().Find(x => x.Title.Equals(title));
+                ResourceEditForm f = new ResourceEditForm(true, new Object[] { prev.Title, prev.Amount.ToString(), prev.Description });
+                DialogResult res = f.ShowDialog();
+                if (res == DialogResult.OK)
+                {
+                    prev.Title = (string)f.Resource[0];
+                    prev.Amount = Convert.ToInt32(convert((string)f.Resource[1]));
+                    prev.Description = (string)f.Resource[2];
+                }
+                load_resources();
             }
-            load_resources();
         }
 
         private void addButton_Click(object sender, EventArgs e)
@@ -84,10 +98,13 @@ namespace OOD.EMS.UI.Execution
 
         private void button2_Click(object sender, EventArgs e)
         {
-            String title = (string)dataGridView1.Rows[dataGridView1.SelectedRows[0].Index].Cells[0].Value;
-            Resource prev = ResourceStorage.getInstance().all().Find(x => x.Title.Equals(title));
-            ResourceEditForm f = new ResourceEditForm(false, new Object[] { prev.Title, prev.Amount.ToString(), prev.Description });
-            f.ShowDialog();
+            if (dataGridView1.SelectedRows.Count > 0)
+            {
+                String title = (string)dataGridView1.Rows[dataGridView1.SelectedRows[0].Index].Cells[0].Value;
+                Resource prev = ResourceStorage.getInstance().all().Find(x => x.Title.Equals(title));
+                ResourceEditForm f = new ResourceEditForm(false, new Object[] { prev.Title, prev.Amount.ToString(), prev.Description });
+                f.ShowDialog();
+            }
         }
     }
 }

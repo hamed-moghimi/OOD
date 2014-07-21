@@ -105,11 +105,22 @@ namespace OOD.EMS.UI.Execution
             TreeNode selected = structureTree.SelectedNode;
             if (selected != null)
             {
-                OrganizationStructure.getInstance().remove(getDepartment(selected));
-                structureTree.Nodes.Remove(selected);
+                Department dept = getDepartment(selected);
+                Department resp = dept.getResponsible();
+                if (resp != null)
+                {
+                    MessageBox.Show("بخش " + resp.Name + " مسئول یک هدف اجرایی یا مسئولیت است و نمی‌توان آن را حذف کرد");
+                }
+                else
+                {
+                    OrganizationStructure.getInstance().remove(getDepartment(selected));
+                    structureTree.Nodes.Remove(selected);
+                }
             }
             
         }
+
+        
 
         private Department getDepartment(TreeNode node)
         {

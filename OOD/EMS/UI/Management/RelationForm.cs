@@ -83,24 +83,33 @@ namespace OOD.EMS.UI.Management
             
             if (selected.Text == "هدف کلان - الزام قانونی")
             {
-                String firstName = (string)goalLegalGrid.Rows[goalLegalGrid.SelectedRows[0].Index].Cells[0].Value;
-                String secondName = (string)goalLegalGrid.Rows[goalLegalGrid.SelectedRows[0].Index].Cells[1].Value;
-                rel = GeneralGoal_LegalConstraintRelationStorage.getInstance().all().Find(x => x.GenGoal.Title.Equals(firstName)
-                       && x.LegConst.Title.Equals(secondName));
+                if (goalLegalGrid.SelectedRows.Count > 0)
+                {
+                    String firstName = (string)goalLegalGrid.Rows[goalLegalGrid.SelectedRows[0].Index].Cells[0].Value;
+                    String secondName = (string)goalLegalGrid.Rows[goalLegalGrid.SelectedRows[0].Index].Cells[1].Value;
+                    rel = GeneralGoal_LegalConstraintRelationStorage.getInstance().all().Find(x => x.GenGoal.Title.Equals(firstName)
+                           && x.LegConst.Title.Equals(secondName));
+                }
             }
             else if (selected.Text == "هدف کلان - تاثیر زیست‌محیطی")
             {
-                String firstName = (string)goalEffectGrid.Rows[goalEffectGrid.SelectedRows[0].Index].Cells[0].Value;
-                String secondName = (string)goalEffectGrid.Rows[goalEffectGrid.SelectedRows[0].Index].Cells[1].Value;
-                rel = GeneralGoal_EnvironEffectRelationStorage.getInstance().all().Find(x => x.GenGoal.Title.Equals(firstName)
-                       && x.EnvEffect.Title.Equals(secondName));
+                if (goalEffectGrid.SelectedRows.Count > 0)
+                {
+                    String firstName = (string)goalEffectGrid.Rows[goalEffectGrid.SelectedRows[0].Index].Cells[0].Value;
+                    String secondName = (string)goalEffectGrid.Rows[goalEffectGrid.SelectedRows[0].Index].Cells[1].Value;
+                    rel = GeneralGoal_EnvironEffectRelationStorage.getInstance().all().Find(x => x.GenGoal.Title.Equals(firstName)
+                           && x.EnvEffect.Title.Equals(secondName));
+                }
             }
             else if (selected.Text == "الزام قانونی - تاثیر زیست‌محیطی")
             {
-                String firstName = (string)legalEffectGrid.Rows[legalEffectGrid.SelectedRows[0].Index].Cells[0].Value;
-                String secondName = (string)legalEffectGrid.Rows[legalEffectGrid.SelectedRows[0].Index].Cells[1].Value;
-                rel = LegalConstraint_EnvironEffectRelationStorage.getInstance().all().Find(x => x.LegConst.Title.Equals(firstName)
-                       && x.EnvEffect.Title.Equals(secondName));
+                if (legalEffectGrid.SelectedRows.Count > 0)
+                {
+                    String firstName = (string)legalEffectGrid.Rows[legalEffectGrid.SelectedRows[0].Index].Cells[0].Value;
+                    String secondName = (string)legalEffectGrid.Rows[legalEffectGrid.SelectedRows[0].Index].Cells[1].Value;
+                    rel = LegalConstraint_EnvironEffectRelationStorage.getInstance().all().Find(x => x.LegConst.Title.Equals(firstName)
+                           && x.EnvEffect.Title.Equals(secondName));
+                }
             }
 
             (new ViewRelationForm(rel)).ShowDialog();

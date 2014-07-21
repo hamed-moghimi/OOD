@@ -62,19 +62,22 @@ namespace OOD.EMS.UI.Management
 
         private void view_Click(object sender, EventArgs e)
         {
-            String name = (string)dataGridView1.Rows[dataGridView1.SelectedRows[0].Index].Cells[0].Value;
-            EnvironEffect goal = null;
-            try
+            if (dataGridView1.SelectedRows.Count > 0)
             {
-                goal = EnvironEffectStorage.getInstance().all().Find(x => x.Title.Equals(name));
-            }
-            catch (Exception)
-            {
-            }
+                String name = (string)dataGridView1.Rows[dataGridView1.SelectedRows[0].Index].Cells[0].Value;
+                EnvironEffect goal = null;
+                try
+                {
+                    goal = EnvironEffectStorage.getInstance().all().Find(x => x.Title.Equals(name));
+                }
+                catch (Exception)
+                {
+                }
 
-            if (goal != null)
-            {
-                (new ViewEffectForm(goal)).ShowDialog();
+                if (goal != null)
+                {
+                    (new ViewEffectForm(goal)).ShowDialog();
+                }
             }
         }
 

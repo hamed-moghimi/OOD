@@ -52,13 +52,16 @@ namespace OOD.EMS.UI.Execution
 
         private void editButton_Click(object sender, EventArgs e)
         {
-            String genName = (string)dataGridView1.Rows[dataGridView1.SelectedRows[0].Index].Cells[0].Value;
-            String execName = (string)dataGridView1.Rows[dataGridView1.SelectedRows[0].Index].Cells[1].Value;
-            GeneralGoal genGoal = GeneralGoalStorage.getInstance().all().Find(x => x.Title.Equals(genName));
-            ExecutiveGoal execGoal = ExecutiveGoalStorage.getInstance().all().Find(x => x.Title.Equals(execName));
-            GeneralGoal_ExecutiveGoalRelation rel = GeneralGoal_ExecutiveGoalRelationStorage.getInstance().all()
-                .Find(x => x.GenGoal.Equals(genGoal) && x.ExecGoal.Equals(execGoal));
-            (new ViewGoalRelationForm(rel)).ShowDialog();
+            if (dataGridView1.SelectedRows.Count > 0)
+            {
+                String genName = (string)dataGridView1.Rows[dataGridView1.SelectedRows[0].Index].Cells[0].Value;
+                String execName = (string)dataGridView1.Rows[dataGridView1.SelectedRows[0].Index].Cells[1].Value;
+                GeneralGoal genGoal = GeneralGoalStorage.getInstance().all().Find(x => x.Title.Equals(genName));
+                ExecutiveGoal execGoal = ExecutiveGoalStorage.getInstance().all().Find(x => x.Title.Equals(execName));
+                GeneralGoal_ExecutiveGoalRelation rel = GeneralGoal_ExecutiveGoalRelationStorage.getInstance().all()
+                    .Find(x => x.GenGoal.Equals(genGoal) && x.ExecGoal.Equals(execGoal));
+                (new ViewGoalRelationForm(rel)).ShowDialog();
+            }
             
         }
     }

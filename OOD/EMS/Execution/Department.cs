@@ -48,5 +48,34 @@ namespace OOD.EMS.Execution
             return Name.Equals(dept.Name) && ((Supervisor == null && dept.Supervisor == null) ||
                 (Supervisor != null && dept.Supervisor != null && Supervisor.Equals(dept.Supervisor)));
         }
+
+        public Department getResponsible()
+        {
+            foreach (ExecutiveGoal goal in ExecutiveGoalStorage.getInstance().all())
+            {
+                if (goal.Manager.Equals(this))
+                {
+                    return this;
+                }
+            }
+            foreach (EMS.Execution.Task t in TaskStorage.getInstance().all())
+            {
+                if (t.department.Equals(this))
+                {
+                    return this;
+                }
+            }
+
+            foreach (Department child in getChildren())
+            {
+                Department res = child.getResponsible();
+                if (res != null)
+                {
+                    return res;
+                }
+            }
+            
+            return null;
+        }
     }
 }

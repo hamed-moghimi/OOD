@@ -82,11 +82,14 @@ namespace OOD.EMS.UI.Execution
 
         private void deleteButton_Click(object sender, EventArgs e)
         {
-            String name = (string)taskGrid.Rows[taskGrid.SelectedRows[0].Index].Cells[1].Value;
-            List<Task> tasks = program.getTasks();
-            Task target = tasks.Find(x => x.Title.Equals(name));
-            program.remove(target);
-            load_tasks();
+            if (taskGrid.SelectedRows.Count > 0)
+            {
+                String name = (string)taskGrid.Rows[taskGrid.SelectedRows[0].Index].Cells[1].Value;
+                List<Task> tasks = program.getTasks();
+                Task target = tasks.Find(x => x.Title.Equals(name));
+                program.remove(target);
+                load_tasks();
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -104,13 +107,16 @@ namespace OOD.EMS.UI.Execution
 
         private void button2_Click(object sender, EventArgs e)
         {
-            String name = (string)resourceGrid.Rows[resourceGrid.SelectedRows[0].Index].Cells[0].Value;
-            DateTime from = Convert.ToDateTime((string)resourceGrid.Rows[resourceGrid.SelectedRows[0].Index].Cells[1].Value);
-            DateTime to = Convert.ToDateTime((string)resourceGrid.Rows[resourceGrid.SelectedRows[0].Index].Cells[2].Value);
-            List<Resource> rs = program.getResources();
-            Resource target = rs.Find(x => x.Title.Equals(name));
-            program.removeResource(target, from, to);
-            load_allocs();
+            if (resourceGrid.SelectedRows.Count > 0)
+            {
+                String name = (string)resourceGrid.Rows[resourceGrid.SelectedRows[0].Index].Cells[0].Value;
+                DateTime from = Convert.ToDateTime((string)resourceGrid.Rows[resourceGrid.SelectedRows[0].Index].Cells[1].Value);
+                DateTime to = Convert.ToDateTime((string)resourceGrid.Rows[resourceGrid.SelectedRows[0].Index].Cells[2].Value);
+                List<Resource> rs = program.getResources();
+                Resource target = rs.Find(x => x.Title.Equals(name));
+                program.removeResource(target, from, to);
+                load_allocs();
+            }
         }
 
         private void selectBtn_Click(object sender, EventArgs e)

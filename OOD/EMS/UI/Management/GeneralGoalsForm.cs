@@ -90,19 +90,22 @@ namespace OOD.EMS.UI.Management
 
         private void view_Click(object sender, EventArgs e)
         {
-            String name = (string)dataGridView1.Rows[dataGridView1.SelectedRows[0].Index].Cells[0].Value;
-            GeneralGoal goal = null;
-            try
+            if (dataGridView1.SelectedRows.Count > 0)
             {
-                goal = GeneralGoalStorage.getInstance().all().Find(x => x.Title.Equals(name)); 
-            }
-            catch (Exception)
-            {
-            }
-            
-            if (goal != null)
-            {
-                (new ViewGeneralGoalForm(goal)).ShowDialog();
+                String name = (string)dataGridView1.Rows[dataGridView1.SelectedRows[0].Index].Cells[0].Value;
+                GeneralGoal goal = null;
+                try
+                {
+                    goal = GeneralGoalStorage.getInstance().all().Find(x => x.Title.Equals(name));
+                }
+                catch (Exception)
+                {
+                }
+
+                if (goal != null)
+                {
+                    (new ViewGeneralGoalForm(goal)).ShowDialog();
+                }
             }
         }
     }

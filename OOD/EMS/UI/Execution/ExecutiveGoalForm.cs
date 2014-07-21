@@ -44,9 +44,12 @@ namespace OOD.EMS.UI.Execution
 
         private void editButton_Click_1(object sender, EventArgs e)
         {
-            String name = (String)dataGridView1.Rows[dataGridView1.SelectedRows[0].Index].Cells[0].Value;
-            ExecutiveGoal goal = ExecutiveGoalStorage.getInstance().all().Find(x => x.Title.Equals(name));
-            (new ExecutiveGoalEditForm(false, goal)).ShowDialog();
+            if (dataGridView1.SelectedRows.Count > 0)
+            {
+                String name = (String)dataGridView1.Rows[dataGridView1.SelectedRows[0].Index].Cells[0].Value;
+                ExecutiveGoal goal = ExecutiveGoalStorage.getInstance().all().Find(x => x.Title.Equals(name));
+                (new ExecutiveGoalEditForm(false, goal)).ShowDialog();
+            }
         }
 
         private void Cancel_Click(object sender, EventArgs e)

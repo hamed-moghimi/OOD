@@ -36,21 +36,24 @@ namespace OOD.EMS.UI.Users
 
         private void delete_Click(object sender, EventArgs e)
         {
-            String username = (String)userGrid.Rows[userGrid.SelectedRows[0].Index].Cells[0].Value;
-            User user = UserStorage.getInstance().all().Find(x => x.Username.Equals(username));
-            if (user != null)
+            if (userGrid.SelectedRows.Count > 0)
             {
-                if (user.ALevel is Administrator)
+                String username = (String)userGrid.Rows[userGrid.SelectedRows[0].Index].Cells[0].Value;
+                User user = UserStorage.getInstance().all().Find(x => x.Username.Equals(username));
+                if (user != null)
                 {
-                    MessageBox.Show("مدیر سیستم قابل حذف نیست");
-                }
-                else
-                {
-                    DialogResult res = ask_confirm();
-                    if (res == DialogResult.Yes)
+                    if (user.ALevel is Administrator)
                     {
-                        UserStorage.getInstance().remove(user);
-                        load_users();
+                        MessageBox.Show("مدیر سیستم قابل حذف نیست");
+                    }
+                    else
+                    {
+                        DialogResult res = ask_confirm();
+                        if (res == DialogResult.Yes)
+                        {
+                            UserStorage.getInstance().remove(user);
+                            load_users();
+                        }
                     }
                 }
             }
@@ -65,18 +68,21 @@ namespace OOD.EMS.UI.Users
 
         private void edit_Click(object sender, EventArgs e)
         {
-            String username = (String)userGrid.Rows[userGrid.SelectedRows[0].Index].Cells[0].Value;
-            User user = UserStorage.getInstance().all().Find(x => x.Username.Equals(username));
-            if (user != null)
+            if (userGrid.SelectedRows.Count > 0)
             {
-                if (user.ALevel is Administrator)
+                String username = (String)userGrid.Rows[userGrid.SelectedRows[0].Index].Cells[0].Value;
+                User user = UserStorage.getInstance().all().Find(x => x.Username.Equals(username));
+                if (user != null)
                 {
-                    MessageBox.Show("مدیر سیستم قابل تغییر نیست");
-                }
-                else 
-                { 
-                    (new EditUserForm(user)).ShowDialog();
-                    load_users();
+                    if (user.ALevel is Administrator)
+                    {
+                        MessageBox.Show("مدیر سیستم قابل تغییر نیست");
+                    }
+                    else
+                    {
+                        (new EditUserForm(user)).ShowDialog();
+                        load_users();
+                    }
                 }
             }
         }
@@ -88,12 +94,14 @@ namespace OOD.EMS.UI.Users
 
         private void viewButton_Click(object sender, EventArgs e)
         {
-            String username = (String)userGrid.Rows[userGrid.SelectedRows[0].Index].Cells[0].Value;
-            User user = UserStorage.getInstance().all().Find(x => x.Username.Equals(username));
-            if (user != null)
+            if (userGrid.SelectedRows.Count > 0)
             {
-               (new ViewUserForm(user)).ShowDialog();
-                 
+                String username = (String)userGrid.Rows[userGrid.SelectedRows[0].Index].Cells[0].Value;
+                User user = UserStorage.getInstance().all().Find(x => x.Username.Equals(username));
+                if (user != null)
+                {
+                    (new ViewUserForm(user)).ShowDialog();
+                }
             }
         }
     }
