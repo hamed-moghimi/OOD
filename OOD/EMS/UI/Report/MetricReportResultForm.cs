@@ -37,6 +37,11 @@ namespace OOD.EMS.UI.Report
                 i = (i + 1) % colors.Count();
                 foreach (var value in values)
                     series.Points.AddXY(value.Date, value.Value);
+                foreach (DataPoint p in series.Points)
+                {
+                    p.MarkerStyle = MarkerStyle.Circle;
+                    p.MarkerSize = 5;
+                }
             }
         }
     }

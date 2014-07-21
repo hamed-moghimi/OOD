@@ -49,7 +49,7 @@ namespace OOD.EMS.UI.Audit.Audit
         private void OK_Click(object sender, EventArgs e)
         {
             // TODO: validate
-            var progress = Int32.Parse(progressBox.Text);
+            var progress = Int32.Parse(convert(progressBox.Text));
             //////
             Audit = new TaskAudit(task, Authentication.getInstance().ActiveUser,
                 descBox.Text, progress, attachmentPanel1.getAttachments());

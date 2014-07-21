@@ -27,6 +27,12 @@ namespace OOD
             }
             Storage.getInstance().load(path);
             Application.ApplicationExit += new EventHandler(OnApplicationExit);
+
+            MessageBoxManager.OK = "تایید";
+            MessageBoxManager.Cancel = "انصراف";
+            MessageBoxManager.Yes = "بلی";
+            MessageBoxManager.No = "خیر";
+            MessageBoxManager.Register();
             
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
