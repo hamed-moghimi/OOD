@@ -56,7 +56,7 @@
             this.Cancel.Location = new System.Drawing.Point(29, 130);
             this.Cancel.Name = "Cancel";
             this.Cancel.Size = new System.Drawing.Size(100, 30);
-            this.Cancel.TabIndex = 3;
+            this.Cancel.TabIndex = 5;
             this.Cancel.Text = "انصراف";
             this.Cancel.UseVisualStyleBackColor = true;
             this.Cancel.Click += new System.EventHandler(this.Cancel_Click);
@@ -78,7 +78,7 @@
             this.valueBox.Name = "valueBox";
             this.valueBox.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.valueBox.Size = new System.Drawing.Size(102, 31);
-            this.valueBox.TabIndex = 6;
+            this.valueBox.TabIndex = 2;
             // 
             // label2
             // 
@@ -97,8 +97,9 @@
             this.metricBox.FormattingEnabled = true;
             this.metricBox.Location = new System.Drawing.Point(12, 12);
             this.metricBox.Name = "metricBox";
+            this.metricBox.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.metricBox.Size = new System.Drawing.Size(225, 32);
-            this.metricBox.TabIndex = 7;
+            this.metricBox.TabIndex = 1;
             this.metricBox.SelectedIndexChanged += new System.EventHandler(this.metricBox_SelectedIndexChanged);
             // 
             // unitBox
@@ -120,7 +121,7 @@
             this.dateBox.Name = "dateBox";
             this.dateBox.ShowTime = false;
             this.dateBox.Size = new System.Drawing.Size(115, 27);
-            this.dateBox.TabIndex = 9;
+            this.dateBox.TabIndex = 3;
             this.dateBox.Text = "persianDateTimePicker1";
             this.dateBox.Value = ((FreeControls.PersianDate)(resources.GetObject("dateBox.Value")));
             // 
