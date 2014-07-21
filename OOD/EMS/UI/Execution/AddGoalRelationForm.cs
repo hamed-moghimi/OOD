@@ -46,28 +46,31 @@ namespace OOD.EMS.UI.Execution
 
         private void add_Click(object sender, EventArgs e)
         {
-            String genName = (string)genGrid.Rows[genGrid.SelectedRows[0].Index].Cells[0].Value;
-            String execName = (string)execGrid.Rows[execGrid.SelectedRows[0].Index].Cells[0].Value;
-            GeneralGoal genGoal = GeneralGoalStorage.getInstance().all().Find(x => x.Title.Equals(genName));
-            ExecutiveGoal execGoal = ExecutiveGoalStorage.getInstance().all().Find(x => x.Title.Equals(execName));
-            try
+            if (genGrid.SelectedRows.Count > 0 && execGrid.SelectedRows.Count > 0)
             {
-                GeneralGoal_ExecutiveGoalRelation grel =
-                    new GeneralGoal_ExecutiveGoalRelation(genGoal, execGoal, Convert.ToInt32(convert(shareBox.Text)));
-                if (GeneralGoal_ExecutiveGoalRelationStorage.getInstance().all().Contains(grel))
+                String genName = (string)genGrid.Rows[genGrid.SelectedRows[0].Index].Cells[0].Value;
+                String execName = (string)execGrid.Rows[execGrid.SelectedRows[0].Index].Cells[0].Value;
+                GeneralGoal genGoal = GeneralGoalStorage.getInstance().all().Find(x => x.Title.Equals(genName));
+                ExecutiveGoal execGoal = ExecutiveGoalStorage.getInstance().all().Find(x => x.Title.Equals(execName));
+                try
                 {
-                    MessageBox.Show(new RelationExistsException().Message);
+                    GeneralGoal_ExecutiveGoalRelation grel =
+                        new GeneralGoal_ExecutiveGoalRelation(genGoal, execGoal, Convert.ToInt32(convert(shareBox.Text)));
+                    if (GeneralGoal_ExecutiveGoalRelationStorage.getInstance().all().Contains(grel))
+                    {
+                        MessageBox.Show(new RelationExistsException().Message);
+                    }
+                    else
+                    {
+                        GeneralGoal_ExecutiveGoalRelationStorage.getInstance().create(grel);
+                        this.DialogResult = DialogResult.OK;
+                        this.Close();
+                    }
                 }
-                else
+                catch (Exception e2)
                 {
-                    GeneralGoal_ExecutiveGoalRelationStorage.getInstance().create(grel);
-                    this.DialogResult = DialogResult.OK;
-                    this.Close();
+                    MessageBox.Show(new IncompleteFormException().Message);
                 }
-            }
-            catch (Exception e2)
-            {
-                MessageBox.Show(new IncompleteFormException().Message);
             }
         }
     }

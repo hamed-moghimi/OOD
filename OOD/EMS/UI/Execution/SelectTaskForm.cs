@@ -51,11 +51,14 @@ namespace OOD.EMS.UI.Execution
             }
             try
             {
-                String name = (string)dataGridView1.Rows[dataGridView1.SelectedRows[0].Index].Cells[0].Value;
-                Cont = Convert.ToInt32(convert(cont_box.Text));
-                goal = TaskStorage.getInstance().all().Find(x => x.Title.Equals(name));
-                this.DialogResult = DialogResult.OK;
-                this.Close();
+                if (dataGridView1.SelectedRows.Count > 0)
+                {
+                    String name = (string)dataGridView1.Rows[dataGridView1.SelectedRows[0].Index].Cells[0].Value;
+                    Cont = Convert.ToInt32(convert(cont_box.Text));
+                    goal = TaskStorage.getInstance().all().Find(x => x.Title.Equals(name));
+                    this.DialogResult = DialogResult.OK;
+                    this.Close();
+                }
             }
             catch (Exception e2)
             {

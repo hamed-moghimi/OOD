@@ -62,7 +62,7 @@
             this.Cancel.Location = new System.Drawing.Point(14, 90);
             this.Cancel.Name = "Cancel";
             this.Cancel.Size = new System.Drawing.Size(103, 30);
-            this.Cancel.TabIndex = 3;
+            this.Cancel.TabIndex = 4;
             this.Cancel.Text = "انصراف";
             this.Cancel.UseVisualStyleBackColor = true;
             this.Cancel.Click += new System.EventHandler(this.Cancel_Click);
@@ -72,7 +72,7 @@
             this.OK.Location = new System.Drawing.Point(123, 90);
             this.OK.Name = "OK";
             this.OK.Size = new System.Drawing.Size(103, 30);
-            this.OK.TabIndex = 4;
+            this.OK.TabIndex = 3;
             this.OK.Text = "ثبت";
             this.OK.UseVisualStyleBackColor = true;
             this.OK.Click += new System.EventHandler(this.OK_Click);
@@ -84,7 +84,7 @@
             this.unitBox.Name = "unitBox";
             this.unitBox.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.unitBox.Size = new System.Drawing.Size(212, 31);
-            this.unitBox.TabIndex = 6;
+            this.unitBox.TabIndex = 2;
             // 
             // label2
             // 

@@ -66,6 +66,7 @@ namespace OOD.EMS.UI.Execution
                     if (toDateBox.Value < fromDateBox.Value)
                     {
                         MessageBox.Show("بازه‌ی زمانی صحیح نمی‌باشد");
+                        return;
                     }
                 
                     name = name_box.Text;

@@ -53,5 +53,34 @@ namespace OOD.EMS.Execution
         {
             return this.Name;
         }
+
+        public Department getResponsible()
+        {
+            foreach (ExecutiveGoal goal in ExecutiveGoalStorage.getInstance().all())
+            {
+                if (goal.Manager.Equals(this))
+                {
+                    return this;
+                }
+            }
+            foreach (EMS.Execution.Task t in TaskStorage.getInstance().all())
+            {
+                if (t.department.Equals(this))
+                {
+                    return this;
+                }
+            }
+
+            foreach (Department child in getChildren())
+            {
+                Department res = child.getResponsible();
+                if (res != null)
+                {
+                    return res;
+                }
+            }
+            
+            return null;
+        }
     }
 }

@@ -15,6 +15,7 @@ using OOD.EMS.UI.Audit.Report;
 using OOD.EMS.UI.Audit.Metric;
 using OOD.EMS.UI.Management;
 using OOD.EMS.UI.Users;
+using OOD.EMS.Users;
 
 namespace OOD.EMS.UI
 {
@@ -23,6 +24,17 @@ namespace OOD.EMS.UI
         public TemplateForm()
         {
             InitializeComponent();
+            
+            AccessLevel level = Authentication.getInstance().ActiveUser.ALevel;
+            if (!level.canModifyAuditDocs())
+            {
+                transformAuditMenu();
+            }
+            if (!level.canModifyExecutiveDocs())
+            {
+                transformExecutiveMenu();
+            }
+            
         }
 
         // fields
@@ -202,6 +214,23 @@ namespace OOD.EMS.UI
         private void GoalsRelationManagementToolStripMenuItem_Click(object sender, EventArgs e)
         {
             newChild(new ExecutiveGoal_GeneralGoalRelationForm());
+        }
+
+        private void transformExecutiveMenu()
+        {
+            resourcesSubmenu.Text = "مشاهده‌ی منابع";
+            structureSubmenu.Text = "مشاهده‌ی ساختار";
+            executiveSubmenu.Text = "مشاهده‌ی اهداف اجرایی";
+            scheduleSubmenu.Text = "مشاهده‌ی برنامه‌های اقدام";
+            TaskSubmenu.Text = "مشاهده‌ی مسئولیت‌ها";
+            GoalRelationSubmenu.Text = "مشاهده‌ی ارتباط اهداف";
+        }
+
+        private void transformAuditMenu()
+        {
+            auditGoalSubmenu.Text = "مشاهده‌ی حسابرسی";
+            reportAuditSubmenu.Text = "مشاهده‌ی گزارش";
+            metricsAuditSubmenu.Visible = false;
         }
     }
 }

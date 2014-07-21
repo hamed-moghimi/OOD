@@ -14,6 +14,8 @@ namespace OOD.EMS.UI.Execution
 
         public ExecutionProgram program { set; get; }
         private ExecutiveGoal goal;
+        private List<Allocation> removed = new List<Allocation>();
+        private List<Allocation> added = new List<Allocation>();
 
         public ScheduleEditForm(bool canEdit, ExecutiveGoal goal)
         {
@@ -34,10 +36,12 @@ namespace OOD.EMS.UI.Execution
             }
             else
             {
-                program = goal.program;
+                program = new ExecutionProgram(goal.program);
             }
             load_tasks();
             load_allocs();
+
+            
         }
 
         private void load_tasks()
@@ -60,7 +64,7 @@ namespace OOD.EMS.UI.Execution
             foreach (Allocation con in program.Resources)
             {
                 resourceGrid.Rows.Add(new Object[] { con.AllocResource.Title, con.getStartDateString(),
-                    con.getDueDateString(), con.Amount.ToString()});
+                    con.getDueDateString(), con.Amount.ToString() + " " + con.AllocResource.unit});
             }
         }
 
@@ -82,11 +86,14 @@ namespace OOD.EMS.UI.Execution
 
         private void deleteButton_Click(object sender, EventArgs e)
         {
-            String name = (string)taskGrid.Rows[taskGrid.SelectedRows[0].Index].Cells[1].Value;
-            List<Task> tasks = program.getTasks();
-            Task target = tasks.Find(x => x.Title.Equals(name));
-            program.remove(target);
-            load_tasks();
+            if (taskGrid.SelectedRows.Count > 0)
+            {
+                String name = (string)taskGrid.Rows[taskGrid.SelectedRows[0].Index].Cells[1].Value;
+                List<Task> tasks = program.getTasks();
+                Task target = tasks.Find(x => x.Title.Equals(name));
+                program.remove(target);
+                load_tasks();
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -98,19 +105,29 @@ namespace OOD.EMS.UI.Execution
                 Allocation alloc = f.alloc;
                 alloc.Program = program;
                 program.addResource(alloc.AllocResource, alloc.Amount, alloc.FromDate, alloc.ToDate);
+                added.Add(alloc);
                 load_allocs();
             }
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            String name = (string)resourceGrid.Rows[resourceGrid.SelectedRows[0].Index].Cells[0].Value;
-            DateTime from = Convert.ToDateTime((string)resourceGrid.Rows[resourceGrid.SelectedRows[0].Index].Cells[1].Value);
-            DateTime to = Convert.ToDateTime((string)resourceGrid.Rows[resourceGrid.SelectedRows[0].Index].Cells[2].Value);
-            List<Resource> rs = program.getResources();
-            Resource target = rs.Find(x => x.Title.Equals(name));
-            program.removeResource(target, from, to);
-            load_allocs();
+            if (resourceGrid.SelectedRows.Count > 0)
+            {
+                String name = (string)resourceGrid.Rows[resourceGrid.SelectedRows[0].Index].Cells[0].Value;
+                DateTime from = Convert.ToDateTime((string)resourceGrid.Rows[resourceGrid.SelectedRows[0].Index].Cells[1].Value);
+                DateTime to = Convert.ToDateTime((string)resourceGrid.Rows[resourceGrid.SelectedRows[0].Index].Cells[2].Value);
+                List<Resource> rs = program.getResources();
+                Resource target = rs.Find(x => x.Title.Equals(name));
+                Allocation alloc = program.Resources.Find(x => x.AllocResource.Equals(target) && x.FromDate.Date.Equals(from.Date) &&
+                                                x.ToDate.Date.Equals(to.Date));
+                program.removeResource(alloc.AllocResource, alloc.FromDate, alloc.ToDate);
+                if (!added.Contains(alloc))
+                {
+                    removed.Add(alloc);
+                }
+                load_allocs();
+            }
         }
 
         private void selectBtn_Click(object sender, EventArgs e)
@@ -122,6 +139,15 @@ namespace OOD.EMS.UI.Execution
 
         private void Cancel_Click(object sender, EventArgs e)
         {
+            foreach (Allocation alloc in removed)
+            {
+                AllocationStorage.getInstance().create(alloc);
+            }
+            foreach (Allocation alloc in added)
+            {
+                AllocationStorage.getInstance().remove(alloc);
+            }
+            
             this.DialogResult = DialogResult.Cancel;
             this.Close();
         }

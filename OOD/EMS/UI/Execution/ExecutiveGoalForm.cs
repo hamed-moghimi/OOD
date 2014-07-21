@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 using OOD.EMS.Execution;
+using OOD.EMS.Users;
 
 namespace OOD.EMS.UI.Execution
 {
@@ -15,6 +16,14 @@ namespace OOD.EMS.UI.Execution
         {
             InitializeComponent();
             load_goals();
+
+            AccessLevel level = Authentication.getInstance().ActiveUser.ALevel;
+            if (!level.canModifyExecutiveDocs())
+            {
+                addButton.Visible = false;
+                editButton.Location = new System.Drawing.Point(editButton.Location.X, editButton.Location.Y + 80);
+            }
+
         }
 
         private void load_goals()
@@ -35,9 +44,12 @@ namespace OOD.EMS.UI.Execution
 
         private void editButton_Click_1(object sender, EventArgs e)
         {
-            String name = (String)dataGridView1.Rows[dataGridView1.SelectedRows[0].Index].Cells[0].Value;
-            ExecutiveGoal goal = ExecutiveGoalStorage.getInstance().all().Find(x => x.Title.Equals(name));
-            (new ExecutiveGoalEditForm(false, goal)).ShowDialog();
+            if (dataGridView1.SelectedRows.Count > 0)
+            {
+                String name = (String)dataGridView1.Rows[dataGridView1.SelectedRows[0].Index].Cells[0].Value;
+                ExecutiveGoal goal = ExecutiveGoalStorage.getInstance().all().Find(x => x.Title.Equals(name));
+                (new ExecutiveGoalEditForm(false, goal)).ShowDialog();
+            }
         }
 
         private void Cancel_Click(object sender, EventArgs e)

@@ -29,15 +29,15 @@ namespace OOD.EMS.UI.Report
         {
             try
             {
-                DateTime fromDate = DateTime.Parse(fromDateBox.Text);
-                DateTime toDate = DateTime.Parse(toDateBox.Text);
+                DateTime fromDate = fromDateBox.Value;
+                DateTime toDate = toDateBox.Value;
                 ExecutionProgram program = programListBox.SelectedItem as ExecutionProgram;
                 if(program == null)
                     throw new ArgumentNullException();
                 var reporter = new ScheduleReporter();
                 var report = reporter.report(program, fromDate, toDate);
-                //(new ScheduleReportResultForm(report)).Show();
-                (new TimeReportForm(program)).Show();
+                (new ScheduleReportResultForm(report)).Show();
+                
             }
             catch (FormatException)
             {

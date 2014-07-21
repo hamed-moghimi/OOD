@@ -9,6 +9,7 @@ using System.Windows.Forms;
 using OOD.EMS.Execution;
 using OOD.EMS.Exceptions;
 using OOD.EMS.Management;
+using OOD.EMS.UI.Management;
 
 namespace OOD.EMS.UI.Execution
 {
@@ -17,6 +18,8 @@ namespace OOD.EMS.UI.Execution
         private bool canEdit = false;
         private Department dept;
         private String prevTitle;
+        private List<GeneralGoal_ExecutiveGoalRelation> rels = new List<GeneralGoal_ExecutiveGoalRelation>();
+        ExecutiveGoal goal;
 
         public ExecutiveGoalEditForm(bool canEdit, ExecutiveGoal goal)
         {
@@ -31,6 +34,8 @@ namespace OOD.EMS.UI.Execution
                 prevTitle = goal.Title;
                 dept = goal.Manager;
                 attachmentPanel1.populate(goal.attachments);
+                this.goal = goal;
+                load_genGoals();
             }
             else
             {
@@ -40,14 +45,28 @@ namespace OOD.EMS.UI.Execution
             }
             dateBox.ReadOnly = true;
             titleBox.ReadOnly  =  dscp_box.ReadOnly = !canEdit;
-            button2.Visible = button1.Visible = canEdit;
+            button2.Visible = button1.Visible = addRelationBtn.Visible = canEdit;
             if (!canEdit)
             {
                 Cancel.Text = "بازگشت";
                 attachmentPanel1.ViewMode = true;
+                genGoalGrid.Location = new System.Drawing.Point(genGoalGrid.Location.X + 50, genGoalGrid.Location.Y);
+
             }
+            
         }
 
+        private void load_genGoals()
+        {
+            genGoalGrid.Rows.Clear();
+            foreach (GeneralGoal_ExecutiveGoalRelation rel in GeneralGoal_ExecutiveGoalRelationStorage.getInstance().all())
+            {
+                if (rel.ExecGoal.Equals(goal))
+                {
+                    genGoalGrid.Rows.Add(new Object[] { rel.GenGoal.Title });
+                }
+            }
+        }
         private void button2_Click(object sender, EventArgs e)
         {
             StructureSelectForm f = new StructureSelectForm();
@@ -86,9 +105,28 @@ namespace OOD.EMS.UI.Execution
                 ExecutiveGoal new_goal = new ExecutiveGoal(titleBox.Text, dscp_box.Text, dept);
                 new_goal.attachments = attachmentPanel1.getAttachments();
                 ExecutiveGoalStorage.getInstance().create(new_goal);
+                foreach (GeneralGoal_ExecutiveGoalRelation rel in rels)
+                {
+                    rel.ExecGoal = new_goal;
+                    GeneralGoal_ExecutiveGoalRelationStorage.getInstance().create(rel);
+                }
                 this.DialogResult = DialogResult.OK;
                 this.Close();
             }
+        }
+
+        private void addRelationBtn_Click(object sender, EventArgs e)
+        {
+            SelectGeneralGoalForm f = new SelectGeneralGoalForm();
+            DialogResult res = f.ShowDialog();
+            if (res == DialogResult.OK)
+            {
+                genGoalGrid.Rows.Add(new Object[] { f.goal.Title });
+                rels.Add(new GeneralGoal_ExecutiveGoalRelation(f.goal,
+                    goal, f.cont));
+                
+            }
+            
         }
 
         

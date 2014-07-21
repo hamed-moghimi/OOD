@@ -20,6 +20,7 @@ namespace OOD.EMS.UI.Management
             this.DateBox.Text = goal.getDateString();
             this.dscp_box.Text = goal.Description;
             this.userBox.Text = goal.DocUser.Firstname + " " + goal.DocUser.Lastname;
+            this.progress_label.Text = goal.getProgress().ToString();
             attachmentPanel1.populate(goal.attachments);
             attachmentPanel1.ViewMode = true;
         }

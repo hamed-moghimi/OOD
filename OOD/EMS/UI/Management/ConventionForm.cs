@@ -23,6 +23,15 @@ namespace OOD.EMS.UI.Management
             policyBox.Text = conv.Policy;
             dscpBox.Text = conv.Description;
             attachmentPanel1.populate(conv.attachments);
+
+            AccessLevel level = Authentication.getInstance().ActiveUser.ALevel;
+            if (!level.canModifyManagementDocs())
+            {
+                policyBox.ReadOnly = dscpBox.ReadOnly = true;
+                attachmentPanel1.ViewMode = true;
+                button2.Visible = false;
+                Cancel.Text = "بازگشت";
+            }
         }
 
         

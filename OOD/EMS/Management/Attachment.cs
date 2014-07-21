@@ -33,20 +33,27 @@ namespace OOD.EMS.Management
             
         }
 
-        public void save()
+        public void save(byte[] binaryData)
         {
-            //save on system
+            // Open file for reading
+            System.IO.FileStream _FileStream =
+               new System.IO.FileStream(path + @"\" + Title, System.IO.FileMode.Create,
+                                        System.IO.FileAccess.Write);
+            // Writes a block of bytes to this stream using data from
+            // a byte array.
+            _FileStream.Write(binaryData, 0, binaryData.Length);
+
+            // close file stream
+            _FileStream.Close();
+                        
         }
 
         public void download(String dlPath)
         {
-            if (path == null)
+            if (path != null)
             {
-                //error
-            }
-            else
-            {
-                //dl to dlPath
+                byte[] binaryData = File.ReadAllBytes(path + @"\" + Title);
+                File.WriteAllBytes(dlPath, binaryData);
             }
         }
 

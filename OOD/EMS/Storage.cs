@@ -28,6 +28,7 @@ namespace OOD.EMS
         public GeneralGoal_EnvironEffectRelationStorage genGoal_EnvironEffectStorage { get; set; }
         public GeneralGoal_LegalConstraintRelationStorage genGoal_LegalStorage { get; set; }
         public LegalConstraint_EnvironEffectRelationStorage legal_EnvironStorage { get; set; }
+        public Convention convention { set; get; }
 
         //Execution
         public ResourceStorage resourceStorage { get; set; }
@@ -35,6 +36,7 @@ namespace OOD.EMS
         public ExecutiveGoalStorage executiveGoalStorage { get; set; }
         public TaskStorage taskStorage { get; set; }
         public GeneralGoal_ExecutiveGoalRelationStorage genGoal_ExecGoalStorage { get; set; }
+        public AllocationStorage allocationStorage { get; set; }
 
         //Users
         public UserStorage userStorage { get; set; }
@@ -68,6 +70,7 @@ namespace OOD.EMS
             genGoal_EnvironEffectStorage = GeneralGoal_EnvironEffectRelationStorage.getInstance();
             genGoal_LegalStorage = GeneralGoal_LegalConstraintRelationStorage.getInstance();
             legal_EnvironStorage = LegalConstraint_EnvironEffectRelationStorage.getInstance();
+            convention = Convention.getInstance();
 
             //Execution
             resourceStorage = ResourceStorage.getInstance();
@@ -75,6 +78,7 @@ namespace OOD.EMS
             executiveGoalStorage = ExecutiveGoalStorage.getInstance();
             taskStorage = TaskStorage.getInstance();
             genGoal_ExecGoalStorage = GeneralGoal_ExecutiveGoalRelationStorage.getInstance();
+            allocationStorage = AllocationStorage.getInstance();
 
             //Users
             userStorage = UserStorage.getInstance();

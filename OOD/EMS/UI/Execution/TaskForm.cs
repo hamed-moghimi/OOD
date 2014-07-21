@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using OOD.EMS.Execution;
+using OOD.EMS.Users;
 
 namespace OOD.EMS.UI.Execution
 {
@@ -17,6 +18,13 @@ namespace OOD.EMS.UI.Execution
         {
             InitializeComponent();
             load_tasks();
+
+            AccessLevel level = Authentication.getInstance().ActiveUser.ALevel;
+            if (!level.canModifyExecutiveDocs())
+            {
+                addButton.Visible = editButton.Visible = false;
+                button2.Location = new System.Drawing.Point(button2.Location.X, button2.Location.Y + 50);
+            }
         }
 
         private void load_tasks()
@@ -32,19 +40,22 @@ namespace OOD.EMS.UI.Execution
 
         private void editButton_Click(object sender, EventArgs e)
         {
-            String title = (string)dataGridView1.Rows[dataGridView1.SelectedRows[0].Index].Cells[0].Value;
-            EMS.Execution.Task prev = TaskStorage.getInstance().all().Find(x => x.Title.Equals(title));
-            TaskEditForm f = new TaskEditForm(prev); DialogResult res = f.ShowDialog();
-            if (res == DialogResult.OK)
+            if (dataGridView1.SelectedRows.Count > 0)
             {
-                prev.Title = (string)f.name;
-                prev.StartDate = Convert.ToDateTime(f.fromDate);
-                prev.DueDate = Convert.ToDateTime(f.toDate);
-                prev.Description = f.dscp;
-                prev.department = f.manager;
-                prev.attachments = f.attachments;
+                String title = (string)dataGridView1.Rows[dataGridView1.SelectedRows[0].Index].Cells[0].Value;
+                EMS.Execution.Task prev = TaskStorage.getInstance().all().Find(x => x.Title.Equals(title));
+                TaskEditForm f = new TaskEditForm(prev); DialogResult res = f.ShowDialog();
+                if (res == DialogResult.OK)
+                {
+                    prev.Title = (string)f.name;
+                    prev.StartDate = Convert.ToDateTime(f.fromDate);
+                    prev.DueDate = Convert.ToDateTime(f.toDate);
+                    prev.Description = f.dscp;
+                    prev.department = f.manager;
+                    prev.attachments = f.attachments;
+                }
+                load_tasks();
             }
-            load_tasks();
         }
 
         private void addButton_Click(object sender, EventArgs e)
@@ -69,9 +80,12 @@ namespace OOD.EMS.UI.Execution
 
         private void button2_Click(object sender, EventArgs e)
         {
-            String title = (string)dataGridView1.Rows[dataGridView1.SelectedRows[0].Index].Cells[0].Value;
-            EMS.Execution.Task prev = TaskStorage.getInstance().all().Find(x => x.Title.Equals(title));
-            (new ViewTaskForm(prev)).ShowDialog();
+            if (dataGridView1.SelectedRows.Count > 0)
+            {
+                String title = (string)dataGridView1.Rows[dataGridView1.SelectedRows[0].Index].Cells[0].Value;
+                EMS.Execution.Task prev = TaskStorage.getInstance().all().Find(x => x.Title.Equals(title));
+                (new ViewTaskForm(prev)).ShowDialog();
+            }
         }
     }
 }

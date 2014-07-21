@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 using OOD.EMS.Execution;
+using OOD.EMS.Users;
 
 namespace OOD.EMS.UI.Execution
 {
@@ -25,7 +26,7 @@ namespace OOD.EMS.UI.Execution
             dataGridView1.Rows.Clear();
             foreach (ExecutiveGoal goal in ExecutiveGoalStorage.getInstance().all())
             {
-                if (goal.program == null)
+                if (goal.program == null && goal.Manager.Manager.Equals(Authentication.getInstance().ActiveUser))
                 {
                     dataGridView1.Rows.Add(new Object[] { goal.Title, goal.getDateString() });
                 }
@@ -40,10 +41,13 @@ namespace OOD.EMS.UI.Execution
 
         private void selectBtn_Click(object sender, EventArgs e)
         {
-            String name = (string)dataGridView1.Rows[dataGridView1.SelectedRows[0].Index].Cells[0].Value;
-            goal = ExecutiveGoalStorage.getInstance().all().Find(x => x.Title.Equals(name));
-            this.DialogResult = DialogResult.OK;
-            this.Close();
+            if (dataGridView1.SelectedRows.Count > 0)
+            {
+                String name = (string)dataGridView1.Rows[dataGridView1.SelectedRows[0].Index].Cells[0].Value;
+                goal = ExecutiveGoalStorage.getInstance().all().Find(x => x.Title.Equals(name));
+                this.DialogResult = DialogResult.OK;
+                this.Close();
+            }
         }
 
 

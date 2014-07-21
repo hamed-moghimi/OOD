@@ -20,7 +20,12 @@ namespace OOD
         {
             DirectoryInfo mainDir = new DirectoryInfo(@Application.StartupPath);
             DirectoryInfo twoLevelsUp = mainDir.Parent.Parent;
-            Storage.getInstance().load(twoLevelsUp.FullName + @"\data");
+            String path = twoLevelsUp.FullName + @"\data";
+            if (!Directory.Exists(path))
+            {
+                Directory.CreateDirectory(path);
+            }
+            Storage.getInstance().load(path);
             Application.ApplicationExit += new EventHandler(OnApplicationExit);
             
             Application.EnableVisualStyles();

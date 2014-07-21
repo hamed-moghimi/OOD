@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace OOD.EMS.Execution
 {
+    [Serializable()]
     public class AllocationStorage
     {
         private static AllocationStorage instance;
@@ -18,7 +19,17 @@ namespace OOD.EMS.Execution
 
         public static AllocationStorage getInstance()
         {
-            if (instance == null) instance = new AllocationStorage();
+            if (instance == null)
+            {
+                if (Storage.getInstance().allocationStorage == null)
+                {
+                    instance = new AllocationStorage();
+                }
+                else
+                {
+                    instance = Storage.getInstance().allocationStorage;
+                }
+            } 
             return instance;
         }
 
