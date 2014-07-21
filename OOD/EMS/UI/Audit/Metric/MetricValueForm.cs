@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using OOD.EMS.Audit;
+using OOD.EMS.Exceptions;
 
 namespace OOD.EMS.UI.Audit.Metric
 {
@@ -48,14 +49,26 @@ namespace OOD.EMS.UI.Audit.Metric
 
         private void OK_Click(object sender, EventArgs e)
         {
-            if (Value == null)
-                Value = new MetricValue(null, 0, DateTime.Now);
-            Value.Date = dateBox.Value;
-            Value.pairMetric = metricBox.SelectedItem as Metric;
-            //TODO: convert number
-            Value.Value = double.Parse(valueBox.Text);
-            this.DialogResult = System.Windows.Forms.DialogResult.OK;
-            this.Close();
+
+            try
+            {
+                if (Value == null)
+                    Value = new MetricValue(null, 0, DateTime.Now);
+                Value.Date = dateBox.Value;
+                Value.pairMetric = metricBox.SelectedItem as Metric;
+                if (Value.pairMetric == null)
+                {
+                    throw new IncompleteFormException();
+                }
+                //TODO: convert number
+                Value.Value = double.Parse(convert(valueBox.Text));
+                this.DialogResult = System.Windows.Forms.DialogResult.OK;
+                this.Close();
+            }
+            catch (Exception e2)
+            {
+                MessageBox.Show(new IncompleteFormException().Message, "خطا");
+            }
         }
 
         private void metricBox_SelectedIndexChanged(object sender, EventArgs e)
