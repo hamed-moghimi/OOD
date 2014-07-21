@@ -49,6 +49,7 @@ namespace OOD.EMS.UI.Execution
                 titleBox.Text = (string)resource[0];
                 amountBox.Text = (string)resource[1];
                 descBox.Text = (string)resource[2];
+                unitBox.Text = (string)resource[3];
             }
             else
                 resource = new object[3];
@@ -62,6 +63,7 @@ namespace OOD.EMS.UI.Execution
             resource[0] = titleBox.Text;
             resource[1] = convert(amountBox.Text);
             resource[2] = descBox.Text;
+            resource[3] = unitBox.Text;
         }
 
         private void Cancel_Click(object sender, EventArgs e)
@@ -73,7 +75,7 @@ namespace OOD.EMS.UI.Execution
         private void button2_Click(object sender, EventArgs e)
         {
             
-            if(titleBox.Text.Trim().Count() == 0)
+            if(titleBox.Text.Trim().Count() == 0 || unitBox.Text.Trim().Count() == 0)
             {
                 MessageBox.Show(new IncompleteFormException().Message);
                 return;

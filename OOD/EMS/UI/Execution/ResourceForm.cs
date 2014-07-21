@@ -25,7 +25,7 @@ namespace OOD.EMS.UI.Execution
             dataGridView1.Rows.Clear();
             foreach (Resource r in ResourceStorage.getInstance().all())
             {
-                object[] row = new object[] {r.Title, r.Amount, r.Description };
+                object[] row = new object[] {r.Title, r.getAmountString(), r.Description };
                 dataGridView1.Rows.Add(row);
             }
 
@@ -67,13 +67,14 @@ namespace OOD.EMS.UI.Execution
             {
                 String title = (string)dataGridView1.Rows[dataGridView1.SelectedRows[0].Index].Cells[0].Value;
                 Resource prev = ResourceStorage.getInstance().all().Find(x => x.Title.Equals(title));
-                ResourceEditForm f = new ResourceEditForm(true, new Object[] { prev.Title, prev.Amount.ToString(), prev.Description });
+                ResourceEditForm f = new ResourceEditForm(true, new Object[] { prev.Title, prev.Amount.ToString(), prev.Description, prev.unit });
                 DialogResult res = f.ShowDialog();
                 if (res == DialogResult.OK)
                 {
                     prev.Title = (string)f.Resource[0];
                     prev.Amount = Convert.ToInt32(convert((string)f.Resource[1]));
                     prev.Description = (string)f.Resource[2];
+                    prev.unit = (string)f.Resource[3];
                 }
                 load_resources();
             }
@@ -86,7 +87,7 @@ namespace OOD.EMS.UI.Execution
             if (res == DialogResult.OK)
             {
                 ResourceStorage.getInstance().create(new Resource((string)f.Resource[0], Convert.ToInt32((string)f.Resource[1]),
-                    (string)f.Resource[2]));
+                    (string)f.Resource[2], (string)f.Resource[3]));
             }
             load_resources();
         }

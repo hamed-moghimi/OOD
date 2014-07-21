@@ -60,7 +60,7 @@ namespace OOD.EMS.UI.Execution
             foreach (Allocation con in program.Resources)
             {
                 resourceGrid.Rows.Add(new Object[] { con.AllocResource.Title, con.getStartDateString(),
-                    con.getDueDateString(), con.Amount.ToString()});
+                    con.getDueDateString(), con.Amount.ToString() + " " + con.AllocResource.unit});
             }
         }
 

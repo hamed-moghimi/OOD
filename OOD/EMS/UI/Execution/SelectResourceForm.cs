@@ -34,7 +34,8 @@ namespace OOD.EMS.UI.Execution
             {
                 if (!exclude.Contains(r))
                 {
-                    dataGridView1.Rows.Add(new Object[] { r.Title, ResourceAllocator.getInstance().getRemainder(r, from, to) });
+                    dataGridView1.Rows.Add(new Object[] { r.Title, ResourceAllocator.getInstance().getRemainder(r, from, to) + " "
+                    + r.unit});
                 }
             }
         }
@@ -59,6 +60,7 @@ namespace OOD.EMS.UI.Execution
                     if (toDate < fromDate)
                     {
                         MessageBox.Show("بازه‌ی زمانی صحیح نمی‌باشد");
+                        return;
                     }
                     alloc = new Allocation(fromDate, toDate, r, null, amount);
                     if (ResourceAllocator.getInstance().isConsistent(alloc))

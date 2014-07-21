@@ -18,10 +18,10 @@ namespace OOD.EMS.Execution
             resources = new List<Resource>();
 
             //TMP
-            resources.Add(new Resource("منبع ۱", 12, "توضیحات منبع ۱"));
-            resources.Add(new Resource("منبع ۲", 12, "توضیحات منبع ۲"));
-            resources.Add(new Resource("منبع ۳", 12, "توضیحات منبع ۳"));
-            resources.Add(new Resource("منبع ۴", 12, "توضیحات منبع ۴"));
+            resources.Add(new Resource("منبع ۱", 12, "توضیحات منبع ۱", "نفر"));
+            resources.Add(new Resource("منبع ۲", 12, "توضیحات منبع ۲", "کیلوگرم"));
+            resources.Add(new Resource("منبع ۳", 12, "توضیحات منبع ۳", "واحد"));
+            resources.Add(new Resource("منبع ۴", 12, "توضیحات منبع ۴", "فروند"));
         }
 
         public static ResourceStorage getInstance()

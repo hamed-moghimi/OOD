@@ -12,12 +12,14 @@ namespace OOD.EMS.Execution
         public String Title { set; get; }
         public int Amount { set; get; }
         public String Description { set; get; }
+        public String unit { set; get; }
 
-        public Resource(String title, int amount, string description)
+        public Resource(String title, int amount, string description, string unit)
         {
             Title = title;
             Amount = amount;
             Description = description;
+            this.unit = unit;
         }
 
         public override bool Equals(object obj)
@@ -32,6 +34,11 @@ namespace OOD.EMS.Execution
         {
             if (res == null) return false;
             return Title.Equals(res.Title);
+        }
+
+        public String getAmountString()
+        {
+            return Amount + " " + unit;
         }
     }
 }
