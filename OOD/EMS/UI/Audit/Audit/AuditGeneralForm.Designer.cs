@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tasksList = new System.Windows.Forms.DataGridView();
             this.executiveGoal = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.progress = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -41,6 +41,8 @@
             this.addAttachment = new System.Windows.Forms.OpenFileDialog();
             this.label2 = new System.Windows.Forms.Label();
             this.attachmentPanel1 = new OOD.EMS.UI.AttachmentPanel();
+            this.progressBox = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.tasksList)).BeginInit();
             this.SuspendLayout();
             // 
@@ -59,16 +61,16 @@
             this.tasksList.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.executiveGoal,
             this.progress});
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("B Nazanin", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.tasksList.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("B Nazanin", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.tasksList.DefaultCellStyle = dataGridViewCellStyle3;
             this.tasksList.GridColor = System.Drawing.SystemColors.Control;
-            this.tasksList.Location = new System.Drawing.Point(16, 66);
+            this.tasksList.Location = new System.Drawing.Point(16, 96);
             this.tasksList.MultiSelect = false;
             this.tasksList.Name = "tasksList";
             this.tasksList.ReadOnly = true;
@@ -95,7 +97,7 @@
             // 
             // descBox
             // 
-            this.descBox.Location = new System.Drawing.Point(16, 209);
+            this.descBox.Location = new System.Drawing.Point(16, 239);
             this.descBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.descBox.Name = "descBox";
             this.descBox.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -106,7 +108,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(418, 181);
+            this.label3.Location = new System.Drawing.Point(418, 211);
             this.label3.Name = "label3";
             this.label3.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.label3.Size = new System.Drawing.Size(60, 24);
@@ -115,7 +117,7 @@
             // 
             // OK
             // 
-            this.OK.Location = new System.Drawing.Point(127, 540);
+            this.OK.Location = new System.Drawing.Point(127, 570);
             this.OK.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.OK.Name = "OK";
             this.OK.Size = new System.Drawing.Size(105, 33);
@@ -126,7 +128,7 @@
             // 
             // Cancel
             // 
-            this.Cancel.Location = new System.Drawing.Point(16, 540);
+            this.Cancel.Location = new System.Drawing.Point(16, 570);
             this.Cancel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Cancel.Name = "Cancel";
             this.Cancel.Size = new System.Drawing.Size(105, 33);
@@ -140,7 +142,7 @@
             this.targetName.Location = new System.Drawing.Point(22, 9);
             this.targetName.Name = "targetName";
             this.targetName.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.targetName.Size = new System.Drawing.Size(390, 24);
+            this.targetName.Size = new System.Drawing.Size(363, 24);
             this.targetName.TabIndex = 12;
             this.targetName.Text = "هدف کلان";
             // 
@@ -161,7 +163,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(317, 39);
+            this.label2.Location = new System.Drawing.Point(317, 69);
             this.label2.Name = "label2";
             this.label2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.label2.Size = new System.Drawing.Size(156, 24);
@@ -171,17 +173,38 @@
             // attachmentPanel1
             // 
             this.attachmentPanel1.Changed = false;
-            this.attachmentPanel1.Location = new System.Drawing.Point(12, 345);
+            this.attachmentPanel1.Location = new System.Drawing.Point(12, 375);
             this.attachmentPanel1.Name = "attachmentPanel1";
             this.attachmentPanel1.Size = new System.Drawing.Size(461, 188);
             this.attachmentPanel1.TabIndex = 14;
             this.attachmentPanel1.ViewMode = false;
             // 
+            // progressBox
+            // 
+            this.progressBox.Location = new System.Drawing.Point(22, 36);
+            this.progressBox.Name = "progressBox";
+            this.progressBox.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.progressBox.Size = new System.Drawing.Size(363, 24);
+            this.progressBox.TabIndex = 16;
+            this.progressBox.Text = "۵۰٪";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(391, 36);
+            this.label1.Name = "label1";
+            this.label1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.label1.Size = new System.Drawing.Size(82, 24);
+            this.label1.TabIndex = 15;
+            this.label1.Text = "پیشرفت هدف:";
+            // 
             // AuditGeneralForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(486, 581);
+            this.ClientSize = new System.Drawing.Size(486, 612);
+            this.Controls.Add(this.progressBox);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.attachmentPanel1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.tasksList);
@@ -215,6 +238,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn executiveGoal;
         private System.Windows.Forms.DataGridViewTextBoxColumn progress;
         private AttachmentPanel attachmentPanel1;
+        private System.Windows.Forms.Label progressBox;
+        private System.Windows.Forms.Label label1;
 
     }
 }

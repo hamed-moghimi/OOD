@@ -9,7 +9,6 @@ namespace OOD.EMS.Audit
     [Serializable()]
     public class ExecutiveGoalAudit : BaseAudit
     {
-        public int Progress { set; get; }
         public Execution.ExecutiveGoal Goal { set; get; }
 
         public ExecutiveGoalAudit(Execution.ExecutiveGoal goal,

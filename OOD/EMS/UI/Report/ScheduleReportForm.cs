@@ -41,11 +41,11 @@ namespace OOD.EMS.UI.Report
             }
             catch (FormatException)
             {
-                MessageBox.Show("تاریخ شروع یا پایان گزارش نادرست است");
+                MessageBox.Show("تاریخ شروع یا پایان گزارش نادرست است", "خطا", MessageBoxButtons.OK, MessageBoxIcon.Error, MessageBoxDefaultButton.Button1, MessageBoxOptions.RtlReading| MessageBoxOptions.RightAlign);
             }
             catch (ArgumentNullException)
             {
-                MessageBox.Show("لطفا برنامه اقدام موردنظر خود را انتخاب کنید");
+                MessageBox.Show("لطفا برنامه اقدام موردنظر خود را انتخاب کنید", "خطا", MessageBoxButtons.OK, MessageBoxIcon.Error, MessageBoxDefaultButton.Button1, MessageBoxOptions.RtlReading| MessageBoxOptions.RightAlign);
             }
         }
     }

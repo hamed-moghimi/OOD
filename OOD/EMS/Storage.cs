@@ -105,7 +105,7 @@ namespace OOD.EMS
             }
             catch (IOException)
             {
-                MessageBox.Show("در هنگام ایجاد داده‌ها خطا ایجاد شده است");
+                MessageBox.Show("در هنگام ایجاد داده‌ها خطا ایجاد شده است", "خطا", MessageBoxButtons.OK, MessageBoxIcon.Error, MessageBoxDefaultButton.Button1, MessageBoxOptions.RtlReading| MessageBoxOptions.RightAlign);
             }
         }
 

@@ -54,7 +54,7 @@ namespace OOD.EMS.UI.Audit.Metric
         {
             if (list.SelectedRows.Count == 0)
             {
-                MessageBox.Show("حداقل یکی از موارد را انتخاب کنید");
+                MessageBox.Show("حداقل یکی از موارد را انتخاب کنید", "خطا", MessageBoxButtons.OK, MessageBoxIcon.Error, MessageBoxDefaultButton.Button1, MessageBoxOptions.RtlReading| MessageBoxOptions.RightAlign);
                 return;
             }
             var item = list.SelectedRows[0].Cells[3].Value as MetricValue;
@@ -68,7 +68,7 @@ namespace OOD.EMS.UI.Audit.Metric
         {
             if (list.SelectedRows.Count == 0)
             {
-                MessageBox.Show("حداقل یکی از موارد را انتخاب کنید");
+                MessageBox.Show("حداقل یکی از موارد را انتخاب کنید", "خطا", MessageBoxButtons.OK, MessageBoxIcon.Error, MessageBoxDefaultButton.Button1, MessageBoxOptions.RtlReading| MessageBoxOptions.RightAlign);
                 return;
             }
             var item = list.SelectedRows[0].Cells[3].Value as MetricValue;
@@ -77,13 +77,32 @@ namespace OOD.EMS.UI.Audit.Metric
             loadValues();
         }
 
+        private bool endAudit = false;
         private void OK_Click(object sender, EventArgs e)
         {
-            var res = MessageBox.Show("با پایان حسابرسی، تمامی مقادیر واردشده در سیستم ثبت شده و دیگر قادر به تغییر یا حذف آن‌ها نیستید\nآیا مطمئن هستید که می‌خواهید به حسابرسی پایان دهید؟",
-                "تایید", MessageBoxButtons.YesNo, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button2, MessageBoxOptions.RtlReading | MessageBoxOptions.RightAlign);
-            if (res == System.Windows.Forms.DialogResult.Yes)
-                MetricValueStorage.getInstance().addAll(audit.all());
+            endAudit = true;
             this.Close();
+        }
+
+        private void MetricValueListForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (endAudit)
+            {
+                var res = MessageBox.Show("با پایان حسابرسی، تمامی مقادیر واردشده در سیستم ثبت شده و دیگر قادر به تغییر یا حذف آن‌ها نیستید\nآیا مطمئن هستید که می‌خواهید به حسابرسی پایان دهید؟",
+                    "تایید", MessageBoxButtons.YesNo, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button2, MessageBoxOptions.RtlReading | MessageBoxOptions.RightAlign);
+                if (res == System.Windows.Forms.DialogResult.Yes)
+                {
+                    MetricValueStorage.getInstance().addAll(audit.all());
+                }
+                else
+                    e.Cancel = true;
+            }
+            else
+            {
+                e.Cancel =
+                    MessageBox.Show("آیا مطمئن هستید که می‌خواهید بدون ثبت مقادیر خارج شوید؟", "تایید", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1, MessageBoxOptions.RightAlign | MessageBoxOptions.RtlReading)
+                    != System.Windows.Forms.DialogResult.Yes;
+            }
         }
     }
 }

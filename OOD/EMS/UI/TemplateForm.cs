@@ -24,17 +24,20 @@ namespace OOD.EMS.UI
         public TemplateForm()
         {
             InitializeComponent();
-            
-            AccessLevel level = Authentication.getInstance().ActiveUser.ALevel;
-            if (!level.canModifyAuditDocs())
+
+            try
             {
-                transformAuditMenu();
+                AccessLevel level = Authentication.getInstance().ActiveUser.ALevel;
+                if (!level.canModifyAuditDocs())
+                {
+                    transformAuditMenu();
+                }
+                if (!level.canModifyExecutiveDocs())
+                {
+                    transformExecutiveMenu();
+                }
             }
-            if (!level.canModifyExecutiveDocs())
-            {
-                transformExecutiveMenu();
-            }
-            
+            catch (Exception) { }
         }
 
         // fields
@@ -76,8 +79,6 @@ namespace OOD.EMS.UI
         {
             return MessageBox.Show("آیا مطمئن هستید؟", "تایید", MessageBoxButtons.YesNo, MessageBoxIcon.Question
                 , MessageBoxDefaultButton.Button1, MessageBoxOptions.RightAlign | MessageBoxOptions.RtlReading);
-            
-
         }
 
         protected String convert(String old)
@@ -183,8 +184,8 @@ namespace OOD.EMS.UI
 
         private void exitSubmenu_Click(object sender, EventArgs e)
         {
-            ask_confirm();
-            System.Windows.Forms.Application.Exit();
+            if(ask_confirm() == System.Windows.Forms.DialogResult.Yes)
+                System.Windows.Forms.Application.Exit();
         }
 
         private void relationsSubmenu_Click(object sender, EventArgs e)

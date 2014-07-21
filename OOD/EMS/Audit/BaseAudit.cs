@@ -13,6 +13,7 @@ namespace OOD.EMS.Audit
         public User Creator { set; get; }
         public String Description { set; get; }
         public DateTime Date { set; get; }
+        public int Progress { set; get; }
         public List<Management.Attachment> Attachments { set; get; }
 
         public BaseAudit(User creator, string description, List<Management.Attachment> attachments)

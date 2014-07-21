@@ -59,7 +59,7 @@ namespace OOD.EMS.UI.Execution
                     DateTime toDate = toDateBox.Value;
                     if (toDate < fromDate)
                     {
-                        MessageBox.Show("بازه‌ی زمانی صحیح نمی‌باشد");
+                        MessageBox.Show("بازه‌ی زمانی صحیح نمی‌باشد", "خطا", MessageBoxButtons.OK, MessageBoxIcon.Error, MessageBoxDefaultButton.Button1, MessageBoxOptions.RtlReading| MessageBoxOptions.RightAlign);
                         return;
                     }
                     alloc = new Allocation(fromDate, toDate, r, null, amount);
@@ -70,7 +70,7 @@ namespace OOD.EMS.UI.Execution
                     }
                     else
                     {
-                        MessageBox.Show("منبع کافی نمی‌باشد");
+                        MessageBox.Show("منبع کافی نمی‌باشد", "خطا", MessageBoxButtons.OK, MessageBoxIcon.Error, MessageBoxDefaultButton.Button1, MessageBoxOptions.RtlReading| MessageBoxOptions.RightAlign);
                     }
                 }
                 catch (Exception e2)

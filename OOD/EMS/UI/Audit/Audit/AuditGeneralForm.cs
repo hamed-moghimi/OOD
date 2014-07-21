@@ -36,14 +36,15 @@ namespace OOD.EMS.UI.Audit.Audit
         {
             this.goal = goal;
             targetName.Text = goal.Title;
+            progressBox.Text = goal.getProgress().ToString() + "٪";
             fillList(goal.getExecutiveGoals());
         }
 
-        public AuditGeneralForm(GeneralGoalAudit audit)
-            : this()
+        public AuditGeneralForm(GeneralGoalAudit audit) : this()
         {
             this.goal = audit.Goal;
             targetName.Text = audit.Goal.Title;
+            progressBox.Text = audit.Progress.ToString() + "٪";
             descBox.Text = audit.Description;
             descBox.ReadOnly = true;
             OK.Visible = false;
@@ -65,11 +66,11 @@ namespace OOD.EMS.UI.Audit.Audit
         {
             if (descBox.Text == "")
             {
-                MessageBox.Show("توضیحات برای ثبت حسابرسی الزامی است");
+                MessageBox.Show("توضیحات برای ثبت حسابرسی الزامی است", "خطا", MessageBoxButtons.OK, MessageBoxIcon.Error, MessageBoxDefaultButton.Button1, MessageBoxOptions.RtlReading| MessageBoxOptions.RightAlign);
                 return;
             }
             this.audit = new GeneralGoalAudit(goal, Authentication.getInstance().ActiveUser,
-                descBox.Text, attachmentPanel1.getAttachments());
+                descBox.Text, goal.getProgress(), attachmentPanel1.getAttachments());
             GeneralGoalAuditStorage.getInstance().create(audit);
             this.DialogResult = DialogResult.OK;
             this.Close();

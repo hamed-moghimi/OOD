@@ -35,14 +35,14 @@ namespace OOD.EMS.UI.Management
             name = this.name_box.Text;
             if (name.Trim().Count() == 0)
             {
-                MessageBox.Show(new IncompleteFormException().Message);
+                MessageBox.Show(new IncompleteFormException().Message, "خطا", MessageBoxButtons.OK, MessageBoxIcon.Error, MessageBoxDefaultButton.Button1, MessageBoxOptions.RtlReading| MessageBoxOptions.RightAlign);
                 return;
             }
             dscp = this.dscp_box.Text;
             attachments = attachmentPanel1.getAttachments();
             if (EnvironEffectStorage.getInstance().all().Contains(new EnvironEffect(name, dscp)))
             {
-                MessageBox.Show(new DocumentExsitsException().Message);
+                MessageBox.Show(new DocumentExsitsException().Message, "خطا", MessageBoxButtons.OK, MessageBoxIcon.Error, MessageBoxDefaultButton.Button1, MessageBoxOptions.RtlReading| MessageBoxOptions.RightAlign);
                 this.DialogResult = DialogResult.None;
             }
             else

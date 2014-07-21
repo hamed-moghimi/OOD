@@ -61,7 +61,6 @@
             this.editButton.Size = new System.Drawing.Size(38, 37);
             this.editButton.TabIndex = 14;
             this.editButton.Text = "   ";
-            this.toolTip.SetToolTip(this.editButton, "ویرایش مقدار");
             this.editButton.UseVisualStyleBackColor = true;
             this.editButton.Click += new System.EventHandler(this.editButton_Click);
             // 
@@ -166,6 +165,7 @@
             this.Controls.Add(this.Cancel);
             this.Name = "MetricValueListForm";
             this.Text = "ارزیابی بر اساس سنجه‌ها";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MetricValueListForm_FormClosing);
             this.Controls.SetChildIndex(this.Cancel, 0);
             this.Controls.SetChildIndex(this.addButton, 0);
             this.Controls.SetChildIndex(this.removeButton, 0);

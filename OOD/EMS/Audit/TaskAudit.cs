@@ -10,7 +10,6 @@ namespace OOD.EMS.Audit
     [Serializable()]
     public class TaskAudit : BaseAudit
     {
-        public int Progress { set; get; }
         public Task AuditTask { set; get; }
 
         public TaskAudit(Task auditTask, User creator, String description,

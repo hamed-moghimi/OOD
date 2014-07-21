@@ -81,7 +81,7 @@ namespace OOD.EMS.UI.Audit.Audit
         {
             if (descBox.Text == "")
             {
-                MessageBox.Show("توضیحات برای ثبت حسابرسی الزامی است");
+                MessageBox.Show("توضیحات برای ثبت حسابرسی الزامی است", "خطا", MessageBoxButtons.OK, MessageBoxIcon.Error, MessageBoxDefaultButton.Button1, MessageBoxOptions.RtlReading| MessageBoxOptions.RightAlign);
                 return;
             }
             this.audit = new ExecutiveGoalAudit(goal, Authentication.getInstance().ActiveUser,

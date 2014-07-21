@@ -58,7 +58,7 @@ namespace OOD.EMS.UI.Audit.Report
         {
             if (list.SelectedRows.Count == 0)
             {
-                MessageBox.Show("حداقل یکی از موارد را برای مشاهده انتخاب کنید");
+                MessageBox.Show("حداقل یکی از موارد را برای مشاهده انتخاب کنید", "خطا", MessageBoxButtons.OK, MessageBoxIcon.Error, MessageBoxDefaultButton.Button1, MessageBoxOptions.RtlReading| MessageBoxOptions.RightAlign);
                 return;
             }
             var item = list.SelectedRows[0].Cells[0].Value as PhysicalInspection;

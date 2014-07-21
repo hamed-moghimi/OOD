@@ -40,7 +40,7 @@ namespace OOD.EMS.UI.Audit.Audit
         private void OK_Click(object sender, EventArgs e)
         {
             if (list.SelectedRows.Count == 0)
-                MessageBox.Show("لطفا یکی از موارد را برای مشاهده اتخاب کنید");
+                MessageBox.Show("لطفا یکی از موارد را برای مشاهده اتخاب کنید", "خطا", MessageBoxButtons.OK, MessageBoxIcon.Error, MessageBoxDefaultButton.Button1, MessageBoxOptions.RtlReading| MessageBoxOptions.RightAlign);
             else
             {
                 this.audit = list.SelectedRows[0].Cells[2].Value as BaseAudit;

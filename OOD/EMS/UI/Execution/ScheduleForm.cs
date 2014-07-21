@@ -73,7 +73,7 @@ namespace OOD.EMS.UI.Execution
                 }
                 else
                 {
-                    MessageBox.Show("تنها مسئول هدف می‌تواند برنامه‌ی آن را ویرایش کند");
+                    MessageBox.Show("تنها مسئول هدف می‌تواند برنامه‌ی آن را ویرایش کند", "خطا", MessageBoxButtons.OK, MessageBoxIcon.Error, MessageBoxDefaultButton.Button1, MessageBoxOptions.RtlReading| MessageBoxOptions.RightAlign);
                 }
             }
         }
@@ -100,7 +100,7 @@ namespace OOD.EMS.UI.Execution
                 }
                 else
                 {
-                    MessageBox.Show("تنها مسئول هدف می‌تواند برنامه‌ی آن را حذف کند");
+                    MessageBox.Show("تنها مسئول هدف می‌تواند برنامه‌ی آن را حذف کند", "خطا", MessageBoxButtons.OK, MessageBoxIcon.Error, MessageBoxDefaultButton.Button1, MessageBoxOptions.RtlReading| MessageBoxOptions.RightAlign);
                 }
             }
             

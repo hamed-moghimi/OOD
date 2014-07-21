@@ -47,7 +47,7 @@ namespace OOD.EMS.UI.Audit.Metric
         {
             if (list.SelectedRows.Count == 0)
             {
-                MessageBox.Show("حداقل یکی از موارد را انتخاب کنید");
+                MessageBox.Show("حداقل یکی از موارد را انتخاب کنید", "خطا", MessageBoxButtons.OK, MessageBoxIcon.Error, MessageBoxDefaultButton.Button1, MessageBoxOptions.RtlReading| MessageBoxOptions.RightAlign);
                 return;
             }
             var metric = list.SelectedRows[0].Cells[0].Value as Metric;
@@ -61,7 +61,7 @@ namespace OOD.EMS.UI.Audit.Metric
         {
             if (list.SelectedRows.Count == 0)
             {
-                MessageBox.Show("حداقل یکی از موارد را انتخاب کنید");
+                MessageBox.Show("حداقل یکی از موارد را انتخاب کنید", "خطا", MessageBoxButtons.OK, MessageBoxIcon.Error, MessageBoxDefaultButton.Button1, MessageBoxOptions.RtlReading| MessageBoxOptions.RightAlign);
                 return;
             }
             var metric = list.SelectedRows[0].Cells[0].Value as Metric;
@@ -71,7 +71,7 @@ namespace OOD.EMS.UI.Audit.Metric
                 select value;
             if (values.Count() != 0)
             {
-                MessageBox.Show("شما نمی‌توانید سنجه‌ای که برای آن مقدار به ثبت رسیده حذف کنید");
+                MessageBox.Show("شما نمی‌توانید سنجه‌ای که برای آن مقدار به ثبت رسیده حذف کنید", "خطا", MessageBoxButtons.OK, MessageBoxIcon.Error, MessageBoxDefaultButton.Button1, MessageBoxOptions.RtlReading| MessageBoxOptions.RightAlign);
                 return;
             }
             ask_confirm();

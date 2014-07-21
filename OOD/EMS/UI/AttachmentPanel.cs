@@ -82,8 +82,8 @@ namespace OOD.EMS.UI
                     catch (Exception _Exception)
                     {
                         // Error
-                        MessageBox.Show(_Exception.ToString());
-                        MessageBox.Show("در حین اضافه کردن ضمیمه خطا رخ داده است");
+                        MessageBox.Show(_Exception.ToString(), "خطا", MessageBoxButtons.OK, MessageBoxIcon.Error, MessageBoxDefaultButton.Button1, MessageBoxOptions.RtlReading| MessageBoxOptions.RightAlign);
+                        MessageBox.Show("در حین اضافه کردن ضمیمه خطا رخ داده است", "خطا", MessageBoxButtons.OK, MessageBoxIcon.Error, MessageBoxDefaultButton.Button1, MessageBoxOptions.RtlReading| MessageBoxOptions.RightAlign);
                     }
 
                 }

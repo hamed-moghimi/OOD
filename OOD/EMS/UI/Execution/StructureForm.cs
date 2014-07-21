@@ -110,7 +110,7 @@ namespace OOD.EMS.UI.Execution
                 Department resp = dept.getResponsible();
                 if (resp != null)
                 {
-                    MessageBox.Show("بخش " + resp.Name + " مسئول یک هدف اجرایی یا مسئولیت است و نمی‌توان آن را حذف کرد");
+                    MessageBox.Show("بخش " + resp.Name + " مسئول یک هدف اجرایی یا مسئولیت است و نمی‌توان آن را حذف کرد", "خطا", MessageBoxButtons.OK, MessageBoxIcon.Error, MessageBoxDefaultButton.Button1, MessageBoxOptions.RtlReading| MessageBoxOptions.RightAlign);
                 }
                 else
                 {
@@ -146,7 +146,7 @@ namespace OOD.EMS.UI.Execution
         {
             if (deptName.Text.Trim().Count() == 0 || structureTree.SelectedNode == null)
             {
-                MessageBox.Show(new IncompleteFormException().Message);
+                MessageBox.Show(new IncompleteFormException().Message, "خطا", MessageBoxButtons.OK, MessageBoxIcon.Error, MessageBoxDefaultButton.Button1, MessageBoxOptions.RtlReading| MessageBoxOptions.RightAlign);
             }
             else
             {

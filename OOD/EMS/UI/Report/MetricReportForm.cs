@@ -37,7 +37,7 @@ namespace OOD.EMS.UI.Report
             }
             catch (ArgumentNullException)
             {
-                MessageBox.Show("حداقل یکی از سنجه‌ها را باید انتخاب کنید");
+                MessageBox.Show("حداقل یکی از سنجه‌ها را باید انتخاب کنید", "خطا", MessageBoxButtons.OK, MessageBoxIcon.Error, MessageBoxDefaultButton.Button1, MessageBoxOptions.RtlReading| MessageBoxOptions.RightAlign);
             }
         }
     }

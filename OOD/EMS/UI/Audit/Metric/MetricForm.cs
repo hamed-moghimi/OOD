@@ -40,7 +40,7 @@ namespace OOD.EMS.UI.Audit.Metric
         {
             if (titleBox.Text.Equals("") || unitBox.Text.Equals(""))
             {
-                MessageBox.Show("فرم را درست و کامل پر کنید");
+                MessageBox.Show("فرم را درست و کامل پر کنید", "خطا", MessageBoxButtons.OK, MessageBoxIcon.Error, MessageBoxDefaultButton.Button1, MessageBoxOptions.RtlReading| MessageBoxOptions.RightAlign);
                 return;
             }
             
@@ -49,7 +49,7 @@ namespace OOD.EMS.UI.Audit.Metric
                 Metric = new Metric(titleBox.Text, unitBox.Text);
                 if (MetricStorage.getInstance().all().Contains(Metric))
                 {
-                    MessageBox.Show("سنجه‌ای با این نام پیش از این در سیستم ثبت شده است");
+                    MessageBox.Show("سنجه‌ای با این نام پیش از این در سیستم ثبت شده است", "خطا", MessageBoxButtons.OK, MessageBoxIcon.Error, MessageBoxDefaultButton.Button1, MessageBoxOptions.RtlReading| MessageBoxOptions.RightAlign);
                     return;
                 }
                 MetricStorage.getInstance().create(Metric);

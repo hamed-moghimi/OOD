@@ -31,7 +31,7 @@ namespace OOD.EMS.UI.Management
             name = this.name_box.Text;
             if (name.Trim().Count() == 0)
             {
-                MessageBox.Show(new IncompleteFormException().Message);
+                MessageBox.Show(new IncompleteFormException().Message, "خطا", MessageBoxButtons.OK, MessageBoxIcon.Error, MessageBoxDefaultButton.Button1, MessageBoxOptions.RtlReading| MessageBoxOptions.RightAlign);
                 return;
             }
             
@@ -40,7 +40,7 @@ namespace OOD.EMS.UI.Management
 
             if (LegalConstraintStorage.getInstance().all().Contains(new LegalConstraint(name, dscp)))
             {
-                MessageBox.Show(new DocumentExsitsException().Message);
+                MessageBox.Show(new DocumentExsitsException().Message, "خطا", MessageBoxButtons.OK, MessageBoxIcon.Error, MessageBoxDefaultButton.Button1, MessageBoxOptions.RtlReading| MessageBoxOptions.RightAlign);
                 this.DialogResult = DialogResult.None;
             }
             else

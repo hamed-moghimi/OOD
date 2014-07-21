@@ -33,6 +33,7 @@ namespace OOD.EMS.UI.Report
                 series.ChartArea = chart.ChartAreas[0].Name;
                 series.ChartType = SeriesChartType.Line;
                 series.IsValueShownAsLabel = true;
+                series.MarkerStyle = MarkerStyle.Circle;
                 series.Color = colors[i];
                 i = (i + 1) % colors.Count();
                 foreach (var value in values)

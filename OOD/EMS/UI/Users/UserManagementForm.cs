@@ -44,7 +44,7 @@ namespace OOD.EMS.UI.Users
                 {
                     if (user.ALevel is Administrator)
                     {
-                        MessageBox.Show("مدیر سیستم قابل حذف نیست");
+                        MessageBox.Show("مدیر سیستم قابل حذف نیست", "خطا", MessageBoxButtons.OK, MessageBoxIcon.Error, MessageBoxDefaultButton.Button1, MessageBoxOptions.RtlReading| MessageBoxOptions.RightAlign);
                     }
                     else
                     {
@@ -76,7 +76,7 @@ namespace OOD.EMS.UI.Users
                 {
                     if (user.ALevel is Administrator)
                     {
-                        MessageBox.Show("مدیر سیستم قابل تغییر نیست");
+                        MessageBox.Show("مدیر سیستم قابل تغییر نیست", "خطا", MessageBoxButtons.OK, MessageBoxIcon.Error, MessageBoxDefaultButton.Button1, MessageBoxOptions.RtlReading| MessageBoxOptions.RightAlign);
                     }
                     else
                     {

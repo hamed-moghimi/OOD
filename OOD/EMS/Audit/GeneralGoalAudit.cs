@@ -12,9 +12,10 @@ namespace OOD.EMS.Audit
         public Management.GeneralGoal Goal { get; set; }
 
         public GeneralGoalAudit(Management.GeneralGoal goal, Users.User creator,
-            string description, List<Management.Attachment> attachments)
+            string description, int progress, List<Management.Attachment> attachments)
             : base(creator, description, attachments)
         {
+            Progress = progress;
             Goal = goal;
         }
     }

@@ -48,7 +48,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <ManifestCertificateThumbprint>68001069100AA6085B3C70E65F72563B7076CFAD</ManifestCertificateThumbprint>
+    <ManifestCertificateThumbprint>FEDBBCAA3F72A26EB18943ED1C1AF3C45A30E5AD</ManifestCertificateThumbprint>
   </PropertyGroup>
   <PropertyGroup>
     <ManifestKeyFile>OOD_TemporaryKey.pfx</ManifestKeyFile>
@@ -57,7 +57,10 @@
     <GenerateManifests>true</GenerateManifests>
   </PropertyGroup>
   <PropertyGroup>
-    <SignManifests>true</SignManifests>
+    <SignManifests>false</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Globe 4.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.ReportViewer.Common, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
@@ -503,12 +506,6 @@
     <Compile Include="EMS\UI\Report\ScheduleReportResultForm.Designer.cs">
       <DependentUpon>ScheduleReportResultForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="EMS\UI\Report\TimeReportForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="EMS\UI\Report\TimeReportForm.Designer.cs">
-      <DependentUpon>TimeReportForm.cs</DependentUpon>
-    </Compile>
     <Compile Include="EMS\UI\TemplateDialog.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -737,9 +734,6 @@
     <EmbeddedResource Include="EMS\UI\Report\ScheduleReportResultForm.resx">
       <DependentUpon>ScheduleReportResultForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="EMS\UI\Report\TimeReportForm.resx">
-      <DependentUpon>TimeReportForm.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="EMS\UI\TemplateDialog.resx">
       <DependentUpon>TemplateDialog.cs</DependentUpon>
     </EmbeddedResource>
@@ -772,7 +766,6 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <None Include="OOD_TemporaryKey.pfx" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -841,6 +834,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\search.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Globe 4.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

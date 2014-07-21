@@ -49,7 +49,7 @@ namespace OOD.EMS.UI.Audit.Report
         {
             if (titleBox.Text.Equals("") || descBox.Text.Equals(""))
             {
-                MessageBox.Show("فرم را درست و کامل پر کنید");
+                MessageBox.Show("فرم را درست و کامل پر کنید", "خطا", MessageBoxButtons.OK, MessageBoxIcon.Error, MessageBoxDefaultButton.Button1, MessageBoxOptions.RtlReading| MessageBoxOptions.RightAlign);
                 return;
             }
             inspection = new ExecutionInspection(titleBox.Text, descBox.Text, dateBox.Value,
