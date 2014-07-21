@@ -33,6 +33,7 @@ namespace OOD.EMS.UI.Execution
             if (!canEdit)
             {
                 this.button2.Visible = false;
+                
                 this.Cancel.Text = "بازگشت";
             }
         }
@@ -52,8 +53,8 @@ namespace OOD.EMS.UI.Execution
                 unitBox.Text = (string)resource[3];
             }
             else
-                resource = new object[3];
-            titleBox.ReadOnly = amountBox.ReadOnly = descBox.ReadOnly = !canEdit;
+                resource = new object[4];
+            titleBox.ReadOnly = amountBox.ReadOnly = descBox.ReadOnly = unitBox.ReadOnly = !canEdit;
             
         }
 

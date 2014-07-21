@@ -53,7 +53,7 @@
             this.Cancel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Cancel.Name = "Cancel";
             this.Cancel.Size = new System.Drawing.Size(105, 33);
-            this.Cancel.TabIndex = 18;
+            this.Cancel.TabIndex = 19;
             this.Cancel.Text = "انصراف";
             this.Cancel.UseVisualStyleBackColor = true;
             this.Cancel.Click += new System.EventHandler(this.Cancel_Click);
@@ -64,7 +64,7 @@
             this.button2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(105, 33);
-            this.button2.TabIndex = 17;
+            this.button2.TabIndex = 18;
             this.button2.Text = "ثبت";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
@@ -86,7 +86,7 @@
             this.dscp_box.Name = "dscp_box";
             this.dscp_box.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.dscp_box.Size = new System.Drawing.Size(458, 78);
-            this.dscp_box.TabIndex = 20;
+            this.dscp_box.TabIndex = 16;
             this.dscp_box.Text = "";
             // 
             // name_box
@@ -103,7 +103,7 @@
             this.attachmentPanel1.Location = new System.Drawing.Point(12, 161);
             this.attachmentPanel1.Name = "attachmentPanel1";
             this.attachmentPanel1.Size = new System.Drawing.Size(458, 188);
-            this.attachmentPanel1.TabIndex = 21;
+            this.attachmentPanel1.TabIndex = 17;
             this.attachmentPanel1.ViewMode = false;
             // 
             // AddGeneralGoalsForm

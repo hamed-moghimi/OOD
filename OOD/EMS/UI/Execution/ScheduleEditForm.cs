@@ -14,6 +14,8 @@ namespace OOD.EMS.UI.Execution
 
         public ExecutionProgram program { set; get; }
         private ExecutiveGoal goal;
+        private List<Allocation> removed = new List<Allocation>();
+        private List<Allocation> added = new List<Allocation>();
 
         public ScheduleEditForm(bool canEdit, ExecutiveGoal goal)
         {
@@ -34,10 +36,12 @@ namespace OOD.EMS.UI.Execution
             }
             else
             {
-                program = goal.program;
+                program = new ExecutionProgram(goal.program);
             }
             load_tasks();
             load_allocs();
+
+            
         }
 
         private void load_tasks()
@@ -101,6 +105,7 @@ namespace OOD.EMS.UI.Execution
                 Allocation alloc = f.alloc;
                 alloc.Program = program;
                 program.addResource(alloc.AllocResource, alloc.Amount, alloc.FromDate, alloc.ToDate);
+                added.Add(alloc);
                 load_allocs();
             }
         }
@@ -114,7 +119,13 @@ namespace OOD.EMS.UI.Execution
                 DateTime to = Convert.ToDateTime((string)resourceGrid.Rows[resourceGrid.SelectedRows[0].Index].Cells[2].Value);
                 List<Resource> rs = program.getResources();
                 Resource target = rs.Find(x => x.Title.Equals(name));
-                program.removeResource(target, from, to);
+                Allocation alloc = program.Resources.Find(x => x.AllocResource.Equals(target) && x.FromDate.Date.Equals(from.Date) &&
+                                                x.ToDate.Date.Equals(to.Date));
+                program.removeResource(alloc.AllocResource, alloc.FromDate, alloc.ToDate);
+                if (!added.Contains(alloc))
+                {
+                    removed.Add(alloc);
+                }
                 load_allocs();
             }
         }
@@ -128,6 +139,15 @@ namespace OOD.EMS.UI.Execution
 
         private void Cancel_Click(object sender, EventArgs e)
         {
+            foreach (Allocation alloc in removed)
+            {
+                AllocationStorage.getInstance().create(alloc);
+            }
+            foreach (Allocation alloc in added)
+            {
+                AllocationStorage.getInstance().remove(alloc);
+            }
+            
             this.DialogResult = DialogResult.Cancel;
             this.Close();
         }

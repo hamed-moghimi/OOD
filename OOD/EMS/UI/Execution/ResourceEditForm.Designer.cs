@@ -47,7 +47,7 @@
             this.descBox.Name = "descBox";
             this.descBox.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.descBox.Size = new System.Drawing.Size(465, 148);
-            this.descBox.TabIndex = 18;
+            this.descBox.TabIndex = 19;
             // 
             // amountBox
             // 
@@ -110,7 +110,7 @@
             this.Cancel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Cancel.Name = "Cancel";
             this.Cancel.Size = new System.Drawing.Size(105, 33);
-            this.Cancel.TabIndex = 20;
+            this.Cancel.TabIndex = 21;
             this.Cancel.Text = "انصراف";
             this.Cancel.UseVisualStyleBackColor = true;
             this.Cancel.Click += new System.EventHandler(this.Cancel_Click);
@@ -121,7 +121,7 @@
             this.button2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(105, 33);
-            this.button2.TabIndex = 19;
+            this.button2.TabIndex = 20;
             this.button2.Text = "ثبت";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
@@ -132,7 +132,7 @@
             this.unitBox.Name = "unitBox";
             this.unitBox.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.unitBox.Size = new System.Drawing.Size(111, 31);
-            this.unitBox.TabIndex = 22;
+            this.unitBox.TabIndex = 18;
             // 
             // label4
             // 

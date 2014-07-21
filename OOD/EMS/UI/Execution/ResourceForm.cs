@@ -103,7 +103,8 @@ namespace OOD.EMS.UI.Execution
             {
                 String title = (string)dataGridView1.Rows[dataGridView1.SelectedRows[0].Index].Cells[0].Value;
                 Resource prev = ResourceStorage.getInstance().all().Find(x => x.Title.Equals(title));
-                ResourceEditForm f = new ResourceEditForm(false, new Object[] { prev.Title, prev.Amount.ToString(), prev.Description });
+                ResourceEditForm f = new ResourceEditForm(false, new Object[] { prev.Title, prev.Amount.ToString(), prev.Description
+                 ,prev.unit});
                 f.ShowDialog();
             }
         }

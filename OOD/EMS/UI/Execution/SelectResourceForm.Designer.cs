@@ -60,6 +60,7 @@
             // 
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.Window;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.title,
@@ -95,7 +96,7 @@
             this.Cancel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Cancel.Name = "Cancel";
             this.Cancel.Size = new System.Drawing.Size(105, 33);
-            this.Cancel.TabIndex = 16;
+            this.Cancel.TabIndex = 19;
             this.Cancel.Text = "انصراف";
             this.Cancel.UseVisualStyleBackColor = true;
             this.Cancel.Click += new System.EventHandler(this.Cancel_Click);
@@ -106,7 +107,7 @@
             this.selectBtn.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.selectBtn.Name = "selectBtn";
             this.selectBtn.Size = new System.Drawing.Size(105, 33);
-            this.selectBtn.TabIndex = 15;
+            this.selectBtn.TabIndex = 18;
             this.selectBtn.Text = "ثبت";
             this.selectBtn.UseVisualStyleBackColor = true;
             this.selectBtn.Click += new System.EventHandler(this.selectBtn_Click);
@@ -127,7 +128,7 @@
             this.cont_box.Name = "cont_box";
             this.cont_box.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.cont_box.Size = new System.Drawing.Size(118, 31);
-            this.cont_box.TabIndex = 18;
+            this.cont_box.TabIndex = 15;
             // 
             // label2
             // 
@@ -157,7 +158,7 @@
             this.fromDateBox.Name = "fromDateBox";
             this.fromDateBox.ShowTime = false;
             this.fromDateBox.Size = new System.Drawing.Size(115, 27);
-            this.fromDateBox.TabIndex = 22;
+            this.fromDateBox.TabIndex = 16;
             this.fromDateBox.Text = "persianDateTimePicker1";
             this.fromDateBox.Value = ((FreeControls.PersianDate)(resources.GetObject("fromDateBox.Value")));
             this.fromDateBox.ValueChanged += new FreeControls.PersianDateTimePicker.onValueChanged(this.fromDateBox_ValueChanged);
@@ -170,7 +171,7 @@
             this.toDateBox.Name = "toDateBox";
             this.toDateBox.ShowTime = false;
             this.toDateBox.Size = new System.Drawing.Size(115, 27);
-            this.toDateBox.TabIndex = 23;
+            this.toDateBox.TabIndex = 17;
             this.toDateBox.Text = "persianDateTimePicker2";
             this.toDateBox.Value = ((FreeControls.PersianDate)(resources.GetObject("toDateBox.Value")));
             this.toDateBox.ValueChanged += new FreeControls.PersianDateTimePicker.onValueChanged(this.toDateBox_ValueChanged);

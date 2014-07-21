@@ -15,6 +15,7 @@ namespace OOD.EMS.UI.Execution
         public ScheduleForm()
         {
             InitializeComponent();
+            dataGridView1.BackgroundColor = System.Drawing.SystemColors.Window;
             load_programs();
 
             AccessLevel level = Authentication.getInstance().ActiveUser.ALevel;
@@ -88,6 +89,11 @@ namespace OOD.EMS.UI.Execution
                     DialogResult res = ask_confirm();
                     if (res == DialogResult.Yes)
                     {
+                        foreach (Allocation alloc in goal.program.Resources)
+                        {
+                            AllocationStorage.getInstance().remove(alloc);
+                        }
+
                         goal.program = null;
                         load_programs();
                     }

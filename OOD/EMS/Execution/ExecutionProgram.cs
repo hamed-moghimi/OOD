@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace OOD.EMS.Execution
 {
@@ -23,6 +24,27 @@ namespace OOD.EMS.Execution
             Date = DateTime.Now;
             Tasks = new List<Contribution>();
             Resources = new List<Allocation>();
+        }
+
+        public ExecutionProgram(ExecutionProgram p)
+        {
+            if (p != null)
+            {
+                Title = p.Title;
+                Description = p.Description;
+                Date = p.Date;
+                Tasks = new List<Contribution>();
+                foreach (Contribution cont in p.Tasks)
+                {
+                    Tasks.Add(cont);
+                }
+                Resources = new List<Allocation>();
+                foreach (Allocation alloc in p.Resources)
+                {
+                    Resources.Add(alloc);
+                }
+                
+            }
         }
 
         public DateTime getStartDate()
@@ -106,8 +128,9 @@ namespace OOD.EMS.Execution
 
         public void removeResource(Resource r, DateTime from, DateTime to)
         {
-            Allocation alloc = Resources.Find(x => x.AllocResource.Equals(r) && x.FromDate.Equals(from) &&
-                                                x.ToDate.Equals(to));
+            Allocation alloc = Resources.Find(x => x.AllocResource.Title.Equals(r.Title) && x.FromDate.Date.Equals(from.Date) &&
+                                                x.ToDate.Date.Equals(to.Date));
+            Resources.Remove(alloc);
             AllocationStorage.getInstance().remove(alloc);
         }
 

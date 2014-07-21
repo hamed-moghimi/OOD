@@ -35,6 +35,7 @@ namespace OOD.EMS
         public ExecutiveGoalStorage executiveGoalStorage { get; set; }
         public TaskStorage taskStorage { get; set; }
         public GeneralGoal_ExecutiveGoalRelationStorage genGoal_ExecGoalStorage { get; set; }
+        public AllocationStorage allocationStorage { get; set; }
 
         //Users
         public UserStorage userStorage { get; set; }
@@ -75,6 +76,7 @@ namespace OOD.EMS
             executiveGoalStorage = ExecutiveGoalStorage.getInstance();
             taskStorage = TaskStorage.getInstance();
             genGoal_ExecGoalStorage = GeneralGoal_ExecutiveGoalRelationStorage.getInstance();
+            allocationStorage = AllocationStorage.getInstance();
 
             //Users
             userStorage = UserStorage.getInstance();

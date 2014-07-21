@@ -127,6 +127,7 @@ namespace OOD.EMS.UI.Management
             Object selected = docType1.SelectedItem;
             List<ManagementDocument> list = null;
 
+            
             if (selected.ToString() == "اهداف کلان")
             {
                 list = GeneralGoalStorage.getInstance().all().Cast<ManagementDocument>().ToList();    
@@ -140,11 +141,22 @@ namespace OOD.EMS.UI.Management
                 list = EnvironEffectStorage.getInstance().all().Cast<ManagementDocument>().ToList();
             }
 
+            String name = "";
+            if (rel1Grid.SelectedRows.Count > 0)
+            {
+                name = (string)rel1Grid.Rows[rel1Grid.SelectedRows[0].Index].Cells[0].Value;
+            }
+
             rel1Grid.Rows.Clear();
             foreach (ManagementDocument doc in list)
             {
                 object[] row = new object[] { doc.Title };
                 rel1Grid.Rows.Add(row);
+            }
+            int sindex = list.FindIndex(x => x.Title.Equals(name));
+            if (sindex >= 0)
+            {
+                rel1Grid.Rows[sindex].Selected = true ;
             }
 
             List<String> docList = new List<String>(new String[] { "اهداف کلان", "الزامات قانونی", "تاثیرات زیست‌محیطی" });
@@ -186,11 +198,22 @@ namespace OOD.EMS.UI.Management
                 list = EnvironEffectStorage.getInstance().all().Cast<ManagementDocument>().ToList();
             }
 
+            String name = "";
+            if (rel2Grid.SelectedRows.Count > 0)
+            {
+                name = (string)rel2Grid.Rows[rel2Grid.SelectedRows[0].Index].Cells[0].Value;
+            }
+
             rel2Grid.Rows.Clear();
             foreach (ManagementDocument doc in list)
             {
                 object[] row = new object[] { doc.Title };
                 rel2Grid.Rows.Add(row);
+            }
+            int sindex = list.FindIndex(x => x.Title.Equals(name));
+            if (sindex >= 0)
+            {
+                rel2Grid.Rows[sindex].Selected = true;
             }
 
             List<String> docList = new List<String>(new String[] { "اهداف کلان", "الزامات قانونی", "تاثیرات زیست‌محیطی" });
