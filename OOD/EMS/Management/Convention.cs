@@ -7,7 +7,8 @@ using OOD.EMS.Users;
 
 namespace OOD.EMS.Management
 {
-    class Convention
+    [Serializable()]
+    public class Convention
     {
         public String Policy { set; get; }
         public DateTime Date { set; get; }
@@ -30,7 +31,14 @@ namespace OOD.EMS.Management
         {
             if (instance == null)
             {
-                instance = new Convention("", "");
+                if (Storage.getInstance().convention == null)
+                {
+                    instance = new Convention("", "");
+                }
+                else
+                {
+                    instance = Storage.getInstance().convention;
+                }
             }
             return instance;
         }

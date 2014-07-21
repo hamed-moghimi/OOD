@@ -28,6 +28,7 @@ namespace OOD.EMS
         public GeneralGoal_EnvironEffectRelationStorage genGoal_EnvironEffectStorage { get; set; }
         public GeneralGoal_LegalConstraintRelationStorage genGoal_LegalStorage { get; set; }
         public LegalConstraint_EnvironEffectRelationStorage legal_EnvironStorage { get; set; }
+        public Convention convention { set; get; }
 
         //Execution
         public ResourceStorage resourceStorage { get; set; }
@@ -69,6 +70,7 @@ namespace OOD.EMS
             genGoal_EnvironEffectStorage = GeneralGoal_EnvironEffectRelationStorage.getInstance();
             genGoal_LegalStorage = GeneralGoal_LegalConstraintRelationStorage.getInstance();
             legal_EnvironStorage = LegalConstraint_EnvironEffectRelationStorage.getInstance();
+            convention = Convention.getInstance();
 
             //Execution
             resourceStorage = ResourceStorage.getInstance();
