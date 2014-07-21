@@ -92,8 +92,15 @@ namespace OOD.EMS.UI.Execution
             if (selected != null)
             {
                 Section = getDepartment(selected);
-                this.DialogResult = DialogResult.OK;
-                this.Close();
+                if(Section.Equals(OrganizationStructure.getInstance().Root))
+                {
+                    MessageBox.Show("سازمان نمی‌تواند انتخاب شود", "خطا", MessageBoxButtons.OK, MessageBoxIcon.Warning,
+                    MessageBoxDefaultButton.Button1, MessageBoxOptions.RightAlign | MessageBoxOptions.RtlReading);
+                }
+                else{
+                    this.DialogResult = DialogResult.OK;
+                    this.Close();
+                }
             }
             else
             {
