@@ -52,8 +52,9 @@
     </Reference>
     <Reference Include="Microsoft.ReportViewer.Common, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
     <Reference Include="Microsoft.ReportViewer.WinForms, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
-    <Reference Include="PersianDate">
-      <HintPath>.\PersianDate.dll</HintPath>
+    <Reference Include="PersianDate, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\deliverable\bin\Release\PersianDate.dll</HintPath>
     </Reference>
     <Reference Include="PopupControl">
       <HintPath>.\PopupControl.dll</HintPath>

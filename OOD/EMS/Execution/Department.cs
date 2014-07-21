@@ -48,5 +48,10 @@ namespace OOD.EMS.Execution
             return Name.Equals(dept.Name) && ((Supervisor == null && dept.Supervisor == null) ||
                 (Supervisor != null && dept.Supervisor != null && Supervisor.Equals(dept.Supervisor)));
         }
+
+        public override string ToString()
+        {
+            return this.Name;
+        }
     }
 }

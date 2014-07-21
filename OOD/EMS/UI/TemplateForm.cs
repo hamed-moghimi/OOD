@@ -104,7 +104,7 @@ namespace OOD.EMS.UI
 
         private void documentReport_Click(object sender, EventArgs e)
         {
-            newChild(new OverallReportForm());
+            (new OverallReportForm()).ShowDialog();
         }
 
         private void scheduleReport_Click(object sender, EventArgs e)

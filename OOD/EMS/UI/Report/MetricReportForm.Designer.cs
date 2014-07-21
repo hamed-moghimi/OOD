@@ -30,14 +30,14 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MetricReportForm));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.toDateBox = new FreeControls.PersianDateTimePicker();
+            this.fromDateBox = new FreeControls.PersianDateTimePicker();
             this.label4 = new System.Windows.Forms.Label();
             this.metricsBox = new System.Windows.Forms.CheckedListBox();
             this.label3 = new System.Windows.Forms.Label();
             this.reportButton = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.fromDateBox = new FreeControls.PersianDateTimePicker();
-            this.toDateBox = new FreeControls.PersianDateTimePicker();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -61,6 +61,30 @@
             this.groupBox1.TabIndex = 6;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "گزارش‌گیری از اندازه‌ها و سنجه‌ها";
+            // 
+            // toDateBox
+            // 
+            this.toDateBox.BackColor = System.Drawing.Color.White;
+            this.toDateBox.Font = new System.Drawing.Font("B Nazanin", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.toDateBox.Location = new System.Drawing.Point(35, 101);
+            this.toDateBox.Name = "toDateBox";
+            this.toDateBox.ShowTime = false;
+            this.toDateBox.Size = new System.Drawing.Size(115, 27);
+            this.toDateBox.TabIndex = 12;
+            this.toDateBox.Text = "persianDateTimePicker1";
+            this.toDateBox.Value = ((FreeControls.PersianDate)(resources.GetObject("toDateBox.Value")));
+            // 
+            // fromDateBox
+            // 
+            this.fromDateBox.BackColor = System.Drawing.Color.White;
+            this.fromDateBox.Font = new System.Drawing.Font("B Nazanin", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.fromDateBox.Location = new System.Drawing.Point(35, 60);
+            this.fromDateBox.Name = "fromDateBox";
+            this.fromDateBox.ShowTime = false;
+            this.fromDateBox.Size = new System.Drawing.Size(115, 27);
+            this.fromDateBox.TabIndex = 11;
+            this.fromDateBox.Text = "persianDateTimePicker1";
+            this.fromDateBox.Value = ((FreeControls.PersianDate)(resources.GetObject("fromDateBox.Value")));
             // 
             // label4
             // 
@@ -119,30 +143,6 @@
             this.label1.Size = new System.Drawing.Size(60, 26);
             this.label1.TabIndex = 1;
             this.label1.Text = "از تاریخ :";
-            // 
-            // fromDateBox
-            // 
-            this.fromDateBox.BackColor = System.Drawing.Color.White;
-            this.fromDateBox.Font = new System.Drawing.Font("B Nazanin", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.fromDateBox.Location = new System.Drawing.Point(35, 60);
-            this.fromDateBox.Name = "fromDateBox";
-            this.fromDateBox.ShowTime = false;
-            this.fromDateBox.Size = new System.Drawing.Size(115, 27);
-            this.fromDateBox.TabIndex = 11;
-            this.fromDateBox.Text = "persianDateTimePicker1";
-            this.fromDateBox.Value = ((FreeControls.PersianDate)(resources.GetObject("fromDateBox.Value")));
-            // 
-            // toDateBox
-            // 
-            this.toDateBox.BackColor = System.Drawing.Color.White;
-            this.toDateBox.Font = new System.Drawing.Font("B Nazanin", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.toDateBox.Location = new System.Drawing.Point(35, 101);
-            this.toDateBox.Name = "toDateBox";
-            this.toDateBox.ShowTime = false;
-            this.toDateBox.Size = new System.Drawing.Size(115, 27);
-            this.toDateBox.TabIndex = 12;
-            this.toDateBox.Text = "persianDateTimePicker1";
-            this.toDateBox.Value = ((FreeControls.PersianDate)(resources.GetObject("toDateBox.Value")));
             // 
             // MetricReportForm
             // 

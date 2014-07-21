@@ -16,13 +16,6 @@ namespace OOD.EMS.Management
         private LegalConstraintStorage()
         {
             legalConstraints = new List<LegalConstraint>();
-
-            //TMP
-            legalConstraints.Add(new LegalConstraint("سند شماره‌ی ۱", "توضیح سند شماره‌ ۱"));
-            legalConstraints.Add(new LegalConstraint("سند شماره‌ی ۲", "توضیح سند شماره‌ ۲"));
-            legalConstraints.Add(new LegalConstraint("سند شماره‌ی ۳", "توضیح سند شماره‌۳"));
-            legalConstraints.Add(new LegalConstraint("سند شماره‌ی ۴", "توضیح سند شماره‌ ۴"));
-
         }
 
         public List<LegalConstraint> all()

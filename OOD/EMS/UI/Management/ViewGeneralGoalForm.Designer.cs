@@ -73,10 +73,10 @@
             // 
             // dscp_box
             // 
-            this.dscp_box.Enabled = false;
             this.dscp_box.Location = new System.Drawing.Point(13, 157);
             this.dscp_box.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dscp_box.Name = "dscp_box";
+            this.dscp_box.ReadOnly = true;
             this.dscp_box.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.dscp_box.Size = new System.Drawing.Size(458, 78);
             this.dscp_box.TabIndex = 15;

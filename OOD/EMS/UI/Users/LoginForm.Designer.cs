@@ -55,7 +55,7 @@
             this.usernameBox.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.usernameBox.Size = new System.Drawing.Size(159, 31);
             this.usernameBox.TabIndex = 6;
-            this.usernameBox.Text = "minmit";
+            this.usernameBox.Text = "moghimi";
             // 
             // Cancel
             // 

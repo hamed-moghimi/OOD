@@ -16,13 +16,6 @@ namespace OOD.EMS.Management
         private EnvironEffectStorage()
         {
             environEffects = new List<EnvironEffect>();
-
-            //TMP
-            environEffects.Add(new EnvironEffect("سند ۱", "توضیحات سند ۱"));
-            environEffects.Add(new EnvironEffect("سند ۲", "توضیحات سند ۲"));
-            environEffects.Add(new EnvironEffect("سند ۳", "توضیحات سند ۳"));
-            environEffects.Add(new EnvironEffect("سند ۴", "توضیحات سند ۴"));
-
         }
 
         public static EnvironEffectStorage getInstance()

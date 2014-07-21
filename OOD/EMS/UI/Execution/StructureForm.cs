@@ -40,6 +40,8 @@ namespace OOD.EMS.UI.Execution
 
         private TreeNode[] getChildrenNodes(Department dept)
         {
+            if (dept == null)
+                return new TreeNode[] { };
             List<Department> childs = dept.getChildren();
             List<TreeNode> resList = new List<TreeNode>();
             foreach (Department c in childs)
@@ -55,7 +57,6 @@ namespace OOD.EMS.UI.Execution
                 }
             }
             return resList.ToArray();
-            
         }
 
         private void next_Click(object sender, EventArgs e)

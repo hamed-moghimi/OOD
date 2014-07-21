@@ -18,22 +18,8 @@ namespace OOD.EMS.Execution
         {
             departments = new List<Department>();
 
-            //TMP
-            List<User> users = UserStorage.getInstance().all();
-            Department root = new Department("سازمان", null, users[0]);
-            Department m1 = new Department("معاونت ۱", root, users[0]);
-            Department m2 = new Department("معاونت ۲", root, users[0]);
-            Department m11 = new Department("زیربخش ۱", m1, users[0]);
-            Department m21 = new Department("زیربخش ۱", m2, users[0]);
-            Department m12 = new Department("زیربخش ۲", m1, users[0]);
-            Department m22 = new Department("زیربخش ۲", m2, users[0]);
+            Department root = new Department("سازمان", null, null);
             this.create(root);
-            this.create(m1);
-            this.create(m2);
-            this.create(m11);
-            this.create(m21);
-            this.create(m12);
-            this.create(m22);
         }
 
         public static OrganizationStructure getInstance()

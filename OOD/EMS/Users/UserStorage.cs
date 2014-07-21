@@ -17,10 +17,10 @@ namespace OOD.EMS.Users
             userList = new List<User>();
 
             //TMP
-            userList.Add(new User("مینا", "طهماسبی", "minmit", new Manager()));
-            userList.Add(new User("حامد", "مقیمی", "shmoghimi70", new HeadManager()));
-            userList.Add(new User("بهروز", "ربیعی", "brabiee", new Inspector()));
-            userList.Add(new User("فرهاد", "شاه‌محمدی", "farhadfnr", new Administrator()));
+            userList.Add(new User("مینا", "طهماسبی", "tahmasbi", new Manager()));
+            userList.Add(new User("حامد", "مقیمی", "moghimi", new HeadManager()));
+            userList.Add(new User("بهروز", "ربیعی", "rabiee", new Inspector()));
+            userList.Add(new User("", "مدیر سامانه", "administrator", new Administrator()));
         }
 
         public List<User> all()

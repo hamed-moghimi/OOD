@@ -27,8 +27,8 @@ namespace OOD.EMS.UI.Report
                 Braincase.GanttChart.Task chart_task = new Braincase.GanttChart.Task();
                 chart_task.Name = t.Title;
                 manager.Add(chart_task);
-                manager.SetStart(chart_task, (int)Math.Round((t.StartDate - Start).TotalDays));
-                manager.SetEnd(chart_task, (int)Math.Round((t.DueDate - Start).TotalDays));
+                //manager.SetStart(chart_task, (int)Math.Ceiling((t.StartDate.d - Start).TotalDays));
+                manager.SetEnd(chart_task, (int)Math.Ceiling((t.DueDate - Start).TotalDays));
                 manager.SetComplete(chart_task, (float)(t.Progress / 100.0));
                 
             }
@@ -37,7 +37,7 @@ namespace OOD.EMS.UI.Report
 
             manager.TimeScale = TimeScale.Day;
             var span = DateTime.Today - manager.Start;
-            manager.Now = (int)Math.Round(span.TotalDays + 10);
+            manager.Now = (int)Math.Ceiling(span.TotalDays + 10);
             chart1.Init(manager);
             chart1.TimeScaleDisplay = TimeScaleDisplay.DayOfMonth;
         }

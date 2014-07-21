@@ -16,12 +16,6 @@ namespace OOD.EMS.Execution
         private ResourceStorage()
         {
             resources = new List<Resource>();
-
-            //TMP
-            resources.Add(new Resource("منبع ۱", 12, "توضیحات منبع ۱"));
-            resources.Add(new Resource("منبع ۲", 12, "توضیحات منبع ۲"));
-            resources.Add(new Resource("منبع ۳", 12, "توضیحات منبع ۳"));
-            resources.Add(new Resource("منبع ۴", 12, "توضیحات منبع ۴"));
         }
 
         public static ResourceStorage getInstance()
